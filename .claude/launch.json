@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lamina",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["scripts/start.sh"],
+      "port": 8765
+    }
+  ]
+}
