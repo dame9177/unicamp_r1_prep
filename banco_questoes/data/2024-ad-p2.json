@@ -1,0 +1,1260 @@
+{
+  "id": "unicamp-2024-ad-p2",
+  "instituicao": "UNICAMP",
+  "processo_seletivo": 2024,
+  "modalidade": "acesso_direto",
+  "tipo": "regular",
+  "turno": "Prova 2 (tarde)",
+  "formato": "resposta_curta",
+  "data_aplicacao": "2023-11-20",
+  "fontes": {
+    "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+    "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/resp_esperadas/resp_ad2.pdf",
+    "gabarito_retificado_em": null
+  },
+  "valores_referencia": "VALORES DE REFERÊNCIA DOS EXAMES LABORATORIAIS, UTILIZADOS NESTA AVALIAÇÃO:\n\n| EXAME VALOR | REFERÊNCIA |\n|---|---|\n| Ácido úrico | Homem: 3,5 a 7,2 mg/dL; mulher: 2,6 a 6,0 mg/dL |\n| Albumina plasmática | 3,5 a 5,2 g/dL |\n| Bilirrubina total | 0,3 a 1,2 mg/dL |\n| Cálcio sérico | 8,8 a 10,2 mg/dL |\n| Creatinina | Homem: < 1,2 mg/dL, mulher: < 0,9 mg/dL |\n| CPK (creatina fosfoquinase) | Homem: < 190 UI/L, mulher: < 170 UI/L |\n| Colesterol total | < 200 UI/L |\n| LDH (ou DHL) | Homem: < 680 UI/L, mulher: <450 UI/L |\n| HDL-colesterol | Homem: ≥ 40 mg/dL; mulher: ≥ 50 mg/dL. |\n| LDL-colesterol | < 100 mg/dL |\n| Triglicérides | < 150 mg/dL |\n| Ferro sérico | 60 a 180 ug/dL |\n| Fosfatase alcalina | Homem: 40 a 129 UI/L, mulher 35 a 103 UI/L |\n| Fósforo sérico | 2,5 a 4,5 mg/dL |\n| Lactato | 0,5 a 1,6 mmol/L |\n| Saturação transferrina | 20 a 45% |\n| TSH | 0,3 a 4,2 uUI/mL |\n| T3L | 0,20 a 0,44 ng/dL |\n| T4L | 0,9 a 1,7 ng/dL |\n| Glicemia | 60 a 99 mg/dL |\n| Ureia | < 65 anos: 17-48 mg/dL. ≥ 65 anos: < 71 mg/dL. |\n| Sódio (Na+) | 132 a 146 mEq/L |\n| Potássio (K+) | 3,7 a 5,4 mEq/L |\n| TGO | Homem: <40 UI/L, mulher: < 32 UI/L |\n| TGP | Homem: < 41 UI/L, mulher: < 33 UI/L |\n| TIBC | 225 a 450 ug/dL |\n| Magnésio | 1,31 a 1,91 mEq/L |\n| Fósforo | 3,0 a 4,5 mg/dL |\n\n| Hemoglobina Hematócrito Leucócitos Plaquetas VCM CHCM | Homem: 14 a 18 g/dL, mulher: 12-16 g/dL Homem: 41-52%, mulher: 36-46% 4.000 a 10.000/mm3 150.000 a 400.000/mm3 81,7 a 96,8fL 32,0 a 36 g/dL |\n|---|---|\n| Exame de urina Densidade pH Hemácias Leucócitos Proteína | 1005 a 1035 5,0 a 8,0 Até 5/campo Até 5/campo Negativo/traços |\n| Proteinúria 24 horas | < 0,15 g/24 horas |\n| Albuminúria | < 30 mg/g |\n| Proteína/creatinina (amostra urina) | < 0,20 |\n| Gasometria venosa | pH: 7,33 a 7,43 HCO : 18 a 23 mmol/L 3 PCO : 38 a 50 mmHg 2 Cloro: 98 a 106 mmol/L |\n| Hemoglobina glicada (HbA1c) | 4,5 a 5,6% |\n| Gama GT | Homem < 85UI/L; mulher < 38UI/L |\n| PSAtotal | < 4,0ng/mL |",
+  "total_questoes": 60,
+  "questoes": [
+    {
+      "id": "unicamp-2024-ad-p2-q61",
+      "numero": 61,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 62a, em acompanhamento médico regular na Unidade Básica de Saúde por hipertensão arterial e obesidade, comparece à Unidade de Emergência queixando-se de dor e edema em joelho direito há um dia. Nega episódios semelhantes ou trauma recente. Exame físico: eritema e aumento de volume do joelho direito, com dor de forte intensidade à palpação e sinal da tecla positivo. A CONDUTA INDISPENSÁVEL A SER REALIZADA NO MOMENTO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Punção articular ou artrocentese diagnóstica",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q62",
+      "numero": 62,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Adolescente, 16a, é trazida ao Pronto-Socorro por falta de ar e mal-estar há dois dias. Exame físico: vígil e confusa; mucosas secas; peso=66Kg; PA=76/48mmHg; FC=124bpm; FR=28irpm; T=37,4ºC; oximetria de pulso=96% em ar ambiente. Exames laboratoriais: glicemia=560mg/dL; creatinina=0,9mg/dL; potássio=3,2mEq/L; sódio=130mEq/L. Gasometria arterial: pH=6,97; HCO3=12mEq/L; PaCO2=24mmHg; PaO2=112mmHg; cloreto=95mEq/L. ALÉM DA REPOSIÇÃO DE POTÁSSIO, A CONDUTA IMEDIATA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Expansão volêmica com soro fisiológico (0,9%) ou com Ringer ou com cristaloide. Insulina não será aceito.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q63",
+      "numero": 63,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 48a, procura o Pronto Atendimento por vômitos e fraqueza há uma semana. Perdeu sete quilos nos últimos seis meses. Antecedentes: hipertensão arterial, etilismo (1 garrafa de destilado por dia há 15 anos) e tabagismo de 20 anos-maço. Exame físico: regular estado geral; descorado (+/4); desorientado; peso=48Kg; altura=1,76m; PA=112/64mmHg; FC=114bpm; FR=14irpm; oximetria de pulso=96% em ar ambiente. ANTES DA ADMINISTRAÇÃO DE CARBOIDRATOS, DEVE SER PRESCRITO:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Tiamina ou vitamina B1. Não será aceito apenas vitamina B ou complexo B.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q64",
+      "numero": 64,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 45a, é trazida por familiares ao Pronto-Socorro por sonolência iniciada há 30 minutos. Exame físico: PA=102/74mmHg; FR=5irpm; FC=66bpm; T=36,30C e oximetria de pulso=90% em ar ambiente. Exame neurológico: pupilas mióticas; isocóricas; com leve resposta à luz; sem alterações neurológicas focais. Escala de coma de Glasgow: resposta verbal=2; resposta motora=4; abertura ocular=2. Ausculta pulmonar com raros roncos difusos. Glicemia capilar=122mg/dL. Iniciada ventilação com dispositivo bolsa-valva-máscara, enquanto se pondera a necessidade de intubação orotraqueal. A MEDICAÇÃO INTRAVENOSA INDICADA PARA ADMINISTRAÇÃO IMEDIATA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Naloxone",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q65",
+      "numero": 65,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 31a, procura Pronto-Socorro com quadro de tosse produtiva há dez dias e episódios de febre não aferida com queda do estado geral. Refere inapetência e emagrecimento na última semana. Antecedentes pessoais: etilista há 10 anos. Exame físico: mau estado geral; sonolento; desidratado; descorado +/4; PA=95/63mmHg; FC=113bpm; FR=22irpm; T=36,1oC; oximetria de pulso=94% em ar ambiente. Coração: bulhas rítmicas taquicárdicas e hiperfonéticas, sem sopros. Pulmões: murmúrio vesicular diminuído em base direita. Abdome: plano, tenso à palpação, fígado palpável a cerca de 2cm do rebordo costal direito; baço não palpável. Membros: sem edemas. Radiograma de tórax (imagem Q65). Líquido pleural: eritrocrômico; hemácias=27.000/mm3; leucócitos=1.445/mm3 (96% linfomononucleares, 4% polimorfonucleares); raras células mesoteliais; proteínas totais=3,6g/dL; glicose=125mg/dL; desidrogenase láctica=388UI/L; adenosina deaminase=51UI/L. O PROVÁVEL AGENTE ETIOLÓGICO É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q65.png",
+          "rotulo": "IMAGEM Q65",
+          "legenda": "IMAGEM Q65 (correspondente à questão 65)",
+          "pagina": 25
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Mycobacterium tuberculosis. Não será aceito tuberculose",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q66",
+      "numero": 66,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 32a, iniciou quadro de ptose palpebral à direita (D) há cerca de 20 dias. Há cinco dias evoluiu com quadro de diplopia horizontal, disfagia, disartria e fraqueza em membros, todos com piora expressiva no período noturno, sendo que desperta pela manhã assintomática. Exame físico: ptose palpebral D, disartria e fraqueza muscular de quatro membros nas provas de fatigabilidade, com melhora ao repouso. Pesquisa de anticorpo anti-receptor de acetilcolina=positivo. A NEOPLASIA MAIS COMUMENTE ASSOCIADA A ESSE CASO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Timoma",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q67",
+      "numero": 67,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 42a, retorna à Unidade Básica de Saúde com queixa de exantema acometendo face, tronco e membros superiores há duas semanas, com o surgimento de edema facial há três dias. Há dois meses, foram introduzidas as seguintes medicações: anlodipino 5mg/dia; sinvastatina 20mg/dia e alopurinol 300mg/dia. Antecedentes pessoais: hipertensão arterial há quatro anos, em uso prévio de atenolol 50mg/dia; síndrome metabólica; cefaleia tensional, com uso frequente de dipirona. Exame físico: T=38,3ºC; presença de linfonodos palpáveis, discretamente aumentados e móveis em cadeia cervical e axilar; hepatomegalia dolorosa a 5cm do rebordo costal direito. A MEDICAÇÃO COM MAIOR PROBABILIDADE DE ASSOCIAÇÃO COM ESTE QUADRO CLÍNICO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Alopurinol",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q68",
+      "numero": 68,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 35a, HIV positivo há três anos, em uso regular de terapia antirretroviral, sem infecções oportunistas prévias e sem outras comorbidades. Manteve-se durante todo o período de seguimento com contagem de CD4+ > 500cel/mm3 e carga viral negativa. Em janeiro de 2023, apresentou quadro de exantema não pruriginoso, maculopapular disseminado, acometendo palmas das mãos e plantas dos pés, com VDRL=1:128 e teste treponêmico=positivo. Realizou tratamento com benzilpenicilina benzatina 2.400.000UI, dose única e foi realizada notificação compulsória. Em setembro de 2023, paciente retorna assintomático, com VDRL=1:64. A CONDUTA PARA ESTE PACIENTE É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Coleta de liquor ou liquido cefalorraquidiano ou punção liquórica",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 7
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q69",
+      "numero": 69,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 55a, foi trazida por familiares à Unidade de Emergência por febre, cefaleia e confusão mental há quatro dias. Antecedentes: diabetes e hipertensão arterial. Exame físico: PA=132/68mmHg; FC=102bpm; FR=20irpm; T=37,5ºC. Ausculta cardíaca e pulmonar sem alterações, ausência de lesões de pele. Exame neurológico: apresenta resposta motora ao comando, verbal com palavras confusas e ocular ao comando verbal. Pupilas isocóricas e fotorreagentes. Sinais de Kernig e Brudzinski presentes. Sem déficits focais. Iniciada expansão volêmica. Líquido cefalorraquidiano: aspecto turvo, 800células/mm3 com predomínio de polimorfonucleares, proteína=80mg/dL, glicose=15mg/dL, bacterioscopia=cocos Gram-positivos aos pares. O PRIMEIRO FÁRMACO A SER ADMINISTRADO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Dexametasona ou corticoide ou corticosteroide",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 7
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q70",
+      "numero": 70,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 66a, assintomática, comparece à Unidade Básica de Saúde para consulta de rotina. Ganhou cinco quilogramas nos últimos 12 meses. Antecedentes pessoais: hipertensão arterial e dislipidemia. Em uso regular de enalapril e atorvastatina. Exame físico: IMC=29Kg/m2; PA=136/82mmHg; FC=68bpm. Exames laboratoriais: glicemia de jejum=118mg/dL; hemoglobina glicada=6,3%; TSH=2,36UI/L. CONSIDERANDO OS EXAMES LABORATORIAIS, DE ACORDO COM A DIRETRIZ DA SOCIEDADE BRASILEIRA DE DIABETES (2020), A CONDUTA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Modificação do estilo de vida ou dieta e atividade física ou promoção da saúde. Introdução de qualquer medicação será considerada errada.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 7
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q71",
+      "numero": 71,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 23a, procura a Unidade Básica de Saúde referindo evacuações líquidas há cinco meses, não sanguinolentas, acompanhadas de cólicas, além de aumento da eliminação de gases. Os sintomas melhoram com o jejum. Nega perda de peso, uso de antibióticos ou comorbidades. Exame físico sem alterações. Exames laboratoriais: hemoglobina=14,2g/dL; hematócrito=42,2%; leucócitos=7.800/mm3; coprocultura e parasitológico de fezes (três amostras) negativos. A CONDUTA INICIAL É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Teste da dieta sem lactose ou restrição de lactose ou dieta sem lactose.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 8
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q72",
+      "numero": 72,
+      "area": "Clínica Médica",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 34a, procura Pronto Atendimento por cefaleia há duas semanas, que inicialmente melhorava com analgésicos simples, evoluindo com piora progressiva. Tem apresentado episódios de mal-estar, caracterizado como palpitações e tremores de extremidades e sudorese intensa, tratado como síndrome do pânico, aguardando consulta do psiquiatra. Nos últimos dois dias refere ter piorado da cefaleia. Nas últimas 24 horas está com náuseas, cansaço aos mínimos esforços e redução do volume urinário. Exame físico: paciente um pouco agitado; pulsação carotídea visível; PA=224/144mmHg; FC=128bpm; FR=26irpm; oximetria de pulso=92% em ar ambiente. Pulmões: crepitações finas em 2/3, bilateralmente; edema +/4 em membros inferiores. Fundo de olho (imagem Q72). CONSIDERANDO A HIPÓTESE DIAGNÓSTICA, O MEDICAMENTO DE ESCOLHA É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q72.png",
+          "rotulo": "Imagem Q72",
+          "legenda": "Imagem Q72 (correspondente à questão 72)",
+          "pagina": 25
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Nitroprussiato de sódio ou labetalol ou nicardipina. Medicação VO não será aceita.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 8
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q73",
+      "numero": 73,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 57a, hospitalizado por quadro de icterícia, colúria, acolia fecal, inapetência e perda de peso de 6Kg no último mês, foi diagnosticado como tumor de cabeça de pâncreas. Exame físico: T=36,3ºC; PA=126/74mmHg; FC=82bpm. Ausência de lesões cutâneas; coração: bulhas rítmicas, sem sopros. Exames de estadiamento: tomografia de tórax: imagem de falha de enchimento em átrio esquerdo, com cerca de 3cm de diâmetro, móvel e pedunculada. Ecocardiograma transesofágico: presença de tumor aderido à parede anterior do átrio esquerdo, pedunculada, móvel, que se protrai para a válvula mitral na contração atrial, obstruindo parcialmente a mesma, sem causar alteração hemodinâmica. Ressonância do coração: imagem não compatível com trombo. (imagem Q73). A HIPÓTESE DIAGNÓSTICA DESTE TUMOR É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q73.png",
+          "rotulo": "IMAGEM Q73",
+          "legenda": "IMAGEM Q73 (correspondente à questão 73)",
+          "pagina": 26
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Mixoma. Não será aceito tumor intracardíaco",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q74",
+      "numero": 74,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 1a, é trazido à consulta de Puericultura pela mãe, que reporta aumento vespertino do lado direito do escroto, indolor e intermitente, desde o nascimento. Exame físico: transiluminação do escroto direito positiva. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Hidrocele comunicante. Não será aceito apenas hidrocele",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q75",
+      "numero": 75,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "A administração do ácido tranexâmico é realizada para prevenir a coagulopatia no paciente traumatizado grave em choque hipovolêmico. O TEMPO MÁXIMO, APÓS O EVENTO TRAUMÁTICO, EM QUE A PRIMEIRA DOSE DEVE SER ADMINISTRADA É DE:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "3 horas ou 180 minutos",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q76",
+      "numero": 76,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 25a, vítima de colisão frontal entre dois veículos em alta velocidade. Refere acionamento do “air-bag”. Admitido em um Centro de Trauma, consciente e orientado, escala de coma de Glasgow=15, PA=106/58mmHg, FC=115bpm, FR=26irpm, oximetria de pulso=95% em aporte de O2 12L/min com máscara não reinalante. Radiograma de tórax: (imagem Q76). O EXAME QUE CONFIRMA A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q76.png",
+          "rotulo": "IMAGEM Q76",
+          "legenda": "IMAGEM Q76 (correspondente à questão 76)",
+          "pagina": 26
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Angiotomografia de tórax ou tomografia de tórax contrastado. Não será aceita apenas tomografia de tórax. A menção ao contraste é essencial. Sinonímias de exames contrastados de aorta torácica serão considerados.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q77",
+      "numero": 77,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 20a, vítima de colisão de motocicleta com anteparo fixo, apresenta fratura exposta de fêmur e tíbia esquerdos, sem sangramento ativo. Admitida consciente, orientada, estável hemodinamicamente. Na avaliação do membro inferior esquerdo, observa-se alteração de coloração em relação ao membro contralateral e ausência de pulsos pedioso e tibial posterior, com pulso femoral presente. A ESTRUTURA LESIONADA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Artéria poplítea",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q78",
+      "numero": 78,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 38a, vítima de queda de costas, de andaime de cerca de seis metros. Encaminhado consciente ao Centro de Trauma. Exame físico: Escala de coma de Glasgow=15; PA=82/46mmHg; FC=60bpm; FR=22irpm; oximetria de pulso=98% em ar ambiente; tetraplégico. Foi realizada reposição volêmica com 1.000mL de solução de Ringer com lactato aquecido, sem alteração nos sinais vitais. Radiograma de tórax na sala de emergência sem achados relacionados ao trauma, e E-FAST negativo em todas as áreas. Possui estabilidade de bacia à avaliação e não apresenta sinais de fraturas de extremidades. QUAL A FISIOPATOLOGIA DO CHOQUE?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Perda de tônus simpático. Não será aceito choque neurogênico. A comanda solicita a fisiopatologia do choque, não a classificação.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q79",
+      "numero": 79,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 22a, 70Kg, deu entrada no Pronto-Socorro com extenso ferimento corto-contuso da pele na coxa direita, secundário a um acidente doméstico. A sutura será realizada sob anestesia local, utilizando lidocaína 1% sem vasoconstritor. O VOLUME MÁXIMO DESTE ANESTÉSICO, PERMITIDO PARA ESTE PACIENTE, É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "60 ml. Será aceita também a dose de 300mg.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q80",
+      "numero": 80,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 23a, casada, nulípara, com estenose mitral grave, ritmo sinusal, foi submetida à cirurgia para troca valvar, com válvula biológica. QUAL O BENEFÍCIO, EM CASO DE GESTAÇÃO, NA ESCOLHA DESTA VÁLVULA?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Não necessitar de anticoagulação durante a gravidez.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q81",
+      "numero": 81,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 48a, vem encaminhado para serviço de referência em cirurgia torácica para avaliação de derrame pleural complicado. Deu entrada consciente, orientado e dispneico, com drenagem torácica realizada previamente no serviço de origem, conforme esquema abaixo. QUAL O MOTIVO PARA O QUADRO CLÍNICO APRESENTADO?",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q81.png",
+          "rotulo": null,
+          "legenda": null,
+          "pagina": 11
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Conexão inadequada do circuito ao frasco coletor ou sistema coletor aberto ou dreno inserido em respiro.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q82",
+      "numero": 82,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 45a, admitida em Pronto-Socorro com queixa de dor abdominal súbita em epigastro, associada a náuseas, sem vômitos. Nega febre ou alterações de hábito intestinal e urinário. Está em tratamento de uma tendinite no membro superior direito com anti-inflamatório não esteroidal há cinco dias. Radiograma de abdome (imagem Q82). O DIAGNÓSTICO SINDRÔMICO É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q82.png",
+          "rotulo": "IMAGEM Q82",
+          "legenda": "IMAGEM Q82 (correspondente à questão 82)",
+          "pagina": 26
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Abdome agudo por perfuração ou abdome agudo perfurativo. Somente abdome agudo não será pontuado, assim como diagnósticos etiológicos- úlcera, úlcera perfurada, etc.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q83",
+      "numero": 83,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "O câncer de tireoide acomete indivíduos de qualquer sexo e faixa etária. As mulheres representam cerca de 75% dos casos e, em adultos jovens, é a neoplasia maligna mais comum. A incidência global aumentou nos últimos 40 anos, principalmente o diagnóstico dos microcarcinomas. A PROVÁVEL JUSTIFICATIVA DO AUMENTO DE DIAGNÓSTICOS É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Excesso de exames de ultrassonografia ou maior rastreio ou maior investigação.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q84",
+      "numero": 84,
+      "area": "Cirurgia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 32a, assintomática, retorna à Unidade Básica de Saúde para receber resultados de exames. Ultrassonografia abdominal: presença de nódulo hepático, homogêneo, hiperecogênico e com limites bem definidos, com cerca de 3,0cm de diâmetro no segmento II. Tomografia computadorizada de abdome: presença de lesão hipoatenuante na fase pré-contraste. Após a infusão do contraste endovenoso, observou-se realce inicialmente periférico, globuliforme e descontínuo, evoluindo para realce progressivamente centrípeto. Ao final do exame, o nódulo apresentou-se repleto de contraste, isodenso em relação ao parênquima adjacente. O DIAGNÓSTICO MAIS PROVÁVEL DESTE NÓDULO HEPÁTICO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Hemangioma",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 12
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q85",
+      "numero": 85,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 4m, é trazido ao Pronto-Socorro com história de febre, diminuição da aceitação das mamadas, vômitos e sonolência há um dia. Exame físico: regular estado geral, hipoativo e com rendilhado cutâneo; T=38,2oC; FC=162bpm; FR=59irpm; oximetria de pulso=98% em ar ambiente; pulsos periféricos cheios; perfusão periférica=2s. O MÉTODO INDICADO PARA COLETA DE URINA PARA ESSE PACIENTE É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Coleta de urina por sonda uretral ou sonda vesical ou punção supra-púbica. Não serão consideradas coleta por jato médio ou saco coletor.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q86",
+      "numero": 86,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 9a, é trazido à Unidade Básica de Saúde com história de febre alta, dor de cabeça intensa e mal-estar geral há três dias. Relata mialgia e cansaço excessivo há um dia. Criança saudável, situação vacinal atualizada, costuma brincar em um campinho de futebol perto de casa, por onde circulam animais silvestres. Exame físico: T=38,5°C; rash cutâneo e dor abdominal à palpação. Foi iniciado tratamento empírico e solicitada coleta de duas amostras de sorologia para a confirmação da hipótese diagnóstica. O INTERVALO DE TEMPO, ENTRE ESTAS DUAS COLETAS, DEVE SER DE:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "15 dias ou 2 semanas",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q87",
+      "numero": 87,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menina, 8 dias de vida, é trazida ao Pronto-Socorro com quadro de vômitos, letargia, perda de peso, sinais de desidratação, perfusão periférica lentificada, FC=185bpm. Exames laboratoriais: sódio=118mEq/L; potássio=8mEq/L; glicose=39mg/dL. Mãe refere que um dos exames do teste de triagem neonatal biológica está alterado. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "hiperplasia adrenal congênita forma clássica ou hiperplasia adrenal congênita perdedora de sal ou insuficiência adrenal.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q88",
+      "numero": 88,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Recém-nascido, 40 semanas de idade gestacional, nasce em apneia, pálido e flácido, de parto cesárea de urgência por descolamento prematuro de placenta. Após passos iniciais da reanimação, apresenta FC=10bpm e apneia. Foi aplicada ventilação com pressão positiva por máscara, sem resposta, e a seguir foi intubado com sucesso e iniciada a ventilação por cânula traqueal. Após 30 segundos, manteve FC=10bpm, sem resposta ao aumento da fração inspirada de oxigênio até 100%. Iniciada compressão torácica. O RITMO DE COMPRESSÃO TORÁCICA EM RELAÇÃO À VENTILAÇÃO DEVE SER DE:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "3:1 ou 3 compressões para 1 ventilação",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q89",
+      "numero": 89,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 14a, previamente hígido, retorna à Unidade Básica de Saúde para avaliação de exames. Na consulta anterior, há dois dias, referia fadiga, anorexia, náuseas, mal-estar geral, vômitos e pele amarelada há sete dias. Hábito intestinal: fezes esbranquiçadas, sem sangue ou muco. Hábito urinário: urina escura. Frequenta escola em turno integral, com vários casos semelhantes que começaram há 20 dias. Exame físico: PA=102/80mmHg; FC=110bpm; FR=22irpm; bom estado geral; consciente; acianótico; ictérico 2+/4; afebril; hipocorado +/4+; mucosas úmidas. Abdome: fígado palpável a 2cm do rebordo costal direito, fibroelástico, borda aguda, superfície lisa, doloroso à palpação; sinal de Blumberg ausente; baço não palpável e não percutível. Exames laboratoriais: ALT=2.503UI/L; AST=2.165UI/L; gamaGT=195UI/L; fosfatase alcalina=680UI/L; bilirrubina total=9mg/dL; bilirrubina direta=7,8mg/dL. O EXAME LABORATORIAL QUE CONFIRMA A HIPÓTESE DIAGNÓSTICA MAIS PROVÁVEL É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Sorologia para hepatite A. Não será aceito hepatite isoladamente.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q90",
+      "numero": 90,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menina, 6a, é trazida para Puericultura com história de aumento de mamas e aparecimento de pelos em região genital há três meses. Nega outras queixas, doenças ou uso de medicamentos. Exame físico: peso=z escore=+0,36DP; estatura=z escore= + 1DP; estadio de Tanner: M3, com mamas túrgidas; P2, com poucos pelos grossos e escuros em grandes lábios; odor axilar, sem pelos axilares ou acne. QUAL EXAME LABORATORIAL ESTÁ INDICADO PARA CONFIRMAR A HIPÓTESE DIAGNÓSTICA?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "LH ou hormônio luteinizante",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q91",
+      "numero": 91,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 2a, é trazido para avaliação no Pronto-Socorro com queixa de chiado no peito e falta de ar há 20 dias. Refere tratamento de pneumonia iniciado há 14 dias e, mesmo após ter usado dois antibióticos diferentes, mantém tosse emetizante, com vômito constituído por secreção amarelada em grande quantidade. Exame físico: bom estado geral; hidratado; corado; presença de retração supraesternal e intercostal bilateral leves; pulmões: murmúrio vesicular diminuído em base direita, presença de roncos e raros sibilos difusos bilateralmente; coração: bulhas rítmicas, normofonéticas, sem sopros. Radiograma de tórax: opacidade homogênea nos 2/3 inferiores do hemitórax direito, com desvio mediastinal para a direita e hiperinsuflação do pulmão esquerdo e do 1/3 superior do pulmão direito. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Aspiração de corpo estranho ou obstrução do bronquio de lobo inferior D. Apenas corpo estranho não pontua.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q92",
+      "numero": 92,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Recém-nascido, 40 semanas de idade gestacional. Sorologias maternas: HIV=negativo; teste rápido de sífilis=negativo; antiHCV=negativo; HBsAg=positivo, anti-HBsAg=negativo, HBeAg=positivo. SEGUNDO O PROTOCOLO CLÍNICO E DIRETRIZES TERAPÊUTICAS PARA PREVENÇÃO DA TRANSMISSÃO VERTICAL DE HIV, SÍFILIS E HEPATITES VIRAIS (2022), A CONDUTA EM RELAÇÃO AO BANHO DO RECÉM-NASCIDO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "ser realizado em água corrente E imediatamente após o nascimento. Qualquer outra situação de banho ou resposta parcial, serão consideradas incorretas.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q93",
+      "numero": 93,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 19a, terceiro dia de puerpério, procura Unidade Básica de Saúde referindo aparecimento de lesões pruriginosas pelo corpo há dois dias, com piora progressiva. Exame físico: presença de pápulas, vesículas e raras crostas em tronco, face e membros (imagem Q93). Recém-nascido, 72h de vida, assintomático, em aleitamento materno exclusivo, exame físico sem alterações. Antecedentes perinatais: oito consultas de pré-natal; gravidez e parto vaginal sem intercorrências; peso ao nascimento=3.520g; Apgar=9-10; Capurro=39semanas. CONSIDERANDO A DOENÇA MATERNA, A CONDUTA PARA O RECÉM-NASCIDO É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q93.png",
+          "rotulo": "IMAGEM Q93",
+          "legenda": "IMAGEM Q93",
+          "pagina": 27
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Imunoglobulina humana antivaricela zoster (Ighavz).",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q94",
+      "numero": 94,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menina, 11a, é trazida ao Pronto-Socorro com queixa de dor em joelho direito há aproximadamente três meses, com aumento progressivo da intensidade da dor e claudicação há duas semanas. Nega febre, sinais inflamatórios ou trauma prévio. Relata que vai para escola e no restante do tempo fica no celular. Antecedentes pessoais: hipotireoidismo em tratamento. Sem antecedentes familiares relevantes. Há uma semana realizou radiograma de joelhos, que estava normal. Exame físico: IMC=35Kg/m2; membros inferiores: assume atitude de rotação externa do membro inferior direito com limitação da rotação interna do quadril correspondente. Radiograma de quadril (imagem Q94). A HIPÓTESE DIAGNÓSTICA PRINCIPAL É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q94.png",
+          "rotulo": "IMAGEM Q94",
+          "legenda": "IMAGEM Q94",
+          "pagina": 27
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Episiolistese de cabeça de fêmur ou epifisiólise femoral proximal ou epifisiólise proximal do fêmur.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q95",
+      "numero": 95,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Quatro meninas saudáveis de 7 anos, pré-púberes, têm pais baixos. As quatro têm estatura 4cm abaixo do percentil três da curva de referência, estando dentro da altura alvo (canal familiar). Avaliação da idade óssea: menina A=4anos; menina B=6anos; menina C=7anos; menina D=9anos. CONSIDERANDO QUE TODAS CONTINUARÃO SEU CRESCIMENTO SEM INTERFERÊNCIA DE DOENÇAS INTERCORRENTES OU AGRAVOS NUTRICIONAIS, QUAL DAS MENINAS TEM MELHOR PROGNÓSTICO DE ALTURA FINAL?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Menina A",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q96",
+      "numero": 96,
+      "area": "Pediatria",
+      "formato": "resposta_curta",
+      "enunciado": "Menino, 5a, previamente hígido, é trazido à Unidade Básica de Saúde com história de tosse seca há 18 dias, em crises, acompanhada de vômitos após alguns episódios e, por vezes, parece ter dificuldade em retomar o fôlego. Carteira vacinal: últimas vacinas registradas com 12 meses de vida. Exame físico: bom estado geral; corado; T=36,4oC; FR=24irpm; durante inspeção de orofaringe apresentou tosse e ficou pletórico. Ausculta pulmonar: murmúrio vesicular presente, sem ruídos adventícios. O AGENTE ETIOLÓGICO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Bordetella pertussis ou Bordetella",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q97",
+      "numero": 97,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 32a, tercigesta com duas cesáreas anteriores, sem comorbidades, comparece à consulta pré-natal de rotina às 22 semanas de gravidez. Traz consigo o seguinte cartão vacinal:\n\n| Hepatite B Janeiro 2013 | Hepatite B Fevereiro 2013 | Hepatite B Julho 2013 |  |\n|---|---|---|---|\n| Influenza Abril 2013 | Influenza Maio 2019 |  | Influenza Abril 2023 |\n| dT Agosto 2006 | dT Outubro 2006 | dTpa Abril 2013 | dTpa Maio 2019 |\n| Febre Amarela Maio 2020 |  |  |  |\n| Covid-19 Janeiro 2021 | Covid-19 Fevereiro 2021 | Covid-19 Outubro 2021 | Covid-19 Julho 2023 |\n| Sarampo/caxumba/rubéola Agosto 2006 | Sarampo/caxumba/rubéola Maio 2020 |  |  |\n\nA ORIENTAÇÃO VACINAL, NESTE MOMENTO DO PRÉ NATAL, É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Indicar dTpa (difteria, tétano e coqueluche acelular) ou tríplice acelular",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q98",
+      "numero": 98,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 35a, procura Unidade Básica de Saúde com queixa de leucorreia clara, prurido e irritação vulvovaginal, além de odor desagradável. Exame ginecológico: especular visualiza imagem (Q98), pH vaginal > 4,5 e teste de Whiff positivo. O DIAGNÓSTICO ETIOLÓGICO É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q98.png",
+          "rotulo": "IMAGEM Q98",
+          "legenda": "IMAGEM Q98 (correspondente a questão 98)",
+          "pagina": 28
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Tricomoníase, Trichomonas vaginallis",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q99",
+      "numero": 99,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 28a, primigesta, evolui para parto normal espontâneo às 37 semanas e 4 dias, sem intercorrências. Antecedentes: diabetes tipo 2, em uso de dieta e exercícios pré-concepcional; necessitou de insulina durante a gravidez, com uso de 40 unidades de insulina NPH antes do parto. QUAL A CONDUTA QUANTO À INSULINA NO PRIMEIRO DIA DE PUERPÉRIO?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Reduzir para 20 unidades de insulina NPH (aceitar reduzir para metade ou 1/3 da dose). Retirar insulina ou apenas redução da dose, sem especificação, serão considerados errados.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q100",
+      "numero": 100,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 58a, comparece à Unidade Básica de Saúde para resultado de mamografia (imagem Q100). Exame físico: mamas simétricas, sem nódulos ou retrações, axilas e fossas subclaviculares livres. EM RELAÇÃO AO RASTREAMENTO DO CÂNCER DE MAMA, A ORIENTAÇÃO PARA ESTA PACIENTE É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q100.png",
+          "rotulo": "IMAGEM Q100",
+          "legenda": "IMAGEM Q100 (correspondente a questão 100)",
+          "pagina": 28
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Repetir mamografia em 2 anos ou controle mamográfico de rotina",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q101",
+      "numero": 101,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Mulher, 32a, G3P1C1A1, idade gestacional de 41 semanas, dá entrada em trabalho de parto espontâneo, com evolução conforme partograma abaixo. Está deambulando, com dieta geral e com métodos não farmacológicos no alívio da dor. Antecedentes pessoais: sem comorbidades, último parto há três anos, por apresentação pélvica.",
+      "enunciado": "A CONDUTA OBSTÉTRICA É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q101.png",
+          "rotulo": null,
+          "legenda": "LEGENDA: C=LÍQUIDO CLARO I I I I=BOLSA ÍNTEGRA CARDIOTOCOGRAFIA NORMAL – CATEGORIA 1",
+          "pagina": 18
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Ocitocina ou prescrever ocitocina. (melhor resposta ocitocina IV. Se colocar outra via de administração, será considerada errada).",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 18
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q102",
+      "numero": 102,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Mulher, 32a, G3P1C1A1, idade gestacional de 41 semanas, dá entrada em trabalho de parto espontâneo, com evolução conforme partograma abaixo. Está deambulando, com dieta geral e com métodos não farmacológicos no alívio da dor. Antecedentes pessoais: sem comorbidades, último parto há três anos, por apresentação pélvica.",
+      "enunciado": "Parturiente evoluiu para dilatação total, com feto cefálico, em plano zero de De Lee. Após duas horas de expulsivo sem progressão da apresentação, foi realizada analgesia peridural contínua e ruptura artificial de membranas, sendo constatado mecônio 2+/4+. Quinze minutos após, com feto em plano +2 de De Lee e variedade occípito direita transversa fixa, apresentou a seguinte cardiotocografia: A CONDUTA INDICADA É:",
+      "alternativas": null,
+      "imagens": [
+        {
+          "arquivo": "images/2024-ad-p2/q101.png",
+          "rotulo": null,
+          "legenda": "LEGENDA: C=LÍQUIDO CLARO I I I I=BOLSA ÍNTEGRA CARDIOTOCOGRAFIA NORMAL – CATEGORIA 1",
+          "pagina": 18
+        },
+        {
+          "arquivo": "images/2024-ad-p2/q102.png",
+          "rotulo": null,
+          "legenda": "20/11/2023 20/11/2023 Mulher, 32a IG 41 semanas Toque: dilatação total cefálico",
+          "pagina": 19
+        }
+      ],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Fórcipe de Kielland ou fórcipe de rotação",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 18
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q103",
+      "numero": 103,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 18a, secundigesta com parto vaginal anterior, idade gestacional de 31 semanas, procura Maternidade com quadro de ruptura espontânea de membranas e contrações uterinas; refere boa movimentação fetal. Antecedentes: apresentou inibição de trabalho de parto há cinco dias, tendo recebido duas doses de betametasona 12mg (total=24mg), com exames de rastreamento de infecção negativos e pesquisa de estreptococo do grupo B=negativa. Exame físico: bom estado geral; fácies de dor; afebril; FC=98bpm; PA=124/78mmHg; altura uterina=28cm; feto cefálico; BCF=156bpm; dinâmica uterina: 3 contrações fortes de 45 segundos em 10 minutos; exame especular: visualizada saída ativa de líquido amniótico claro sem grumos e sem odor do colo uterino, e dilatação de 4cm. Cardiotocografia=Categoria 1. O MEDICAMENTO NECESSÁRIO A SER PRESCRITO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Sulfato de magnésio",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 19
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q104",
+      "numero": 104,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Adolescente, 18a, iniciou vida sexual e deseja orientação para anticoncepção hormonal. Não quer colocar dispositivo intrauterino. Refere episódios frequentes de cefaleia com duração de 4 a 6 horas, pulsátil, latejante, unilateral, associada a náuseas e vômitos, com sensibilidade à luz. Nega antecedente familiar de trombose venosa. Exame físico: PA=113/72mmHg; IMC=25Kg/m2; exame ginecológico=normal. O MÉTODO ANTICONCEPCIONAL INDICADO NESTE CASO É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Anticoncepcional oral com progestagênio OU implante de progestagênio OU injetável de progestagênio. Qualquer método não hormonal ou que contenha estrogênio será considerado errado.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 19
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q105",
+      "numero": 105,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 32a, G2P1(C1) A0, idade gestacional de 38 semanas e 4 dias, procura a Maternidade por sangramento vaginal em pequena quantidade, acompanhado de cólica de forte intensidade, que iniciaram hoje. Queixa de ausência de movimentos do bebê há um dia. Antecedentes: hipertensa crônica, sem uso de medicação, tabagista de três cigarros por dia, descolamento prematuro de placenta em gestação anterior. Exame físico: PA=122/78mmHg; FC=92bpm; FR=18irpm; abdome gravídico, altura uterina=32cm, útero hipertônico, BCF não auscultado. Especular: visualizado sangramento ativo em moderada quantidade, vindo de orifício cervical. Toque vaginal: colo dilatado 6cm, 80% esvaecido, bolsa íntegra tensa. Foi realizada amniotomia, com saída de líquido sanguinolento com coágulos; solicitados exames laboratoriais e reserva de sangue. Ultrassonografia à beira leito confirmou óbito fetal e presença de hematoma retrocoriônico de pequeno volume. A CONDUTA OBSTÉTRICA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Parto vaginal ou parto normal ou parto por via baixa. Não serão aceitos apenas parto ou cesárea.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q106",
+      "numero": 106,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 42a, G2P2, assintomática, comparece à Unidade Básica de Saúde para resultado de exame de colpocitologia oncótica. Resultado: células glandulares atípicas sem outras especificações (ACG-SOE). DE ACORDO COM AS DIRETRIZES BRASILEIRAS PARA O RASTREAMENTO DO CÂNCER DO COLO DO ÚTERO – INCA, A CONDUTA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Colposcopia ou encaminhar para colposcopia",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q107",
+      "numero": 107,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 31a, nuligesta, queixa-se de amenorreia há nove meses, desde que suspendeu o uso do anticoncepcional oral combinado, que utilizava há 10 anos, pois pretende engravidar. Nega alterações menstruais prévias. Exames de investigação: ultrassonografia transvaginal=sem alterações; beta-hCG sérico=negativo; TSH=3,6mUI/L; prolactina=21ng/mL; FSH=45mUI/mL. Após 15 dias, FSH=60mUI/mL. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Insuficiência ovariana prematura ou insuficiência ovariana precoce ou menopausa prematura. Deve estar informado prematura ou precoce. Sem esta indicação temporal, será considerada errada.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q108",
+      "numero": 108,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "resposta_curta",
+      "enunciado": "Mulher, 63a, G0, comparece à Unidade Básica de Saúde por sangramento via vaginal há uma semana, intermitente, em pequena quantidade, sem outras queixas. Refere ter apresentado sangramento semelhante há três meses, quando realizou ultrassonografia transvaginal mostrando linha endometrial regular, de 3mm de espessura. Antecedentes: menopausa aos 53 anos, sem uso de terapia hormonal. Exame físico: IMC=35Kg/m2; ginecológico: sem alterações. Colpocitologia oncótica=normal. A CONDUTA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Biópsia de endométrio com Pipelle ou curetagem uterina ou histeroscopia",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q109",
+      "numero": 109,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Todas as sextas-feiras, o médico e a agente comunitária de saúde coordenam um grupo de moradores durante caminhada pelo bairro. Costumam passar por horta que fornece diferentes vegetais a vários comércios da cidade. O médico observou que os trabalhadores exercem parte de sua atividade em pé, porém curvados, notadamente para colocar as sementes no solo, e que não usam equipamentos de proteção individual ao pulverizarem agrotóxicos nas plantações. Após a caminhada, o médico retorna à horta e combina de atender em consulta todos os cinquenta e quatro trabalhadores rurais nas próximas duas semanas. Detecta quinze trabalhadores com lombalgia crônica, três com dermatite nos braços e um com queixa de fraqueza, roncos, sibilos, salivação aumentada, sudorese e bradicardia. O médico transferiu este último paciente para um serviço de urgência, ofereceu sessões de ginástica laboral e alongamento a todos os trabalhadores e lhes explicou sobre o nexo causal entre os sintomas e a atividade ocupacional.",
+      "enunciado": "SE CONSIDERARMOS QUE A FREQUÊNCIA DE LOMBALGIA É SEMELHANTE EM TODAS AS HORTAS DO PAÍS, QUAL É O COEFICIENTE DE PREVALÊNCIA DESSA CONDIÇÃO CLÍNICA ENTRE OS TRABALHADORES RURAIS DE HORTA NO PAÍS?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "15/54 ou (x1.000) ou 278 por 1.000 trabalhadores de hortas rurais ou 0,278 ou 0,28",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 21
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q110",
+      "numero": 110,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Todas as sextas-feiras, o médico e a agente comunitária de saúde coordenam um grupo de moradores durante caminhada pelo bairro. Costumam passar por horta que fornece diferentes vegetais a vários comércios da cidade. O médico observou que os trabalhadores exercem parte de sua atividade em pé, porém curvados, notadamente para colocar as sementes no solo, e que não usam equipamentos de proteção individual ao pulverizarem agrotóxicos nas plantações. Após a caminhada, o médico retorna à horta e combina de atender em consulta todos os cinquenta e quatro trabalhadores rurais nas próximas duas semanas. Detecta quinze trabalhadores com lombalgia crônica, três com dermatite nos braços e um com queixa de fraqueza, roncos, sibilos, salivação aumentada, sudorese e bradicardia. O médico transferiu este último paciente para um serviço de urgência, ofereceu sessões de ginástica laboral e alongamento a todos os trabalhadores e lhes explicou sobre o nexo causal entre os sintomas e a atividade ocupacional.",
+      "enunciado": "QUAL A HIPÓTESE DIAGNÓSTICA PARA O MORADOR QUE FOI TRANSFERIDO AO SERVIÇO DE URGÊNCIA?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Intoxicação por organofosforado",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 21
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q111",
+      "numero": 111,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado": "A Saúde do Trabalhador (ST) é o campo da Saúde Pública que tem como objeto de estudo e intervenção as relações de produção-consumo e o processo saúde-doença das pessoas e, em particular, dos(as) trabalhadores(as). As ações de ST consideram o fenômeno saúde-doença na sua relação com o trabalho, em seus aspectos individuais e coletivos, biológicos e sociopolíticos. CITE UM DOS EIXOS NOS QUAIS AS AÇÕES DE SAÚDE DO(A) TRABALHADOR(A) ESTÃO ORGANIZADAS.",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "PROMOÇÃO DA SAÚDE (ou promoção da saúde no trabalho; ou promoção da saúde do(a) trabalhador(a)) ou ASSISTÊNCIA À SAÚDE (ou atenção à saúde; ou atenção integral à saúde – e suas variações incluindo “do(a) trabalhador(a)) ou VIGILÂNCIA EM SAÚDE DO TRABALHADOR (ou vigilância em saúde do(a) trabalhador(a))",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 21
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q112",
+      "numero": 112,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Durante a última década, várias famílias haitianas foram morar numa favela na periferia de uma grande cidade brasileira. Estudantes de medicina, vinculados a um programa de extensão universitária, passaram a realizar rodas de conversa e atendimentos em saúde. Perceberam que esses imigrantes não procuravam a Unidade Básica de Saúde, pois achavam que as consultas deveriam ser pagas, e grande parte estava desempregada ou em subemprego. Muitos eram hipertensos e acreditavam que essa condição estava associada à ingesta de determinados alimentos, como carne bovina, chocolate e refrigerantes. Os estudantes se interessaram em conhecer essas explicações da doença e os tratamentos adotados pelos imigrantes haitianos: chás (amendoim, alho ou babosa). Junto com a equipe de saúde da família, elaboraram um Projeto Terapêutico Singular, que incluiu a participação do Centro de Referência da Assistência Social. Uma das propostas foi de acompanhar um grupo de 50 adultos hipertensos, durante dois anos, a fim de estudar o nível pressórico e o possível surgimento de complicações. Explicaram aos haitianos que o sistema de saúde brasileiro é mantido com os impostos pagos pela população, que é gratuito, e que todas as pessoas, inclusive os estrangeiros, têm direito a atendimentos.",
+      "enunciado": "QUAL O MODELO DE ATENÇÃO À SAÚDE DO SISTEMA DE SAÚDE BRASILEIRO?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Beveridiano ou de seguridade social",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q113",
+      "numero": 113,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Durante a última década, várias famílias haitianas foram morar numa favela na periferia de uma grande cidade brasileira. Estudantes de medicina, vinculados a um programa de extensão universitária, passaram a realizar rodas de conversa e atendimentos em saúde. Perceberam que esses imigrantes não procuravam a Unidade Básica de Saúde, pois achavam que as consultas deveriam ser pagas, e grande parte estava desempregada ou em subemprego. Muitos eram hipertensos e acreditavam que essa condição estava associada à ingesta de determinados alimentos, como carne bovina, chocolate e refrigerantes. Os estudantes se interessaram em conhecer essas explicações da doença e os tratamentos adotados pelos imigrantes haitianos: chás (amendoim, alho ou babosa). Junto com a equipe de saúde da família, elaboraram um Projeto Terapêutico Singular, que incluiu a participação do Centro de Referência da Assistência Social. Uma das propostas foi de acompanhar um grupo de 50 adultos hipertensos, durante dois anos, a fim de estudar o nível pressórico e o possível surgimento de complicações. Explicaram aos haitianos que o sistema de saúde brasileiro é mantido com os impostos pagos pela população, que é gratuito, e que todas as pessoas, inclusive os estrangeiros, têm direito a atendimentos.",
+      "enunciado": "QUAL O TIPO DE ESTUDO QUE FOI PROPOSTO?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Coorte",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q114",
+      "numero": 114,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado": "Segundo a Organização Mundial de Saúde, são duas as doenças que acometem as crianças com menos de cinco anos e que têm maior associação com o meio-ambiente. ALÉM DAS DOENÇAS RESPIRATÓRIAS AGUDAS DO TRATO INFERIOR, A OUTRA DOENÇA É:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Diarreia",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q115",
+      "numero": 115,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado": "Homem, 54a, comparece à Unidade Básica de Saúde, onde foi avaliado com teste rápido para sífilis, cujo resultado foi positivo. O médico prescreve o tratamento e indica a investigação e o tratamento do seu parceiro. O homem pede que o companheiro seja tratado, mas que não lhe seja informado o diagnóstico de sífilis. DE ACORDO COM O MÉTODO DELIBERATIVO PROPOSTO POR DIEGO GRACIA, CITE UM DOS ASPECTOS A SER CONSIDERADO.",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Gabarito: fatos ou valores ou deveres ou responsabilidades.",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q116",
+      "numero": 116,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Pedro, 36a, comparece ao Pronto Atendimento referindo cefaleia, tonturas, vômitos, sudorese intensa, mal-estar geral, fraqueza e dor abdominal, que apareceram alguns minutos depois de preparar um defensivo agrícola. Exame físico: PA=110/72mmHg; FC=74bpm; oximetria de pulso=93% em ar ambiente; consciente; pálido; lacrimejante; apresentando rinorreia, sialorreia, tosse e sudorese intensas, com roupas molhadas. Pupilas mióticas; pulmões: sibilos, roncos e estertores bilateralmente; abdome: ruídos aumentados. Contexto familiar: é agricultor familiar desde os 16 anos, começou trabalhar com o pai e dois irmãos mais velhos. Na atualidade é casado com Maria de 34 anos e tem dois filhos, de 14 e 16 anos, que ajudam na lavoura de tomate, quiabo, vagem, milho e feijão, no contraturno da escola. Maria, além das atividades da casa, trabalha na lavoura e lava as roupas utilizadas pelo marido e filhos no trabalho.",
+      "enunciado": "ALÉM DO TRATAMENTO DE MANUTENÇÃO DA VIDA, CITE O TRATAMENTO ESPECÍFICO QUE DEVE SER ADMINISTRADO PARA PEDRO:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Atropina/atropinização",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 23
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q117",
+      "numero": 117,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Pedro, 36a, comparece ao Pronto Atendimento referindo cefaleia, tonturas, vômitos, sudorese intensa, mal-estar geral, fraqueza e dor abdominal, que apareceram alguns minutos depois de preparar um defensivo agrícola. Exame físico: PA=110/72mmHg; FC=74bpm; oximetria de pulso=93% em ar ambiente; consciente; pálido; lacrimejante; apresentando rinorreia, sialorreia, tosse e sudorese intensas, com roupas molhadas. Pupilas mióticas; pulmões: sibilos, roncos e estertores bilateralmente; abdome: ruídos aumentados. Contexto familiar: é agricultor familiar desde os 16 anos, começou trabalhar com o pai e dois irmãos mais velhos. Na atualidade é casado com Maria de 34 anos e tem dois filhos, de 14 e 16 anos, que ajudam na lavoura de tomate, quiabo, vagem, milho e feijão, no contraturno da escola. Maria, além das atividades da casa, trabalha na lavoura e lava as roupas utilizadas pelo marido e filhos no trabalho.",
+      "enunciado": "O CASO DO PEDRO DEVERÁ SER REGISTRADO EM QUAL SISTEMA DE INFORMAÇÃO EPIDEMIOLÓGICA?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "SINAN ou Sistema informative de agravos de notificação",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 23
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q118",
+      "numero": 118,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "Pedro, 36a, comparece ao Pronto Atendimento referindo cefaleia, tonturas, vômitos, sudorese intensa, mal-estar geral, fraqueza e dor abdominal, que apareceram alguns minutos depois de preparar um defensivo agrícola. Exame físico: PA=110/72mmHg; FC=74bpm; oximetria de pulso=93% em ar ambiente; consciente; pálido; lacrimejante; apresentando rinorreia, sialorreia, tosse e sudorese intensas, com roupas molhadas. Pupilas mióticas; pulmões: sibilos, roncos e estertores bilateralmente; abdome: ruídos aumentados. Contexto familiar: é agricultor familiar desde os 16 anos, começou trabalhar com o pai e dois irmãos mais velhos. Na atualidade é casado com Maria de 34 anos e tem dois filhos, de 14 e 16 anos, que ajudam na lavoura de tomate, quiabo, vagem, milho e feijão, no contraturno da escola. Maria, além das atividades da casa, trabalha na lavoura e lava as roupas utilizadas pelo marido e filhos no trabalho.",
+      "enunciado": "PARA A INVESTIGAÇÃO DA EXPOSIÇÃO DA MARIA, CITE O EXAME LABORATORIAL ESPECÍFICO OU BIOMARCADOR DE EFEITO QUE INDICA CONTATO DE LONGO PRAZO:",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Quantificação da atividade da acetilcolinesterase/ cholinesterase verdadeira/ cholinesterase eritrocitaria",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 23
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q119",
+      "numero": 119,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "A nocividade do trabalho pode estar relacionada a insumos e matérias-primas, objetos, máquinas e ferramentas utilizados, que podem produzir lesões e situações de risco à saúde, como a presença de poeiras, substâncias químicas e agentes físicos perigosos ou nocivos. A organização do trabalho, expressa na duração, na intensidade, nas exigências de produtividade, na jornada de trabalho em turnos, no local de trabalho e nas relações conflituosas com a chefia e os colegas, pode causar sofrimento e adoecimento.",
+      "enunciado": "CITE UMA DOENÇA OCULAR CORRELACIONADA COM A EXPOSIÇÃO A RADIAÇÕES NÃO IONIZANTES.",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Catarata ou conjuntivite ou ceratite",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 24
+      }
+    },
+    {
+      "id": "unicamp-2024-ad-p2-q120",
+      "numero": 120,
+      "area": "Saúde Coletiva",
+      "formato": "resposta_curta",
+      "enunciado_compartilhado": "A nocividade do trabalho pode estar relacionada a insumos e matérias-primas, objetos, máquinas e ferramentas utilizados, que podem produzir lesões e situações de risco à saúde, como a presença de poeiras, substâncias químicas e agentes físicos perigosos ou nocivos. A organização do trabalho, expressa na duração, na intensidade, nas exigências de produtividade, na jornada de trabalho em turnos, no local de trabalho e nas relações conflituosas com a chefia e os colegas, pode causar sofrimento e adoecimento.",
+      "enunciado": "QUAL O FATOR DE RISCO OCUPACIONAL COMUM, ASSOCIADO COM NEOPLASIA MALIGNA DE PULMÃO E SÍNDROME DE CAPLAN?",
+      "alternativas": null,
+      "imagens": [],
+      "gabarito": {
+        "letra": null,
+        "resposta_esperada": "Silica ou silica livre",
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "pagina": 24
+      }
+    }
+  ]
+}

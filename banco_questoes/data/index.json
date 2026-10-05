@@ -1,0 +1,306 @@
+{
+  "provas": [
+    {
+      "id": "unicamp-2026-ad-p1",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2026,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 1 (manhã)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2025-11-16",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2026/provas/dAD1.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2026/resp_esperadas/resp_ad1.pdf",
+        "gabarito_retificado_em": "01/12/2025"
+      },
+      "total_questoes": 50,
+      "arquivo_json": "data/2026-ad-p1.json",
+      "arquivo_md": "markdown/2026-ad-p1.md",
+      "total_imagens": 12,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2026-ad-p2",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2026,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 2 (tarde)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2025-11-16",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2026/provas/dAD2.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2026/resp_esperadas/resp_ad2.pdf",
+        "gabarito_retificado_em": "01/12/2025"
+      },
+      "total_questoes": 50,
+      "arquivo_json": "data/2026-ad-p2.json",
+      "arquivo_md": "markdown/2026-ad-p2.md",
+      "total_imagens": 11,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2026-ad-remanescentes",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2026,
+      "modalidade": "acesso_direto",
+      "tipo": "vagas_remanescentes",
+      "turno": "Vagas remanescentes (prova 2)",
+      "formato": "resposta_curta",
+      "data_aplicacao": null,
+      "fontes": {
+        "prova_pdf": "https://portal.fcm.unicamp.br/wp-content/uploads/sites/58/2026/03/AD-P2-para-publicar-1.pdf",
+        "gabarito_pdf": "https://portal.fcm.unicamp.br/wp-content/uploads/sites/58/2026/03/AD-prova-2-gabarito-1.pdf",
+        "gabarito_retificado_em": null
+      },
+      "total_questoes": 50,
+      "arquivo_json": "data/2026-ad-remanescentes.json",
+      "arquivo_md": "markdown/2026-ad-remanescentes.md",
+      "total_imagens": 4,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2025-ad-p1",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2025,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 1 (manhã)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2024-11-17",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2025/provas/dAD1.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2025/resp_esperadas/resp_ad1.pdf",
+        "gabarito_retificado_em": "27/11/2024"
+      },
+      "total_questoes": 50,
+      "arquivo_json": "data/2025-ad-p1.json",
+      "arquivo_md": "markdown/2025-ad-p1.md",
+      "total_imagens": 8,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2025-ad-p2",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2025,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 2 (tarde)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2024-11-17",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2025/provas/dAD2.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2025/resp_esperadas/resp_ad2.pdf",
+        "gabarito_retificado_em": "02/12/2024"
+      },
+      "total_questoes": 50,
+      "arquivo_json": "data/2025-ad-p2.json",
+      "arquivo_md": "markdown/2025-ad-p2.md",
+      "total_imagens": 7,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2024-ad-p1",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2024,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 1 (manhã)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2023-11-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD1.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/resp_esperadas/resp_ad1.pdf",
+        "gabarito_retificado_em": null
+      },
+      "total_questoes": 60,
+      "arquivo_json": "data/2024-ad-p1.json",
+      "arquivo_md": "markdown/2024-ad-p1.md",
+      "total_imagens": 11,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2024-ad-p2",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2024,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 2 (tarde)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2023-11-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/provas/dAD2.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2024/resp_esperadas/resp_ad2.pdf",
+        "gabarito_retificado_em": null
+      },
+      "total_questoes": 60,
+      "arquivo_json": "data/2024-ad-p2.json",
+      "arquivo_md": "markdown/2024-ad-p2.md",
+      "total_imagens": 12,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2023-ad-p1",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2023,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 1 (manhã)",
+      "formato": "multipla_escolha",
+      "data_aplicacao": "2022-12-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2023/provas/tADW.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2023/gabaritos/g1_acessodireto_W.pdf",
+        "gabarito_retificado_em": "02/01/2023"
+      },
+      "total_questoes": 80,
+      "arquivo_json": "data/2023-ad-p1.json",
+      "arquivo_md": "markdown/2023-ad-p1.md",
+      "total_imagens": 15,
+      "anuladas": [
+        27
+      ],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2023-ad-p2",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2023,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 2 (tarde)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2022-12-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2023/provas/dAD.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2023/resp_esperadas/resp_ad.pdf",
+        "gabarito_retificado_em": "02/01/2023"
+      },
+      "total_questoes": 60,
+      "arquivo_json": "data/2023-ad-p2.json",
+      "arquivo_md": "markdown/2023-ad-p2.md",
+      "total_imagens": 18,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2022-ad-p1",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2022,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 1 (manhã)",
+      "formato": "multipla_escolha",
+      "data_aplicacao": "2021-12-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/gabaritos/g1_acessodireto_W.pdf",
+        "gabarito_retificado_em": "03/01/2022"
+      },
+      "total_questoes": 80,
+      "arquivo_json": "data/2022-ad-p1.json",
+      "arquivo_md": "markdown/2022-ad-p1.md",
+      "total_imagens": 8,
+      "anuladas": [
+        27,
+        63
+      ],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    },
+    {
+      "id": "unicamp-2022-ad-p2",
+      "instituicao": "UNICAMP",
+      "processo_seletivo": 2022,
+      "modalidade": "acesso_direto",
+      "tipo": "regular",
+      "turno": "Prova 2 (tarde)",
+      "formato": "resposta_curta",
+      "data_aplicacao": "2021-12-20",
+      "fontes": {
+        "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/dAD.pdf",
+        "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/resp_esperadas/resp_ad.pdf",
+        "gabarito_retificado_em": "03/01/2022"
+      },
+      "total_questoes": 60,
+      "arquivo_json": "data/2022-ad-p2.json",
+      "arquivo_md": "markdown/2022-ad-p2.md",
+      "total_imagens": 12,
+      "anuladas": [],
+      "areas": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Ginecologia e Obstetrícia",
+        "Pediatria",
+        "Saúde Coletiva"
+      ]
+    }
+  ]
+}

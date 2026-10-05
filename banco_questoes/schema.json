@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "unicamp-acesso-direto/prova.schema.json",
+  "title": "Prova de Residência Médica UNICAMP – Acesso Direto",
+  "type": "object",
+  "required": ["id", "instituicao", "processo_seletivo", "modalidade", "tipo", "turno", "formato",
+               "data_aplicacao", "fontes", "valores_referencia", "total_questoes", "questoes"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^unicamp-\\d{4}-ad-"},
+    "instituicao": {"const": "UNICAMP"},
+    "processo_seletivo": {"type": "integer", "description": "Ano do processo seletivo (a prova é aplicada no fim do ano anterior)."},
+    "modalidade": {"const": "acesso_direto"},
+    "tipo": {"enum": ["regular", "vagas_remanescentes"]},
+    "turno": {"type": "string"},
+    "formato": {"enum": ["multipla_escolha", "resposta_curta"]},
+    "data_aplicacao": {"type": ["string", "null"], "format": "date"},
+    "fontes": {
+      "type": "object",
+      "required": ["prova_pdf", "gabarito_pdf", "gabarito_retificado_em"],
+      "additionalProperties": false,
+      "properties": {
+        "prova_pdf": {"type": "string", "format": "uri"},
+        "gabarito_pdf": {"type": "string", "format": "uri"},
+        "gabarito_retificado_em": {"type": ["string", "null"], "description": "dd/mm/aaaa, quando a página oficial informa retificação."}
+      }
+    },
+    "valores_referencia": {"type": ["string", "null"], "description": "Tabela de valores laboratoriais de referência do caderno, em Markdown."},
+    "total_questoes": {"type": "integer"},
+    "questoes": {"type": "array", "items": {"$ref": "#/$defs/questao"}}
+  },
+  "$defs": {
+    "questao": {
+      "type": "object",
+      "required": ["id", "numero", "area", "formato", "enunciado", "alternativas", "imagens", "gabarito", "anulada", "fonte"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^unicamp-\\d{4}-ad-[a-z0-9-]+-q\\d{2,3}$"},
+        "numero": {"type": "integer", "minimum": 1},
+        "area": {"enum": ["Clínica Médica", "Cirurgia", "Pediatria", "Ginecologia e Obstetrícia", "Saúde Coletiva"]},
+        "formato": {"enum": ["multipla_escolha", "resposta_curta"]},
+        "enunciado_compartilhado": {"type": "string", "description": "Caso clínico comum a um grupo de questões (\"O enunciado abaixo refere-se às questões X e Y\")."},
+        "enunciado": {"type": "string", "description": "Texto da questão em Markdown simples (tabelas em formato pipe)."},
+        "alternativas": {
+          "type": ["object", "null"],
+          "propertyNames": {"enum": ["a", "b", "c", "d"]},
+          "additionalProperties": {"type": "string"}
+        },
+        "imagens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["arquivo", "rotulo", "legenda", "pagina"],
+            "additionalProperties": false,
+            "properties": {
+              "arquivo": {"type": "string", "pattern": "^images/.+\\.png$", "description": "Caminho relativo à raiz do repositório."},
+              "rotulo": {"type": ["string", "null"], "description": "Rótulo no caderno de imagens (ex.: \"IMAGEM Q12\"); null para imagens dentro do enunciado."},
+              "legenda": {"type": ["string", "null"], "description": "Legenda do caderno ou texto sobreposto à imagem."},
+              "pagina": {"type": "integer", "description": "Página do PDF original onde a imagem aparece."}
+            }
+          }
+        },
+        "gabarito": {
+          "type": "object",
+          "required": ["letra", "resposta_esperada", "ampliado"],
+          "additionalProperties": false,
+          "properties": {
+            "letra": {"type": ["string", "null"], "enum": ["A", "B", "C", "D", null]},
+            "resposta_esperada": {"type": ["string", "null"], "description": "Texto oficial de 'respostas esperadas', com sinônimos aceitos e observações."},
+            "ampliado": {"type": "boolean", "description": "true quando o gabarito oficial foi ampliado após recursos."}
+          }
+        },
+        "anulada": {"type": "boolean"},
+        "fonte": {
+          "type": "object",
+          "required": ["pdf", "pagina"],
+          "additionalProperties": false,
+          "properties": {
+            "pdf": {"type": "string", "format": "uri"},
+            "pagina": {"type": ["integer", "null"]}
+          }
+        }
+      }
+    }
+  }
+}

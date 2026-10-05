@@ -1,0 +1,1995 @@
+{
+  "id": "unicamp-2022-ad-p1",
+  "instituicao": "UNICAMP",
+  "processo_seletivo": 2022,
+  "modalidade": "acesso_direto",
+  "tipo": "regular",
+  "turno": "Prova 1 (manhã)",
+  "formato": "multipla_escolha",
+  "data_aplicacao": "2021-12-20",
+  "fontes": {
+    "prova_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+    "gabarito_pdf": "https://www.comvest.unicamp.br/residenciamedica2022/gabaritos/g1_acessodireto_W.pdf",
+    "gabarito_retificado_em": "03/01/2022"
+  },
+  "valores_referencia": "Valor de referência exames laboratoriais:\n\n| Parâmetro | Valor de normalidade |\n|---|---|\n| Ácido fólico | 3,1 a 20,5 ng/dL |\n| Albumina plasmática | 3,5 a 5,2 g/dL |\n| ALT (TGP) | Homem <41UI/L; mulher < 33 UI/L |\n| AST (TGO) | Homem < 40 UI/L; mulher < 33 UI/L |\n| Atividade plasmática de renina | 0,6 a 4,18 ng/ml/h (ortostática) 0,32 a 1,84 ng/ml/h (supino) |\n| Bilirrubina total | 0,3 a 1,2 mg/dL |\n| Cálcio | 8,8 a 10,2 mg/dL |\n| CPK (creatina fosfoquinase) | 0 a 171 UI/L |\n| CK-mb (creatinaquinase fração mb) | 0 a 24 UI/L |\n| Cloro | 98 a 106 mmol/L |\n| Colesterol total | < 200 mg/dL |\n| Colesterol HDL | Homem ≥ 40 mg/dL; mulher ≥ 50 mg/dL |\n| Colesterol LDL | < 100 mg/dL |\n| Creatinina | Homem: ≤ 1,2 mg/dL Mulher: ≤ 0,8 mg/dL |\n| Cortisol urinário | 3,5 a 4,5 mcg/24h |\n| Ferritina | Homem: 30 a 400 ng/mL; mulher 13 a 150 ng/mL |\n| Ferro sérico | Homem: 70 a 180 µg/dL; mulher 60 a 180µg/dL |\n| Fibrinogênio | 175 a 400 mg/dL |\n| Fosfatase alcalina | Homem: 40 a 129UI/L; mulher 35 a 103UI/L |\n| Fósforo | 2,5 a 4,5 mg/dL |\n| Glicemia jejum | 60 a 99 mg/dL |\n| Hemograma | Hemoglobina: homem 14-18 g/dL; mulher 12 a 16 g/dL Hematócrito: homem 41-52%; mulher 36 a 46% Leucócitos: 4.000 a 10.000/mm3 (segmentados 2.000 a 8.000/mm3; linfócitos 1.000 a 4.000/ mm3; monócitos 200 a 800/mm3;eosinófilos < 450/mm3, basófilos <200/ mm3) Plaquetas: 150.000 a 450.000/mm3 VCM: 80 a 99 fL HCM 27 a 32 pg Reticulócitos: 50.000 a 100.000/ mm3 |\n| Hemoglobina glicada (HbA1c) | 4,0 a 5,6% |\n| Metanefrinas urina | < 400 mcg/24h (totais < 1300 mcg/24h) |\n| Paratormônio (PTH) | 15 a 65 pg/mL |\n| Potássio | 3,5 a 5,1 mEq/L |\n| Proteína C reativa | Processo inflamatório: 10-50 mg/L (leve); 50-100 mg/dL (moderado); > 100 mg/dL (grave) Risco cardiovascular: < 1 mg/dL (baixo); 1-3 mg/dL (médio); > 3 mg/dL (alto) |\n| RNI (TP) | Até 1,25 |\n| R (TTPA) | Até 1,3 |\n| Sódio | 135 a 145 mEq/L |\n| TIBC | 255 a 450µg/dL |\n| Troponina T | 0 a 14 ng/L |\n| Triglicérides | < 150 mg/dL |\n| TSH | 0,3 a 4,2 µUI/mL |\n\n| T4livre | 0,9 a 1,7 ng/dL |\n|---|---|\n| Vitamina B12 | 200 a 900 pg/mL |\n| Vitamina D | 31 a 100 ng/mL |\n| Ureia | 17 a 43 mg/dL |\n| Exame de urina | Leucócitos < 5/campo Hemácias < 5/campo Proteína negativo/traços |\n| Relação albumina/creatinina urinária | < 30 mg/g |\n| Relação proteína/creatinina urinária | < 0,20 |\n\n| Gasometria | Arterial | venosa |\n|---|---|---|\n| pH | 7,35 a 7,45 | 7,33 a 7,43 |\n| pO2 | 83 a 108 mmHg | 38 a 50 mmHg |\n| pCO2 | 32 a 48 mmHg | 31 a 54 mmHg |\n| HCO3 | 18 a 23 mmol/L | 18 a 23 mmol/L |\n| Lactato | 0,5 a 1,6 mmol/L | 0,5 a 1,6 mmol/L |\n| Cálcio iônico | 1,15 a 1,29 mmol/L | 1,15 a 1,29 mmol/L |",
+  "total_questoes": 80,
+  "questoes": [
+    {
+      "id": "unicamp-2022-ad-p1-q01",
+      "numero": 1,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 45a, assintomático, procura Unidade Básica de Saúde por contato com paciente com diagnóstico de tuberculose. Radiograma de tórax: normal. Prova tuberculínica (PPD): 22 mm. A CONDUTA É:",
+      "alternativas": {
+        "a": "Iniciar profilaxia com isoniazida.",
+        "b": "Iniciar rifampicina, pirazinamida, isoniazida e etambutol.",
+        "c": "Realizar tomografia computadorizada de tórax.",
+        "d": "Repetir radiograma de tórax em seis meses."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q02",
+      "numero": 2,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 72a, procura atendimento médico referindo dispneia aos grandes esforços habituais. Exame físico: PA= 168x82 mmHg, FC= 88 bpm. ECG: ritmo sinusal e alterações inespecíficas da repolarização ventricular. Ecocardiograma transtorácico: aumento discreto de átrio esquerdo, ventrículo esquerdo com diâmetros normais e espessuras do septo intraventricular e parede posterior de VE aumentadas. Fração de ejeção (Simpson)= 71%. Relaxamento diastólico anormal grau I. A ESTRATÉGIA TERAPÊUTICA ANTIHIPERTENSIVA PREFERENCIAL NESTE CASO É:",
+      "alternativas": {
+        "a": "Bloqueador de receptor de angiotensina e alfa agonista central.",
+        "b": "Inibidor de enzima de conversão de angiotensina e diurético tiazídico.",
+        "c": "Betabloqueador e antagonista de aldosterona.",
+        "d": "Bloqueador de canal de cálcio e diurético de alça."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q03",
+      "numero": 3,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 50a, procura atendimento em Unidade de Emergência por dor torácica associada a palpitações, tremores e sudorese. Refere episódios prévios semelhantes. Exame físico: PA= 222x124 mmHg; FC= 122 bpm; sudoreico; tremor de extremidades. Fundo de olho: cruzamentos patológicos e papila nítida. ECG: sobrecarga de ventrículo esquerdo. Troponina: normal. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": {
+        "a": "Dissecção aguda de aorta.",
+        "b": "Doença de Addison.",
+        "c": "Hipertensão maligna.",
+        "d": "Feocromocitoma."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 5
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q04",
+      "numero": 4,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 50a, é trazido a serviço médico com história de cefaleia há uma semana e confusão mental há dois dias. Nega vômitos ou diarreia. Exame físico: PA= 128x84 mmHg, FC= 56 bpm; neurológico: confuso, sonolento. Ureia= 20 mg/dL; creatinina= 0,8 mg/dL; sódio= 115 mEq/L; potássio= 3,6 mEq/L; Hb= 11 g/dL. Exame sumário de urina: sem alterações. Radiograma de tórax: ANEXO A A CAUSA MAIS PROVÁVEL DA HIPONATREMIA É:",
+      "alternativas": {
+        "a": "Insuficiência adrenal.",
+        "b": "Diabetes insipidus central.",
+        "c": "Nefrite intersticial crônica.",
+        "d": "Secreção inapropriada de ADH."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q04.png",
+          "rotulo": "QUESTÃO 4",
+          "legenda": "QUESTÃO 4",
+          "pagina": 39
+        }
+      ],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q05",
+      "numero": 5,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 46a, procura Unidade Básica de Saúde com queixa de dor abdominal frequente, infraumbilical, que ocorre 2-3 vezes/dia, há mais de um ano. Algumas vezes pós-prandiais, melhora com evacuação. As fezes são amolecidas, com presença de muco e sem outras alterações. Refere urgência para defecar, com episódios à noite. Nega emagrecimento e febre. Exame físico: dor à palpação de fossa ilíaca, ausência de massas palpáveis. A HIPOTESE DIAGNÓSTICA É:",
+      "alternativas": {
+        "a": "Diverticulite.",
+        "b": "Supercrescimento bacteriano.",
+        "c": "Síndrome do intestino irritável.",
+        "d": "Doença cólica."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q06",
+      "numero": 6,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 67a, refere dispneia aos esforços, batedeira, ansiedade, queimação retroesternal e emagrecimento não intencional de 5 kg, apesar de bom apetite, há um mês. Refere dificuldade para dormir e aumento do hábito intestinal para três vezes por dia. Antecedente pessoais: infarto do miocárdio há dois anos, em uso regular de captopril 150mg/dia, amiodarona 100 mg/dia, atorvastatina 40 mg/dia e AAS 100 mg/dia. Exame físico: PA= 152x96 mmHg; FC= 96 bpm; T= 37,3ºC; FR= 16 irpm; Oximetria de pulso (ar ambiente)= 95%. A CONDUTA É:",
+      "alternativas": {
+        "a": "Realizar ecocardiograma.",
+        "b": "Dosar hormônio estimulante da tireóide.",
+        "c": "Realizar cateterismo.",
+        "d": "Dosar cálcio sérico."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 6
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q07",
+      "numero": 7,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 46a, procura Unidade de Emergência referindo dois episódios de hematêmese, em moderada quantidade há quatro horas. Antecedente pessoal: portadora de vírus da hepatite C. Exame físico: Regular estado geral, descorada 2+/4+; ictérica +/4+; PA= 104x72 mmHg; FC= 104 bpm; FR= 20 irpm; Abdome: flácido, ausência de ascite ou massas palpáveis, fígado palpado a 6cm do RCD indolor, borda romba e lisa, consistência 3+/4+; baço percutível e palpado a 4 cm do RCE. Hb= 8,1 g/dL; Ht= 25,4%; albumina= 3,1 g/dL; bilirrubina total= 2,7 mg/dL; RNI= 2,1. Endoscopia digestiva: ligadura elástica de varizes esofágicas. Prescrito octreotide 50 µg/h em bomba de infusão intravenosa. A CONDUTA É:",
+      "alternativas": {
+        "a": "Realizar transfusão sanguínea até Hb 9g/dL.",
+        "b": "Prescrever ressuscitação volêmica com solução salina até PA > 120 mmHg.",
+        "c": "Iniciar propranolol 20 mg/dia via oral.",
+        "d": "Iniciar vitamina K 10 mg/dia intramuscular."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 7
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q08",
+      "numero": 8,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 57a, é trazido ao serviço médico após episódio de desmaio ao realizar grande esforço no trabalho. Conta que subitamente perdeu a consciência, sem referir qualquer outro sintoma, e que ao acordar não apresentava déficits. Nas últimas semanas sentiu aperto no peito ao realizar os esforços que desaparecia ao repouso. Exame físico: PA= 110x85 mmHg; FC= 92 bpm; FR= 16 irpm; Oximetria de pulso (ar ambiente)= 97%, corado, hidratado. Pulso carotídeo diminuído e tardio; Coração: ictus no 5º espaço intercostal esquerdo desviado 2 cm para a esquerda da linha hemiclavicular ipsilateral, bulhas rítmicas com sopro mesossistólico ejetivo, rude, audível em focos aórtico, aórtico acessório e mitral, irradiado para o pescoço com B4 presente; extremidades: pulsos de baixa amplitude. O DIAGNÓSTICO É:",
+      "alternativas": {
+        "a": "Insuficiência aórtica.",
+        "b": "Insuficiência mitral.",
+        "c": "Estenose aórtica.",
+        "d": "Estenose mitral."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 7
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q09",
+      "numero": 9,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 74a, veio ao Pronto Atendimento acompanhada pelo marido, que relatou que a paciente perdeu subitamente a consciência há três horas, quando ambos estavam assistindo televisão no sofá. O episódio durou dois minutos, e ela recobrou totalmente a consciência. No momento, a paciente está consciente, orientada, e relata apenas desconforto epigástrico leve. Antecedentes pessoais: hipertensão arterial, dislipidemia e diabetes mellitus. Medicações em uso: losartana 25mg 12/12h, AAS 100mg/dia, metformina 850mg 3 vezes ao dia. Exame físico: PA= 156x98 mmHg, FC= 102 bpm, FR= 22 irpm, T= 36,6˚C, glicemia capilar= 102mg/dL; descorada +/4+; ausculta cardíaca, pulmonar e exame do abdome sem alterações; membros inferiores: edema +/4+ simétrico. A CONDUTA INICIAL NO SETOR DE EMERGÊNCIA É:",
+      "alternativas": {
+        "a": "Administrar captopril 25mg sublingual.",
+        "b": "Realizar tomografia de crânio com contraste arterial e venoso.",
+        "c": "Realizar eletrocardiograma.",
+        "d": "Realizar tomografia de tórax com contraste."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 8
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q10",
+      "numero": 10,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 39a, chega à emergência com confusão mental, náuseas e vômitos há 4 horas. Esposa o encontrou sonolento no banheiro, ao lado de cartelas de medicação aparentemente vazias jogadas no vaso sanitário. Antecedentes: depressão; usa amitriptilina. Exame físico: PA=124x78 mmHg, FC=108 bpm, FR=29 irpm, oximetria de pulso (ar ambiente)= 97%, T= 36,5oC. Glasgow 14, pupilas normais, sem déficits focais. Sem sinais de desconforto respiratório e ausculta respiratória normal. Eletrocardiograma: taquicardia sinusal. Glicemia capilar= 110mg/dL. Gasometria arterial: pH= 7,23; pO2= 91 mmHg; pCO2= 15 mmHg; HCO3= 10 mEq/L; BE= -7 mEq/L, SaO2= 97%; sódio= 135 mEq/L; creatinina=0,92 mg/dL; lactato= 3,0 mmol/L e cloro= 98 mMol/L. A HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": {
+        "a": "Intoxicação por salicilatos.",
+        "b": "Intoxicação por antidepressivo tricíclico.",
+        "c": "Sepse.",
+        "d": "Crise tireotóxica."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 8
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q11",
+      "numero": 11,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 62a, procura atendimento médico com queixa de tontura e dispneia de início agudo há 2 horas. Antecedentes: hipertensão arterial e diabetes mellitus tipo 2, em uso de losartana, besilato de anlodipino e metformina. Exame físico: FC= 152 bpm, FR= 28 irpm, PA= 96x62 mmHg, oximetria de pulso (ar ambiente) = 88%; consciente, orientado, sonolento; pulmões: murmúrio vesicular presente com estertores crepitantes finos bilaterais até campos médios pulmonares. ECG realizado na sala de emergência: O DIAGNÓSTICO E A CONDUTA SÃO:",
+      "alternativas": {
+        "a": "Taquicardia por reentrada nodal; cardioversão elétrica sincronizada.",
+        "b": "Flutter atrial 2:1; cardioversão elétrica sincronizada.",
+        "c": "Taquicardia por reentrada nodal; manobra de Valsalva modificada.",
+        "d": "Flutter atrial 2:1; betabloqueador e anticoagulação."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q11.png",
+          "rotulo": "QUESTÃO 11",
+          "legenda": "QUESTÃO 11",
+          "pagina": 39
+        }
+      ],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q12",
+      "numero": 12,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 45a, queixa-se de dispneia há três dias, associada a tosse seca. Há uma semana com ageusia. Antecedentes: tabagista (20 anos/maço). Hipertensão arterial em uso de hidroclorotiazida. Exame físico: PA= 112x74 mmHg, FC= 134 bpm, FR= 29 irpm, T= 36,1oC, oximetria de pulso (ar ambiente)= 89%; consciente, alerta, fala normal. Pulmões: murmúrio vesicular presente simétrico; membros: extremidades frias, sem edema. Iniciado cateter nasal de O2 a 3L/min, sem melhora da hipoxemia; aumentado para 6L/min em cateter, mantida a mesma hipoxemia, mas sem aumento do desconforto respiratório. Ultrassonografia à beira do leito evidencia algumas linhas B em bases. Tomografia de tórax sem contraste (evidenciado o corte que apresenta as principais alterações do exame) e eletrocardiograma: ALÉM DE INICIAR DEXAMETASONA, A CONDUTA IMEDIATA É:",
+      "alternativas": {
+        "a": "Iniciar ventilação não invasiva.",
+        "b": "Iniciar ceftriaxone e azitromicina.",
+        "c": "Manter tratamento e internar em UTI-COVID.",
+        "d": "Solicitar angiotomografia de tórax."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q12.png",
+          "rotulo": "QUESTÃO 12",
+          "legenda": "QUESTÃO 12",
+          "pagina": 40
+        }
+      ],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 9
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q13",
+      "numero": 13,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 60a, comparece ao atendimento de urgência referindo piora da dispneia há três dias (de mMRC 2 passou para mMRC 4), acompanhada de tosse produtiva com escarro amarelado e raias de sangue. Nega febre. Antecedente pessoal: ex-fumante há quatro anos (carga tabágica de 40 anos/maço), doença pulmonar obstrutiva crônica há quatro anos, em uso regular de medicações por via inalatória (formoterol e glicopirrônio) e salbutamol spray eventualmente; não teve exacerbações nos últimos 12 meses. Exame físico: orientado, FR= 32 irpm, oximetria de pulso= 86% (ar ambiente), uso de musculatura acessória para respirar. Pulmões: murmúrio vesicular reduzido globalmente, estertores subcrepitantes esparsos. NO MANEJO TERAPÊUTICO DESTE PACIENTE É CORRETO",
+      "alternativas": {
+        "a": "Indicar intubação orotraqueal para ventilação mecânica invasiva, se houver retenção progressiva de CO2.",
+        "b": "Iniciar oxigênio por cateter nasal, para manter oximetria de pulso entre 88 a 92%.",
+        "c": "Iniciar corticoesteroide sistêmico e mantê-lo por um período mínimo de 14 dias.",
+        "d": "Iniciar teofilina e sulfato de magnésio, para manter oximetria de pulso acima de 92%."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q14",
+      "numero": 14,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 36a, iniciou quadro de dor e vermelhidão ocular à direita, sem perda da acuidade visual, há dois dias. Refere dor lombar pela manhã e após longos períodos em repouso. Faz tratamento de artrite no joelho esquerdo. Antecedente familiar: pai e tio apresentam quadro semelhante. Radiograma e ressonância nuclear magnética evidenciam sacroileíte. A HIPOTESE DIAGNÓSTICA DO QUADRO AGUDO É:",
+      "alternativas": {
+        "a": "Ceratoconjuntivite seca.",
+        "b": "Esclerite necrotizante.",
+        "c": "Uveíte posterior.",
+        "d": "Uveíte anterior."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q15",
+      "numero": 15,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 60a, comparece na Unidade Básica de Saúde, sem queixas, para resultado de exames. Antecedente pessoal: hipertensão arterial e diabetes mellitus, em acompanhamento regular. Creatinina= 0,9 mg/dL; exame sumário de urina: leucócitos= 20/campo, hemácias= 10/campo, proteína ausente, bactérias presentes; urocultura= E. Coli = 105 UFC/mL. A CONDUTA ADEQUADA É:",
+      "alternativas": {
+        "a": "Manter sem antibioticoterapia.",
+        "b": "Prescrever ciprofloxacino por 3 dias.",
+        "c": "Prescrever profilaxia com cefalexina.",
+        "d": "Prescrever profilaxia com cranberry."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 10
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q16",
+      "numero": 16,
+      "area": "Clínica Médica",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 45a, hígido, é trazido ao Pronto Socorro com quadro de febre, agitação psicomotora e confusão mental. Familiar refere que estava com quadro de sinusite há uma semana, com febre, tosse com expectoração purulenta, dor de ouvido e cefaleia, tratada com antitérmicos e descongestionante nasal. Exame físico: confuso, agitado, PA= 118x69 mmHg; FC= 102 bpm; T= 38,9oC; rigidez de nuca presente. O AGENTE ETIOLÓGICO DA MENINGITE É:",
+      "alternativas": {
+        "a": "Streptococcus pneumoniae.",
+        "b": "Cryptococcus neoformans.",
+        "c": "Neisseria meningitidis.",
+        "d": "Mycobacterium tuberculosis."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q17",
+      "numero": 17,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 25a, deu entrada no Pronto Socorro, após trauma por acidente automobilístico, com quadro de retenção urinária, fratura de bacia e uretrorragia. A PRINCIPAL HIPÓTESE DIAGNÓSTICA, O EXAME A SER SOLICITADO E A MELHOR CONDUTA, RESPECTIVAMENTE, SÃO:",
+      "alternativas": {
+        "a": "Trauma de uretra posterior (membranosa), uretrocistografia retrógrada e sondagem vesical.",
+        "b": "Trauma de uretra anterior (bulbar), tomografia de abdome e sondagem vesical.",
+        "c": "Trauma de uretra posterior (membranosa), uretrocistografia retrógrada e cistostomia.",
+        "d": "Trauma de uretra anterior (bulbar), tomografia de abdome e cistostomia."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q18",
+      "numero": 18,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 45a, procurou Pronto Socorro com queixa de dor lombar à esquerda de forte intensidade há 2 horas, repentina e com hematúria macroscópica. Foi realizado exame de ultrassonografia de abdome com diagnóstico de cálculo ureteral de 6mm no ureter distal esquerdo a 1 cm da junção ureterovesical e associado à hidronefrose ipsilateral. ALEM DE INTERNAÇÃO E ANALGESIA INTRAVENOSA A CONDUTA INICIAL É:",
+      "alternativas": {
+        "a": "Realizar ureteroscopia para extração de cálculo com Sonda Dormia.",
+        "b": "Realizar tomografia computadorizada de abdome.",
+        "c": "Iniciar terapia expulsiva com doxasozina ou tansulozina.",
+        "d": "Prescrever inibidores da 5-alfa-redutase."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 11
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q19",
+      "numero": 19,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 33a, retorna à consulta na Unidade Básica de Saúde, para resultado de exames. Antecedentes pessoais: nega comorbidades, G3P3; método contraceptivo: oral combinado. Nega etilismo e tabagismo. Ultrassonografia abdominal: nódulo único, levemente hiperecoico, bem delimitado, medindo 3cm, localizado no segmento VIII hepático. O DIAGNÓSTICO MAIS PROVÁVEL É:",
+      "alternativas": {
+        "a": "Adenoma hepático.",
+        "b": "Hiperplasia nodular focal.",
+        "c": "Hemangioma hepático.",
+        "d": "Carcinoma hepatocelular."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 12
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q20",
+      "numero": 20,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 58a, procura atendimento médico com queixa de tosse e emagrecimento de 5 Kg há dois meses. Broncoscopia: lesão endoscopicamente visível e obstrutiva à direita. Radiograma do tórax:\nA LESÃO ENCONTRA-SE NO BRÔNQUIO:",
+      "alternativas": {
+        "a": "Principal.",
+        "b": "Intermediário.",
+        "c": "Lobo inferior.",
+        "d": "Lobo médio."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q20.png",
+          "rotulo": "QUESTÃO 20",
+          "legenda": "QUESTÃO 20",
+          "pagina": 40
+        }
+      ],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 12
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q21",
+      "numero": 21,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem 34a, motorista, sem uso do cinto de segurança quando houve colisão frontal com outro veículo de passeio a 60km/h. Estava preso nas ferragens, e a Unidade Pré Hospitalar demorou em torno de 30 minutos para retirá-lo e em seguida foi levado à Unidade de Pronto Atendimento com queixa de dor no tórax. Na sala de emergência apresentava-se: PA= 121x83 mmHg, FC= 111bpm, FR= 18 irpm, oximetria de pulso (com máscara não reinalante 12L/min de O2)= 97%; Tórax: murmúrio vesicular presente bilateralmente, diminuído posteriormente à esquerda; membros sem alterações. Radiograma de tórax simples na sala de emergência: O DIAGNÓSTICO RADIOLÓGICO É:",
+      "alternativas": {
+        "a": "Hérnia diafragmática esquerda traumática.",
+        "b": "Pneumotórax simples à esquerda.",
+        "c": "Atelectasia esquerda por compressão.",
+        "d": "Lesão traumática de aorta torácica."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q21.png",
+          "rotulo": "QUESTÃO 21",
+          "legenda": "QUESTÃO 21",
+          "pagina": 41
+        }
+      ],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 12
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q22",
+      "numero": 22,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem 31a, recebeu golpe de estrangulamento (“mata leão”) durante uma briga, até apresentar parada cardiorrespiratória (PCR). O atendimento pré-hospitalar realiza aquisição de uma via aérea definitiva e um acesso venoso, e inicia manobras de reanimação cardiopulmonar cerebral, obtendo retorno dos pulsos centrais. O tempo da PCR foi de 8 minutos. É levado a um hospital terciário, onde após 20 horas de Unidade de Terapia Intensiva, sob cuidados clínicos e ventilação mecânica evoluiu com: Escala de Glasgow= 3, sem sedação, pupilas midriáticas sem reação ao estímulo luminoso, T= 35,8oC, PA média= 68mmHg. Sódio sérico= 148mEq/L. OS PRÉ-REQUISITOS QUE IMPEDEM O INÍCIO DO PROTOCOLO DE MORTE ENCEFÁLICA SÃO:",
+      "alternativas": {
+        "a": "Sódio sérico e pressão arterial média.",
+        "b": "Tempo de tratamento e observação.",
+        "c": "Temperatura axilar e tempo de PCR.",
+        "d": "Pressão arterial média e temperatura axilar."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q23",
+      "numero": 23,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 68a, tem queda da própria altura, sofrendo ferimento corto-contuso em região do supercílio direito. Nega perda de consciência, amnésia lacunar e ingesta de bebida alcoólica prévia. Antecedente pessoal: tabagista 45 maços-ano e hipotireoidismo, sem acompanhamento adequado. Durante a sutura evidenciou-se que o ferimento alcançava o osso frontal. A INDICAÇÃO DE OBSERVAÇÃO CLÍNICA E/OU TOMOGRAFIA COMPUTADORIZADA DE CRÂNIO É DEVIDO A(O):",
+      "alternativas": {
+        "a": "Idade do paciente.",
+        "b": "Profundidade do ferimento.",
+        "c": "Tabagismo.",
+        "d": "Hipotireoidismo."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 13
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q24",
+      "numero": 24,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem 56a, é trazido à Unidade de Pronto Atendimento com história de ingestão de soda cáustica há 30 minutos. Antecedentes pessoais: depressão e dois episódios prévios de tentativa de suicídio (40 comprimidos de AAS e 60 comprimidos de antidepressivo respectivamente). A última tentativa foi há uma semana. APÓS PROTOCOLO DO ATLS®, A CONDUTA É:",
+      "alternativas": {
+        "a": "Analgesia; tratamento das lesões orais.",
+        "b": "Antidepressivo em altas doses; sonda nasoenteral.",
+        "c": "Analgesia; ácido forte via oral.",
+        "d": "Bloqueador de bomba de próton; lavagem gástrica."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q25",
+      "numero": 25,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Jovem, 23a, submetido a cirurgia com diagnóstico intra-operatório de apendicite grau III. No inventário da cavidade foi observado um divertículo no intestino delgado, a 30 cm da válvula ileocecal. O TIPO DE DIVERTÍCULO E A CONDUTA SÃO:",
+      "alternativas": {
+        "a": "Verdadeiro; ressecção imediata.",
+        "b": "Adquirido; invaginação cirúrgica.",
+        "c": "Congênito; ressecção posterior se necessário.",
+        "d": "Falso; ressecção imediata."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q26",
+      "numero": 26,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 77a, procura atendimento médico por apresentar dor abdominal difusa, uma hora após as refeições, de forte intensidade, tipo aperto, há 40 dias, com melhora espontânea. Hoje, três horas após almoço iniciou dor persistente e de maior intensidade, fazendo-a procurar Pronto Socorro. Nega alterações do hábito intestinal e urinário. Antecedentes Pessoais: dislipidemia; tabagismo= 27 anos/maço; revascularização do membro inferior direito há dois anos; em uso de cilostazol, sinvastatina e AAS diário. Exame físico: descorada +/+4, hidratada, afebril, PA= 123x76 mmHg, FC= 95 bpm, oximetria de pulso (ar ambiente)= 93%; abdome: plano, normotenso, sem distensão, ruídos hidroaéreos presentes, dor à palpação sem visceromegalia e sem irritação peritoneal. O EXAME PARA CONFIRMAÇÃO DA HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": {
+        "a": "Cintilografia com hemácias marcadas.",
+        "b": "Endoscopia digestiva alta.",
+        "c": "Ultrassonografia de abdome superior.",
+        "d": "Angiotomografia de abdome."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 14
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q27",
+      "numero": 27,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 43a, procura o Pronto Socorro com queixa de dor epigástrica de forte intensidade, irradiada para o dorso, acompanhada de náusea, vômitos e perda de apetite há dois dias. Realizada hidratação e medicamentos sintomáticos endovenosos, com melhora dos sintomas. Exame físico: FC= 96 bpm, FR= 16 irpm, PA= 125x72 mmHg, T= 36,5oC; Abdome: plano, normotenso, doloroso à palpação profunda em epigástrio e descompressão brusca dolorosa ausente. Amilase= 1.123 U/L, Lipase= 867 U/L e leucometria= 16.400/mm3. O EXAME PARA CONFIRMAÇÃO DA HIPÓTESE DIAGNÓSTICA É:",
+      "alternativas": {
+        "a": "Tomografia de abdome sem contraste.",
+        "b": "Endoscopia digestiva alta.",
+        "c": "Ultrassonografia de abdome superior.",
+        "d": "Dosagens seriadas de amilase e lipase."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": true,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q28",
+      "numero": 28,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem 18a, procurou Pronto Socorro com dor abdominal que se iniciou em região epigástrica e posteriormente migrou para fossa ilíaca direita, acompanhada de anorexia, há um dia. Nega comorbidades. Exame físico: PA= 114x76 mmHg, FC= 76 bpm, FR =15 irpm, oximetria de pulso (ar ambiente)= 99%, T= 36,7oC. PARA A INDICAÇÃO CIRÚRGICA É NECESSÁRIO:",
+      "alternativas": {
+        "a": "Hemograma com leucocitose e desvio à esquerda.",
+        "b": "Dor à descompressão brusca em fossa ilíaca direita.",
+        "c": "Realização de tomografia computadorizada de abdome.",
+        "d": "Realização de ultrassonografia de abdome total."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q29",
+      "numero": 29,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina, 3 meses, é trazida para Unidade de Emergência por choro incoercível e inchaço em região das virilhas. Exame físico: abaulamento irredutível bilateralmente em região inguinal. A ESTRUTURA MAIS PROVÁVEL PRESENTE NO ABAULAMENTO É:",
+      "alternativas": {
+        "a": "Intestino delgado.",
+        "b": "Ovário.",
+        "c": "Cólon.",
+        "d": "Epíplon."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 15
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q30",
+      "numero": 30,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "Menino, 7 meses, chega a enfermaria no pós operatório imediato de cirurgia para correção de intussuscepção intestinal, com resseção de 30 cm de intestino delgado e da válvula ileocecal. EM DECORRÊNCIA DESTA RESSECÇÃO O PACIENTE PODERÁ DESENVOLVER:",
+      "alternativas": {
+        "a": "Raquitismo.",
+        "b": "Escorbuto.",
+        "c": "Anemia ferropriva.",
+        "d": "Anemia megaloblástica."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q31",
+      "numero": 31,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "A CONDUTA PARA TROMBOSE VENOSA PROFUNDA FEMORO-POPLÍTEA É:",
+      "alternativas": {
+        "a": "Vasodilatador e meia de compressão.",
+        "b": "Anticoagulante e elevação do membro.",
+        "c": "Flebografia para realização de trombectomia.",
+        "d": "Repouso e ácido acetilsalicílico."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q32",
+      "numero": 32,
+      "area": "Cirurgia",
+      "formato": "multipla_escolha",
+      "enunciado": "EM QUAL DAS SITUAÇÕES ABAIXO ESTÁ SEMPRE INDICADA A CORREÇÃO DE ANEURISMA DE AORTA ABDOMINAL:",
+      "alternativas": {
+        "a": "Em aneurisma sintomático com 4,5 cm de diâmetro.",
+        "b": "Em aneurisma justa-renal.",
+        "c": "Quando houver trombos murais.",
+        "d": "Em pacientes com hipertensão arterial."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q33",
+      "numero": 33,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Lactente, 18m, sofreu trauma na face. Exame físico: Escala de Coma de Glasgow= 15; face: ferimento cortocontuso perilabial. A conduta é de sutura simples. A DROGA INDICADA PARA SEDOANALGESIA PARA O PROCEDIMENTO É:",
+      "alternativas": {
+        "a": "Midazolam.",
+        "b": "Cetamina.",
+        "c": "Meperidina.",
+        "d": "Propofol."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 16
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q34",
+      "numero": 34,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "O Teste do Reflexo Vermelho é uma ferramenta de alta sensibilidade para o rastreamento de alterações oculares com risco de causar ambliopia ou deficiência visual. O TESTE DEVE SER REALIZADO:",
+      "alternativas": {
+        "a": "Uma única vez antes da alta da maternidade.",
+        "b": "Antes da alta da maternidade e uma vez ao ano até cinco anos de vida.",
+        "c": "Antes da alta da maternidade e uma vez ao ano, nos dois primeiros anos de vida.",
+        "d": "Antes da alta da maternidade e três vezes ao ano, nos três primeiros anos de vida."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q35",
+      "numero": 35,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "As parasitoses intestinais podem afetar até 36% da população brasileira. CONSIDERANDO A POSSIBILIDADE DE COMPLICAÇÕES DEPENDENTES DO TIPO DE PARASITA, ASSINALE A ALTERNATIVA COM AS ASSOCIAÇÕES CORRETAS:\n\n| 1. Ascaris lumbricoides | A. Abcesso hepático |\n|---|---|\n| 2. Taenia sollium | B. Prolapso retal |\n| 3. Strongyloides stercoralis | C. Suboclusão intestinal |\n| 4. Giardia lamblia | D. Sindrome de Löeffler |\n| 5. Entamoeba histolytica | E. Cisticercose |\n| 6. Schistosoma mansoni | F. Desnutrição |\n| 7. Ancylostoma duodenale | G. Anemia ferropriva |\n| 8. Trichuris trichiura | H. Hipertensão portal |",
+      "alternativas": {
+        "a": "1C, 3D, 5A.",
+        "b": "2E, 4G, 8D.",
+        "c": "3H, 5A, 7F.",
+        "d": "1D, 4F, 6E."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 17
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q36",
+      "numero": 36,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina, 5a, chega à Unidade de Emergência em crise convulsiva tônico-clônica generalizada há cerca de 10 minutos segundo os pais. Antecedente pessoal: epilepsia em uso de ácido valpróico. Na sala de emergência, colocado cateter de O2, e não conseguido acesso venoso. A MELHOR ALTERNATIVA PARA A MEDICAÇÃO INICIAL É",
+      "alternativas": {
+        "a": "Fenitoína; via retal.",
+        "b": "Fenobarbital; via intranasal.",
+        "c": "Midazolam; via intramuscular.",
+        "d": "Diazepam; via oral."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 18
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q37",
+      "numero": 37,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Lactente, 3m, é trazida pelos familiares inconsciente, em apneia e hipotônica. PARA AVALIAÇÃO DE PARADA CARDIORESPIRATÓRIA, O PULSO A SER EXAMINADO É:",
+      "alternativas": {
+        "a": "Carotídeo.",
+        "b": "Pedioso.",
+        "c": "Radial.",
+        "d": "Braquial."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 18
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q38",
+      "numero": 38,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Recém-nascido a termo foi submetido ao teste de triagem de cardiopatia congênita com 48 horas de vida. Os valores de saturação de oxigênio encontrados no membro superior direito e no membro inferior esquerdo foram 93%. Exame físico: FR= 52irpm, FC= 147bpm, Pulmões: murmúrio vesicular simétrico bilateralmente, coração: Bulhas rítmicas normofonéticas sem sopros. A CONDUTA É:",
+      "alternativas": {
+        "a": "Realizar ecocardiografia.",
+        "b": "Ofertar suplementação de oxigênio por cateter nasal 1L/minuto.",
+        "c": "Medir a saturação de oxigênio no membro inferior direito.",
+        "d": "Repetir o teste após uma hora."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 18
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q39",
+      "numero": 39,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina, 12a, estatura abaixo do percentil 3 e cresceu 6,5 cm nos últimos três anos, com idade óssea de 11 anos e nega menarca. Nega uso de medicamentos, refere alimentação saudável e atividade física. Exame físico: estadio puberal de Tanner= M1P1 sem outras alterações. O QUE JUSTIFICA A INVESTIGAÇÃO DA ESTATURA NESTE CASO É:",
+      "alternativas": {
+        "a": "Velocidade de crescimento.",
+        "b": "Estadio Puberal de Tanner.",
+        "c": "Idade óssea.",
+        "d": "Ausência de menarca."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 19
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q40",
+      "numero": 40,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina, 7a, é trazida pela mãe com relato de abuso sexual pelo padrasto há quatro dias. Informa ainda que estes abusos já vêm acontecendo há cerca de seis meses. EM RELAÇÃO À PROFILAXIA DA INFECÇÃO PELO HIV, ASSINALE A ALTERNATIVA CORRETA:",
+      "alternativas": {
+        "a": "Prescrever tenofovir + lamivudina + dolutegravir (TDF+3TC+DTG).",
+        "b": "Prescrever o esquema TDF+3TC+DTG, se teste rápido do agressor for positivo.",
+        "c": "Prescrever zidovudina (AZT) por 28 dias.",
+        "d": "Não há indicação de profilaxia."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 19
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q41",
+      "numero": 41,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menino, 40 dias, em aleitamento materno exclusivo, tem diagnóstico de galactosemia, confirmado pela dosagem enzimática da galactose-1-fosfato uridil transferase (GALT). A ORIENTAÇÃO ALIMENTAR BASEADA NO DIAGNÓSTICO É:",
+      "alternativas": {
+        "a": "Leite materno exclusivo.",
+        "b": "Fórmula infantil de seguimento.",
+        "c": "Fórmula de soja.",
+        "d": "Fórmula infantil de partida."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 19
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q42",
+      "numero": 42,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menino, 4a, é trazido à Unidade Básica de Saúde para atualização do calendário vacinal. Faz uso regular de prednisona e ciclosporina há dois anos para tratamento de síndrome nefrótica. Traz carteira vacinal atualizada até os 15 meses. QUAIS VACINAS ESTÃO CONTRAINDICADAS NESSE MOMENTO?",
+      "alternativas": {
+        "a": "Varicela e febre amarela.",
+        "b": "VOP e DPT.",
+        "c": "Febre amarela e DPT.",
+        "d": "Tríplice viral e DTPa."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q43",
+      "numero": 43,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menino, 1a, é trazido à Unidade Básica de Saúde para consulta de puericultura. Mãe refere que o filho recusa muito os alimentos e, quando come. aceita muito pouco. Nega vômitos, uso de medicamentos. Hábito intestinal: uma evacuação com fezes endurecidas a cada quatro dias. Nega controle esfincteriano. Exame físico: bom estado geral, corado, IMC percentil 3 para a idade; abdome: globoso, flácido, indolor a palpação. O SINAL DE ALARME A SER CONSIDERADO NO DIAGNÓSTICO DIFERENCIAL DA CONSTIPAÇÃO INTESTINAL É",
+      "alternativas": {
+        "a": "Recusa alimentar.",
+        "b": "Saciedade precoce.",
+        "c": "Retardo de crescimento.",
+        "d": "Incontinência retentiva."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 20
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q44",
+      "numero": 44,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Lactente, 13m, interna na Enfermaria de Pediatria com história de cansaço há três dias. Nega episódios de engasgo ou cianose. Antecedente pessoal: terceira internação nos últimos oito meses por quadro semelhante, em todos fez uso de antibioticoterapia e inalação com beta2-agonista; vacinação atualizada. Exame físico: Bom estado geral, FC= 110bpm, FR= 39irpm, oximetria de pulso (ar ambiente)= 95%; pulmões: murmúrio vesicular: presente diminuído em base direita, anteriormente. Radiograma de tórax: opacidade homogênea em topografia de lobo médio, com adenomegalia peri-hilar ipsilateral. Radiogramas de tórax das internações anteriores com imagens semelhantes. O EXAME A SER REALIZADO COM OBJETIVO DE IDENTIFICAÇÃO DO AGENTE ETIOLÓGICO É:",
+      "alternativas": {
+        "a": "Sorologia para Mycoplasma pneumoniae.",
+        "b": "Cultura para Bordetella pertussis.",
+        "c": "Pesquisa de Mycobacterium tuberculosis em lavado gástrico.",
+        "d": "Sorologia para Chlamydophila pneumoniae."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 21
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q45",
+      "numero": 45,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menino, 16 m, interna na Enfermaria de Pediatria com história de febre há seis dias e dor a mobilização do joelho direito há quatro dias. Nega trauma e comorbidades. Por opção familiar não recebeu nenhuma vacina do Programa Nacional de Imunização. Exame físico: Regular estado geral, FC= 102 bpm, FR= 22 irmp, perfusão 3 segundos, PA= 87x52 mmHg, T= 39oC; joelho direito com bloqueio articular, hiperemia e calor local. Coletado exames e iniciado antibioticoterapia de amplo espectro. O laboratório de microbiologia informa 8 horas após a coleta de hemocultura crescimento de cocobacilo gram negativo pleomórfico. A BACTÉRIA DESCRITA É:",
+      "alternativas": {
+        "a": "Haemophilus influenzae tipo B.",
+        "b": "Sthaphylococcus aureus.",
+        "c": "Streptococcus pneumoniae.",
+        "d": "Salmonella spp."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 21
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q46",
+      "numero": 46,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina 9a, é trazida para consulta de rotina na Unidade Básica de Saúde. Mãe está muito preocupada com as crises de asma. Mãe conta que a filha tosse quando treina natação e que acorda toda manhã com obstrução e prurido nasal. No último ano apresentou seis episódios de asma com necessidade de ir ao Pronto Socorro, sendo a última há três semanas, quando ficou internada por três dias. Antecedentes pessoais: os quadros iniciaram aos dois anos de idade. Medicações em uso: Beta2-agonista de curta duração nas crises de falta de ar e formoterol 12mcg associado à budesonida 200mcg duas vezes ao dia, com uso irregular. A HIPOTESE DIAGNÓSTICA E A CONDUTA SÃO:",
+      "alternativas": {
+        "a": "Asma moderada não controlada; introduzir anti-leucotrieno, orientar adesão e técnica inalatória e retorno em três meses.",
+        "b": "Asma grave não controlada; otimizar o tratamento da rinite alérgica, orientar adesão e técnica inalatória, manter medicação profilática, retorno em quatro semanas.",
+        "c": "Asma grave controlada; otimizar o tratamento da rinite alérgica, prescrever dipropionato de beclometasona 200 mcg spray oral a cada 12 horas e retorno em dois meses.",
+        "d": "Asma moderada controlada; introduzir predinisolona 20mg/dia em dias alternados, orientar adesão e técnica inalatória, manter medicação profilática, retorno em quatro semanas."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q47",
+      "numero": 47,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Lactente, 2m, chega a Unidade de Emergência Pediátrica com crise convulsiva tônico-clônica generalizada controlada com uma dose de diazepam. Mãe conta que a criança está irritada há oito dias e mais sonolenta nos últimos dois dias. Exame físico: Regular do estado geral, FR= 40irpm, FC= 145bpm; pulmões: murmúrio vesicular simétrico bilateralmente, neurológico: paralisia de sexto par craniano. Tomografia de crânio com contraste: hidrocefalia acentuada e impregnação dos vasos da base. Líquor: Leucócitos= 450/mm3 (72% linfócitos, 38% neutrófilo), proteína= 523mg/dL, glicose= 22mg/dL; glicemia= 68mg/dL. O AGENTE ETIOLÓGICO É:",
+      "alternativas": {
+        "a": "Haemophilus influenzae tipo B.",
+        "b": "Mycobacterium tuberculosis.",
+        "c": "Aspergillus fumigatus.",
+        "d": "Escherichia coli."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 22
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q48",
+      "numero": 48,
+      "area": "Pediatria",
+      "formato": "multipla_escolha",
+      "enunciado": "Menina, 10a, é trazida pela mãe a Unidade de Emergência, referindo que a filha está sonolenta e apresentou cinco episódios de vômitos após queda da beliche há quatro horas. Exame físico: FC= 56bmp, FR= 12irpm, PA= 144x92mmHg, Escala de Coma de Glasgow= 13. Tomografia de Crânio sem contraste:",
+      "alternativas": {
+        "a": "Hematoma epidural; sem hipertensão intracraniana.",
+        "b": "Hematoma epidural; com hipertensão intracraniana.",
+        "c": "Hematoma subdural; com hipertensão intracraniana.",
+        "d": "Hematoma subdural; sem hipertensão intracraniana."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q48.png",
+          "rotulo": "QUESTÃO 48",
+          "legenda": "QUESTÃO 48",
+          "pagina": 41
+        }
+      ],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 23
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q49",
+      "numero": 49,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Primigesta, 27a, idade gestacional de 33 semanas, procura atendimento médico com queixa de cansaço, dor torácica e febre há quatro dias. Refere tosse seca e prostração há oito dias. Antecedentes pessoais: diabetes mellitus tipo 1 e traço falciforme. Exame físico geral: Regular estado geral, descorada+/4+, T= 38,5oC, PA=134x61 mmHg, FC=110 bpm, FR=50 irpm, oximetria de pulso (ar ambiente)= 89%, IMC=23,4Kg/m2. Exame obstétrico: Altura uterina= 30 cm, BCF=158 bpm, dinâmica uterina= 2 contrações fracas de 30 segundos em 10 minutos, sem hipertonia uterina, boa movimentação fetal. Toque vaginal: colo 100% esvaecido, dilatado 3 cm. RT-PCR para covid-19= positivo. Além de internação e dos cuidados de suporte com oxigênio, A CONDUTA É:",
+      "alternativas": {
+        "a": "Inibição do trabalho de parto, prescrição de betametasona e de sulfato de magnésio.",
+        "b": "Ultrassonografia com Doppler e prescrição de sulfato de magnésio.",
+        "c": "Cardiotocografia, prescrição de dexametasona e assistência ao trabalho de parto.",
+        "d": "Realização de cesárea de urgência."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 23
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q50",
+      "numero": 50,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 34a, G4P1C1A2, idade gestacional de 38 semanas e 6 dias, procura atendimento por início de contrações ontem e piora da dor hoje. Nega perdas vaginais e sangramento. Refere boa movimentação fetal. Sem comorbidades. Exame obstétrico: dinâmica uterina=2 contrações fracas de 30 segundos em 10 minutos, altura uterina= 38 cm, BCF= 146 bpm, cefálico. Toque vaginal= colo dilatado 1 polpa, grosso, posterior. Cardiotocografia:\nA CONDUTA É:",
+      "alternativas": {
+        "a": "Internar para indução de parto.",
+        "b": "Internar para cesárea.",
+        "c": "Dar alta com orientações sobre o trabalho de parto.",
+        "d": "Dar alta e indicar cardiotocografia a cada 3 dias."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q50.png",
+          "rotulo": "QUESTÃO 50",
+          "legenda": "QUESTÃO 50",
+          "pagina": 42
+        }
+      ],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 24
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q51",
+      "numero": 51,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 36a, G3P0A2 com idade gestacional de 30 semanas, chega ao Pronto Atendimento de uma Maternidade referindo muita dor abdominal e parada da movimentação fetal há 1 dia. Exame físico: Regular estado geral, descorada 3+/4+, sudoreica, FC= 135bpm, PA= 81x52 mmHg; exame obstétrico: altura uterina 35 cm, útero hipertônico e doloroso à palpação, ausência de batimentos cardíacos fetais, toque vaginal: colo impérvio. A CONDUTA É:",
+      "alternativas": {
+        "a": "Realizar cesárea de urgência.",
+        "b": "Solicitar ultrassonografia de urgência.",
+        "c": "Induzir parto vaginal.",
+        "d": "Aguardar parto espontâneo."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 24
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q52",
+      "numero": 52,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 19a, G1P0, idade gestacional de 39 semanas e 6 dias, comparece ao pronto atendimento com queixa de perda de líquido via vaginal há 12 horas e contrações a cada 5 minutos (há 6 horas). Refere boa movimentação fetal. Não realizou pré-natal. Exame físico; FC= 88 bpm, PA = 109 x 75 mmHg, T= 36,2oC. Exame obstétrico: altura uterina =35 cm, BCF=150 bpm, dinâmica uterina= 3 contrações moderadas de 40 segundos em 10 minutos. Exame especular: saída de moderada quantidade de líquido claro com grumos grossos pelo orifício externo do colo. Toque vaginal: colo dilatado 5 cm, medianizado, 80% esvaecido, feto cefálico, plano – 2 de DeLee. EM RELAÇÃO AO ESTREPTOCOCO DO GRUPO B, A CONDUTA É:",
+      "alternativas": {
+        "a": "Coletar cultura e, se positiva, iniciar profilaxia.",
+        "b": "Iniciar imediatamente profilaxia.",
+        "c": "Iniciar profilaxia em 6 horas.",
+        "d": "Não tem indicação de profilaxia."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 25
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q53",
+      "numero": 53,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 32a, G2P1A0, idade gestacional de 30 semanas e 2 dias, queixa-se de cefaleia, coriza, dor de garganta e tosse há 3 dias. Nega náuseas, vômitos, febre e contato com pessoas com covid-19. Antecedentes Pessoais: hipertensão arterial crônica, diabetes gestacional controlado com dieta e covid-19 há 5 meses. Medicamentos em uso: sulfato ferroso, carbonato de cálcio 1g/dia, AAS 100mg/dia, metildopa 1g/dia. Recebeu vacina contra covid-19 Pfizer® há 2 meses. Exame físico: IMC= 38Kg/m2; PA= 109x76 mmHg; T= 37,8ºC; FR= 26 ipm; FC= 109 bpm, oximetria de pulso (ar ambiente)= 97%. Realizou perfil glicêmico há 6 dias: jejum= 134 mg/dL, pós café= 163mg/dL, pós-almoço= 220 mg/dL e pós-jantar=188mg/dL. A CONDUTA É:",
+      "alternativas": {
+        "a": "Internar para introdução de insulina; realizar RT-PCR covid-19 e isolamento respiratório.",
+        "b": "Introduzir insulina e seguimento ambulatorial; descartada covid-19 pelo antecedente de infecção prévia e vacinação.",
+        "c": "Internar para introdução de insulina; sem necessidade isolamento respiratório.",
+        "d": "Orientar dieta para diabético, realizar RT-PCR covid-19 e isolamento domiciliar."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 25
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q54",
+      "numero": 54,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 22a, G2P1FV0, vem para primeira consulta de pré-natal em Unidade Básica de Saúde, assintomática. Idade gestacional pela amenorreia: 6 semanas. Antecedente Pessoal: óbito fetal com 32 semanas sem causa conhecida, nega patologias crônicas e nega uso de substâncias psicoativas. Questiona sobre riscos desta gestação e se deverá fazer algo diferente. EM RELAÇÃO ÀS DÚVIDAS DA PACIENTE, ASSINALE A RESPOSTA CORRETA:",
+      "alternativas": {
+        "a": "Risco habitual; seguir pré-natal de rotina em UBS.",
+        "b": "Alto risco; usar anticoagulação profilática.",
+        "c": "Alto risco; investigar trombofilias.",
+        "d": "Risco habitual; ultrassonografia quinzenal no terceiro trimestre."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 26
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q55",
+      "numero": 55,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Puérpera, 20a, G1P1, amamentando recém-nascido de 20 dias de vida, comparece à Unidade Básica de Saúde com queixa de dor mamária e febre há dois dias. Exame físico: bom estado geral, FC= 100 bpm, FR= 18 irpm, PA= 125x88 mmHg, T= 38o C. Exame das mamas: ingurgitamento bilateral; mama direita avermelhada e dolorosa à palpação, com edema de pele, sem sinais de abscesso, com fissura mamilar. ALÉM DA ORDENHA DAS MAMAS, A CONDUTA É:",
+      "alternativas": {
+        "a": "Antibioticoterapia endovenosa; suspensão temporária da amamentação.",
+        "b": "Antibioticoterapia oral; manutenção da amamentação.",
+        "c": "Analgesia; manutenção da amamentação.",
+        "d": "Antibioticoterapia oral; suspensão temporária da amamentação."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 26
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q56",
+      "numero": 56,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 32a, G3P2A0, comparece para primeira consulta de pré-natal com 15 semanas de amenorreia. Última citologia oncótica de colo uterino com resultado de lesão intra-epitelial de baixo grau, realizada há dois anos. A CONDUTA É:",
+      "alternativas": {
+        "a": "Realizar colposcopia após 20 semanas de gestação.",
+        "b": "Realizar colposcopia após o parto.",
+        "c": "Coletar citologia oncótica de colo uterino em 1 ano.",
+        "d": "Coletar citologia oncótica de colo uterino nesta consulta."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 26
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q57",
+      "numero": 57,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 22a, G1P0, idade gestacional de 10 semanas procurou o Pronto Atendimento com dor em baixo ventre e sangramento. Exame físico: hidratada, FR=14 irpm, PA= 88x56 mmHg, FC= 112 bpm, descorada +/4+, T=36,4oC. Exame especular: sangramento ativo com coágulos; toque vaginal: colo pérvio para 1 polpa digital com útero aumentado para 8 semanas. A CONDUTA É:",
+      "alternativas": {
+        "a": "Progesterona.",
+        "b": "Ultrassonografia.",
+        "c": "Misoprostol.",
+        "d": "Curetagem."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 27
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q58",
+      "numero": 58,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Adolescente, 16a, vem à consulta por ainda não ter menstruado. Apresenta curva de crescimento de peso e altura dentro da normalidade e idade óssea de acordo com a idade cronológica. Tem uma irmã mais jovem que menstruou aos 12 anos. Exame físico: desenvolvimento mamário e pelos pubianos no estágio IV de Tanner e vulva de aspecto normal. O PROVÁVEL DIAGNÓSTICO É:",
+      "alternativas": {
+        "a": "Amenorreia primária; Síndrome de Asherman.",
+        "b": "Amenorreia primária; Síndrome de Rokitansky.",
+        "c": "Amenorreia secundária; Síndrome de Swyer.",
+        "d": "Amenorreia secundária; Síndrome de Turner."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 27
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q59",
+      "numero": 59,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem transgênero, 30a, vem ao pronto socorro referindo ter sofrido violência sexual com penetração há 24 horas. Nega comorbidades, uso de medicamentos e cirurgias prévias. A CONDUTA ADEQUADA PARA ESTE PACIENTE É:",
+      "alternativas": {
+        "a": "Anticoncepção de emergência com levonorgestrel 1,5 mg em dose única.",
+        "b": "Não indicar anticoncepção porque é um homem transgênero.",
+        "c": "Não indicar anticoncepção de emergência, pois evento ocorreu há mais de 12 horas.",
+        "d": "Anticoncepção de emergência com desogestrel 0,75 mg duas doses com intervalo de 12 horas."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 27
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q60",
+      "numero": 60,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 25a, comparece ao pronto atendimento com queixa de ferida vulvar indolor há 14 dias. Antecedentes ginecológicos: nuligesta, utiliza anticoncepcional oral combinado como contracepção, última menstruação há 21 dias. Exame físico: lesão única, 2cm de diâmetro, base endurada e fundo limpo em grande lábio à direita e linfadenopatia inguinal ipsilateral. O DIAGNÓSTICO E TRATAMENTO SÃO:",
+      "alternativas": {
+        "a": "Cancro mole. Penicilina G benzatina - 2,4 milhões UI intramuscular em dose única.",
+        "b": "Sífilis primária. Penicilina G benzatina - 2,4 milhões UI intramuscular em dose única.",
+        "c": "Sífilis primária. Azitromicina - 1 g via oral em dose única.",
+        "d": "Cancro mole. Azitromicina - 1 g via oral em dose única."
+      },
+      "imagens": [
+        {
+          "arquivo": "images/2022-ad-p1/q60.png",
+          "rotulo": "QUESTÃO 60",
+          "legenda": "QUESTÃO 60",
+          "pagina": 42
+        }
+      ],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 28
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q61",
+      "numero": 61,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 35a, vem encaminhada do ambulatório de gastrocirurgia com queixa de irregularidade menstrual: refere ciclos de 3 a 4 dias de duração, com intervalo de 15 a 40 dias entre os ciclos. Antecedente pessoal: duas gestações prévias, com dois partos vaginais e cirurgia bariátrica disabsortiva há 10 meses, com perda de 30 Kg. Ultrassonografia transvaginal: sem alterações. A CONDUTA É:",
+      "alternativas": {
+        "a": "Contraceptivo injetável combinado com estradiol e noretisterona.",
+        "b": "Pílula de progestagênio isolado com desogestrel.",
+        "c": "Contraceptivo oral combinado com etinilestradiol e levonorgestrel.",
+        "d": "Pílula de progestagênio isolado com noretisterona."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 28
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q62",
+      "numero": 62,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 60a, procura o ginecologista após segundo episódio de sangramento vaginal em pequena quantidade. Antecedentes pessoais: obesidade grau II e menopausa aos 50 anos, sem reposição hormonal. Exame ginecológico: sem particularidades. Ultrassonografia pélvica: espessura endometrial de 10 mm. A HIPÓTESE DIAGNÓSTICA E O EXAME DE INVESTIGAÇÃO SÃO:",
+      "alternativas": {
+        "a": "Pólipo endometrial; ultrassom pélvico transvaginal.",
+        "b": "Carcinoma de endométrio, histeroscopia.",
+        "c": "Atrofia endometrial; teste de progesterona.",
+        "d": "Sarcoma de útero; biópsia de endométrio."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 28
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q63",
+      "numero": 63,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 23a, procura o Unidade Básica de Saúde para consulta ginecológica de rotina, refere vida sexual ativa há 10 meses. Antecedente pessoal: transplante renal, em terapia imunossupressora. A ORIENTAÇÃO EM RELAÇÃO À PREVENÇÃO DE CÂNCER DE COLO UTERINO É:",
+      "alternativas": {
+        "a": "Coleta de colpocitologia oncológica aos 25 anos, com intervalo anual nos dois primeiros exames. Não há indicação de vacinação pela faixa etária.",
+        "b": "Coleta de colpocitologia oncológica agora, com intervalo anual. Indicada vacinação para HPV com duas doses tempo 0-6 meses.",
+        "c": "Coleta de colpocitologia oncológica aos 25 anos, com intervalo anual nos dois primeiros exames. A vacina é contraindicada para população transplantada.",
+        "d": "Coleta de colpocitologia oncológica agora com intervalo semestral no primeiro ano. Vacinação para HPV com três doses tempo 0-3-12 meses."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": true,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 29
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q64",
+      "numero": 64,
+      "area": "Ginecologia e Obstetrícia",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 31a, procura o serviço por estar gestante e deseja interrupção da gravidez. Refere ter companheiro e fazer uso de preservativo em suas relações sexuais. Refere que a gestação é fruto de um estupro ocorrido há 9 semanas. Na época, ficou muito traumatizada e não fez boletim de ocorrência, não contou para ninguém sobre o ocorrido e nem procurou atendimento médico. ALÉM DAS PROFILAXIAS INDICADAS, A ORIENTAÇÃO PARA A MULHER NESSE CASO É:",
+      "alternativas": {
+        "a": "Seguir a gestação com apoio psicológico, pois não tem direito ao aborto legal.",
+        "b": "Registrar queixa na Delegacia de Defesa da Mulher para ter direito ao aborto legal.",
+        "c": "Obter a anuência do companheiro para ter direito ao aborto legal.",
+        "d": "Explicar que tem direito ao aborto legal mediante seu próprio relato."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 29
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q65",
+      "numero": 65,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Foi realizado um estudo epidemiológico para conhecer o perfil de mortalidade infantil indígena e observaram-se 254 óbitos em crianças menores de um ano, notificadas ao Sistema de Informação da Atenção à Saúde Indígena, no estado do Pará, no período de 2013 a 2018. Dos óbitos, 89 ocorreram entre o nascimento e seis dias, 29 foram entre sete e 27 dias, e 136 aconteceram no período de 28 a 364 dias de vida. Cento e trinta e sete óbitos (n=137) ocorreram em hospitais e as três principais causas foram: afecções perinatais (n=69), doenças do aparelho respiratório (n=48) e doenças infecciosas e parasitárias (n=40). O estudo também encontrou diferenciais na distribuição dos óbitos de acordo com as etnias. ASSINALE A ALTERNATIVA EM RELAÇÃO À PROPORÇÃO DE ÓBITOS NO PERÍODO NEONATAL TARDIO, A PROPORÇÃO DE MORTES POR INFECÇÕES PERINATAIS, E A PROPORÇÃO DE ÓBITOS FORA DO AMBIENTE HOSPITALAR:",
+      "alternativas": {
+        "a": "11,42%; 18,90% e 53,93%.",
+        "b": "53,54%; 27,16% e 46,06%.",
+        "c": "11,42%; 27,16% e 46,06%.",
+        "d": "53,54%; 27,16% e 53,93%."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 30
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q66",
+      "numero": 66,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "COM OS DADOS DA TABELA RESPONDA A ALTERNATIVA CORRETA:\n\n| Indicadores |  |  | Cidade A |  |  | Cidade B |  |  |\n|---|---|---|---|---|---|---|---|---|\n|  | Número de nascidos vivos |  |  | 10.000 |  |  | 5.000 |  |\n| Número total de óbitos |  |  | 1.500 |  |  | 2.000 |  |  |\n|  | Número total de óbitos em menores de 1 ano |  |  | 150 |  |  | 100 |  |\n| Número total de óbitos em menores de 28 dias |  |  | 80 |  |  | 60 |  |  |\n|  | Número total de óbitos de 28 a 364 dias |  |  | 30 |  |  | 22 |  |\n| Número total de óbitos maternos |  |  | 4 |  |  | 2 |  |  |\n\nFonte: dados hipotéticos.",
+      "alternativas": {
+        "a": "O coeficiente de mortalidade infantil é maior na cidade A em relação à cidade B.",
+        "b": "A taxa de mortalidade neonatal é maior na cidade A em relação à cidade B.",
+        "c": "A razão de mortalidade materna é maior na cidade A em relação à cidade B.",
+        "d": "A mortalidade infantil proporcional é maior na cidade A em relação à cidade B."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 30
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q67",
+      "numero": 67,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Para determinar os fatores sociodemográficos, comportamentais e de assistência à saúde relacionados à ocorrência de sífilis em mulheres atendidas em maternidades públicas, foi realizado um estudo entre julho de 2018 e julho de 2019. Na seleção das participantes foi considerado o resultado da sorologia por ELISA (enzyme-linked immunosorbent assay) - variável usada para o diagnóstico de sífilis. Todas residiam em Recife e as informações pregressas foram obtidas por meio de entrevista durante a internação hospitalar. O nível de escolaridade fundamental incompleto (Odds Ratio - OR= 2,02), três ou mais parceiros sexuais no último ano (OR= 3,1) entre outros fatores, além de uma a três consultas ao pré-natal (OR= 3,5) e história anterior de infecção sexualmente transmissível (OR= 9,7), aumentaram as chances de ocorrência da doença. O DESENHO DESTE ESTUDO EPIDEMIOLÓGICO É:",
+      "alternativas": {
+        "a": "Coorte retrospectiva.",
+        "b": "Transversal ou seccional.",
+        "c": "Coorte prospectiva.",
+        "d": "Caso-controle."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 31
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q68",
+      "numero": 68,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Em um município X com 980.000 habitantes em que a expectativa de vida está acima dos 70 anos, ocorreram 14.210 óbitos por todas as causas entre 2019 e 2020. Na comparação da mortalidade por covid-19 com a mortalidade por doenças cardiovasculares, e usando os dados abaixo: Tabela. Distribuição dos óbitos segundo faixas etárias e causa. Município X, 2019- 2020. Faixas etárias Covid-19  %  Cardiovasculares  % 0-9  3  0,09  4  0,11 10-19  5  0,14  1  0,03 20-29  50  1,42  21  0,60 30-39  165  4,61  51  1,46 40-49  330  9,11  145  4,15 50-59  740  20,51  334  9,55 60-69  606  17,09  682  19,50 70-79  756  21,53  752  21,50 80 e mais  895  25,49  1.510  43,27 Total  3.550  3.500\nEM RELAÇÃO AO INDICADOR QUE CONFERE MAIOR IMPORTÂNCIA EPIDEMIOLÓGICA PARA A COVID-19, A ALTERNATIVA CORRETA É:",
+      "alternativas": {
+        "a": "Mortalidade proporcional por causa de óbito.",
+        "b": "Coeficiente de mortalidade por causa específica.",
+        "c": "Anos potenciais de vida perdidos (APVP).",
+        "d": "Número absoluto de óbitos para cada causa."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 32
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q69",
+      "numero": 69,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 50a, faz acompanhamento na Unidade Básica de Saúde em razão de hipertensão arterial, obesidade, tabagismo, nervosismo. Faz uso de clonazepam, losartana, atenolol e uso irregular de fluoxetina. Procura a UBS com frequência para pedir troca de receitas e tem aumentado o uso de clonazepan por conta própria. CONSIDERANDO A PREVENÇÃO QUATERNÁRIA, A CONDUTA É:",
+      "alternativas": {
+        "a": "Reduzir a dose de benzodiazepínico.",
+        "b": "Solicitar eletrocardiograma e exames laboratoriais.",
+        "c": "Inserir a paciente em grupo de tabagismo.",
+        "d": "Encaminhar ao ambulatório de psiquiatria."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 32
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q70",
+      "numero": 70,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "O TRABALHO DOS PROFISSIONAIS DE EQUIPE DE SAÚDE DA FAMÍLIA É CARACTERIZADO PELOS SEGUINTES ATRIBUTOS ESSENCIAIS DA ATENÇÃO PRIMÁRIA EM SAÚDE:",
+      "alternativas": {
+        "a": "Atenção no primeiro contato, longitudinalidade, integralidade e coordenação do cuidado.",
+        "b": "Universalidade, atenção no primeiro contato, integralidade e equidade.",
+        "c": "Atenção no primeiro contato, participação social, descentralização e integralidade.",
+        "d": "Universalidade, integralidade, equidade e participação social."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 33
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q71",
+      "numero": 71,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Uma equipe de saúde da família recebe notificação da maternidade informando o nascimento de bebê no dia anterior e planeja visita ao binômio, pois se trata de ferramenta potente para prevenção de agravos e promoção de saúde. O MELHOR MOMENTO PARA REALIZAR ESSA VISITA É:",
+      "alternativas": {
+        "a": "Entre o 7˚ e o 10˚ dia após o parto, quando a icterícia neonatal é mais acentuada.",
+        "b": "No momento da vacina BCG, ao final do primeiro mês de vida.",
+        "c": "Deve-se aguardar a consulta ser agendada pela mãe.",
+        "d": "Na primeira semana após o parto, a fim de reduzir a mortalidade."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 33
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q72",
+      "numero": 72,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Homem, 30a, é atendido na Unidade Básica de Saúde com queixas de dor no cotovelo direito há um ano, com piora há três meses. Refere trabalhar como forneiro, em setor de fundição de ferro, desde 2015. A atividade principal consiste em retirar impurezas do sobrenadante de ferro fundido, utilizando escumadeira de 50 cm de diâmetro com haste de dois metros, realizando movimentos de extensão e pronação do braço direito, a cada 10 minutos, durante a jornada de oito horas de trabalho. Há seis meses começou a fazer horas extras, toda semana. Exame físico: dor à palpação de epicôndilo lateral direito; teste de Cozen positivo. A CONDUTA É:",
+      "alternativas": {
+        "a": "Notificar no SINAN como doença relacionada a trabalho.",
+        "b": "Solicitar ressonância nuclear magnética de cotovelo para diagnóstico.",
+        "c": "Realizar visita a empresa para emissão de CAT.",
+        "d": "Solicitar ultrassonografia de cotovelo para notificar agravo relacionado ao trabalho."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 33
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q73",
+      "numero": 73,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "CONSIDERANDO A COVID-19 RELACIONADA AO TRABALHO, ASSINALE A CORRETA:",
+      "alternativas": {
+        "a": "Devem ser notificados no SINAN os casos que foram diagnosticados como covid-19 e com exposição que possa ter ocorrido no trabalho.",
+        "b": "A covid-19 é uma doença pandêmica e, portanto, não é considerada doença relacionada ao trabalho.",
+        "c": "A possibilidade de contaminação em transporte coletivo afasta a possibilidade de covid-19 relacionada ao trabalho.",
+        "d": "A suspeita de contaminação em ambiente domiciliar afasta a possibilidade de covid-19 relacionada ao trabalho."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "A",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 34
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q74",
+      "numero": 74,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "A anamnese ocupacional é importante para identificar os fatores de risco ocupacionais associados a determinadas doenças ou agravos. A ALTERNATIVA QUE CARACTERIZA ESTA ASSOCIAÇÃO É:",
+      "alternativas": {
+        "a": "Soldador e glaucoma.",
+        "b": "Pedreiro e dermatite de contato.",
+        "c": "Montador de bateria de veículos e intoxicação por mercúrio.",
+        "d": "Marceneiro e silicose."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 34
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q75",
+      "numero": 75,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "A equipe gestora de um Pronto Atendimento (PA) detecta uma alta demanda de pacientes que procuram o serviço devido ao controle inadequado de doenças crônicas. CONSIDERANDO A CONSTRUÇÃO DE REDES ASSISTENCIAIS E OS DIFERENTES PAPÉIS DOS SERVIÇOS, A EQUIPE GESTORA DEVE:",
+      "alternativas": {
+        "a": "Recusar o atendimento desses pacientes, orientando-os a procurar as Unidades Básicas de Saúde.",
+        "b": "Estabelecer um fluxo de agendamento dos casos mais graves para os ambulatórios de especialidades.",
+        "c": "Criar um grupo para elaborar Projetos Terapêuticos Singulares (PTS) para os casos que mais procuram o PA.",
+        "d": "Estabelecer um fluxo de informações sobre os pacientes junto ao gestor municipal e Unidades Básicas de Saúde."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "D",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 34
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q76",
+      "numero": 76,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "ASSINALE A ALTERNATIVA CORRETA EM RELAÇÃO AOS PRINCÍPIOS DA CLÍNICA AMPLIADA E COMPARTILHADA, DA MEDICINA CENTRADA NA PESSOA E DA MEDICINA DAS NARRATIVAS:",
+      "alternativas": {
+        "a": "São desenvolvidos pela Atenção Primária para qualificar o trabalho médico.",
+        "b": "Valorizam a autonomia e autoconhecimento dos pacientes.",
+        "c": "Restringem-se ao trabalho da equipe de saúde da família.",
+        "d": "Cada um deles é uma etapa do Projeto Terapêutico Singular."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 35
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q77",
+      "numero": 77,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Uma equipe de saúde da família percebe que um homem, antes frequentador ocasional do serviço, torna-se progressivamente frequentador assíduo. Embora sempre se dizendo doente, as queixas eram imprecisas e variadas. Os exames clínicos e laboratoriais não confirmaram nenhuma hipótese diagnóstica. Alguns membros da equipe passaram a classificá-lo como “poliqueixoso”. A RESPEITO DO ENFRENTAMENTO DESTE TIPO DE PROBLEMA, ASSINALE A ALTERNATIVA CORRETA:",
+      "alternativas": {
+        "a": "Explicações orgânicas confiáveis são encontradas na maior parte das queixas somáticas na atenção primária, com investigação adequada.",
+        "b": "A equipe deve solicitar o apoio do Centro Atenção Psicossocial para lidar adequadamente com este tipo de problema.",
+        "c": "A fragilidade de alguns dos atributos da atenção primária dificulta o cuidado deste tipo de problema.",
+        "d": "O mais provável é que o homem esteja buscando ganhos secundários relacionados ao trabalho."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 35
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q78",
+      "numero": 78,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Segundo o escritor Oliver Sacks, em seu livro O homem que confundiu sua mulher com o chapéu, “Meu trabalho, minha vida estão voltados totalmente para os doentes — mas os doentes e suas doenças conduzem-me a reflexões que, de outro modo, talvez não me ocorressem. Tanto assim que me vejo compelido a indagar, como Nietzsche: ‘Quanto à doença: não somos quase tentados a perguntar se conseguiríamos passar sem ela’? e a ver as questões que ela suscita como sendo de uma natureza fundamental. Invariavelmente meus pacientes levam-me a questionar, e invariavelmente minhas questões levam-me aos pacientes, assim (...), existe um movimento contínuo de um para o outro\". ASSINALE A ALTERNATIVA CORRETA:",
+      "alternativas": {
+        "a": "Conhecer a doença é suficiente para dimensionar a experiência do adoecimento.",
+        "b": "O autor entende a saúde como o completo bem estar físico, mental e espiritual.",
+        "c": "A doença é uma construção teórica e um instrumento de trabalho do médico.",
+        "d": "A doença é o objeto de trabalho do médico."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "C",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 36
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q79",
+      "numero": 79,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Devido à falta de outros tratamentos médicos eficazes, pressão pública e política, autoridades sanitárias de diversos países, incluindo o Brasil, autorizaram o uso de cloroquina e hidroxicloroquina para covid-19, em março de 2020. A comunidade médica adotou a hidroxicloroquina para o tratamento de covid-19, apesar da falta de evidências convincentes de benefício. Um manuscrito publicado pela The Lancet, em maio de 2020, relatou que o uso de hidroxicloroquina ou cloroquina em pacientes hospitalizados com covid-19 foi associado a uma diminuição de sobrevida hospitalar e a um aumento da frequência de arritmias ventriculares, imediatamente colocando em questão a adoção generalizada destes medicamentos. É CORRETO AFIRMAR:",
+      "alternativas": {
+        "a": "O princípio ético da autonomia deve orientar as prescrições médicas, priorizando a comunicação e o esclarecimento entre riscos e benefícios.",
+        "b": "As orientações acerca das intervenções médicas podem resultar em danos para os pacientes, demandando reavaliações num contexto dinâmico de riscos e benefícios.",
+        "c": "Cabe aos gestores públicos garantirem respaldo institucional para que a autonomia médica seja exercida, visando a valorização da relação médico-paciente.",
+        "d": "É recomendada a administração de um medicamento que não tem efeito comprovado, como alternativa para o tratamento, assumindo que o benefício será maior."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 37
+      }
+    },
+    {
+      "id": "unicamp-2022-ad-p1-q80",
+      "numero": 80,
+      "area": "Saúde Coletiva",
+      "formato": "multipla_escolha",
+      "enunciado": "Mulher, 42a, comparece em consulta na Unidade Básica de Saúde para trazer os resultados do exame de mamografia e para fazer acompanhamento de rotina. Queixa-se de surto de agressividade há aproximadamente 15 dias. Apresenta várias questões de saúde mental desde a juventude. Relata que teve problemas com álcool há 15 anos, mas não faz uso no momento. Recentemente, vem apresentando sintomas depressivos e ansiosos. É mãe de dois filhos biológicos e um adotivo, reside com os filhos e o parceiro atual, pai dos adolescentes, e trabalha como faxineira em empresa terceirizada. Relata que recentemente vem sofrendo violência doméstica por parte do parceiro, com discussões frequentes e agressões verbais e físicas. Vem tentando fazer com que o companheiro saia da casa, mas ele resiste. Durante esses episódios de violência, sente-se muito mal e nervosa e recorreu ao Pronto Socorro da cidade duas vezes no último mês. Foi medicada devido a dores no peito e aumento da pressão arterial, posteriores às agressões do companheiro. A CONDUTA PROFISSIONAL DO MÉDICO DEVE SER:",
+      "alternativas": {
+        "a": "Promover o acolhimento, registrar no prontuário as violências sofridas relatadas em entrevista e constatadas no exame físico e planejar visita domiciliar para averiguação dos fatos.",
+        "b": "Fortalecer o vínculo com a paciente, solicitar apoio da equipe no desenho de um plano terapêutico e realizar a notificação compulsória à autoridade sanitária.",
+        "c": "Realizar visita domiciliar acompanhado por agente comunitário de saúde e assistente social e informar o companheiro que a equipe da UBS irá denunciá-lo para a autoridade policial.",
+        "d": "Monitorar os parâmetros clínicos da paciente nas visitas domiciliares semanais e não realizar a notificação compulsória à autoridade sanitária, evitando causar mais danos."
+      },
+      "imagens": [],
+      "gabarito": {
+        "letra": "B",
+        "resposta_esperada": null,
+        "ampliado": false
+      },
+      "anulada": false,
+      "fonte": {
+        "pdf": "https://www.comvest.unicamp.br/residenciamedica2022/provas/tAD1W.pdf",
+        "pagina": 38
+      }
+    }
+  ]
+}
