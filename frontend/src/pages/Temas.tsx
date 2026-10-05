@@ -24,7 +24,7 @@ export default function Temas() {
     <div className="max-w-6xl mx-auto px-8 py-8 entrar">
       <Cabecalho
         titulo="Temas"
-        sub={<>{data.length} temas · <span className="text-eosina">{dominados} dominados</span> · prioridade = prevalência na banca × lacuna de domínio × peso do coach</>}
+        sub={<>{data.length} temas · <span className="text-eosina">{dominados} dominados</span> · prioridade = prevalência na banca × lacuna de domínio × peso do Preceptor</>}
       />
       <div className="flex flex-wrap items-center gap-2 mb-5">
         <button className={clsx('chip !py-1 !px-3', !area && '!text-texto !border-hema')} onClick={() => setArea(null)}>Todas</button>

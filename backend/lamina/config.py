@@ -20,6 +20,11 @@ APP_DATA = Path(os.environ.get("LAMINA_DATA_DIR", REPO_ROOT / "app_data"))
 DB_PATH = APP_DATA / "lamina.db"
 PERFIL_PATH = APP_DATA / "perfil.json"
 CLAUDE_CWD = APP_DATA / "claude_cwd"
+AGENTES_DIR = APP_DATA / "agentes"        # um diretório persistente por agente (caderno + MEMORIA.md)
+BIBLIOTECA_DIR = APP_DATA / "biblioteca"  # documentos integrais e notas verificadas, compartilhados
+
+# Ciclo do Preceptor em segundo plano (desligado nos testes e com LAMINA_SEM_MAESTRO=1).
+MAESTRO_ATIVO = os.environ.get("LAMINA_SEM_MAESTRO") != "1"
 
 CLAUDE_CLI = Path(os.environ.get("LAMINA_CLAUDE_CLI", Path.home() / ".local" / "bin" / "claude"))
 

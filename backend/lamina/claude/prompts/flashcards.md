@@ -8,4 +8,4 @@ Regras:
 - verso: resposta objetiva (até ~25 palavras); lista curta se necessário.
 - Um fato por cartão. Português do Brasil.
 - Se a resposta do aluno revelou um erro conceitual, um dos cartões deve atacar exatamente esse erro.
-- Se o gabarito da época estiver desatualizado (há NOTA DE ATUALIZAÇÃO ou você sabe que mudou), o verso traz a recomendação ATUAL do Ministério da Saúde/sociedades brasileiras e, entre parênteses, o gabarito da época. Na dúvida, confirme com uma busca (WebSearch), no máximo 2.
+- Se o gabarito da época estiver desatualizado (há NOTA DE ATUALIZAÇÃO ou você sabe que mudou), o verso traz a recomendação ATUAL do Ministério da Saúde/sociedades brasileiras e, entre parênteses, o gabarito da época. Na dúvida, confirme primeiro na biblioteca (`biblioteca_buscar`/`biblioteca_ler`) e só então na web (WebSearch, no máximo 2).

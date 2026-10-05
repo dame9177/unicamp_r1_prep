@@ -37,7 +37,12 @@ def conectar(path: Path | None = None) -> Iterator[sqlite3.Connection]:
 
 
 # Colunas adicionadas depois da primeira versão: (tabela, coluna, tipo).
-MIGRACOES = [("questoes", "obs_curadoria", "TEXT"), ("tentativas", "adendo", "TEXT")]
+MIGRACOES = [
+    ("questoes", "obs_curadoria", "TEXT"),
+    ("tentativas", "adendo", "TEXT"),
+    ("chats", "agente", "TEXT NOT NULL DEFAULT 'tutor'"),
+    ("llm_jobs", "fundo", "INTEGER NOT NULL DEFAULT 0"),
+]
 
 
 def inicializar(path: Path | None = None) -> None:
@@ -67,6 +72,19 @@ def obter_ajuste(conn: sqlite3.Connection, chave: str, padrao: Any = None) -> An
 def salvar_ajuste(conn: sqlite3.Connection, chave: str, valor: Any) -> None:
     conn.execute(
         "INSERT INTO ajustes (chave, valor_json) VALUES (?, ?) "
+        "ON CONFLICT(chave) DO UPDATE SET valor_json = excluded.valor_json",
+        (chave, json.dumps(valor, ensure_ascii=False)),
+    )
+
+
+def obter_estado(conn: sqlite3.Connection, chave: str, padrao: Any = None) -> Any:
+    r = conn.execute("SELECT valor_json FROM estado WHERE chave = ?", (chave,)).fetchone()
+    return json.loads(r[0]) if r else padrao
+
+
+def salvar_estado(conn: sqlite3.Connection, chave: str, valor: Any) -> None:
+    conn.execute(
+        "INSERT INTO estado (chave, valor_json) VALUES (?, ?) "
         "ON CONFLICT(chave) DO UPDATE SET valor_json = excluded.valor_json",
         (chave, json.dumps(valor, ensure_ascii=False)),
     )

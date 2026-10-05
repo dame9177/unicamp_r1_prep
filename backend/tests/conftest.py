@@ -16,6 +16,9 @@ def ambiente(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "DB_PATH", dados / "lamina.db")
     monkeypatch.setattr(config, "PERFIL_PATH", dados / "perfil.json")
     monkeypatch.setattr(config, "CLAUDE_CWD", dados / "claude_cwd")
+    monkeypatch.setattr(config, "AGENTES_DIR", dados / "agentes")
+    monkeypatch.setattr(config, "BIBLIOTECA_DIR", dados / "biblioteca")
+    monkeypatch.setattr(config, "MAESTRO_ATIVO", False)
     cur = tmp_path / "curadoria"
     if config.CURADORIA_DIR.exists():
         shutil.copytree(config.CURADORIA_DIR, cur)
@@ -51,6 +54,8 @@ def fake_runner():
         "juiz": juiz,
         "flashcards": lambda p: {"cartoes": [{"frente": "F1?", "verso": "V1"}, {"frente": "F2?", "verso": "V2"}]},
         "tutor": lambda p: "Explicação **didática**.\n\nFontes: SBP 2025",
+        "preceptor": lambda p: "Ronda feita: plano ajustado.",
+        "bibliotecario": lambda p: "Relatório: capturei 1 documento.",
     })
     runner_mod.definir_runner(fr)
     yield fr
