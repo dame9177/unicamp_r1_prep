@@ -1,0 +1,494 @@
+{
+ "temas": [
+  {
+   "area": "Pediatria",
+   "descricao": "Passos iniciais, VPP, oxigênio, compressões, adrenalina e volume, líquido meconial.",
+   "id": "ped-reanimacao-neonatal-em-sala-de-parto",
+   "nome": "Reanimação neonatal em sala de parto",
+   "ordem": 0
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Icterícia e fototerapia, hipoglicemia, sífilis, GBS, varicela e hepatite B materna, eritema tóxico, dor, triagem cardíaca.",
+   "id": "ped-neonatologia-ictericia-glicemia-infeccoes",
+   "nome": "Neonatologia: icterícia, glicemia, infecções",
+   "ordem": 1
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Teste do pezinho, reflexo vermelho, amamentação, imunizações, profilaxias, violência sexual e comportamento infantil.",
+   "id": "ped-triagem-aleitamento-vacinas-e-prevencao",
+   "nome": "Triagem, aleitamento, vacinas e prevenção",
+   "ordem": 2
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Baixa estatura, idade óssea, puberdade precoce, hipotireoidismo, variações normais do desenvolvimento.",
+   "id": "ped-crescimento-puberdade-e-endocrinologia",
+   "nome": "Crescimento, puberdade e endocrinologia",
+   "ordem": 3
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Diagnóstico nutricional, desnutrição, obesidade, anemia ferropriva, raquitismo e suporte nutricional.",
+   "id": "ped-nutricao-e-carencias",
+   "nome": "Nutrição e carências",
+   "ordem": 4
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Refluxo, estenose de piloro, constipação, dor abdominal funcional, doença celíaca, DII, hepatites e enteropatias.",
+   "id": "ped-gastroenterologia-pediatrica",
+   "nome": "Gastroenterologia pediátrica",
+   "ordem": 5
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Infecções respiratórias: influenza, VSR, pneumonia atípica e complicada, coqueluche, clamídia, tuberculose.",
+   "id": "ped-pneumonias-bronquiolite-e-coqueluche",
+   "nome": "Pneumonias, bronquiolite e coqueluche",
+   "ordem": 6
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Crise de asma, controle da asma e rinite, crupe, aspiração de corpo estranho.",
+   "id": "ped-asma-vias-aereas-e-corpo-estranho",
+   "nome": "Asma, vias aéreas e corpo estranho",
+   "ordem": 7
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Ressuscitação pediátrica, TCE, estado epiléptico, anafilaxia, acesso intraósseo, sedoanalgesia, afogamento.",
+   "id": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+   "nome": "Emergência: PCR, trauma, convulsão, anafilaxia",
+   "ordem": 8
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Toxíndromes, intoxicação medicamentosa, acidentes crotálico e escorpiônico.",
+   "id": "ped-intoxicacoes-e-acidentes-com-animais",
+   "nome": "Intoxicações e acidentes com animais",
+   "ordem": 9
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Síndromes nefrítica e nefrótica, ITU, uropatias, desidratação, hipernatremia, trombose.",
+   "id": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+   "nome": "Nefrologia e distúrbios hidroeletrolíticos",
+   "ordem": 10
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Exantemas, infecções de pele e partes moles, parasitoses, micoses, dengue, meningite, mastoidite, Hib.",
+   "id": "ped-infectologia-exantemas-e-dermatologia",
+   "nome": "Infectologia, exantemas e dermatologia",
+   "ordem": 11
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Cardiopatias, arritmias, miocardite, púrpura, leucemia, vasculite IgA, anemia.",
+   "id": "ped-cardiologia-hematologia-e-oncologia",
+   "nome": "Cardiologia, hematologia e oncologia",
+   "ordem": 12
+  },
+  {
+   "area": "Pediatria",
+   "descricao": "Parafimose, pronação dolorosa, epifisiólise, fraturas, sinovite transitória, invaginação intestinal.",
+   "id": "ped-ortopedia-e-cirurgia-pediatrica",
+   "nome": "Ortopedia e cirurgia pediátrica",
+   "ordem": 13
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Infarto, flutter/torsades, pericardite e tamponamento, estenose mitral/aórtica e síncope cardiogênica.",
+   "id": "cm-cardiologia-sca-arritmias-valvopatias",
+   "nome": "Cardiologia: SCA, arritmias, valvopatias",
+   "ordem": 0
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Tratamento anti-hipertensivo, emergência hipertensiva, feocromocitoma, estratificação de risco e fatores de risco.",
+   "id": "cm-has-dislipidemia-e-risco-cardiovascular",
+   "nome": "HAS, dislipidemia e risco cardiovascular",
+   "ordem": 1
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Diabetes e pré-diabetes, cetoacidose, nódulo de tireoide, hipo/hipertireoidismo, insuficiência adrenal.",
+   "id": "cm-diabetes-tireoide-e-suprarrenal",
+   "nome": "Diabetes, tireoide e suprarrenal",
+   "ordem": 2
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Nefrite intersticial, rabdomiólise, lesão renal aguda, estadiamento de DRC, glomerulopatia membranosa, estenose renal.",
+   "id": "cm-nefrologia-lra-drc-e-glomerulopatias",
+   "nome": "Nefrologia: LRA, DRC e glomerulopatias",
+   "ordem": 3
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Hiponatremia, hipercalemia, acidose metabólica, intoxicações exógenas e antídotos.",
+   "id": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+   "nome": "Distúrbios ácido-base, eletrólitos e intoxicações",
+   "ordem": 4
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Asma, DPOC, doenças intersticiais, TEP, sarcoidose, pneumonias, tosse crônica e pneumoconioses.",
+   "id": "cm-pneumologia-clinica",
+   "nome": "Pneumologia clínica",
+   "ordem": 5
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Ventilação mecânica, via aérea, anafilaxia, choque e POCUS.",
+   "id": "cm-terapia-intensiva-e-emergencias",
+   "nome": "Terapia intensiva e emergências",
+   "ordem": 6
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "AVC, cefaleias, demências, neuropatias, miastenia, Guillain-Barré, vertigem, neuralgia do trigêmeo.",
+   "id": "cm-neurologia-clinica",
+   "nome": "Neurologia clínica",
+   "ordem": 7
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Meningites, encefalite, TB, dengue, hanseníase, micoses, raiva, zoster, acidentes por animais.",
+   "id": "cm-infectologia-geral-e-neuroinfeccoes",
+   "nome": "Infectologia geral e neuroinfecções",
+   "ordem": 8
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Interpretação sorológica de sífilis e hepatite B, neurossífilis e retratamento.",
+   "id": "cm-ist-sifilis-e-hepatites-virais",
+   "nome": "IST, sífilis e hepatites virais",
+   "ordem": 9
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Cirrose, PBE, varizes, hepatites agudas, Wilson, CBP, úlcera, intestino irritável, intolerância à lactose.",
+   "id": "cm-gastroenterologia-e-hepatologia",
+   "nome": "Gastroenterologia e hepatologia",
+   "ordem": 10
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Gota, artrites, osteoartrite, LES, espondiloartrites, uveíte, lesões cutâneas e reações medicamentosas.",
+   "id": "cm-reumatologia-e-dermatologia",
+   "nome": "Reumatologia e dermatologia",
+   "ordem": 11
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Deficiência de B12, anemias hemolíticas, hemocromatose, síndrome de realimentação, tiamina.",
+   "id": "cm-hematologia-nutricao-e-metabolismo",
+   "nome": "Hematologia, nutrição e metabolismo",
+   "ordem": 12
+  },
+  {
+   "area": "Clínica Médica",
+   "descricao": "Delirium, quedas, síncope ortostática, tabagismo, rastreamento e morte encefálica.",
+   "id": "cm-geriatria-prevencao-e-etica",
+   "nome": "Geriatria, prevenção e ética",
+   "ordem": 13
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "ATLS, acessos, hemorragia, ácido tranexâmico, intubação, cricotireoidostomia, choque.",
+   "id": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+   "nome": "Trauma: atendimento inicial, via aérea e choque",
+   "ordem": 0
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Pneumotórax hipertensivo, drenagem torácica, lesão de aorta, fístula broncopleural.",
+   "id": "cir-trauma-toracico-e-drenagem-pleural",
+   "nome": "Trauma torácico e drenagem pleural",
+   "ordem": 1
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Pelve, fraturas expostas, lesões vasculares e nervosas, laparotomia, esplenectomia.",
+   "id": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+   "nome": "Trauma abdominal, pelve, extremidades e nervos",
+   "ordem": 2
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Hematomas intracranianos, indicação de TC, diabetes insipidus pós-operatório, protocolo de morte encefálica e óbito.",
+   "id": "cir-tce-neurocirurgia-e-morte-encefalica",
+   "nome": "TCE, neurocirurgia e morte encefálica",
+   "ordem": 3
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Queimaduras e reposição, fases da cicatrização, fios, agulhas, pinças e anestesia local.",
+   "id": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+   "nome": "Queimaduras, cicatrização e técnica cirúrgica",
+   "ordem": 4
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Claudicação, oclusão arterial aguda, TVP, insuficiência venosa, Buerger, erisipela, isquemia mesentérica.",
+   "id": "cir-doenca-arterial-e-venosa-periferica",
+   "nome": "Doença arterial e venosa periférica",
+   "ordem": 5
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Revascularização, valvas, tumores cardíacos, dissecção e aneurisma de aorta.",
+   "id": "cir-cirurgia-cardiaca-e-aorta",
+   "nome": "Cirurgia cardíaca e aorta",
+   "ordem": 6
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Próstata, retenção urinária, litíase, trauma de uretra, torção testicular, tumores renais.",
+   "id": "cir-urologia",
+   "nome": "Urologia",
+   "ordem": 7
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Hirschsprung, hérnias, criptorquidia, hidrocele, enterocolite necrosante, intussuscepção.",
+   "id": "cir-cirurgia-pediatrica",
+   "nome": "Cirurgia pediátrica",
+   "ordem": 8
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Apendicite, perfuração, sinais semiológicos, divertículo de Meckel, isquemia mesentérica.",
+   "id": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+   "nome": "Abdome agudo, apendicite e isquemia intestinal",
+   "ordem": 9
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Colecistite, colangite, tumores hepáticos, cirrose e varizes, MELD, tumores pancreáticos.",
+   "id": "cir-figado-vias-biliares-e-pancreas",
+   "nome": "Fígado, vias biliares e pâncreas",
+   "ordem": 10
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Cáusticos, megaesôfago, câncer esofágico, gástrico e colorretal, polipose, bariátrica, diverticulose.",
+   "id": "cir-esofago-estomago-e-colon",
+   "nome": "Esôfago, estômago e cólon",
+   "ordem": 11
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Câncer de pulmão, derrames pleurais, empiema, estenose traqueal, SDRA, mediastino.",
+   "id": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+   "nome": "Cirurgia torácica: pulmão, pleura e via aérea",
+   "ordem": 12
+  },
+  {
+   "area": "Cirurgia",
+   "descricao": "Parótida, tireoide, linfonodos cervicais, cisto tireoglosso, câncer de pele, linfonodomegalia.",
+   "id": "cir-cabeca-e-pescoco-pele-e-oncologia",
+   "nome": "Cabeça e pescoço, pele e oncologia",
+   "ordem": 13
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Consulta pré-natal, risco gestacional, anemia, Rh, vacinas, ITU/pielonefrite, COVID e vitalidade fetal.",
+   "id": "go-pre-natal-rotina-vacinas-e-rastreamento",
+   "nome": "Pré-natal: rotina, vacinas e rastreamento",
+   "ordem": 0
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Pré-eclâmpsia, eclâmpsia, HELLP, hipertensão crônica, sulfato de magnésio e aferição da PA.",
+   "id": "go-hipertensao-na-gestacao",
+   "nome": "Hipertensão na gestação",
+   "ordem": 1
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Diagnóstico e tratamento do diabetes gestacional, insulina, puerpério e comorbidades clínicas.",
+   "id": "go-diabetes-e-doencas-clinicas-na-gestacao",
+   "nome": "Diabetes e doenças clínicas na gestação",
+   "ordem": 2
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Sífilis, toxoplasmose, hepatite B, HIV e transmissão vertical com seus protocolos do MS.",
+   "id": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+   "nome": "Infecções na gestação: sífilis, HIV, hepatite, toxo",
+   "ordem": 3
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Mecanismo do parto, partograma, indução, fórcipe, cardiotocografia, Robson, GBS e puerpério.",
+   "id": "go-parto-partograma-e-puerperio",
+   "nome": "Parto, partograma e puerpério",
+   "ordem": 4
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Placenta prévia, acretismo, HPP, inversão uterina, óbito fetal, aborto, ectópica e doença trofoblástica.",
+   "id": "go-hemorragias-abortamento-ectopica-e-mola",
+   "nome": "Hemorragias, abortamento, ectópica e mola",
+   "ordem": 5
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Cerclagem, trabalho de parto prematuro, rotura de membranas, corticoide e neuroproteção.",
+   "id": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+   "nome": "Prematuridade, RPMO e incompetência istmocervical",
+   "ordem": 6
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Escolha de método conforme critérios de elegibilidade, contracepção de emergência e dispositivos.",
+   "id": "go-contracepcao",
+   "nome": "Contracepção",
+   "ordem": 7
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Candidíase, tricomoníase, herpes, sífilis primária, cervicite, DIP e abscesso tubo-ovariano.",
+   "id": "go-vulvovaginites-ist-e-dip",
+   "nome": "Vulvovaginites, IST e DIP",
+   "ordem": 8
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Citologia, DNA-HPV, colposcopia, lesões vulvares, câncer de colo, endométrio e ovário, sangramento pós-menopausa.",
+   "id": "go-cancer-ginecologico-e-rastreamento-do-colo",
+   "nome": "Câncer ginecológico e rastreamento do colo",
+   "ordem": 9
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "BI-RADS, nódulos, derrame papilar, mamografia, mastite, doença periareolar e metástases.",
+   "id": "go-mama-nodulos-rastreamento-e-infeccoes",
+   "nome": "Mama: nódulos, rastreamento e infecções",
+   "ordem": 10
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Amenorreias, SOP, hiperprolactinemia, sangramento uterino anormal, endometriose, mioma e infertilidade.",
+   "id": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+   "nome": "Ciclo menstrual, endometriose, mioma e infertilidade",
+   "ordem": 11
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Terapia hormonal, sintomas da menopausa, incontinência urinária e bexiga hiperativa.",
+   "id": "go-climaterio-e-uroginecologia",
+   "nome": "Climatério e uroginecologia",
+   "ordem": 12
+  },
+  {
+   "area": "Ginecologia e Obstetrícia",
+   "descricao": "Profilaxias após violência sexual, aborto legal, anencefalia e aspectos legais.",
+   "id": "go-violencia-sexual-e-aborto-legal",
+   "nome": "Violência sexual e aborto legal",
+   "ordem": 13
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Modelos de proteção social (Beveridge/Bismarck), princípios e diretrizes do SUS, controle social, regionalização, planejamento e gestão.",
+   "id": "sc-sus-principios-financiamento-e-gestao",
+   "nome": "SUS: princípios, financiamento e gestão",
+   "ordem": 0
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Atributos da APS, ESF, E-multi/NASF, indicadores da APS, ICSAP, visita puerperal, transição de cuidados e coordenação em rede.",
+   "id": "sc-atencao-primaria-e-redes-de-atencao",
+   "nome": "Atenção Primária e redes de atenção",
+   "ordem": 1
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Política Nacional de Humanização, projeto terapêutico singular, equipe de referência, clínica ampliada, medicina centrada na pessoa e narrativas.",
+   "id": "sc-pnh-clinica-ampliada-e-pts",
+   "nome": "PNH, clínica ampliada e PTS",
+   "ordem": 2
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Sensibilidade, especificidade, acurácia, curva ROC, intervalo de confiança, valor-p, distribuição normal e medidas de tendência central.",
+   "id": "sc-bioestatistica-e-testes-diagnosticos",
+   "nome": "Bioestatística e testes diagnósticos",
+   "ordem": 3
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Tipos de estudo, fases da pesquisa clínica, critérios de Bradford Hill, OR/RR, eficácia vacinal, NNT e metanálise.",
+   "id": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+   "nome": "Delineamentos epidemiológicos e medidas de efeito",
+   "ordem": 4
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Incidência, prevalência, mortalidade infantil, taxas brutas e padronizadas, APVP, índice de envelhecimento e cálculos de coeficientes.",
+   "id": "sc-indicadores-e-medidas-de-frequencia",
+   "nome": "Indicadores e medidas de frequência",
+   "ordem": 5
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Doenças de notificação compulsória, SINAN, vigilância sanitária, declaração de óbito, R0, imunização e doenças infecciosas.",
+   "id": "sc-vigilancia-em-saude-e-notificacao",
+   "nome": "Vigilância em saúde e notificação",
+   "ordem": 6
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Prevenção primária, secundária, terciária e quaternária, modelo de Leavell e Clark e iatrogenia.",
+   "id": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+   "nome": "Níveis de prevenção e prevenção quaternária",
+   "ordem": 7
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Código de Ética Médica, consentimento, aborto legal, publicidade médica, método deliberativo, distanásia e responsabilidade.",
+   "id": "sc-etica-medica-bioetica-e-legislacao",
+   "nome": "Ética médica, bioética e legislação",
+   "ordem": 8
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Campo da saúde do trabalhador, anamnese ocupacional, notificação de agravos relacionados ao trabalho e intoxicação por agrotóxicos.",
+   "id": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+   "nome": "Saúde do trabalhador: vigilância e intoxicações",
+   "ordem": 9
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Pneumoconioses, saturnismo, PAIR, LER/DORT, asma ocupacional, dermatoses ocupacionais, cromo e agentes físicos.",
+   "id": "sc-doencas-ocupacionais-especificas",
+   "nome": "Doenças ocupacionais específicas",
+   "ordem": 10
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Burnout, assédio moral, violência doméstica, rede de atenção psicossocial e saúde mental no trabalho.",
+   "id": "sc-saude-mental-violencia-e-trabalho",
+   "nome": "Saúde mental, violência e trabalho",
+   "ordem": 11
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Determinantes sociais, desigualdades raciais, saúde da população trans, saúde ambiental infantil e doenças ligadas à vulnerabilidade.",
+   "id": "sc-determinantes-sociais-equidade-e-populacoes",
+   "nome": "Determinantes sociais, equidade e populações",
+   "ordem": 12
+  },
+  {
+   "area": "Saúde Coletiva",
+   "descricao": "Cuidados paliativos, saúde da pessoa idosa, desprescrição, ambliopia e condutas clínicas na atenção primária.",
+   "id": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+   "nome": "Cuidado clínico: idoso, paliativos e APS",
+   "ordem": 13
+  }
+ ]
+}

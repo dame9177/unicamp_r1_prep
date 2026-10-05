@@ -1,0 +1,4171 @@
+{
+ "unicamp-2022-ad-p1-q01": {
+  "secundarios": [],
+  "subtopico": "Infecção latente por TB: isoniazida",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q02": {
+  "secundarios": [],
+  "subtopico": "HAS com disfunção diastólica",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q03": {
+  "secundarios": [
+   "cm-diabetes-tireoide-e-suprarrenal"
+  ],
+  "subtopico": "Feocromocitoma",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q04": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Hiponatremia por SIADH",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2022-ad-p1-q05": {
+  "secundarios": [],
+  "subtopico": "Síndrome do intestino irritável",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q06": {
+  "secundarios": [],
+  "subtopico": "Hipertireoidismo por amiodarona: TSH",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p1-q07": {
+  "secundarios": [],
+  "subtopico": "Varizes: profilaxia secundária",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q08": {
+  "secundarios": [],
+  "subtopico": "Estenose aórtica",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q09": {
+  "secundarios": [],
+  "subtopico": "Síncope: ECG inicial",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q10": {
+  "secundarios": [],
+  "subtopico": "Intoxicação por salicilato",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q11": {
+  "secundarios": [],
+  "subtopico": "Flutter atrial instável: cardioversão",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q12": {
+  "secundarios": [],
+  "subtopico": "TEP em COVID: angiotomografia",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p1-q13": {
+  "secundarios": [],
+  "subtopico": "DPOC exacerbado: oxigenoterapia",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q14": {
+  "secundarios": [],
+  "subtopico": "Uveíte anterior em espondiloartrite",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q15": {
+  "secundarios": [
+   "cm-infectologia-geral-e-neuroinfeccoes"
+  ],
+  "subtopico": "Bacteriúria assintomática",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q16": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Meningite pós-sinusite: pneumococo",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q17": {
+  "secundarios": [
+   "cir-trauma-abdominal-pelve-extremidades-e-nervos"
+  ],
+  "subtopico": "Trauma de uretra posterior",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q18": {
+  "secundarios": [],
+  "subtopico": "Cálculo ureteral distal: terapia expulsiva",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q19": {
+  "secundarios": [],
+  "subtopico": "Adenoma hepático e anticoncepcional",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q20": {
+  "secundarios": [],
+  "subtopico": "Lesão brônquica: lobo médio",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2022-ad-p1-q21": {
+  "secundarios": [
+   "cir-cirurgia-cardiaca-e-aorta"
+  ],
+  "subtopico": "Lesão traumática de aorta torácica",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2022-ad-p1-q22": {
+  "secundarios": [],
+  "subtopico": "Pré-requisitos do protocolo de morte encefálica",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p1-q23": {
+  "secundarios": [],
+  "subtopico": "Indicação de TC em TCE leve: idade",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q24": {
+  "secundarios": [
+   "cir-trauma-atendimento-inicial-via-aerea-e-choque"
+  ],
+  "subtopico": "Ingestão de soda cáustica: conduta inicial",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q25": {
+  "secundarios": [
+   "cir-cirurgia-pediatrica"
+  ],
+  "subtopico": "Divertículo de Meckel",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q26": {
+  "secundarios": [
+   "cir-doenca-arterial-e-venosa-periferica"
+  ],
+  "subtopico": "Isquemia mesentérica: angiotomografia",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p1-q28": {
+  "secundarios": [],
+  "subtopico": "Apendicite: critério para cirurgia",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q29": {
+  "secundarios": [],
+  "subtopico": "Hérnia inguinal encarcerada com ovário",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q30": {
+  "secundarios": [
+   "cir-esofago-estomago-e-colon"
+  ],
+  "subtopico": "Ressecção ileal: anemia megaloblástica",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2022-ad-p1-q31": {
+  "secundarios": [],
+  "subtopico": "TVP femoropoplítea: tratamento",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q32": {
+  "secundarios": [],
+  "subtopico": "Indicação de correção de aneurisma de aorta",
+  "tema": "cir-cirurgia-cardiaca-e-aorta",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q33": {
+  "secundarios": [],
+  "subtopico": "Sedoanalgesia para sutura: cetamina",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q34": {
+  "secundarios": [],
+  "subtopico": "Teste do reflexo vermelho: periodicidade",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p1-q35": {
+  "secundarios": [
+   "ped-gastroenterologia-pediatrica"
+  ],
+  "subtopico": "Parasitoses e complicações",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2022-ad-p1-q36": {
+  "secundarios": [],
+  "subtopico": "Estado de mal convulsivo sem acesso: midazolam IM",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q37": {
+  "secundarios": [],
+  "subtopico": "Pulso braquial no lactente em PCR",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q38": {
+  "secundarios": [
+   "ped-cardiologia-hematologia-e-oncologia"
+  ],
+  "subtopico": "Teste do coraçãozinho limítrofe",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q39": {
+  "secundarios": [],
+  "subtopico": "Baixa estatura: velocidade de crescimento",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q40": {
+  "secundarios": [],
+  "subtopico": "Abuso sexual crônico: profilaxia HIV",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q41": {
+  "secundarios": [
+   "ped-nutricao-e-carencias"
+  ],
+  "subtopico": "Galactosemia: fórmula de soja",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q42": {
+  "secundarios": [
+   "ped-nefrologia-e-disturbios-hidroeletroliticos"
+  ],
+  "subtopico": "Vacinas contraindicadas em imunossuprimido",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q43": {
+  "secundarios": [
+   "ped-nutricao-e-carencias"
+  ],
+  "subtopico": "Constipação: sinais de alarme",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q44": {
+  "secundarios": [
+   "ped-infectologia-exantemas-e-dermatologia"
+  ],
+  "subtopico": "Tuberculose pulmonar: lavado gástrico",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p1-q45": {
+  "secundarios": [],
+  "subtopico": "Artrite séptica por Hib em não vacinado",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q46": {
+  "secundarios": [],
+  "subtopico": "Asma grave não controlada e rinite",
+  "tema": "ped-asma-vias-aereas-e-corpo-estranho",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q47": {
+  "secundarios": [],
+  "subtopico": "Meningite tuberculosa",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q48": {
+  "secundarios": [],
+  "subtopico": "TCE: hematoma epidural na TC",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2022-ad-p1-q49": {
+  "secundarios": [
+   "go-parto-partograma-e-puerperio"
+  ],
+  "subtopico": "COVID-19 na gestação: conduta",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q50": {
+  "secundarios": [],
+  "subtopico": "Pródromos de trabalho de parto: alta",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q51": {
+  "secundarios": [],
+  "subtopico": "Descolamento prematuro com óbito fetal",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q52": {
+  "secundarios": [
+   "go-prematuridade-rpmo-e-incompetencia-istmocervical"
+  ],
+  "subtopico": "Profilaxia para estreptococo do grupo B",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q53": {
+  "secundarios": [
+   "go-pre-natal-rotina-vacinas-e-rastreamento"
+  ],
+  "subtopico": "Diabetes e síndrome gripal na gestação",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q54": {
+  "secundarios": [],
+  "subtopico": "Antecedente de óbito fetal: trombofilias",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q55": {
+  "secundarios": [
+   "go-mama-nodulos-rastreamento-e-infeccoes"
+  ],
+  "subtopico": "Mastite puerperal: antibiótico",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q56": {
+  "secundarios": [
+   "go-pre-natal-rotina-vacinas-e-rastreamento"
+  ],
+  "subtopico": "Citologia na gestante com LSIL prévio",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q57": {
+  "secundarios": [],
+  "subtopico": "Abortamento incompleto instável: curetagem",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q58": {
+  "secundarios": [],
+  "subtopico": "Síndrome de Rokitansky",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q59": {
+  "secundarios": [
+   "go-contracepcao"
+  ],
+  "subtopico": "Anticoncepção de emergência em homem trans",
+  "tema": "go-violencia-sexual-e-aborto-legal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q60": {
+  "secundarios": [],
+  "subtopico": "Sífilis primária: tratamento",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q61": {
+  "secundarios": [
+   "go-ciclo-menstrual-endometriose-mioma-e-infertilidade"
+  ],
+  "subtopico": "Contracepção pós-cirurgia bariátrica",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q62": {
+  "secundarios": [],
+  "subtopico": "Sangramento pós-menopausa: histeroscopia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p1-q64": {
+  "secundarios": [],
+  "subtopico": "Aborto legal por relato da mulher",
+  "tema": "go-violencia-sexual-e-aborto-legal",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p1-q65": {
+  "secundarios": [],
+  "subtopico": "Proporções de mortalidade infantil indígena",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p1-q66": {
+  "secundarios": [],
+  "subtopico": "Comparação de indicadores de mortalidade infantil",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p1-q67": {
+  "secundarios": [],
+  "subtopico": "Estudo caso-controle em sífilis",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p1-q68": {
+  "secundarios": [],
+  "subtopico": "APVP e importância epidemiológica",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p1-q69": {
+  "secundarios": [
+   "sc-cuidado-clinico-idoso-paliativos-e-aps"
+  ],
+  "subtopico": "Prevenção quaternária e benzodiazepínicos",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q70": {
+  "secundarios": [],
+  "subtopico": "Atributos essenciais da APS",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p1-q71": {
+  "secundarios": [],
+  "subtopico": "Visita domiciliar ao recém-nascido",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q72": {
+  "secundarios": [
+   "sc-doencas-ocupacionais-especificas"
+  ],
+  "subtopico": "Notificação de epicondilite no SINAN",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q73": {
+  "secundarios": [
+   "sc-vigilancia-em-saude-e-notificacao"
+  ],
+  "subtopico": "Covid-19 relacionada ao trabalho",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p1-q74": {
+  "secundarios": [
+   "sc-doencas-ocupacionais-especificas"
+  ],
+  "subtopico": "Anamnese ocupacional: profissão e doença",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p1-q75": {
+  "secundarios": [
+   "sc-sus-principios-financiamento-e-gestao"
+  ],
+  "subtopico": "Rede assistencial e papel do Pronto Atendimento",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q76": {
+  "secundarios": [],
+  "subtopico": "Clínica ampliada e medicina narrativa",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p1-q77": {
+  "secundarios": [
+   "sc-atencao-primaria-e-redes-de-atencao"
+  ],
+  "subtopico": "Paciente poliqueixoso na APS",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p1-q78": {
+  "secundarios": [],
+  "subtopico": "Doença como construção teórica",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p1-q79": {
+  "secundarios": [
+   "sc-niveis-de-prevencao-e-prevencao-quaternaria"
+  ],
+  "subtopico": "Cloroquina e danos de intervenções",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p1-q80": {
+  "secundarios": [
+   "sc-pnh-clinica-ampliada-e-pts"
+  ],
+  "subtopico": "Violência por parceiro íntimo: conduta",
+  "tema": "sc-saude-mental-violencia-e-trabalho",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q01": {
+  "secundarios": [
+   "cm-nefrologia-lra-drc-e-glomerulopatias"
+  ],
+  "subtopico": "Hipercalemia: gluconato de cálcio",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q02": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Neurocisticercose",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q03": {
+  "secundarios": [],
+  "subtopico": "LRA por IECA",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2022-ad-p2-q04": {
+  "secundarios": [
+   "cm-gastroenterologia-e-hepatologia"
+  ],
+  "subtopico": "Rastreamento câncer colorretal hereditário",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p2-q05": {
+  "secundarios": [],
+  "subtopico": "Loxoscelismo",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q06": {
+  "secundarios": [
+   "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes"
+  ],
+  "subtopico": "Rabdomiólise por estatina/fibrato",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q07": {
+  "secundarios": [],
+  "subtopico": "Silicose",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q08": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Síndrome de Ramsay Hunt",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q09": {
+  "secundarios": [],
+  "subtopico": "Anemia hemolítica por metildopa",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q10": {
+  "secundarios": [],
+  "subtopico": "Diabetes tipo 2: início de metformina",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q11": {
+  "secundarios": [],
+  "subtopico": "PBE: diagnóstico",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q12": {
+  "secundarios": [],
+  "subtopico": "Dengue: diagnóstico clínico",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q13": {
+  "secundarios": [
+   "cir-urologia"
+  ],
+  "subtopico": "Fístula colovesical: diverticulite",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2022-ad-p2-q14": {
+  "secundarios": [
+   "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea"
+  ],
+  "subtopico": "Bócio mergulhante",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q15": {
+  "secundarios": [],
+  "subtopico": "Oclusão arterial aguda: tempo de enchimento",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q16": {
+  "secundarios": [],
+  "subtopico": "Tríade de Charcot",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q17": {
+  "secundarios": [],
+  "subtopico": "Neoplasia de cólon direito",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q18": {
+  "secundarios": [],
+  "subtopico": "Estenose traqueal pós-intubação: exame",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p2-q19": {
+  "secundarios": [],
+  "subtopico": "Declaração de óbito em causa externa",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p2-q20": {
+  "secundarios": [],
+  "subtopico": "Trauma abdominal: indicação de laparotomia",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q21": {
+  "secundarios": [],
+  "subtopico": "Via aérea definitiva no trauma",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q22": {
+  "secundarios": [
+   "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea"
+  ],
+  "subtopico": "Câncer de esôfago: fístula traqueoesofágica",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q23": {
+  "secundarios": [],
+  "subtopico": "Queimadura: fórmula de Parkland",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q24": {
+  "secundarios": [],
+  "subtopico": "Rastreio de câncer colorretal familiar",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p2-q25": {
+  "secundarios": [],
+  "subtopico": "Mecônio e hipotonia: VPP em ar ambiente",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q26": {
+  "secundarios": [],
+  "subtopico": "Crupe espasmódico",
+  "tema": "ped-asma-vias-aereas-e-corpo-estranho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q27": {
+  "secundarios": [],
+  "subtopico": "Doença hemolítica Rh: fototerapia",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q28": {
+  "secundarios": [],
+  "subtopico": "Armazenamento do leite ordenhado",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q29": {
+  "secundarios": [],
+  "subtopico": "Doença celíaca: dieta sem glúten",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q30": {
+  "secundarios": [],
+  "subtopico": "Tripsinogênio alto: teste do suor",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p2-q31": {
+  "secundarios": [],
+  "subtopico": "Síndrome simpatomimética por descongestionante",
+  "tema": "ped-intoxicacoes-e-acidentes-com-animais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q32": {
+  "secundarios": [],
+  "subtopico": "Síndrome nefrótica",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q33": {
+  "secundarios": [],
+  "subtopico": "Convulsão febril pós-vacina: DTPa no CRIE",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q34": {
+  "secundarios": [],
+  "subtopico": "Escabiose em lactente",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q35": {
+  "secundarios": [],
+  "subtopico": "Obesidade na curva de IMC",
+  "tema": "ped-nutricao-e-carencias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q36": {
+  "secundarios": [],
+  "subtopico": "TCE: critério PECARN de risco alto",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q37": {
+  "secundarios": [],
+  "subtopico": "Pré-eclâmpsia grave: sulfato de magnésio",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q38": {
+  "secundarios": [],
+  "subtopico": "Cerclagem de emergência com herniação",
+  "tema": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q39": {
+  "secundarios": [],
+  "subtopico": "Toxoplasmose: teste de avidez de IgG",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p2-q40": {
+  "secundarios": [],
+  "subtopico": "Restrição de crescimento fetal: Doppler",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2022-ad-p2-q41": {
+  "secundarios": [],
+  "subtopico": "Hemorragia pós-parto: restos placentários",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q42": {
+  "secundarios": [],
+  "subtopico": "Tumor de Krukenberg",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q43": {
+  "secundarios": [
+   "go-climaterio-e-uroginecologia"
+  ],
+  "subtopico": "Sangramento pós-menopausa: atrofia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q44": {
+  "secundarios": [],
+  "subtopico": "Seguimento mamográfico após câncer de mama",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p2-q45": {
+  "secundarios": [],
+  "subtopico": "Sangramento uterino anormal: progestagênio",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q46": {
+  "secundarios": [],
+  "subtopico": "Terapia hormonal após ooforectomia",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q47": {
+  "secundarios": [],
+  "subtopico": "ASC-US em mulher com HIV",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2022-ad-p2-q48": {
+  "secundarios": [],
+  "subtopico": "Partograma: trabalho de parto fisiológico",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2022-ad-p2-q49": {
+  "secundarios": [
+   "sc-bioestatistica-e-testes-diagnosticos"
+  ],
+  "subtopico": "Forest plot: modelo de efeitos aleatórios",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2022-ad-p2-q50": {
+  "secundarios": [],
+  "subtopico": "Estudo seccional",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p2-q51": {
+  "secundarios": [],
+  "subtopico": "Cálculo de coeficiente por 1000 homens",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2022-ad-p2-q52": {
+  "secundarios": [],
+  "subtopico": "Tinea capitis em comunidade vulnerável",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q53": {
+  "secundarios": [
+   "sc-pnh-clinica-ampliada-e-pts"
+  ],
+  "subtopico": "NASF como apoio à equipe",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p2-q54": {
+  "secundarios": [
+   "sc-doencas-ocupacionais-especificas"
+  ],
+  "subtopico": "Burnout em gerente",
+  "tema": "sc-saude-mental-violencia-e-trabalho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q55": {
+  "secundarios": [
+   "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes"
+  ],
+  "subtopico": "Assédio moral no trabalho bancário",
+  "tema": "sc-saude-mental-violencia-e-trabalho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q56": {
+  "secundarios": [],
+  "subtopico": "Equipe de referência e apoio matricial",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2022-ad-p2-q57": {
+  "secundarios": [
+   "sc-etica-medica-bioetica-e-legislacao"
+  ],
+  "subtopico": "Equidade no acesso a exames",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p2-q58": {
+  "secundarios": [],
+  "subtopico": "Distanásia e obstinação terapêutica",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2022-ad-p2-q59": {
+  "secundarios": [],
+  "subtopico": "Saturnismo em trabalhador de cerâmica",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2022-ad-p2-q60": {
+  "secundarios": [],
+  "subtopico": "Primeira tarefa do PTS",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q01": {
+  "secundarios": [],
+  "subtopico": "Delirium: prevenção não farmacológica",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q02": {
+  "secundarios": [
+   "cm-cardiologia-sca-arritmias-valvopatias"
+  ],
+  "subtopico": "Hipotensão ortostática iatrogênica",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q03": {
+  "secundarios": [
+   "cm-reumatologia-e-dermatologia"
+  ],
+  "subtopico": "Espondilodiscite: ressonância",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q04": {
+  "secundarios": [],
+  "subtopico": "Doença de Menière",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q05": {
+  "secundarios": [
+   "cm-geriatria-prevencao-e-etica"
+  ],
+  "subtopico": "Isolamento social como risco CV",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q06": {
+  "secundarios": [
+   "cm-geriatria-prevencao-e-etica"
+  ],
+  "subtopico": "Quimioprofilaxia de contatos de meningococo",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q07": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Encefalite herpética: liquor",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q08": {
+  "secundarios": [],
+  "subtopico": "Guillain-Barré: tratamento",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q09": {
+  "secundarios": [],
+  "subtopico": "Infarto do miocárdio: patologia",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p1-q10": {
+  "secundarios": [],
+  "subtopico": "Cigarro eletrônico: orientação",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q11": {
+  "secundarios": [],
+  "subtopico": "Úlcera gástrica: controle endoscópico",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q12": {
+  "secundarios": [
+   "cm-terapia-intensiva-e-emergencias"
+  ],
+  "subtopico": "Hemorragia por heparina: protamina",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q13": {
+  "secundarios": [],
+  "subtopico": "Asma persistente: step-up",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q14": {
+  "secundarios": [],
+  "subtopico": "Hipotireoidismo em idoso cardiopata",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q15": {
+  "secundarios": [],
+  "subtopico": "Sífilis: reativação e neurossífilis",
+  "tema": "cm-ist-sifilis-e-hepatites-virais",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q16": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Hipercapnia: ajuste ventilatório",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q17": {
+  "secundarios": [],
+  "subtopico": "Transfusão maciça no choque",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q18": {
+  "secundarios": [],
+  "subtopico": "Manobra BURP na laringoscopia",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p1-q19": {
+  "secundarios": [
+   "cir-trauma-atendimento-inicial-via-aerea-e-choque"
+  ],
+  "subtopico": "Posição do lençol pélvico",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q20": {
+  "secundarios": [],
+  "subtopico": "Posição do dreno torácico",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q21": {
+  "secundarios": [
+   "cir-trauma-atendimento-inicial-via-aerea-e-choque"
+  ],
+  "subtopico": "Pneumotórax hipertensivo: punção",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q22": {
+  "secundarios": [],
+  "subtopico": "Câncer de pulmão: lobo médio",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p1-q23": {
+  "secundarios": [
+   "cir-urologia"
+  ],
+  "subtopico": "Fimose, hidrocele, criptorquidia: conduta",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q24": {
+  "secundarios": [],
+  "subtopico": "Componentes do MELD",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p1-q25": {
+  "secundarios": [],
+  "subtopico": "Fases da cicatrização",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2023-ad-p1-q26": {
+  "secundarios": [],
+  "subtopico": "Vacinas pós-esplenectomia",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q28": {
+  "secundarios": [],
+  "subtopico": "Cisto renal simples",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q29": {
+  "secundarios": [],
+  "subtopico": "Sinais de Cullen, Lenander e Jobert",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q30": {
+  "secundarios": [],
+  "subtopico": "Critério gasométrico de SDRA",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q31": {
+  "secundarios": [
+   "cir-doenca-arterial-e-venosa-periferica"
+  ],
+  "subtopico": "Angina mesentérica",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q32": {
+  "secundarios": [],
+  "subtopico": "TVP: anticoagulação e alvo de RNI",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q33": {
+  "secundarios": [],
+  "subtopico": "Larva migrans cutânea",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q34": {
+  "secundarios": [],
+  "subtopico": "Fratura supracondiliana: contratura de Volkmann",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2023-ad-p1-q35": {
+  "secundarios": [],
+  "subtopico": "Enteropatia perdedora de proteína",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q36": {
+  "secundarios": [
+   "ped-infectologia-exantemas-e-dermatologia"
+  ],
+  "subtopico": "RN contactante de tuberculose: quimioprofilaxia",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q37": {
+  "secundarios": [],
+  "subtopico": "Refluxo patológico: EED",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q38": {
+  "secundarios": [
+   "ped-infectologia-exantemas-e-dermatologia"
+  ],
+  "subtopico": "Vasculite por IgA",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q39": {
+  "secundarios": [],
+  "subtopico": "Molusco contagioso: poxvírus",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q40": {
+  "secundarios": [],
+  "subtopico": "Mastoidite: tratamento antibiótico",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q41": {
+  "secundarios": [],
+  "subtopico": "Aspiração de corpo estranho em lactente",
+  "tema": "ped-asma-vias-aereas-e-corpo-estranho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q42": {
+  "secundarios": [],
+  "subtopico": "PCR em lactente: compressões e ventilação",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q43": {
+  "secundarios": [],
+  "subtopico": "Profilaxia GBS: conduta no RN",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q44": {
+  "secundarios": [],
+  "subtopico": "Hipoglicemia por hiperinsulinismo",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2023-ad-p1-q45": {
+  "secundarios": [],
+  "subtopico": "Acidente escorpiônico",
+  "tema": "ped-intoxicacoes-e-acidentes-com-animais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q46": {
+  "secundarios": [],
+  "subtopico": "Bradicardia com mecônio: VPP",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q47": {
+  "secundarios": [
+   "ped-crescimento-puberdade-e-endocrinologia"
+  ],
+  "subtopico": "TSH elevado na triagem: hipotireoidismo congênito",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q48": {
+  "secundarios": [],
+  "subtopico": "Pneumonia afebril do lactente: Chlamydia",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q49": {
+  "secundarios": [],
+  "subtopico": "Endometriose profunda: indicação cirúrgica",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q50": {
+  "secundarios": [],
+  "subtopico": "Hepatite B na gestação: tenofovir",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q51": {
+  "secundarios": [],
+  "subtopico": "Curva glicêmica: diabetes gestacional",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q52": {
+  "secundarios": [],
+  "subtopico": "RPMO pré-termo: condutas",
+  "tema": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q53": {
+  "secundarios": [],
+  "subtopico": "Contracepção em lúpus com anticorpos antifosfolípide",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q54": {
+  "secundarios": [],
+  "subtopico": "Prolactinoma: agonista dopaminérgico",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q55": {
+  "secundarios": [],
+  "subtopico": "Suplementação de ferro no pré-natal",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q56": {
+  "secundarios": [],
+  "subtopico": "Pré-eclâmpsia sobreposta: conduta",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q57": {
+  "secundarios": [],
+  "subtopico": "Cardiotocografia: taquissistolia",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p1-q58": {
+  "secundarios": [],
+  "subtopico": "Exames de seguimento da terapia hormonal",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q59": {
+  "secundarios": [],
+  "subtopico": "Bexiga hiperativa e anticolinérgico",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q60": {
+  "secundarios": [],
+  "subtopico": "ACG-SOE: colposcopia e biópsia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q61": {
+  "secundarios": [],
+  "subtopico": "Nódulo suspeito em mulher de 56 anos",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q62": {
+  "secundarios": [],
+  "subtopico": "Interrupção do rastreamento aos 66 anos",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q63": {
+  "secundarios": [
+   "go-parto-partograma-e-puerperio"
+  ],
+  "subtopico": "Plano de parto em gestante com HIV",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q64": {
+  "secundarios": [],
+  "subtopico": "Líquen escleroso e neoplasia vulvar",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2023-ad-p1-q65": {
+  "secundarios": [],
+  "subtopico": "Sinal de Koplik e especificidade",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p1-q66": {
+  "secundarios": [],
+  "subtopico": "Características da PAIR",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p1-q67": {
+  "secundarios": [],
+  "subtopico": "Cálculo de intervalo de confiança da média",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p1-q68": {
+  "secundarios": [],
+  "subtopico": "Curva ROC: área sob a curva",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p1-q69": {
+  "secundarios": [],
+  "subtopico": "Número básico de reprodução R0",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q70": {
+  "secundarios": [],
+  "subtopico": "Sensibilidade em teste para IAM",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p1-q71": {
+  "secundarios": [
+   "sc-bioestatistica-e-testes-diagnosticos"
+  ],
+  "subtopico": "Interpretação de odds ratio em metanálise",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p1-q72": {
+  "secundarios": [],
+  "subtopico": "Conduta em suspeita de intoxicação ocupacional",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q73": {
+  "secundarios": [],
+  "subtopico": "Cuidados paliativos: alívio de sintomas",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q74": {
+  "secundarios": [],
+  "subtopico": "Osteocondroma: conduta expectante",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q75": {
+  "secundarios": [],
+  "subtopico": "Sistema de saúde brasileiro: seguridade social",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p1-q76": {
+  "secundarios": [],
+  "subtopico": "Internações por condições sensíveis à APS",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q77": {
+  "secundarios": [],
+  "subtopico": "Desprescrição de tiazídico em idoso",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q78": {
+  "secundarios": [
+   "sc-cuidado-clinico-idoso-paliativos-e-aps"
+  ],
+  "subtopico": "Transição de cuidados na alta hospitalar",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p1-q79": {
+  "secundarios": [],
+  "subtopico": "Prevenção secundária: diagnóstico precoce",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p1-q80": {
+  "secundarios": [],
+  "subtopico": "Capacidade de consentir",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2023-ad-p2-q01": {
+  "secundarios": [],
+  "subtopico": "Enxaqueca: profilaxia",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q02": {
+  "secundarios": [
+   "cm-diabetes-tireoide-e-suprarrenal"
+  ],
+  "subtopico": "Vitiligo: doença tireoidiana associada",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p2-q03": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Tuberculose pulmonar: anatomia patológica",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q04": {
+  "secundarios": [],
+  "subtopico": "Carcinoma basocelular",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q05": {
+  "secundarios": [],
+  "subtopico": "Morte encefálica: horário do óbito",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2023-ad-p2-q06": {
+  "secundarios": [],
+  "subtopico": "LES: diagnóstico diferencial",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q07": {
+  "secundarios": [],
+  "subtopico": "Volume corrente protetor",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q08": {
+  "secundarios": [],
+  "subtopico": "Hidradenite supurativa",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q09": {
+  "secundarios": [],
+  "subtopico": "Torsades de pointes: desfibrilação",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q10": {
+  "secundarios": [
+   "cm-has-dislipidemia-e-risco-cardiovascular"
+  ],
+  "subtopico": "Estenose de artéria renal pós-IECA",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p2-q11": {
+  "secundarios": [],
+  "subtopico": "IAMCSST: reperfusão",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q12": {
+  "secundarios": [],
+  "subtopico": "Tosse crônica: espirometria",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p2-q13": {
+  "secundarios": [],
+  "subtopico": "Cricotireoidostomia: membrana cricotireóidea",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p2-q14": {
+  "secundarios": [
+   "cir-cirurgia-pediatrica"
+  ],
+  "subtopico": "Cisto do ducto tireoglosso",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q15": {
+  "secundarios": [],
+  "subtopico": "Hematoma subdural agudo na TC",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q16": {
+  "secundarios": [],
+  "subtopico": "Polipose adenomatosa: risco familiar",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q17": {
+  "secundarios": [],
+  "subtopico": "Megaesôfago chagásico: esofagograma",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2023-ad-p2-q18": {
+  "secundarios": [],
+  "subtopico": "Câncer de próstata baixo risco: vigilância",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q19": {
+  "secundarios": [
+   "cir-doenca-arterial-e-venosa-periferica"
+  ],
+  "subtopico": "Hematúria com RNI elevado: vitamina K",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q20": {
+  "secundarios": [
+   "cir-esofago-estomago-e-colon"
+  ],
+  "subtopico": "Hemorragia varicosa: endoscopia",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q21": {
+  "secundarios": [],
+  "subtopico": "Quilotórax pós-operatório",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q22": {
+  "secundarios": [],
+  "subtopico": "Colecistite: obstrução do cístico",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2023-ad-p2-q23": {
+  "secundarios": [],
+  "subtopico": "Trauma abdominal fechado pediátrico: pâncreas",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q24": {
+  "secundarios": [],
+  "subtopico": "Cálculo do índice tornozelo-braço",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q25": {
+  "secundarios": [],
+  "subtopico": "Leishmaniose tegumentar",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q26": {
+  "secundarios": [],
+  "subtopico": "Coarctação de aorta",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q27": {
+  "secundarios": [],
+  "subtopico": "Paracoccidioidomicose juvenil",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q28": {
+  "secundarios": [],
+  "subtopico": "Vacina febre amarela materna e amamentação",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q29": {
+  "secundarios": [],
+  "subtopico": "Taquiarritmia supraventricular: cardioversão",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q30": {
+  "secundarios": [],
+  "subtopico": "Coqueluche em lactente",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q31": {
+  "secundarios": [],
+  "subtopico": "Doença de Crohn",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q32": {
+  "secundarios": [],
+  "subtopico": "Síndrome nefrítica",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q33": {
+  "secundarios": [
+   "ped-gastroenterologia-pediatrica"
+  ],
+  "subtopico": "Grau de desidratação na diarreia",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q34": {
+  "secundarios": [],
+  "subtopico": "Acesso intraósseo: tempo máximo",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q35": {
+  "secundarios": [],
+  "subtopico": "Exantema súbito",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q36": {
+  "secundarios": [],
+  "subtopico": "Sinovite transitória do quadril",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q37": {
+  "secundarios": [],
+  "subtopico": "Placenta prévia centro-total",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q38": {
+  "secundarios": [],
+  "subtopico": "Herpes genital recorrente",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q39": {
+  "secundarios": [],
+  "subtopico": "Endometrite puerperal",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q40": {
+  "secundarios": [],
+  "subtopico": "Partograma: parada secundária, cesárea",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q41": {
+  "secundarios": [],
+  "subtopico": "Gestação de 41 semanas: indução",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q42": {
+  "secundarios": [],
+  "subtopico": "Doença inflamatória pélvica",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q43": {
+  "secundarios": [],
+  "subtopico": "Seguimento de ASC-US",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2023-ad-p2-q44": {
+  "secundarios": [],
+  "subtopico": "Pielonefrite na gestação",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q45": {
+  "secundarios": [],
+  "subtopico": "Infertilidade por fator tubário",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q46": {
+  "secundarios": [],
+  "subtopico": "Imagem ultrassonográfica benigna: seguimento",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2023-ad-p2-q47": {
+  "secundarios": [],
+  "subtopico": "Piometra e câncer de endométrio",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q48": {
+  "secundarios": [],
+  "subtopico": "Gestação ectópica / localização desconhecida",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q49": {
+  "secundarios": [],
+  "subtopico": "Cálculo de eficácia da vacina",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q50": {
+  "secundarios": [],
+  "subtopico": "Número necessário a vacinar",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q51": {
+  "secundarios": [],
+  "subtopico": "Taxa de incidência na covid-19",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q52": {
+  "secundarios": [],
+  "subtopico": "Estudo caso-controle em vigilância",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p2-q53": {
+  "secundarios": [],
+  "subtopico": "Cálculo de prevalência de tuberculose",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q54": {
+  "secundarios": [],
+  "subtopico": "Vigilância sanitária e fiscalização",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2023-ad-p2-q55": {
+  "secundarios": [],
+  "subtopico": "Elaioconiose em mecânico",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q56": {
+  "secundarios": [],
+  "subtopico": "Perfuração septal por cromo",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2023-ad-p2-q57": {
+  "secundarios": [
+   "sc-cuidado-clinico-idoso-paliativos-e-aps"
+  ],
+  "subtopico": "Prevenção quaternária em demência avançada",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2023-ad-p2-q58": {
+  "secundarios": [],
+  "subtopico": "Estudo de Framingham: coorte",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2023-ad-p2-q59": {
+  "secundarios": [],
+  "subtopico": "Complexo médico-industrial e equidade",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2023-ad-p2-q60": {
+  "secundarios": [
+   "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes"
+  ],
+  "subtopico": "Parkinsonismo por agrotóxico: glifosato",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q01": {
+  "secundarios": [
+   "cm-hematologia-nutricao-e-metabolismo"
+  ],
+  "subtopico": "Pneumonia em anemia falciforme",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q02": {
+  "secundarios": [],
+  "subtopico": "Baixo risco CV: mudança de estilo de vida",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q03": {
+  "secundarios": [],
+  "subtopico": "Mordedura de cão: antibioticoprofilaxia",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q04": {
+  "secundarios": [],
+  "subtopico": "Profilaxia antirrábica pós-exposição",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q05": {
+  "secundarios": [],
+  "subtopico": "Artrite psoriásica",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q06": {
+  "secundarios": [],
+  "subtopico": "Fibrose pulmonar",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2024-ad-p1-q07": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Insuficiência respiratória: intubação",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q08": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Deficiência de B12 por metformina",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p1-q09": {
+  "secundarios": [],
+  "subtopico": "Anafilaxia: adrenalina IM",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q10": {
+  "secundarios": [],
+  "subtopico": "Pericardite aguda",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q11": {
+  "secundarios": [
+   "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes"
+  ],
+  "subtopico": "Rabdomiólise: hidratação",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q12": {
+  "secundarios": [
+   "cm-infectologia-geral-e-neuroinfeccoes"
+  ],
+  "subtopico": "Micobacteriose não tuberculosa: confirmação",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p1-q13": {
+  "secundarios": [],
+  "subtopico": "Hematoma extradural",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q14": {
+  "secundarios": [],
+  "subtopico": "Artéria meníngea média",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p1-q15": {
+  "secundarios": [],
+  "subtopico": "Adenoma pleomórfico de parótida",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q16": {
+  "secundarios": [],
+  "subtopico": "Hirschsprung: radiograma neonatal",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2024-ad-p1-q17": {
+  "secundarios": [],
+  "subtopico": "Diabetes insipidus pós-craniectomia",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p1-q18": {
+  "secundarios": [
+   "cir-cabeca-e-pescoco-pele-e-oncologia"
+  ],
+  "subtopico": "Nódulo de Sister Mary Joseph",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q19": {
+  "secundarios": [],
+  "subtopico": "Dissecção aórtica: exame confirmatório",
+  "tema": "cir-cirurgia-cardiaca-e-aorta",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p1-q20": {
+  "secundarios": [
+   "cir-trauma-toracico-e-drenagem-pleural"
+  ],
+  "subtopico": "Classificação de hemorragia ATLS",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q21": {
+  "secundarios": [],
+  "subtopico": "Derrame parapneumônico: fase evolutiva",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p1-q22": {
+  "secundarios": [],
+  "subtopico": "Estenose laringotraqueal pós-intubação",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q23": {
+  "secundarios": [],
+  "subtopico": "Colangite: ultrassonografia",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p1-q24": {
+  "secundarios": [],
+  "subtopico": "HPB: tratamento inicial",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q25": {
+  "secundarios": [],
+  "subtopico": "Síndrome nefrótica: volume intravascular reduzido",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p1-q26": {
+  "secundarios": [],
+  "subtopico": "Choque anafilático",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q27": {
+  "secundarios": [],
+  "subtopico": "Acidente crotálico",
+  "tema": "ped-intoxicacoes-e-acidentes-com-animais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q28": {
+  "secundarios": [],
+  "subtopico": "PCR: frequência ventilatória com via aérea avançada",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q29": {
+  "secundarios": [],
+  "subtopico": "Leucemia aguda: apresentação clínica",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q30": {
+  "secundarios": [
+   "ped-gastroenterologia-pediatrica"
+  ],
+  "subtopico": "Invaginação intestinal",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q31": {
+  "secundarios": [],
+  "subtopico": "FiO2 inicial em RN <34 semanas",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q32": {
+  "secundarios": [],
+  "subtopico": "Válvula de uretra posterior: uretrocistografia",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p1-q33": {
+  "secundarios": [],
+  "subtopico": "Constipação: desimpactação",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q34": {
+  "secundarios": [
+   "ped-triagem-aleitamento-vacinas-e-prevencao"
+  ],
+  "subtopico": "Sífilis: RN de mãe tratada, VDRL 1:1",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q35": {
+  "secundarios": [],
+  "subtopico": "Hipotireoidismo adquirido",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q36": {
+  "secundarios": [],
+  "subtopico": "Pitiríase rósea",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q37": {
+  "secundarios": [],
+  "subtopico": "Terapia hormonal combinada na menopausa",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q38": {
+  "secundarios": [],
+  "subtopico": "Queda da insulina por insuficiência placentária",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p1-q39": {
+  "secundarios": [],
+  "subtopico": "Sífilis gestacional: esquema de penicilina",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q40": {
+  "secundarios": [],
+  "subtopico": "Infertilidade com mioma FIGO 0: histeroscopia",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q41": {
+  "secundarios": [],
+  "subtopico": "Acretismo no parto: histerectomia",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q42": {
+  "secundarios": [],
+  "subtopico": "Síndrome HELLP",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p1-q43": {
+  "secundarios": [],
+  "subtopico": "Neoplasia intraepitelial vulvar e HPV",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q44": {
+  "secundarios": [],
+  "subtopico": "Hipertensão crônica com pré-eclâmpsia: resolução",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q45": {
+  "secundarios": [],
+  "subtopico": "Amenorreia de privação com AOC",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q46": {
+  "secundarios": [],
+  "subtopico": "Incontinência de esforço: conduta inicial",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q47": {
+  "secundarios": [],
+  "subtopico": "Derrame pleural por metástase de mama",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2024-ad-p1-q48": {
+  "secundarios": [],
+  "subtopico": "Cisto ovariano IOTA benigno",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p1-q49": {
+  "secundarios": [],
+  "subtopico": "Estudo ecológico",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q50": {
+  "secundarios": [],
+  "subtopico": "Estudo seccional",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q51": {
+  "secundarios": [],
+  "subtopico": "Bradford Hill: gradiente biológico",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q52": {
+  "secundarios": [],
+  "subtopico": "Declaração de óbito: linha A",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q53": {
+  "secundarios": [],
+  "subtopico": "Prevenção primária de TEV",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q54": {
+  "secundarios": [],
+  "subtopico": "Regionalização",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q55": {
+  "secundarios": [
+   "sc-indicadores-e-medidas-de-frequencia"
+  ],
+  "subtopico": "Critérios para notificação compulsória: frequência",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q56": {
+  "secundarios": [
+   "sc-indicadores-e-medidas-de-frequencia"
+  ],
+  "subtopico": "Critérios para notificação: letalidade",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q57": {
+  "secundarios": [],
+  "subtopico": "Prevenção quaternária no rastreamento de PSA",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q58": {
+  "secundarios": [],
+  "subtopico": "Fases do projeto terapêutico singular",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p1-q59": {
+  "secundarios": [],
+  "subtopico": "Taxa de mortalidade bruta",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p1-q60": {
+  "secundarios": [],
+  "subtopico": "Taxa de mortalidade padronizada",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q100": {
+  "secundarios": [],
+  "subtopico": "Rastreamento mamográfico aos 58 anos",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q101": {
+  "secundarios": [],
+  "subtopico": "Condução de hipoatividade uterina: ocitocina",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q102": {
+  "secundarios": [],
+  "subtopico": "Período expulsivo: fórcipe de Kielland",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q103": {
+  "secundarios": [],
+  "subtopico": "Neuroproteção fetal com sulfato de magnésio",
+  "tema": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q104": {
+  "secundarios": [],
+  "subtopico": "Contracepção em enxaqueca com aura",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q105": {
+  "secundarios": [],
+  "subtopico": "Óbito fetal com descolamento: parto vaginal",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q106": {
+  "secundarios": [],
+  "subtopico": "ACG-SOE: colposcopia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q107": {
+  "secundarios": [],
+  "subtopico": "Insuficiência ovariana prematura",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q108": {
+  "secundarios": [],
+  "subtopico": "Sangramento pós-menopausa: biópsia endometrial",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q109": {
+  "secundarios": [],
+  "subtopico": "Coeficiente de prevalência de lombalgia",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q110": {
+  "secundarios": [],
+  "subtopico": "Intoxicação por organofosforado",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q111": {
+  "secundarios": [],
+  "subtopico": "Eixos de ações em saúde do trabalhador",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p2-q112": {
+  "secundarios": [],
+  "subtopico": "Modelo do sistema de saúde brasileiro",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p2-q113": {
+  "secundarios": [],
+  "subtopico": "Estudo de coorte",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2024-ad-p2-q114": {
+  "secundarios": [],
+  "subtopico": "Diarreia e meio ambiente em menores de 5 anos",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q115": {
+  "secundarios": [],
+  "subtopico": "Método deliberativo de Diego Gracia",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2024-ad-p2-q116": {
+  "secundarios": [],
+  "subtopico": "Atropina em intoxicação por organofosforado",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q117": {
+  "secundarios": [
+   "sc-vigilancia-em-saude-e-notificacao"
+  ],
+  "subtopico": "Registro da intoxicação no SINAN",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2024-ad-p2-q118": {
+  "secundarios": [],
+  "subtopico": "Acetilcolinesterase como biomarcador",
+  "tema": "sc-saude-do-trabalhador-vigilancia-e-intoxicacoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q119": {
+  "secundarios": [],
+  "subtopico": "Doenças oculares por radiação não ionizante",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p2-q120": {
+  "secundarios": [],
+  "subtopico": "Sílica: câncer de pulmão e síndrome de Caplan",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p2-q61": {
+  "secundarios": [],
+  "subtopico": "Monoartrite aguda: artrocentese",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q62": {
+  "secundarios": [
+   "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes"
+  ],
+  "subtopico": "Cetoacidose diabética: hidratação",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q63": {
+  "secundarios": [
+   "cm-terapia-intensiva-e-emergencias"
+  ],
+  "subtopico": "Tiamina antes de glicose",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q64": {
+  "secundarios": [
+   "cm-terapia-intensiva-e-emergencias"
+  ],
+  "subtopico": "Intoxicação opioide: naloxona",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q65": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Derrame pleural tuberculoso",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q66": {
+  "secundarios": [],
+  "subtopico": "Miastenia gravis e timoma",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p2-q67": {
+  "secundarios": [],
+  "subtopico": "DRESS por alopurinol",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q68": {
+  "secundarios": [],
+  "subtopico": "Sífilis em HIV: indicação de liquor",
+  "tema": "cm-ist-sifilis-e-hepatites-virais",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q69": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Meningite pneumocócica: dexametasona",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q70": {
+  "secundarios": [],
+  "subtopico": "Pré-diabetes: conduta SBD",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q71": {
+  "secundarios": [],
+  "subtopico": "Intolerância à lactose",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q72": {
+  "secundarios": [],
+  "subtopico": "Emergência hipertensiva: droga EV",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q73": {
+  "secundarios": [],
+  "subtopico": "Mixoma cardíaco",
+  "tema": "cir-cirurgia-cardiaca-e-aorta",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q74": {
+  "secundarios": [
+   "cir-urologia"
+  ],
+  "subtopico": "Hidrocele comunicante",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q75": {
+  "secundarios": [],
+  "subtopico": "Ácido tranexâmico: janela de tempo",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q76": {
+  "secundarios": [
+   "cir-cirurgia-cardiaca-e-aorta"
+  ],
+  "subtopico": "Lesão de aorta: angiotomografia",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q77": {
+  "secundarios": [
+   "cir-doenca-arterial-e-venosa-periferica"
+  ],
+  "subtopico": "Fratura de joelho: artéria poplítea",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q78": {
+  "secundarios": [],
+  "subtopico": "Choque neurogênico: fisiopatologia",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p2-q79": {
+  "secundarios": [],
+  "subtopico": "Dose máxima de lidocaína",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q80": {
+  "secundarios": [],
+  "subtopico": "Valva biológica na gestação",
+  "tema": "cir-cirurgia-cardiaca-e-aorta",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q81": {
+  "secundarios": [],
+  "subtopico": "Falha do sistema de drenagem torácica",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2024-ad-p2-q82": {
+  "secundarios": [],
+  "subtopico": "Úlcera perfurada: pneumoperitônio",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q83": {
+  "secundarios": [],
+  "subtopico": "Câncer de tireoide: sobrediagnóstico",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q84": {
+  "secundarios": [],
+  "subtopico": "Hemangioma hepático",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q85": {
+  "secundarios": [],
+  "subtopico": "ITU em lactente: coleta de urina",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q86": {
+  "secundarios": [],
+  "subtopico": "Sorologia pareada: intervalo de coletas",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q87": {
+  "secundarios": [
+   "ped-crescimento-puberdade-e-endocrinologia"
+  ],
+  "subtopico": "Hiperplasia adrenal perdedora de sal",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q88": {
+  "secundarios": [],
+  "subtopico": "Compressão torácica: relação 3:1",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q89": {
+  "secundarios": [
+   "ped-infectologia-exantemas-e-dermatologia"
+  ],
+  "subtopico": "Hepatite A: sorologia confirmatória",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q90": {
+  "secundarios": [],
+  "subtopico": "Puberdade precoce central: LH",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2024-ad-p2-q91": {
+  "secundarios": [],
+  "subtopico": "Corpo estranho em brônquio",
+  "tema": "ped-asma-vias-aereas-e-corpo-estranho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q92": {
+  "secundarios": [
+   "ped-triagem-aleitamento-vacinas-e-prevencao"
+  ],
+  "subtopico": "Mãe HBsAg+: banho do RN",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q93": {
+  "secundarios": [
+   "ped-infectologia-exantemas-e-dermatologia"
+  ],
+  "subtopico": "Varicela materna puerperal: imunoglobulina",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2024-ad-p2-q94": {
+  "secundarios": [],
+  "subtopico": "Epifisiólise proximal do fêmur",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q95": {
+  "secundarios": [],
+  "subtopico": "Prognóstico de altura final e idade óssea",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q96": {
+  "secundarios": [],
+  "subtopico": "Coqueluche: agente",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2024-ad-p2-q97": {
+  "secundarios": [],
+  "subtopico": "Vacinação na gestação: dTpa",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2024-ad-p2-q98": {
+  "secundarios": [],
+  "subtopico": "Tricomoníase ao especular",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2024-ad-p2-q99": {
+  "secundarios": [],
+  "subtopico": "Insulina no puerpério imediato",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q01": {
+  "secundarios": [],
+  "subtopico": "Tosse pós-infecciosa: conduta expectante",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q02": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Quedas: suspender medicação inapropriada",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q03": {
+  "secundarios": [
+   "cm-pneumologia-clinica"
+  ],
+  "subtopico": "Derrame pleural/pneumotórax: POCUS",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p1-q04": {
+  "secundarios": [
+   "cm-ist-sifilis-e-hepatites-virais"
+  ],
+  "subtopico": "Cirrose por hepatite B",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q05": {
+  "secundarios": [
+   "cm-geriatria-prevencao-e-etica"
+  ],
+  "subtopico": "Demência por corpos de Lewy",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q06": {
+  "secundarios": [],
+  "subtopico": "Cicatriz sorológica de sífilis",
+  "tema": "cm-ist-sifilis-e-hepatites-virais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q07": {
+  "secundarios": [
+   "cm-terapia-intensiva-e-emergencias"
+  ],
+  "subtopico": "Tamponamento cardíaco",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q08": {
+  "secundarios": [],
+  "subtopico": "Neuropatia periférica: eletroneuromiografia",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p1-q09": {
+  "secundarios": [
+   "cm-reumatologia-e-dermatologia"
+  ],
+  "subtopico": "Hanseníase: reação tipo 2/neurite",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q10": {
+  "secundarios": [],
+  "subtopico": "Ventilação protetora: parâmetros",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q11": {
+  "secundarios": [],
+  "subtopico": "Linfonodomegalia: biópsia excisional",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p1-q12": {
+  "secundarios": [],
+  "subtopico": "Carcinoma hepatocelular em cirrótico",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q13": {
+  "secundarios": [],
+  "subtopico": "SDRA: diagnóstico sindrômico",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q14": {
+  "secundarios": [
+   "cir-cabeca-e-pescoco-pele-e-oncologia"
+  ],
+  "subtopico": "Linfoma mediastinal na TC",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2025-ad-p1-q15": {
+  "secundarios": [],
+  "subtopico": "Tumor renal pequeno: nefrectomia parcial",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q16": {
+  "secundarios": [
+   "cir-cirurgia-pediatrica"
+  ],
+  "subtopico": "Apendicite pediátrica: ultrassonografia",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p1-q17": {
+  "secundarios": [],
+  "subtopico": "Morte encefálica: contraindicação",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p1-q18": {
+  "secundarios": [],
+  "subtopico": "Lesão do nervo ulnar",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q19": {
+  "secundarios": [],
+  "subtopico": "Pinça de Kocher e hemostasia",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2025-ad-p1-q20": {
+  "secundarios": [],
+  "subtopico": "Doença de Buerger",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q21": {
+  "secundarios": [],
+  "subtopico": "Complicação de pneumonia: abscesso pulmonar",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2025-ad-p1-q22": {
+  "secundarios": [],
+  "subtopico": "Púrpura trombocitopênica imune",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q23": {
+  "secundarios": [],
+  "subtopico": "Dor abdominal funcional/migrânea abdominal",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q24": {
+  "secundarios": [],
+  "subtopico": "Pitiríase versicolor: Malassezia",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q25": {
+  "secundarios": [],
+  "subtopico": "Líquido meconial: VPP com FC<100",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q26": {
+  "secundarios": [],
+  "subtopico": "Sarampo: exantema e sinal de Koplik",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q27": {
+  "secundarios": [],
+  "subtopico": "Pronação dolorosa",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q28": {
+  "secundarios": [],
+  "subtopico": "Hipoglicemia neonatal sintomática, filho de diabética",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q29": {
+  "secundarios": [],
+  "subtopico": "Toxíndrome anticolinérgica",
+  "tema": "ped-intoxicacoes-e-acidentes-com-animais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q30": {
+  "secundarios": [],
+  "subtopico": "Bronquiolite: VSR",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q31": {
+  "secundarios": [
+   "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo"
+  ],
+  "subtopico": "Via de parto em HIV com parto prematuro",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q32": {
+  "secundarios": [],
+  "subtopico": "Contracepção com anticonvulsivante indutor",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q33": {
+  "secundarios": [],
+  "subtopico": "Papiloma intraductal",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q34": {
+  "secundarios": [],
+  "subtopico": "Bexiga hiperativa: tratamento farmacológico",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q35": {
+  "secundarios": [],
+  "subtopico": "Macrossomia/MBV: TOTG",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p1-q36": {
+  "secundarios": [],
+  "subtopico": "Inversão uterina: manobra de Taxe",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q37": {
+  "secundarios": [],
+  "subtopico": "Vacina HPV após violência sexual",
+  "tema": "go-violencia-sexual-e-aborto-legal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q38": {
+  "secundarios": [],
+  "subtopico": "Aborto legal por estupro: limite de IG",
+  "tema": "go-violencia-sexual-e-aborto-legal",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p1-q39": {
+  "secundarios": [],
+  "subtopico": "Lesão de colo em pós-menopausa: biópsia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q40": {
+  "secundarios": [],
+  "subtopico": "Neoplasia trofoblástica gestacional: quimioterapia",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p1-q41": {
+  "secundarios": [],
+  "subtopico": "Cálculo do índice de envelhecimento",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q42": {
+  "secundarios": [],
+  "subtopico": "Mortalidade proporcional por doença isquêmica",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q43": {
+  "secundarios": [],
+  "subtopico": "Síndrome do impacto do ombro ocupacional",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p1-q44": {
+  "secundarios": [],
+  "subtopico": "Publicidade médica em redes sociais",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p1-q45": {
+  "secundarios": [
+   "sc-sus-principios-financiamento-e-gestao"
+  ],
+  "subtopico": "Equidade na saúde da população trans",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p1-q46": {
+  "secundarios": [],
+  "subtopico": "Determinantes sociais da saúde",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q47": {
+  "secundarios": [
+   "sc-determinantes-sociais-equidade-e-populacoes"
+  ],
+  "subtopico": "Risco relativo e escolaridade materna",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q48": {
+  "secundarios": [],
+  "subtopico": "Sistema de informação para Mpox",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q49": {
+  "secundarios": [],
+  "subtopico": "AVC e desigualdade racial",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p1-q50": {
+  "secundarios": [
+   "sc-saude-mental-violencia-e-trabalho",
+   "sc-etica-medica-bioetica-e-legislacao"
+  ],
+  "subtopico": "Notificação compulsória de violência",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q100": {
+  "secundarios": [],
+  "subtopico": "Negligência no Código de Ética Médica",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p2-q51": {
+  "secundarios": [],
+  "subtopico": "Intoxicação por metanol/etilenoglicol",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q52": {
+  "secundarios": [],
+  "subtopico": "Gota: tratamento a longo prazo",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q53": {
+  "secundarios": [],
+  "subtopico": "Cefaleia em salvas",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q54": {
+  "secundarios": [],
+  "subtopico": "Fecaloma: desimpactação",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q55": {
+  "secundarios": [
+   "cm-nefrologia-lra-drc-e-glomerulopatias"
+  ],
+  "subtopico": "Acidose láctica por metformina",
+  "tema": "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2025-ad-p2-q56": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Meningite bacteriana: agente em adulto",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q57": {
+  "secundarios": [
+   "cm-geriatria-prevencao-e-etica"
+  ],
+  "subtopico": "Hematoma subdural crônico",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q58": {
+  "secundarios": [
+   "cm-infectologia-geral-e-neuroinfeccoes"
+  ],
+  "subtopico": "Pneumocistose: tratamento",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q59": {
+  "secundarios": [],
+  "subtopico": "Estadiamento da DRC",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q60": {
+  "secundarios": [
+   "cm-terapia-intensiva-e-emergencias"
+  ],
+  "subtopico": "Dengue grave: choque refratário",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q61": {
+  "secundarios": [],
+  "subtopico": "Tumor de pâncreas: ecoendoscopia",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p2-q62": {
+  "secundarios": [],
+  "subtopico": "Fístula broncopleural pós-trauma",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q63": {
+  "secundarios": [],
+  "subtopico": "PSA elevado: causa HPB",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q64": {
+  "secundarios": [],
+  "subtopico": "Parotidectomia: lesão do nervo facial",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2025-ad-p2-q65": {
+  "secundarios": [],
+  "subtopico": "Enterocolite necrosante: conduta",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q66": {
+  "secundarios": [
+   "cir-trauma-atendimento-inicial-via-aerea-e-choque"
+  ],
+  "subtopico": "Pneumotórax hipertensivo: toracocentese",
+  "tema": "cir-trauma-toracico-e-drenagem-pleural",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q67": {
+  "secundarios": [],
+  "subtopico": "Agulha de sutura: ponta",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2025-ad-p2-q68": {
+  "secundarios": [],
+  "subtopico": "Acesso venoso de maior fluxo",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q69": {
+  "secundarios": [],
+  "subtopico": "Erisipela: agente etiológico",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2025-ad-p2-q70": {
+  "secundarios": [],
+  "subtopico": "Claudicação: caminhada supervisionada",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q71": {
+  "secundarios": [],
+  "subtopico": "Osteomielite pós-perfuração plantar: Pseudomonas",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q72": {
+  "secundarios": [],
+  "subtopico": "Constipação com incontinência fecal retentiva",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q73": {
+  "secundarios": [],
+  "subtopico": "Pneumonia atípica: Mycoplasma",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q74": {
+  "secundarios": [],
+  "subtopico": "Afogamento: ventilações iniciais",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q75": {
+  "secundarios": [],
+  "subtopico": "Síndrome extrapiramidal por metoclopramida",
+  "tema": "ped-intoxicacoes-e-acidentes-com-animais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q76": {
+  "secundarios": [],
+  "subtopico": "Hipernatremia: contração do compartimento intracelular",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2025-ad-p2-q77": {
+  "secundarios": [],
+  "subtopico": "Icterícia do leite materno",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q78": {
+  "secundarios": [
+   "ped-triagem-aleitamento-vacinas-e-prevencao"
+  ],
+  "subtopico": "Analgesia não farmacológica: sacarose",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q79": {
+  "secundarios": [],
+  "subtopico": "Cardiopatia com hiperfluxo pulmonar no Rx",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2025-ad-p2-q80": {
+  "secundarios": [],
+  "subtopico": "Paralisia cerebral desnutrida: suporte nutricional",
+  "tema": "ped-nutricao-e-carencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q81": {
+  "secundarios": [],
+  "subtopico": "Cerclagem por histórico obstétrico",
+  "tema": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q82": {
+  "secundarios": [],
+  "subtopico": "Pré-eclâmpsia grave: sulfato de magnésio",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q83": {
+  "secundarios": [],
+  "subtopico": "Amenorreia hipotalâmica funcional",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q84": {
+  "secundarios": [],
+  "subtopico": "Câncer de colo sangrante: tamponamento",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q85": {
+  "secundarios": [],
+  "subtopico": "Sífilis gestacional: tratamento",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q86": {
+  "secundarios": [],
+  "subtopico": "Doença de Zuska: cessar tabagismo",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q87": {
+  "secundarios": [],
+  "subtopico": "Sintomas vasomotores: terapia não hormonal",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q88": {
+  "secundarios": [],
+  "subtopico": "Mioma e sangramento: histerectomia",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q89": {
+  "secundarios": [],
+  "subtopico": "Isoimunização Rh: imunoglobulina anti-D",
+  "tema": "go-pre-natal-rotina-vacinas-e-rastreamento",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q90": {
+  "secundarios": [],
+  "subtopico": "DIP com abscesso: esquema antimicrobiano",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q91": {
+  "secundarios": [],
+  "subtopico": "Cálculo de acurácia do teste",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2025-ad-p2-q92": {
+  "secundarios": [],
+  "subtopico": "Asma ocupacional em carpinteiro",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q93": {
+  "secundarios": [],
+  "subtopico": "Tinea capitis em ocupação urbana",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2025-ad-p2-q94": {
+  "secundarios": [],
+  "subtopico": "Rastreamento: prevenção secundária",
+  "tema": "sc-niveis-de-prevencao-e-prevencao-quaternaria",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2025-ad-p2-q95": {
+  "secundarios": [],
+  "subtopico": "Mediana em distribuição assimétrica",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2025-ad-p2-q96": {
+  "secundarios": [
+   "sc-vigilancia-em-saude-e-notificacao"
+  ],
+  "subtopico": "Declaração de óbito em morte violenta",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p2-q97": {
+  "secundarios": [],
+  "subtopico": "Ambliopia: idade ideal de tratamento",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2025-ad-p2-q98": {
+  "secundarios": [],
+  "subtopico": "Gestão e planejamento na pandemia",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2025-ad-p2-q99": {
+  "secundarios": [],
+  "subtopico": "E-multi / NASF",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p1-q01": {
+  "secundarios": [],
+  "subtopico": "Herpes zoster: tratamento antiviral",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q02": {
+  "secundarios": [],
+  "subtopico": "Osteoartrite: achados radiográficos",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p1-q03": {
+  "secundarios": [],
+  "subtopico": "IAMCSST: angioplastia primária",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q04": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Doença de Wilson",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q05": {
+  "secundarios": [],
+  "subtopico": "Hepatite B: cura sorológica",
+  "tema": "cm-ist-sifilis-e-hepatites-virais",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q06": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Meningite tuberculosa: corticoide adjuvante",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q07": {
+  "secundarios": [],
+  "subtopico": "Neuralgia do trigêmeo: tratamento",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q08": {
+  "secundarios": [],
+  "subtopico": "Nefropatia membranosa: histologia",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p1-q09": {
+  "secundarios": [
+   "cm-infectologia-geral-e-neuroinfeccoes"
+  ],
+  "subtopico": "Artrite séptica: agente etiológico",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q10": {
+  "secundarios": [],
+  "subtopico": "Sarcoidose: diagnóstico",
+  "tema": "cm-pneumologia-clinica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q11": {
+  "secundarios": [],
+  "subtopico": "Veia femoral: relação com artéria",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p1-q12": {
+  "secundarios": [],
+  "subtopico": "Hematoma subdural agudo na TC",
+  "tema": "cir-tce-neurocirurgia-e-morte-encefalica",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p1-q13": {
+  "secundarios": [],
+  "subtopico": "Hemorragia diverticular na colonoscopia",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p1-q14": {
+  "secundarios": [],
+  "subtopico": "Queimadura de terceiro grau",
+  "tema": "cir-queimaduras-cicatrizacao-e-tecnica-cirurgica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q15": {
+  "secundarios": [],
+  "subtopico": "Doença de Hirschsprung neonatal",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q16": {
+  "secundarios": [],
+  "subtopico": "Níveis linfonodais cervicais em orofaringe",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p1-q17": {
+  "secundarios": [],
+  "subtopico": "Empiema pleural pós-pneumonia",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q18": {
+  "secundarios": [],
+  "subtopico": "Claudicação: topografia da dor",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p1-q19": {
+  "secundarios": [],
+  "subtopico": "TVP: Doppler vascular",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p1-q20": {
+  "secundarios": [],
+  "subtopico": "Retenção urinária: sondagem de alívio",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q21": {
+  "secundarios": [],
+  "subtopico": "Parafimose: redução manual",
+  "tema": "ped-ortopedia-e-cirurgia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q22": {
+  "secundarios": [],
+  "subtopico": "Síndrome do choque tóxico: agente",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q23": {
+  "secundarios": [
+   "ped-gastroenterologia-pediatrica"
+  ],
+  "subtopico": "Pneumonia recorrente por aspiração",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p1-q24": {
+  "secundarios": [],
+  "subtopico": "Influenza: oseltamivir em lactente",
+  "tema": "ped-pneumonias-bronquiolite-e-coqueluche",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q25": {
+  "secundarios": [],
+  "subtopico": "Baixa estatura familiar/variante normal",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q26": {
+  "secundarios": [],
+  "subtopico": "Crise convulsiva: benzodiazepínico",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q27": {
+  "secundarios": [],
+  "subtopico": "Hematúria glomerular: cilindros hemáticos",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p1-q28": {
+  "secundarios": [],
+  "subtopico": "Mastoidite aguda como complicação de OMA",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q29": {
+  "secundarios": [],
+  "subtopico": "Eritema tóxico neonatal",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q30": {
+  "secundarios": [],
+  "subtopico": "VPP ineficaz: corrigir técnica",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q31": {
+  "secundarios": [],
+  "subtopico": "Incompetência istmocervical ao especular",
+  "tema": "go-prematuridade-rpmo-e-incompetencia-istmocervical",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q32": {
+  "secundarios": [],
+  "subtopico": "Endometriose profunda intestinal: conduta",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q33": {
+  "secundarios": [],
+  "subtopico": "AOC e hiperplasia nodular focal hepática",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q34": {
+  "secundarios": [
+   "go-cancer-ginecologico-e-rastreamento-do-colo"
+  ],
+  "subtopico": "Cervicite ao exame especular",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p1-q35": {
+  "secundarios": [],
+  "subtopico": "Terapia estrogênica isolada pós-histerectomia",
+  "tema": "go-climaterio-e-uroginecologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q36": {
+  "secundarios": [],
+  "subtopico": "Eclâmpsia: nova convulsão, reforço de MgSO4",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q37": {
+  "secundarios": [],
+  "subtopico": "Nódulo BI-RADS 3: seguimento",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q38": {
+  "secundarios": [
+   "go-pre-natal-rotina-vacinas-e-rastreamento"
+  ],
+  "subtopico": "Toxoplasmose: repetir sorologia",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p1-q39": {
+  "secundarios": [],
+  "subtopico": "DNA-HPV outros tipos: repetir em 1 ano",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q40": {
+  "secundarios": [],
+  "subtopico": "Variedade de posição: OET",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q41": {
+  "secundarios": [],
+  "subtopico": "Febre amarela: caso suspeito e notificação",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p1-q42": {
+  "secundarios": [],
+  "subtopico": "Componente neonatal da mortalidade infantil",
+  "tema": "sc-indicadores-e-medidas-de-frequencia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-p1-q43": {
+  "secundarios": [],
+  "subtopico": "Projeto terapêutico singular",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p1-q44": {
+  "secundarios": [
+   "sc-atencao-primaria-e-redes-de-atencao"
+  ],
+  "subtopico": "Equipe de referência e interconsulta",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p1-q45": {
+  "secundarios": [],
+  "subtopico": "Financiamento por impostos no modelo beveridgiano",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-p1-q46": {
+  "secundarios": [],
+  "subtopico": "Paridade dos usuários nos conselhos de saúde",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2026-ad-p1-q47": {
+  "secundarios": [],
+  "subtopico": "Pesquisa clínica: fase I",
+  "tema": "sc-delineamentos-epidemiologicos-e-medidas-de-efeito",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p1-q48": {
+  "secundarios": [],
+  "subtopico": "Equidade e justiça em IA médica",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2026-ad-p1-q49": {
+  "secundarios": [],
+  "subtopico": "Dermatite de contato: patch test",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p1-q50": {
+  "secundarios": [],
+  "subtopico": "Silicose em protético dentário",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q100": {
+  "secundarios": [
+   "sc-doencas-ocupacionais-especificas"
+  ],
+  "subtopico": "Síndrome de Burnout em enfermeira",
+  "tema": "sc-saude-mental-violencia-e-trabalho",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q51": {
+  "secundarios": [
+   "cm-disturbios-acido-base-eletrolitos-e-intoxicacoes"
+  ],
+  "subtopico": "Rabdomiólise: exame confirmatório CPK",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p2-q52": {
+  "secundarios": [],
+  "subtopico": "LRA pré-renal: reposição volêmica",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q53": {
+  "secundarios": [],
+  "subtopico": "AVC isquêmico: trombectomia",
+  "tema": "cm-neurologia-clinica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q54": {
+  "secundarios": [
+   "cm-neurologia-clinica"
+  ],
+  "subtopico": "Anemia megaloblástica: dosar B12",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p2-q55": {
+  "secundarios": [
+   "cm-infectologia-geral-e-neuroinfeccoes"
+  ],
+  "subtopico": "Paracoccidioidomicose e insuficiência adrenal",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p2-q56": {
+  "secundarios": [],
+  "subtopico": "Colangite biliar primária: fosfatase alcalina",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q57": {
+  "secundarios": [
+   "cm-reumatologia-e-dermatologia"
+  ],
+  "subtopico": "Tuberculose osteoarticular",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q58": {
+  "secundarios": [],
+  "subtopico": "FiO2 inicial na ventilação mecânica",
+  "tema": "cm-terapia-intensiva-e-emergencias",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q59": {
+  "secundarios": [],
+  "subtopico": "Nódulo tireoidiano: indicação de PAAF",
+  "tema": "cm-diabetes-tireoide-e-suprarrenal",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q60": {
+  "secundarios": [],
+  "subtopico": "Hepatite aguda grave",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q61": {
+  "secundarios": [
+   "cir-doenca-arterial-e-venosa-periferica"
+  ],
+  "subtopico": "Luxação de joelho: artéria poplítea",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q62": {
+  "secundarios": [],
+  "subtopico": "Ingestão de cáustico: jejunostomia",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q63": {
+  "secundarios": [],
+  "subtopico": "Pólipo vesicular com carcinoma T1a",
+  "tema": "cir-figado-vias-biliares-e-pancreas",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q64": {
+  "secundarios": [
+   "cir-cirurgia-pediatrica"
+  ],
+  "subtopico": "Torção testicular: tempo para cirurgia",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q65": {
+  "secundarios": [],
+  "subtopico": "Câncer de cólon metastático: colonoscopia",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p2-q66": {
+  "secundarios": [
+   "cir-trauma-atendimento-inicial-via-aerea-e-choque"
+  ],
+  "subtopico": "Fratura de pelve: estabilização com lençol",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q67": {
+  "secundarios": [],
+  "subtopico": "Tumor de pulmão: nervo laríngeo recorrente",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p2-q68": {
+  "secundarios": [],
+  "subtopico": "Oclusão arterial aguda: tecido nervoso",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-p2-q69": {
+  "secundarios": [],
+  "subtopico": "Lesão de tronco: revascularização",
+  "tema": "cir-cirurgia-cardiaca-e-aorta",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q70": {
+  "secundarios": [],
+  "subtopico": "Trauma cervical: sinal de lesão de via aérea",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q71": {
+  "secundarios": [],
+  "subtopico": "Palivizumabe: indicação MS",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q72": {
+  "secundarios": [],
+  "subtopico": "Dengue: classificação de gravidade",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q73": {
+  "secundarios": [
+   "ped-ortopedia-e-cirurgia-pediatrica"
+  ],
+  "subtopico": "Genu valgo fisiológico aos 3 anos",
+  "tema": "ped-crescimento-puberdade-e-endocrinologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q74": {
+  "secundarios": [],
+  "subtopico": "Regurgitação fisiológica do lactente",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q75": {
+  "secundarios": [],
+  "subtopico": "Jogos sexuais infantis",
+  "tema": "ped-triagem-aleitamento-vacinas-e-prevencao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q76": {
+  "secundarios": [],
+  "subtopico": "TCE com hipertensão intracraniana: manitol",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q77": {
+  "secundarios": [],
+  "subtopico": "Miocardite viral em lactente",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q78": {
+  "secundarios": [],
+  "subtopico": "Raquitismo: sinais clínicos",
+  "tema": "ped-nutricao-e-carencias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q79": {
+  "secundarios": [
+   "ped-cardiologia-hematologia-e-oncologia"
+  ],
+  "subtopico": "Síndrome nefrótica: trombose venosa",
+  "tema": "ped-nefrologia-e-disturbios-hidroeletroliticos",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-p2-q80": {
+  "secundarios": [
+   "ped-triagem-aleitamento-vacinas-e-prevencao"
+  ],
+  "subtopico": "Sífilis congênita: TNT 1/8, seguimento",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q81": {
+  "secundarios": [],
+  "subtopico": "Gestação de 40+4: indução, Bishop",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q82": {
+  "secundarios": [],
+  "subtopico": "Amenorreia primária hipergonadotrófica: cariótipo",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p2-q83": {
+  "secundarios": [],
+  "subtopico": "Candidíase vulvovaginal recorrente: conduta",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q84": {
+  "secundarios": [
+   "go-contracepcao"
+  ],
+  "subtopico": "Sangramento uterino em Von Willebrand",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q85": {
+  "secundarios": [
+   "go-pre-natal-rotina-vacinas-e-rastreamento"
+  ],
+  "subtopico": "Posição para aferir PA na gestante",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q86": {
+  "secundarios": [],
+  "subtopico": "DIU pós-parto com fio visível",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q87": {
+  "secundarios": [],
+  "subtopico": "Citologia ASC-US seguida de HSIL",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q88": {
+  "secundarios": [],
+  "subtopico": "Anencefalia: documentos para interrupção",
+  "tema": "go-violencia-sexual-e-aborto-legal",
+  "tipo_cognitivo": "etica_legislacao_gestao"
+ },
+ "unicamp-2026-ad-p2-q89": {
+  "secundarios": [],
+  "subtopico": "Acretismo placentário: histerectomia",
+  "tema": "go-hemorragias-abortamento-ectopica-e-mola",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-p2-q90": {
+  "secundarios": [],
+  "subtopico": "Classificação de Robson: grupo 5",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p2-q91": {
+  "secundarios": [],
+  "subtopico": "Acurácia e comparação de testes rápidos",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-p2-q92": {
+  "secundarios": [
+   "sc-delineamentos-epidemiologicos-e-medidas-de-efeito"
+  ],
+  "subtopico": "Intervalo de confiança e significância",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p2-q93": {
+  "secundarios": [],
+  "subtopico": "Clínica ampliada e afetos na relação",
+  "tema": "sc-pnh-clinica-ampliada-e-pts",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p2-q94": {
+  "secundarios": [],
+  "subtopico": "Coordenação do cuidado e alta responsável",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p2-q95": {
+  "secundarios": [
+   "sc-vigilancia-em-saude-e-notificacao"
+  ],
+  "subtopico": "Categorias raça/cor do IBGE nos sistemas",
+  "tema": "sc-determinantes-sociais-equidade-e-populacoes",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-p2-q96": {
+  "secundarios": [],
+  "subtopico": "Caderneta do idoso: perímetro da panturrilha",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-p2-q97": {
+  "secundarios": [
+   "sc-sus-principios-financiamento-e-gestao"
+  ],
+  "subtopico": "Rede de atenção psicossocial",
+  "tema": "sc-saude-mental-violencia-e-trabalho",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p2-q98": {
+  "secundarios": [],
+  "subtopico": "Distribuição normal da glicemia",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-p2-q99": {
+  "secundarios": [],
+  "subtopico": "Hanseníase virchowiana",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q01": {
+  "secundarios": [],
+  "subtopico": "Rinossinusite crônica: tomografia",
+  "tema": "cm-infectologia-geral-e-neuroinfeccoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-remanescentes-q02": {
+  "secundarios": [],
+  "subtopico": "Síndrome de realimentação",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q03": {
+  "secundarios": [],
+  "subtopico": "HAS resistente: terceira droga",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q04": {
+  "secundarios": [],
+  "subtopico": "Nefrite intersticial aguda medicamentosa",
+  "tema": "cm-nefrologia-lra-drc-e-glomerulopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q05": {
+  "secundarios": [],
+  "subtopico": "Estenose mitral: semiologia",
+  "tema": "cm-cardiologia-sca-arritmias-valvopatias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q06": {
+  "secundarios": [],
+  "subtopico": "Hemocromatose transfusional",
+  "tema": "cm-hematologia-nutricao-e-metabolismo",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q07": {
+  "secundarios": [],
+  "subtopico": "PBE: tratamento",
+  "tema": "cm-gastroenterologia-e-hepatologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q08": {
+  "secundarios": [],
+  "subtopico": "Gota: líquido sinovial",
+  "tema": "cm-reumatologia-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q09": {
+  "secundarios": [],
+  "subtopico": "Delirium: fatores de risco",
+  "tema": "cm-geriatria-prevencao-e-etica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-remanescentes-q10": {
+  "secundarios": [],
+  "subtopico": "HAS sistólica no idoso com disfunção diastólica",
+  "tema": "cm-has-dislipidemia-e-risco-cardiovascular",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q11": {
+  "secundarios": [],
+  "subtopico": "Fratura exposta em radiograma",
+  "tema": "cir-trauma-abdominal-pelve-extremidades-e-nervos",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-remanescentes-q12": {
+  "secundarios": [],
+  "subtopico": "Hérnia umbilical: conduta expectante",
+  "tema": "cir-cirurgia-pediatrica",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q13": {
+  "secundarios": [],
+  "subtopico": "Dor em FID e beta-HCG: ultrassonografia",
+  "tema": "cir-abdome-agudo-apendicite-e-isquemia-intestinal",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-remanescentes-q14": {
+  "secundarios": [],
+  "subtopico": "Nódulo prostático: biópsia",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-remanescentes-q15": {
+  "secundarios": [],
+  "subtopico": "Carcinoma basocelular",
+  "tema": "cir-cabeca-e-pescoco-pele-e-oncologia",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-remanescentes-q16": {
+  "secundarios": [],
+  "subtopico": "Insuficiência venosa crônica: úlcera",
+  "tema": "cir-doenca-arterial-e-venosa-periferica",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-remanescentes-q17": {
+  "secundarios": [
+   "cir-trauma-abdominal-pelve-extremidades-e-nervos"
+  ],
+  "subtopico": "Uretrorragia pós-trauma: cistostomia",
+  "tema": "cir-urologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q18": {
+  "secundarios": [],
+  "subtopico": "Manobra BURP na laringoscopia",
+  "tema": "cir-trauma-atendimento-inicial-via-aerea-e-choque",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-remanescentes-q19": {
+  "secundarios": [],
+  "subtopico": "Câncer de pulmão: lobo médio",
+  "tema": "cir-cirurgia-toracica-pulmao-pleura-e-via-aerea",
+  "tipo_cognitivo": "interpretacao_imagem"
+ },
+ "unicamp-2026-ad-remanescentes-q20": {
+  "secundarios": [],
+  "subtopico": "Deficiência de B12 pós-bariátrica",
+  "tema": "cir-esofago-estomago-e-colon",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q21": {
+  "secundarios": [],
+  "subtopico": "Desnutrição: magreza acentuada na OMS",
+  "tema": "ped-nutricao-e-carencias",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q22": {
+  "secundarios": [
+   "ped-nutricao-e-carencias"
+  ],
+  "subtopico": "Anemia ferropriva: dose de ferro",
+  "tema": "ped-cardiologia-hematologia-e-oncologia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q23": {
+  "secundarios": [],
+  "subtopico": "Agente etiológico: estreptococo grupo A",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q24": {
+  "secundarios": [
+   "ped-nefrologia-e-disturbios-hidroeletroliticos"
+  ],
+  "subtopico": "Complicação imunomediada: GNDA",
+  "tema": "ped-infectologia-exantemas-e-dermatologia",
+  "tipo_cognitivo": "fisiopatologia"
+ },
+ "unicamp-2026-ad-remanescentes-q25": {
+  "secundarios": [],
+  "subtopico": "Reanimação: expansão volêmica",
+  "tema": "ped-reanimacao-neonatal-em-sala-de-parto",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q26": {
+  "secundarios": [],
+  "subtopico": "Exacerbação grave de asma: sulfato de magnésio",
+  "tema": "ped-asma-vias-aereas-e-corpo-estranho",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q27": {
+  "secundarios": [],
+  "subtopico": "Anafilaxia: adrenalina IM",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q28": {
+  "secundarios": [],
+  "subtopico": "TCE leve: regra PECARN lactente",
+  "tema": "ped-emergencia-pcr-trauma-convulsao-anafilaxia",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q29": {
+  "secundarios": [],
+  "subtopico": "Estenose hipertrófica de piloro",
+  "tema": "ped-gastroenterologia-pediatrica",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q30": {
+  "secundarios": [],
+  "subtopico": "Fototerapia: espectro de luz azul",
+  "tema": "ped-neonatologia-ictericia-glicemia-infeccoes",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-remanescentes-q31": {
+  "secundarios": [],
+  "subtopico": "Sangramento uterino na perimenopausa",
+  "tema": "go-ciclo-menstrual-endometriose-mioma-e-infertilidade",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q32": {
+  "secundarios": [],
+  "subtopico": "Abscesso tubo-ovariano",
+  "tema": "go-vulvovaginites-ist-e-dip",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q33": {
+  "secundarios": [],
+  "subtopico": "Nódulo mamário em mulher jovem: exame inicial",
+  "tema": "go-mama-nodulos-rastreamento-e-infeccoes",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-remanescentes-q34": {
+  "secundarios": [],
+  "subtopico": "Líquen escleroso com lesão suspeita: biópsia",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "exame_complementar"
+ },
+ "unicamp-2026-ad-remanescentes-q35": {
+  "secundarios": [],
+  "subtopico": "Intervalo do DNA-HPV negativo",
+  "tema": "go-cancer-ginecologico-e-rastreamento-do-colo",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-remanescentes-q36": {
+  "secundarios": [],
+  "subtopico": "Sífilis no puerpério: tratamento",
+  "tema": "go-infeccoes-na-gestacao-sifilis-hiv-hepatite-toxo",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q37": {
+  "secundarios": [],
+  "subtopico": "Diagnóstico de diabetes gestacional precoce",
+  "tema": "go-diabetes-e-doencas-clinicas-na-gestacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q38": {
+  "secundarios": [],
+  "subtopico": "Pré-eclâmpsia com restrição de crescimento",
+  "tema": "go-hipertensao-na-gestacao",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q39": {
+  "secundarios": [
+   "go-ciclo-menstrual-endometriose-mioma-e-infertilidade"
+  ],
+  "subtopico": "Contracepção em SOP hipertensa",
+  "tema": "go-contracepcao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q40": {
+  "secundarios": [],
+  "subtopico": "Partograma normal sob peridural",
+  "tema": "go-parto-partograma-e-puerperio",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q41": {
+  "secundarios": [],
+  "subtopico": "Valor-p e hipótese nula",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-remanescentes-q42": {
+  "secundarios": [],
+  "subtopico": "Febre maculosa: sistema SINAN",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q43": {
+  "secundarios": [],
+  "subtopico": "Saturnismo em operário de fundição",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q44": {
+  "secundarios": [],
+  "subtopico": "Perda auditiva por ruído: tipo neurossensorial",
+  "tema": "sc-doencas-ocupacionais-especificas",
+  "tipo_cognitivo": "diagnostico"
+ },
+ "unicamp-2026-ad-remanescentes-q45": {
+  "secundarios": [],
+  "subtopico": "Cuidados paliativos em câncer de pâncreas",
+  "tema": "sc-cuidado-clinico-idoso-paliativos-e-aps",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q46": {
+  "secundarios": [],
+  "subtopico": "Sinal de Romaña e especificidade",
+  "tema": "sc-bioestatistica-e-testes-diagnosticos",
+  "tipo_cognitivo": "outro"
+ },
+ "unicamp-2026-ad-remanescentes-q47": {
+  "secundarios": [
+   "sc-determinantes-sociais-equidade-e-populacoes"
+  ],
+  "subtopico": "Aborto legal em estupro",
+  "tema": "sc-etica-medica-bioetica-e-legislacao",
+  "tipo_cognitivo": "conduta"
+ },
+ "unicamp-2026-ad-remanescentes-q48": {
+  "secundarios": [],
+  "subtopico": "Modelo bismarckiano de proteção social",
+  "tema": "sc-sus-principios-financiamento-e-gestao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-remanescentes-q49": {
+  "secundarios": [],
+  "subtopico": "Imunização contra vírus sincicial respiratório",
+  "tema": "sc-vigilancia-em-saude-e-notificacao",
+  "tipo_cognitivo": "epidemiologia_prevencao"
+ },
+ "unicamp-2026-ad-remanescentes-q50": {
+  "secundarios": [],
+  "subtopico": "Boas práticas APS: cuidado do diabético",
+  "tema": "sc-atencao-primaria-e-redes-de-atencao",
+  "tipo_cognitivo": "conduta"
+ }
+}
