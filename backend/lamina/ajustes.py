@@ -12,13 +12,23 @@ PADROES: dict[str, object] = {
         "juiz_revisao": "claude-sonnet-5-5",
         "tutor": "claude-sonnet-5-5",
         "flashcards": "claude-sonnet-5-5",
-        "coach": "claude-sonnet-5-5",
+        "preceptor": "claude-sonnet-5-5",
+        "bibliotecario": "claude-sonnet-5-5",
         "curadoria": "claude-sonnet-5-5",
     },
-    "esforco": {"tutor": "low", "flashcards": "low", "coach": "medium", "curadoria": "medium", "juiz_revisao": "medium"},
+    "esforco": {"tutor": "low", "flashcards": "low", "preceptor": "medium", "bibliotecario": "medium",
+                "curadoria": "medium", "juiz_revisao": "medium"},
     "correcao_automatica": True,
-    "coach_automatico": False,
-    "coach_min_tentativas_novas": 25,
+    # Preceptor (orquestrador em segundo plano)
+    "preceptor_fundo": True,            # rondas e tarefas automáticas enquanto o servidor estiver rodando
+    "orcamento_fundo_dia": 400_000,     # tokens/dia que o segundo plano pode gastar
+    "limiar_janela": 0.7,               # não roda em segundo plano acima desta fração da janela do plano
+    "hora_ronda": 7,                    # primeira ronda do dia a partir desta hora
+    "max_rondas_dia": 3,
+    "coach_min_tentativas_novas": 25,   # respostas novas que justificam uma ronda extra
+    "notificacoes_desktop": True,
+    "hora_lembrete": 19,                # lembretes automáticos (meta do dia, flashcards)
+    "silencio": [23, 7],                # sem notificações neste intervalo
     "simulado_duracao_min": 240,
     "meta_diaria": 25,
     "aviso_tokens_dia": 400_000,

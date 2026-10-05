@@ -3,8 +3,9 @@
 O Claude lê páginas da web; uma página maliciosa poderia tentar induzi-lo a executar comandos.
 Por isso o bash do app roda em um sandbox próprio:
 - sem rede (--unshare-all), sem acesso à home do usuário;
-- /trabalho gravável (persistente em app_data/terminal), /dados somente leitura com o banco de
-  questões, a curadoria e um snapshot do banco de desempenho (lamina.db);
+- /trabalho gravável = o caderno do próprio agente (app_data/agentes/<agente>);
+- /biblioteca somente leitura (documentos integrais e notas);
+- /dados somente leitura com o banco de questões, a curadoria e um snapshot do banco de desempenho;
 - tempo e saída limitados.
 """
 
@@ -16,7 +17,7 @@ import sqlite3
 import tempfile
 from pathlib import Path
 
-from lamina import config
+from lamina import agentes, config
 
 LIMITE_SAIDA = 12_000
 TEMPO_MAX = 60
@@ -49,17 +50,18 @@ def _comando_bwrap(trabalho: Path, banco: Path, comando: str) -> list[str]:
     ]
     if config.CURADORIA_DIR.exists():
         args += ["--ro-bind", str(config.CURADORIA_DIR), "/dados/curadoria"]
+    if config.BIBLIOTECA_DIR.exists():
+        args += ["--ro-bind", str(config.BIBLIOTECA_DIR), "/biblioteca"]
     args += ["--unshare-all", "--die-with-parent", "--new-session", "--clearenv",
              "--setenv", "PATH", "/usr/bin:/bin", "--setenv", "HOME", "/trabalho", "--setenv", "LANG", "C.UTF-8",
              "--chdir", "/trabalho", "bash", "-c", comando]
     return args
 
 
-async def executar(comando: str, tempo_max: int = 30) -> str:
+async def executar(comando: str, tempo_max: int = 30, agente: str = "tutor") -> str:
     if not disponivel():
         return "Terminal indisponível: bubblewrap (bwrap) não está instalado."
-    trabalho = config.APP_DATA / "terminal"
-    trabalho.mkdir(parents=True, exist_ok=True)
+    trabalho = agentes.workspace(agente)
     with tempfile.TemporaryDirectory(prefix="lamina-") as tmp:
         banco = Path(tmp) / "lamina.db"
         _snapshot_banco(banco)
@@ -81,9 +83,12 @@ async def executar(comando: str, tempo_max: int = 30) -> str:
 
 DESCRICAO = (
     "Executa um comando bash em um sandbox isolado (sem internet, sem acesso à máquina do usuário). "
-    "Diretório de trabalho gravável: /trabalho. Somente leitura: /dados/banco_questoes (provas em JSON/Markdown e "
+    "Diretório de trabalho gravável: /trabalho (é o seu caderno, o mesmo diretório das suas ferramentas Write/Edit). "
+    "Somente leitura: /biblioteca (docs/<id>/texto.md com o texto integral dos documentos, notas/, CATALOGO.md), "
+    "/dados/banco_questoes (provas em JSON/Markdown e "
     "imagens; data/questoes.jsonl tem todas as questões), /dados/curadoria (temas e classificação) e /dados/lamina.db "
     "(SQLite com o desempenho do aluno: tabelas questoes, temas, tentativas, flashcards, blocos). "
     "Disponíveis: python3 (com sqlite3, json, statistics), grep, find, awk, sed. Use para cálculos, contagens, "
-    "buscas no banco de questões e análises; para internet use WebSearch/WebFetch."
+    "buscas extensas (grep -ri na /biblioteca), organizar arquivos do caderno e análises; para internet use "
+    "WebSearch/WebFetch e, para guardar um documento inteiro, biblioteca_capturar."
 )

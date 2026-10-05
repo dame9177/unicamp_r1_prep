@@ -1,14 +1,17 @@
-"""Tarefas que usam o Claude: julgar respostas, gerar flashcards, tutor (chat) e coach."""
+"""Tarefas que usam o Claude: julgar respostas, gerar flashcards, conversas (tutor e Preceptor),
+rondas do Preceptor e tarefas delegadas (bibliotecário)."""
 
 from __future__ import annotations
 
+import asyncio
 import json
 from collections.abc import AsyncIterator
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from string import Template
 
-from lamina import ajustes, config
+from lamina import agentes, ajustes, config
+from lamina.biblioteca import armazem
 from lamina.claude.runner import ErroClaude, Pedido, obter_runner
 from lamina.db import conectar, linha, linhas
 
@@ -72,23 +75,52 @@ def _questao(conn, questao_id: str) -> dict:
 
 
 # ------------------------------------------------------------------------------------------------
-# Kit de ferramentas comum a todas as instâncias do Claude
+# Kit de ferramentas e ambiente comuns a todas as instâncias do Claude
 # ------------------------------------------------------------------------------------------------
 
-def kit(papel: str) -> dict:
-    """Ferramentas nativas (web, leitura do banco de questões) + MCP do app (terminal isolado etc.)."""
-    from lamina.claude.tools import ContextoCoach, servidor_para
+COM_MEMORIA = {"tutor", "preceptor", "bibliotecario"}
 
-    ctx = ContextoCoach()
+
+def kit(papel: str) -> dict:
+    """Ferramentas nativas (web; leitura/busca no caderno, na biblioteca e no banco; escrita só no caderno)
+    + MCP do app (terminal isolado, biblioteca, dados e ações conforme o papel)."""
+    from lamina.claude.tools import Contexto, servidor_para
+
+    ctx = Contexto()
     servidor, nomes = servidor_para(papel, ctx)
-    banco = str(config.BANCO_DIR)
+    caderno = agentes.workspace(agentes.agente_de(papel))
+    config.BIBLIOTECA_DIR.mkdir(parents=True, exist_ok=True)
+    biblioteca, banco = str(config.BIBLIOTECA_DIR), str(config.BANCO_DIR)
     return {
-        "ferramentas": ["WebSearch", "WebFetch", "Read"],
-        "permitidas": ["WebSearch", "WebFetch", f"Read(/{banco}/**)", *nomes],
+        "ferramentas": ["WebSearch", "WebFetch", "Read", "Grep", "Glob", "Write", "Edit"],
+        "permitidas": ["WebSearch", "WebFetch", f"Read(/{caderno}/**)", f"Read(/{biblioteca}/**)", f"Read(/{banco}/**)",
+                       f"Edit(/{caderno}/**)", *nomes],
         "mcp": {"lamina": servidor},
-        "diretorios_extras": [banco],
+        "diretorios_extras": [biblioteca, banco],
+        "cwd": str(caderno),
         "_ctx": ctx,
     }
+
+
+def sistema(nome_prompt: str, papel: str) -> str:
+    """Prompt de sistema = instruções do papel + ambiente (caderno, biblioteca) + MEMORIA.md do agente."""
+    agente = agentes.agente_de(papel)
+    caderno = agentes.workspace(agente)
+    with conectar() as conn:
+        bib = armazem.resumo_para_prompt(conn)
+    partes = [prompt(nome_prompt), f"""## Seu ambiente
+- Caderno (diretório de trabalho, persistente entre sessões e só seu): {caderno}
+  Crie pastas e arquivos Markdown à vontade com Write/Edit; no terminal ele é /trabalho.
+- Biblioteca compartilhada por todos os agentes: {config.BIBLIOTECA_DIR}
+  Leia com biblioteca_buscar/biblioteca_ler ou Grep/Read (docs/<id>/texto.md, notas/, CATALOGO.md); para
+  acrescentar use biblioteca_capturar (documento integral) e biblioteca_publicar_nota (síntese com fontes).
+- Banco de questões da Unicamp (somente leitura): {config.BANCO_DIR}
+
+## Biblioteca agora
+{bib}"""]
+    if agente in COM_MEMORIA:
+        partes.append(f"## Sua MEMORIA.md (atualize-a com Edit quando aprender algo durável)\n{agentes.memoria(agente)}")
+    return "\n\n".join(partes)
 
 
 def _sem_ctx(k: dict) -> dict:
@@ -168,8 +200,8 @@ async def _julgar_atualizado(tentativa_id: int) -> dict:
                      ("Verificando se o gabarito ainda vale pelas recomendações atuais…", tentativa_id))
     k = kit("juiz")
     r = await obter_runner().executar(Pedido(
-        papel="juiz", modelo=modelo, esforco=esforco, sistema=prompt("juiz_atualizado"), esquema=ESQUEMA_JUIZ,
-        ref=f"tentativa:{tentativa_id}:atualizacao", prompt=texto, max_turnos=12, **_sem_ctx(k),
+        papel="juiz", modelo=modelo, esforco=esforco, sistema=sistema("juiz_atualizado", "juiz"), esquema=ESQUEMA_JUIZ,
+        ref=f"tentativa:{tentativa_id}:atualizacao", prompt=texto, max_turnos=16, **_sem_ctx(k),
     ))
     dados = r.estruturado or json.loads(r.texto)
     with conectar() as conn:
@@ -268,17 +300,23 @@ async def gerar_flashcards(questao_id: str, foco: str | None = None) -> list[dic
     if foco:
         partes.append(f"PEDIDO DO ALUNO: {foco}")
     r = await obter_runner().executar(Pedido(
-        papel="flashcards", modelo=modelo, esforco=esforco, sistema=prompt("flashcards"),
+        papel="flashcards", modelo=modelo, esforco=esforco, sistema=sistema("flashcards", "flashcards"),
         esquema=ESQUEMA_FLASHCARDS, ref=f"questao:{questao_id}", prompt="\n\n".join(partes),
-        max_turnos=10, **_sem_ctx(kit("flashcards")),
+        max_turnos=12, **_sem_ctx(kit("flashcards")),
     ))
     dados = r.estruturado or json.loads(r.texto)
     return dados["cartoes"]
 
 
 # ------------------------------------------------------------------------------------------------
-# Tutor (chat lateral com streaming)
+# Conversas com streaming (tutor e Preceptor): mesmo agente, sessões retomadas com `resume`
 # ------------------------------------------------------------------------------------------------
+
+CONVERSA = {
+    "tutor": {"prompt": "tutor", "max_turnos": 40},
+    "preceptor": {"prompt": "preceptor", "max_turnos": 40},
+}
+
 
 def _contexto_inicial(conn, questao_id: str) -> str:
     q = _questao(conn, questao_id)
@@ -292,57 +330,96 @@ def _contexto_inicial(conn, questao_id: str) -> str:
     return "\n\n".join(partes)
 
 
+def _contexto_preceptor(conn) -> str:
+    from lamina.orquestra import sentinela
+
+    return ("[Conversa com o aluno. Sinais do momento (sentinela):]\n"
+            + json.dumps(sentinela.coletar(conn), ensure_ascii=False, default=str))
+
+
+def _transcricao(conn, chat_id: int, limite: int = 12) -> str:
+    msgs = linhas(conn, "SELECT papel, conteudo FROM mensagens WHERE chat_id = ? ORDER BY id DESC LIMIT ?",
+                  (chat_id, limite + 1))[1:]  # sem a mensagem que acabou de entrar
+    return "\n\n".join(f"{'ALUNO' if m['papel'] == 'user' else 'VOCÊ'}: {m['conteudo'][:3000]}" for m in reversed(msgs))
+
+
 async def conversar(chat_id: int, mensagem: str) -> AsyncIterator[dict]:
     with conectar() as conn:
         chat = linha(conn, "SELECT * FROM chats WHERE id = ?", (chat_id,))
         if not chat:
             raise KeyError(chat_id)
-        modelo = chat["modelo"] or ajustes.modelo(conn, "tutor")
-        esforco = ajustes.esforco(conn, "tutor")
+        agente = chat.get("agente") or "tutor"
+        cfg = CONVERSA[agente]
+        modelo = chat["modelo"] or ajustes.modelo(conn, agente)
+        esforco = ajustes.esforco(conn, agente)
         primeira = chat["session_id"] is None
-        contexto = _contexto_inicial(conn, chat["questao_id"]) if (primeira and chat["questao_id"]) else ""
+        contexto = ""
+        if primeira and agente == "tutor" and chat["questao_id"]:
+            contexto = _contexto_inicial(conn, chat["questao_id"])
+        elif primeira and agente == "preceptor":
+            contexto = _contexto_preceptor(conn)
         conn.execute("INSERT INTO mensagens (chat_id, papel, conteudo) VALUES (?, 'user', ?)", (chat_id, mensagem))
 
+    def pedido(texto: str, retomar: str | None) -> Pedido:
+        return Pedido(papel=agente, modelo=modelo, esforco=esforco, sistema=sistema(cfg["prompt"], agente),
+                      prompt=texto, retomar=retomar, ref=f"chat:{chat_id}", max_turnos=cfg["max_turnos"],
+                      **_sem_ctx(kit(agente)))
+
     texto_prompt = f"{contexto}\n\n---\nPERGUNTA DO ALUNO:\n{mensagem}" if contexto else mensagem
-    pedido = Pedido(
-        papel="tutor", modelo=modelo, esforco=esforco, sistema=prompt("tutor"), prompt=texto_prompt,
-        retomar=chat["session_id"], ref=f"chat:{chat_id}", **_sem_ctx(kit("tutor")),
-    )
+    tentativas = [pedido(texto_prompt, chat["session_id"])]
     atividades: list[str] = []
-    async for ev in obter_runner().transmitir(pedido):
-        if ev["tipo"] == "atividade":
-            atividades.append(ev["detalhe"])
-        elif ev["tipo"] == "fim":
-            with conectar() as conn:
-                cur = conn.execute(
-                    "INSERT INTO mensagens (chat_id, papel, conteudo, atividades_json, job_id) VALUES (?, 'assistant', ?, ?, ?)",
-                    (chat_id, ev["texto"], json.dumps(atividades, ensure_ascii=False), ev.get("job_id")),
-                )
-                ev = {**ev, "mensagem_id": cur.lastrowid}
-                conn.execute(
-                    "UPDATE chats SET session_id = ?, modelo = ?, atualizado_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?",
-                    (ev.get("session_id") or chat["session_id"], modelo, chat_id),
-                )
-        yield ev
+    while tentativas:
+        p = tentativas.pop(0)
+        emitiu = False
+        async for ev in obter_runner().transmitir(p):
+            if ev["tipo"] == "erro" and p.retomar and not emitiu and not atividades:
+                # Sessão anterior indisponível (ex.: diretório do agente mudou): recomeça com a transcrição.
+                with conectar() as conn:
+                    hist = _transcricao(conn, chat_id)
+                    ctx_ini = (_contexto_inicial(conn, chat["questao_id"]) if agente == "tutor" and chat["questao_id"]
+                               else _contexto_preceptor(conn) if agente == "preceptor" else "")
+                tentativas.append(pedido(f"{ctx_ini}\n\n[Conversa até aqui]\n{hist}\n\n---\nNOVA MENSAGEM DO ALUNO:\n"
+                                         f"{mensagem}", None))
+                break
+            if ev["tipo"] == "texto":
+                emitiu = True
+            elif ev["tipo"] == "atividade":
+                atividades.append(ev["detalhe"])
+            elif ev["tipo"] == "fim":
+                with conectar() as conn:
+                    cur = conn.execute(
+                        "INSERT INTO mensagens (chat_id, papel, conteudo, atividades_json, job_id) "
+                        "VALUES (?, 'assistant', ?, ?, ?)",
+                        (chat_id, ev["texto"], json.dumps(atividades, ensure_ascii=False), ev.get("job_id")),
+                    )
+                    ev = {**ev, "mensagem_id": cur.lastrowid}
+                    conn.execute(
+                        "UPDATE chats SET session_id = ?, modelo = ?, "
+                        "atualizado_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?",
+                        (ev.get("session_id") or p.retomar, modelo, chat_id),
+                    )
+            yield ev
 
 
 # ------------------------------------------------------------------------------------------------
-# Coach
+# Preceptor: rondas (segundo plano ou a pedido) e tarefas delegadas a outros agentes
 # ------------------------------------------------------------------------------------------------
 
-async def analisar_coach(pedido_extra: str | None = None) -> dict:
-    from lamina.claude.tools import ContextoCoach
+async def ronda_preceptor(motivo: str, pedido_extra: str | None = None, fundo: bool = True) -> dict:
+    from lamina.orquestra import sentinela
 
     with conectar() as conn:
-        modelo, esforco = ajustes.modelo(conn, "coach"), ajustes.esforco(conn, "coach")
-    k = kit("coach")
-    ctx: ContextoCoach = k["_ctx"]
-    texto = "Analise meu desempenho e organize meu estudo de hoje."
+        modelo, esforco = ajustes.modelo(conn, "preceptor"), ajustes.esforco(conn, "preceptor")
+        sinais = sentinela.coletar(conn)
+    k = kit("preceptor")
+    ctx = k["_ctx"]
+    texto = (f"RONDA — motivo: {motivo}.\n\nSINAIS (sentinela):\n"
+             f"{json.dumps(sinais, ensure_ascii=False, default=str)}")
     if pedido_extra:
-        texto += f"\n\nObservação do aluno: {pedido_extra}"
+        texto += f"\n\nPEDIDO DO ALUNO: {pedido_extra}"
     r = await obter_runner().executar(Pedido(
-        papel="coach", modelo=modelo, esforco=esforco, sistema=prompt("coach"), prompt=texto,
-        ref="coach", max_turnos=20, **_sem_ctx(k),
+        papel="preceptor", modelo=modelo, esforco=esforco, sistema=sistema("preceptor", "preceptor"), prompt=texto,
+        ref="ronda", max_turnos=40, fundo=fundo, timeout_seg=900, **_sem_ctx(k),
     ))
     with conectar() as conn:
         if ctx.acoes:
@@ -351,10 +428,51 @@ async def analisar_coach(pedido_extra: str | None = None) -> dict:
                 (r.job_id, *ctx.acoes),
             )
         cur = conn.execute(
-            "INSERT INTO coach_insights (tipo, titulo, conteudo_md, job_id) VALUES ('analise', ?, ?, ?)",
-            (f"Análise de {date.today().strftime('%d/%m')}", r.texto, r.job_id),
+            "INSERT INTO coach_insights (tipo, titulo, conteudo_md, payload_json, job_id) VALUES ('analise', ?, ?, ?, ?)",
+            (f"Ronda de {datetime.now().strftime('%d/%m %H:%M')}", r.final or r.texto,
+             json.dumps({"motivo": motivo, "fundo": fundo}, ensure_ascii=False), r.job_id),
         )
     return {"analise_id": cur.lastrowid, "texto": r.texto, "acoes": len(ctx.acoes), "job_id": r.job_id}
+
+
+async def analisar_coach(pedido_extra: str | None = None) -> dict:
+    return await ronda_preceptor("pedido do aluno", pedido_extra=pedido_extra, fundo=False)
+
+
+TAREFA_PROMPT = {"bibliotecario": "bibliotecario"}
+
+
+async def executar_tarefa(tarefa_id: int, fundo: bool = True) -> dict:
+    with conectar() as conn:
+        t = linha(conn, "SELECT * FROM tarefas WHERE id = ?", (tarefa_id,))
+        if not t or t["status"] != "pendente":
+            raise ValueError(f"tarefa {tarefa_id} não está pendente")
+        conn.execute("UPDATE tarefas SET status = 'executando', tentativas = tentativas + 1, "
+                     "iniciado_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?", (tarefa_id,))
+        modelo, esforco = ajustes.modelo(conn, t["agente"]), ajustes.esforco(conn, t["agente"])
+    texto = (f"TAREFA #{t['id']} (delegada por: {t['criado_por']}): {t['titulo']}\n\n{t['instrucoes']}\n\n"
+             "Ao terminar, responda com um relatório curto: o que foi feito, ids criados/alterados na biblioteca e "
+             "o que ficou pendente.")
+    try:
+        r = await obter_runner().executar(Pedido(
+            papel=t["agente"], modelo=modelo, esforco=esforco, sistema=sistema(TAREFA_PROMPT[t["agente"]], t["agente"]),
+            prompt=texto, ref=f"tarefa:{t['id']}", max_turnos=60, fundo=fundo, timeout_seg=1500,
+            **_sem_ctx(kit(t["agente"])),
+        ))
+    except asyncio.CancelledError:
+        with conectar() as conn:  # interrompida (freio do segundo plano ou servidor parando): volta para a fila
+            conn.execute("UPDATE tarefas SET status = 'pendente' WHERE id = ?", (tarefa_id,))
+        raise
+    except Exception as exc:
+        with conectar() as conn:
+            conn.execute("UPDATE tarefas SET status = 'erro', resultado = ?, "
+                         "concluido_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?", (str(exc)[:2000], tarefa_id))
+        raise
+    with conectar() as conn:
+        conn.execute("UPDATE tarefas SET status = 'concluida', resultado = ?, job_id = ?, "
+                     "concluido_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?",
+                     (r.final or r.texto, r.job_id, tarefa_id))
+    return {"tarefa_id": tarefa_id, "texto": r.texto, "job_id": r.job_id}
 
 
 def ultima_analise(conn) -> dict | None:

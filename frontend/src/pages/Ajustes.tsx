@@ -6,9 +6,10 @@ import { Cabecalho, Carregando, ErroCaixa } from '../components/ui'
 const PAPEIS: { id: string; rotulo: string; dica: string }[] = [
   { id: 'juiz', rotulo: 'Juiz (correção)', dica: 'Roda a cada resposta. Haiku é rápido e barato.' },
   { id: 'juiz_revisao', rotulo: 'Juiz de revisão', dica: 'Só quando você clica em “Rejulgar”.' },
-  { id: 'tutor', rotulo: 'Tutor', dica: 'Chat lateral com busca na web.' },
+  { id: 'tutor', rotulo: 'Tutor', dica: 'Conversas, com biblioteca, web e caderno próprio.' },
   { id: 'flashcards', rotulo: 'Flashcards', dica: 'Geração sob demanda.' },
-  { id: 'coach', rotulo: 'Coach', dica: 'Análise estratégica.' },
+  { id: 'preceptor', rotulo: 'Preceptor', dica: 'Rondas em segundo plano e conversas de estratégia.' },
+  { id: 'bibliotecario', rotulo: 'Bibliotecário', dica: 'Tarefas de biblioteca em segundo plano.' },
   { id: 'curadoria', rotulo: 'Curadoria', dica: 'Script de temas/adaptação.' },
 ]
 
@@ -56,7 +57,7 @@ export default function Ajustes() {
           <label className="text-sm text-suave">Especialidade-alvo<input className="campo mt-1" value={perfil.especialidade_alvo} onChange={(e) => setPerfil({ ...perfil, especialidade_alvo: e.target.value })} /></label>
           <label className="text-sm text-suave">Data da prova<input type="date" className="campo mt-1" value={perfil.data_prova} onChange={(e) => setPerfil({ ...perfil, data_prova: e.target.value })} /></label>
         </div>
-        <p className="text-[11px] text-apagado mt-2">O tutor e o coach usam essas informações para personalizar o tom e as prioridades.</p>
+        <p className="text-[11px] text-apagado mt-2">O tutor e o Preceptor usam essas informações para personalizar o tom e as prioridades.</p>
       </Painel>
 
       <Painel titulo="Modelos por papel">
@@ -77,14 +78,36 @@ export default function Ajustes() {
         </div>
       </Painel>
 
+      <Painel titulo="Preceptor e segundo plano">
+        <div className="space-y-3 text-sm">
+          <label className="flex items-center gap-3"><input type="checkbox" checked={aj.preceptor_fundo} onChange={(e) => set('preceptor_fundo', e.target.checked)} />
+            Deixar o Preceptor e o bibliotecário trabalharem sozinhos enquanto o servidor estiver rodando</label>
+          <label className="flex items-center gap-3">Orçamento diário do segundo plano
+            <input type="number" step={50000} className="campo !w-32 num !py-1" value={aj.orcamento_fundo_dia} onChange={(e) => set('orcamento_fundo_dia', Number(e.target.value))} /> tokens efetivos</label>
+          <label className="flex items-center gap-3">Não rodar em segundo plano com a janela do plano acima de
+            <input type="number" min={10} max={100} className="campo !w-20 num !py-1" value={Math.round(aj.limiar_janela * 100)} onChange={(e) => set('limiar_janela', Number(e.target.value) / 100)} /> %</label>
+          <label className="flex items-center gap-3">Primeira ronda do dia a partir das
+            <input type="number" min={0} max={23} className="campo !w-20 num !py-1" value={aj.hora_ronda} onChange={(e) => set('hora_ronda', Number(e.target.value))} /> h · no máximo
+            <input type="number" min={0} max={6} className="campo !w-16 num !py-1" value={aj.max_rondas_dia} onChange={(e) => set('max_rondas_dia', Number(e.target.value))} /> rondas/dia</label>
+          <label className="flex items-center gap-3">Ronda extra depois de
+            <input type="number" className="campo !w-20 num !py-1" value={aj.coach_min_tentativas_novas} onChange={(e) => set('coach_min_tentativas_novas', Number(e.target.value))} />
+            respostas novas</label>
+          <label className="flex items-center gap-3"><input type="checkbox" checked={aj.notificacoes_desktop} onChange={(e) => set('notificacoes_desktop', e.target.checked)} />
+            Notificações no desktop (além do sino do app)</label>
+          <label className="flex items-center gap-3">Lembretes automáticos (meta, flashcards, agenda) a partir das
+            <input type="number" min={0} max={23} className="campo !w-20 num !py-1" value={aj.hora_lembrete} onChange={(e) => set('hora_lembrete', Number(e.target.value))} /> h</label>
+          <label className="flex items-center gap-3">Silêncio das
+            <input type="number" min={0} max={23} className="campo !w-16 num !py-1" value={aj.silencio[0]} onChange={(e) => set('silencio', [Number(e.target.value), aj.silencio[1]])} /> h às
+            <input type="number" min={0} max={23} className="campo !w-16 num !py-1" value={aj.silencio[1]} onChange={(e) => set('silencio', [aj.silencio[0], Number(e.target.value)])} /> h</label>
+          <p className="text-[11px] text-apagado">O segundo plano compartilha a janela de uso do seu plano Claude com você. Ele só roda dentro do orçamento acima e para sozinho quando a janela aperta. Rondas e tarefas que você dispara manualmente não contam no orçamento de segundo plano. “Tokens efetivos”: leituras de cache contam 1/10 (uma ronda típica fica em ~50k).</p>
+        </div>
+      </Painel>
+
       <Painel titulo="Automação e limites">
         <div className="space-y-3 text-sm">
           <label className="flex items-center gap-3"><input type="checkbox" checked={aj.correcao_automatica} onChange={(e) => set('correcao_automatica', e.target.checked)} />
             Corrigir automaticamente cada resposta com o juiz</label>
-          <label className="flex items-center gap-3"><input type="checkbox" checked={aj.coach_automatico} onChange={(e) => set('coach_automatico', e.target.checked)} />
-            Coach automático ao abrir o app (no máximo 1×/dia) após
-            <input type="number" className="campo !w-20 num !py-1" value={aj.coach_min_tentativas_novas} onChange={(e) => set('coach_min_tentativas_novas', Number(e.target.value))} />
-            respostas novas</label>
+
           <label className="flex items-center gap-3">Meta diária
             <input type="number" className="campo !w-24 num !py-1" value={aj.meta_diaria} onChange={(e) => set('meta_diaria', Number(e.target.value))} /> questões</label>
           <label className="flex items-center gap-3">Duração padrão do simulado
@@ -119,7 +142,7 @@ export default function Ajustes() {
               {uso.recentes.map((j) => (
                 <tr key={j.id} className="border-t border-borda" title={j.erro ?? ''}>
                   <td className="py-1.5 num">{new Date(j.criado_em).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</td>
-                  <td>{j.papel}</td><td className="text-suave">{j.modelo}</td>
+                  <td>{j.papel}{j.fundo ? <span className="text-eosina/80" title="segundo plano"> ●</span> : null}</td><td className="text-suave">{j.modelo}</td>
                   <td className="text-right num">{j.tokens.toLocaleString('pt-BR')}</td>
                   <td className="text-right num">{j.duracao_ms ? `${(j.duracao_ms / 1000).toFixed(1)}s` : '—'}</td>
                   <td className={j.status === 'erro' ? 'text-errado' : 'text-suave'}>{j.status}</td>

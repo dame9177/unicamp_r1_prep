@@ -151,6 +151,7 @@ export interface Painel {
   coach_sugerido: boolean
   tentativas_desde_analise: number
   serie: { dia: string; n: number; pontos: number }[]
+  agenda_hoje: Pick<ItemAgenda, 'id' | 'titulo' | 'tipo' | 'detalhe' | 'status' | 'tema_id' | 'bloco_id' | 'minutos' | 'tema_nome'>[]
   blocos_abertos: { id: number; nome: string; tipo: string; criado_por: string; total: number; respondidas: number }[]
 }
 
@@ -177,7 +178,7 @@ export interface MensagemChat {
 }
 
 export interface Chat {
-  chat: { id: number; questao_id: string; session_id: string | null; modelo: string | null }
+  chat: { id: number; questao_id: string | null; session_id: string | null; modelo: string | null; agente: 'tutor' | 'preceptor' }
   mensagens: MensagemChat[]
 }
 
@@ -195,7 +196,14 @@ export interface Ajustes {
   modelos: Record<string, string>
   esforco: Record<string, string>
   correcao_automatica: boolean
-  coach_automatico: boolean
+  preceptor_fundo: boolean
+  orcamento_fundo_dia: number
+  limiar_janela: number
+  hora_ronda: number
+  max_rondas_dia: number
+  notificacoes_desktop: boolean
+  hora_lembrete: number
+  silencio: [number, number]
   coach_min_tentativas_novas: number
   simulado_duracao_min: number
   meta_diaria: number
@@ -212,17 +220,132 @@ export interface Perfil {
 export interface Uso {
   hoje: { papel: string; chamadas: number; tokens: number; custo_usd: number }[]
   limite: { status: string | null; utilizacao: number | null; reseta_em: number | null; tipo: string | null; atualizado_em: string } | null
-  recentes: { id: number; papel: string; modelo: string; status: string; tokens: number; custo_usd: number; duracao_ms: number | null; erro: string | null; criado_em: string }[]
+  recentes: { id: number; papel: string; modelo: string; status: string; fundo: number; tokens: number; custo_usd: number; duracao_ms: number | null; erro: string | null; criado_em: string }[]
   aviso_tokens_dia: number
+  fundo_hoje: number
+  orcamento_fundo_dia: number
 }
 
-export interface CoachEstado {
-  rodando: boolean
-  erro: string | null
-  analises: Insight[]
-  acoes: { id: number; tipo: string; descricao: string; criado_em: string; desfeita_em: string | null }[]
-  insights: Insight[]
+export interface Sinais {
+  agora: string
+  dias_ate_prova: number
+  hoje: { respondidas: number; meta: number; faltam: number }
+  dias_sem_estudar: number | null
+  flashcards_vencidos: number
+  agenda_hoje: { id: number; titulo: string; tipo: string; status: string }[]
+  temas_a_revisar: { n: number; principais: string[] }
+  ultima_ronda: string | null
+  tentativas_desde_ultima_ronda: number
+  tarefas: { pendentes: number; executando: number; erros_24h: number }
+  avisos_nao_lidos: number
+  biblioteca: { documentos: number; notas: number }
+  segundo_plano: { pode_rodar: boolean; motivo: string; gasto_hoje: number; orcamento: number; rondas_hoje: number }
+  pausado_ate: string | null
 }
+
+export interface AcaoAgente { id: number; tipo: string; descricao: string; criado_em: string; desfeita_em: string | null }
+
+export interface PreceptorEstado {
+  maestro: { ativo: boolean; ocupado: string | null; ultimo_tick: string | null; ultima_decisao: string | null; ultimo_erro: string | null; intervalo_seg: number }
+  sinais: Sinais
+  rondas: Insight[]
+  acoes: AcaoAgente[]
+  insights: Insight[]
+  chats: { id: number; titulo: string | null; atualizado_em: string }[]
+}
+
+export type TipoAgenda = 'estudo' | 'revisao' | 'simulado' | 'flashcards' | 'leitura' | 'descanso'
+
+export interface ItemAgenda {
+  id: number
+  dia: string
+  titulo: string
+  detalhe: string | null
+  tipo: TipoAgenda
+  tema_id: string | null
+  tema_nome?: string | null
+  bloco_id: number | null
+  bloco_nome?: string | null
+  minutos: number | null
+  status: 'planejado' | 'feito' | 'pulado'
+  origem: string
+}
+
+export interface Aviso {
+  id: number
+  tipo: 'lembrete' | 'sugestao' | 'alerta' | 'relatorio'
+  titulo: string
+  texto: string
+  link: string | null
+  origem: string
+  quando: string
+  status: 'agendado' | 'entregue' | 'lido' | 'descartado'
+  entregue_em: string | null
+}
+
+export interface Tarefa {
+  id: number
+  agente: string
+  titulo: string
+  instrucoes: string
+  prioridade: number
+  status: 'pendente' | 'executando' | 'concluida' | 'erro' | 'cancelada'
+  criado_por: string
+  resultado: string | null
+  criado_em: string
+  iniciado_em: string | null
+  concluido_em: string | null
+}
+
+export type Confiabilidade = 'oficial' | 'sociedade' | 'literatura' | 'nota'
+
+export interface ItemBiblioteca {
+  id: string
+  tipo: 'documento' | 'nota'
+  titulo: string
+  orgao: string | null
+  ano: number | null
+  categoria: string | null
+  confiabilidade: Confiabilidade
+  status: 'vigente' | 'substituido' | 'em_revisao'
+  status_motivo?: string | null
+  paginas: number | null
+  caracteres: number
+  url: string | null
+  temas: string[]
+  fontes?: string[]
+  resumo?: string | null
+  formato?: string | null
+  criado_por: string
+  acessos: number
+  criado_em: string
+  atualizado_em: string
+}
+
+export interface AchadoBiblioteca {
+  doc_id: string
+  local: string
+  trecho: string
+  titulo: string
+  tipo: 'documento' | 'nota'
+  orgao: string | null
+  ano: number | null
+  confiabilidade: Confiabilidade
+  status: string
+}
+
+export interface TextoBiblioteca {
+  id: string
+  titulo: string
+  inicio: number
+  fim: number
+  total_caracteres: number
+  paginas: number | null
+  texto: string
+  continua: boolean
+}
+
+export interface Agente { id: string; nome: string; descricao: string; arquivos: number; bytes: number }
 
 export interface QuestaoCuradoria {
   id: string

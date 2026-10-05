@@ -1,4 +1,4 @@
-"""Rotas que envolvem o Claude (tutor, flashcards, coach) e as de ajustes/uso."""
+"""Rotas que envolvem o Claude (conversas, flashcards) e as de ajustes/uso. O Preceptor fica em orquestra.py."""
 
 from __future__ import annotations
 
@@ -10,10 +10,10 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from lamina import ajustes, config
-from lamina.api.comum import em_segundo_plano, obter_ou_404
+from lamina.api.comum import obter_ou_404
 from lamina.claude import tasks
 from lamina.claude.runner import ErroClaude
-from lamina.claude.tools import desfazer
+from lamina.orquestra import sentinela
 from lamina.db import conectar, linha, linhas
 from lamina.domain import srs
 
@@ -37,8 +37,8 @@ def _chat_completo(conn, chat: dict) -> dict:
 def abrir_chat(questao_id: str, novo: bool = False):
     with conectar() as conn:
         obter_ou_404(conn, "SELECT id FROM questoes WHERE id = ?", (questao_id,), "questão")
-        chat = None if novo else linha(conn, "SELECT * FROM chats WHERE questao_id = ? ORDER BY id DESC LIMIT 1",
-                                       (questao_id,))
+        chat = None if novo else linha(
+            conn, "SELECT * FROM chats WHERE questao_id = ? AND agente = 'tutor' ORDER BY id DESC LIMIT 1", (questao_id,))
         if not chat:
             cur = conn.execute("INSERT INTO chats (questao_id) VALUES (?)", (questao_id,))
             chat = linha(conn, "SELECT * FROM chats WHERE id = ?", (cur.lastrowid,))
@@ -51,7 +51,7 @@ def listar_chats_gerais():
         return linhas(conn, """
             SELECT c.id, c.criado_em, c.atualizado_em,
                    (SELECT conteudo FROM mensagens m WHERE m.chat_id = c.id AND m.papel = 'user' ORDER BY m.id LIMIT 1) AS titulo
-            FROM chats c WHERE c.questao_id IS NULL ORDER BY c.atualizado_em DESC LIMIT 50""")
+            FROM chats c WHERE c.questao_id IS NULL AND c.agente = 'tutor' ORDER BY c.atualizado_em DESC LIMIT 50""")
 
 
 @router.post("/chats")
@@ -200,75 +200,6 @@ def apagar_flashcard(card_id: int):
 
 
 # ------------------------------------------------------------------------------------------------
-# Coach
-# ------------------------------------------------------------------------------------------------
-
-_coach = {"rodando": False, "erro": None}
-
-
-async def _rodar_coach(extra: str | None) -> None:
-    _coach.update(rodando=True, erro=None)
-    try:
-        await tasks.analisar_coach(extra)
-    except Exception as exc:  # noqa: BLE001
-        _coach["erro"] = str(exc)
-    finally:
-        _coach["rodando"] = False
-
-
-class PedidoCoach(BaseModel):
-    observacao: str | None = None
-
-
-@router.post("/coach/analisar")
-async def analisar(dados: PedidoCoach):
-    if _coach["rodando"]:
-        raise HTTPException(409, "o coach já está analisando")
-    em_segundo_plano(_rodar_coach(dados.observacao))
-    return {"iniciado": True}
-
-
-@router.get("/coach")
-def estado_coach():
-    with conectar() as conn:
-        return {
-            **_coach,
-            "analises": linhas(conn, "SELECT * FROM coach_insights WHERE tipo = 'analise' ORDER BY id DESC LIMIT 10"),
-            "acoes": linhas(conn, "SELECT * FROM coach_acoes ORDER BY id DESC LIMIT 40"),
-            "insights": linhas(conn, "SELECT * FROM coach_insights WHERE tipo != 'analise' ORDER BY id DESC LIMIT 40"),
-        }
-
-
-@router.post("/coach/acoes/{acao_id}/desfazer")
-def desfazer_acao(acao_id: int):
-    with conectar() as conn:
-        if not desfazer(conn, acao_id):
-            raise HTTPException(404, "ação inexistente ou já desfeita")
-    return {"ok": True}
-
-
-@router.patch("/coach/insights/{insight_id}")
-def arquivar_insight(insight_id: int, arquivado: bool = True):
-    with conectar() as conn:
-        conn.execute("UPDATE coach_insights SET arquivado = ? WHERE id = ?", (int(arquivado), insight_id))
-    return {"ok": True}
-
-
-async def coach_automatico_se_preciso() -> None:
-    with conectar() as conn:
-        aj = ajustes.todos(conn)
-        if not aj["coach_automatico"] or _coach["rodando"]:
-            return
-        ult = tasks.ultima_analise(conn)
-        hoje = datetime.now(UTC).date().isoformat()
-        if ult and ult["criado_em"][:10] == hoje:
-            return
-        if tasks.tentativas_desde_ultima_analise(conn) < aj["coach_min_tentativas_novas"]:
-            return
-    em_segundo_plano(_rodar_coach(None))
-
-
-# ------------------------------------------------------------------------------------------------
 # Ajustes, perfil e uso
 # ------------------------------------------------------------------------------------------------
 
@@ -303,8 +234,10 @@ def uso():
         return {
             "hoje": tasks.jobs_hoje(conn),
             "limite": linha(conn, "SELECT * FROM limite_uso WHERE id = 1"),
-            "recentes": linhas(conn, "SELECT id, papel, modelo, status, input_tokens + output_tokens + cache_read + "
-                                     "cache_write AS tokens, custo_usd, duracao_ms, erro, criado_em "
+            "recentes": linhas(conn, "SELECT id, papel, modelo, status, fundo, input_tokens + output_tokens + "
+                                     "cache_read + cache_write AS tokens, custo_usd, duracao_ms, erro, criado_em "
                                      "FROM llm_jobs ORDER BY id DESC LIMIT 30"),
+            "fundo_hoje": sentinela.gasto_fundo_hoje(conn),
+            "orcamento_fundo_dia": ajustes.obter(conn, "orcamento_fundo_dia"),
             "aviso_tokens_dia": ajustes.obter(conn, "aviso_tokens_dia"),
         }

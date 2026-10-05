@@ -1,18 +1,21 @@
 import { useQuery } from '@tanstack/react-query'
 import clsx from 'clsx'
-import { BookOpenCheck, Brain, Gauge, Layers, MessageSquareText, Microscope, Search, Settings, Sparkles, Timer, WandSparkles } from 'lucide-react'
+import { BookOpenCheck, Brain, CalendarDays, Gauge, Layers, Library, MessageSquareText, Microscope, Search, Settings, Stethoscope, Timer, WandSparkles } from 'lucide-react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { api, type Painel, type Uso } from '../api'
+import Sino, { useAvisos } from './Avisos'
 
 const ITENS = [
   { to: '/', rotulo: 'Painel', icone: Gauge, fim: true },
+  { to: '/agenda', rotulo: 'Agenda', icone: CalendarDays },
   { to: '/temas', rotulo: 'Temas', icone: Microscope },
   { to: '/blocos', rotulo: 'Blocos', icone: Layers },
   { to: '/busca', rotulo: 'Buscar', icone: Search },
   { to: '/flashcards', rotulo: 'Flashcards', icone: Brain, badge: 'flash' as const },
   { to: '/simulado', rotulo: 'Simulado', icone: Timer },
-  { to: '/coach', rotulo: 'Coach', icone: Sparkles },
   { to: '/tutor', rotulo: 'Tutor livre', icone: MessageSquareText },
+  { to: '/biblioteca', rotulo: 'Biblioteca', icone: Library },
+  { to: '/preceptor', rotulo: 'Preceptor', icone: Stethoscope, badge: 'preceptor' as const },
   { to: '/curadoria', rotulo: 'Curadoria', icone: WandSparkles },
   { to: '/ajustes', rotulo: 'Ajustes', icone: Settings },
 ]
@@ -22,6 +25,7 @@ function MedidorUso() {
   if (!data) return null
   const tokens = data.hoje.reduce((s, h) => s + (h.tokens || 0), 0)
   const frac = Math.min(1, tokens / (data.aviso_tokens_dia || 1))
+  const fracFundo = Math.min(frac, (data.fundo_hoje || 0) / (data.aviso_tokens_dia || 1))
   const limite = data.limite
   return (
     <NavLink to="/ajustes#uso" className="block px-3 py-3 rounded-xl hover:bg-lamina-2 transition" title="Uso do Claude hoje">
@@ -29,10 +33,12 @@ function MedidorUso() {
         <span>Claude hoje</span>
         <span className="num">{(tokens / 1000).toFixed(0)}k tok</span>
       </div>
-      <div className="h-1 rounded-full bg-borda overflow-hidden">
+      <div className="h-1 rounded-full bg-borda overflow-hidden flex">
+        <div className="h-full bg-eosina/70" style={{ width: `${fracFundo * 100}%` }} title="segundo plano (Preceptor e agentes)" />
         <div className={clsx('h-full', frac > 0.85 ? 'bg-errado' : frac > 0.6 ? 'bg-parcial' : 'bg-hema')}
-             style={{ width: `${frac * 100}%` }} />
+             style={{ width: `${(frac - fracFundo) * 100}%` }} />
       </div>
+      {data.fundo_hoje > 0 && <p className="text-[10px] text-apagado mt-1"><span className="text-eosina/80">■</span> segundo plano: {(data.fundo_hoje / 1000).toFixed(0)}k efetivos</p>}
       {limite?.status && limite.status !== 'allowed' && (
         <p className="text-[11px] mt-1.5 text-parcial">
           {limite.status === 'rejected' ? 'Limite do plano atingido' : 'Perto do limite do plano'}
@@ -44,6 +50,8 @@ function MedidorUso() {
 
 export default function Layout() {
   const { data: painel } = useQuery({ queryKey: ['painel'], queryFn: () => api.get<Painel>('/api/painel') })
+  const { data: avisos } = useAvisos()
+  const ocupado = avisos?.maestro.ocupado
   return (
     <div className="flex h-full">
       <aside className="w-56 shrink-0 border-r border-borda bg-tinta/70 backdrop-blur flex flex-col">
@@ -61,11 +69,14 @@ export default function Layout() {
             </div>
           </div>
           {painel && (
-            <div className="mt-5 rounded-xl border border-borda bg-lamina/60 px-3 py-2.5">
-              <p className="text-[11px] text-apagado uppercase tracking-wider">Prova em</p>
-              <p className="titulo text-2xl text-eosina leading-tight">
-                <span className="num">D-{painel.dias_ate_prova}</span>
-              </p>
+            <div className="mt-5 rounded-xl border border-borda bg-lamina/60 px-3 py-2.5 flex items-center justify-between">
+              <div>
+                <p className="text-[11px] text-apagado uppercase tracking-wider">Prova em</p>
+                <p className="titulo text-2xl text-eosina leading-tight">
+                  <span className="num">D-{painel.dias_ate_prova}</span>
+                </p>
+              </div>
+              <Sino />
             </div>
           )}
         </div>
@@ -82,6 +93,9 @@ export default function Layout() {
               <span className="flex-1">{rotulo}</span>
               {badge === 'flash' && painel && painel.flashcards_vencidos > 0 && (
                 <span className="num text-[11px] rounded-full bg-eosina/20 text-eosina px-1.5">{painel.flashcards_vencidos}</span>
+              )}
+              {badge === 'preceptor' && ocupado && (
+                <span className="size-2 rounded-full bg-certo animate-pulse" title={`Trabalhando: ${ocupado}`} />
               )}
             </NavLink>
           ))}

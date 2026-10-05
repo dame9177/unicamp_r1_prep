@@ -16,6 +16,7 @@ import os
 import time
 from collections.abc import AsyncIterator, Callable
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any, Protocol
 
 from lamina import config
@@ -68,6 +69,9 @@ class Pedido:
     max_turnos: int | None = None
     ref: str | None = None
     diretorios_extras: list[str] = field(default_factory=list)
+    cwd: str | None = None          # diretório de trabalho (caderno do agente); padrão: app_data/claude_cwd
+    fundo: bool = False             # chamada do segundo plano (orçamento próprio, fila separada)
+    timeout_seg: int | None = None
 
 
 @dataclass
@@ -86,11 +90,12 @@ class Uso:
 
 @dataclass
 class Resultado:
-    texto: str
+    texto: str              # todos os textos da sessão (narração + resposta)
     estruturado: Any
     session_id: str | None
     uso: Uso
     job_id: int | None
+    final: str = ""         # só a última mensagem (o relatório/resumo)
 
 
 class Runner(Protocol):
@@ -107,19 +112,20 @@ class Runner(Protocol):
 def _abrir_job(pedido: Pedido) -> int:
     with conectar() as conn:
         cur = conn.execute(
-            "INSERT INTO llm_jobs (papel, modelo, ref) VALUES (?, ?, ?)", (pedido.papel, pedido.modelo, pedido.ref)
+            "INSERT INTO llm_jobs (papel, modelo, ref, fundo) VALUES (?, ?, ?, ?)",
+            (pedido.papel, pedido.modelo, pedido.ref, int(pedido.fundo)),
         )
         return cur.lastrowid
 
 
-def _fechar_job(job_id: int, uso: Uso | None, erro: str | None = None) -> None:
+def _fechar_job(job_id: int, uso: Uso | None, erro: str | None = None, status: str | None = None) -> None:
     uso = uso or Uso()
     with conectar() as conn:
         conn.execute(
             """UPDATE llm_jobs SET status = ?, input_tokens = ?, output_tokens = ?, cache_read = ?,
                  cache_write = ?, custo_usd = ?, duracao_ms = ?, erro = ?,
                  finalizado_em = strftime('%Y-%m-%dT%H:%M:%fZ', 'now') WHERE id = ?""",
-            ("erro" if erro else "ok", uso.input_tokens, uso.output_tokens, uso.cache_read, uso.cache_write,
+            (status or ("erro" if erro else "ok"), uso.input_tokens, uso.output_tokens, uso.cache_read, uso.cache_write,
              uso.custo_usd, uso.duracao_ms, erro, job_id),
         )
 
@@ -148,15 +154,57 @@ def _uso_de(resultado: Any) -> Uso:
     )
 
 
+def _relativo(caminho: str) -> tuple[str, str]:
+    """(onde, caminho relativo) para mostrar ao aluno o que o agente está consultando."""
+    for onde, raiz in (("biblioteca", config.BIBLIOTECA_DIR), ("caderno", config.AGENTES_DIR),
+                       ("banco", config.BANCO_DIR)):
+        try:
+            rel = os.path.relpath(caminho, raiz)
+        except ValueError:
+            continue
+        if not rel.startswith(".."):
+            if onde == "caderno":
+                rel = rel.split(os.sep, 1)[-1]
+            return onde, rel
+    return "", os.path.basename(caminho)
+
+
 def descrever_ferramenta(nome: str, entrada: dict) -> str:
-    if nome == "WebSearch":
-        return f"Pesquisando: {entrada.get('query', '')}"
-    if nome == "WebFetch":
-        return f"Lendo: {entrada.get('url', '')}"
-    if nome == "Read":
-        return "Examinando a imagem da questão"
+    curto = nome.removeprefix("mcp__lamina__")
+    match curto:
+        case "WebSearch":
+            return f"Pesquisando na web: {entrada.get('query', '')}"
+        case "WebFetch":
+            return f"Lendo na web: {entrada.get('url', '')}"
+        case "Read":
+            onde, rel = _relativo(entrada.get("file_path", ""))
+            if onde == "banco":
+                return "Examinando a imagem da questão" if rel.startswith("images") else f"Lendo o banco de questões: {rel}"
+            return f"{'Biblioteca' if onde == 'biblioteca' else 'Caderno'}: lendo {rel}"
+        case "Grep":
+            onde, _ = _relativo(entrada.get("path", "") or "")
+            return f"Procurando “{entrada.get('pattern', '')}”" + (f" na {onde}" if onde == "biblioteca" else "")
+        case "Glob":
+            return f"Listando arquivos: {entrada.get('pattern', '')}"
+        case "Write" | "Edit":
+            return f"Caderno: anotando em {_relativo(entrada.get('file_path', ''))[1]}"
+        case "biblioteca_buscar":
+            return f"Biblioteca: buscando “{entrada.get('consulta', '')}”"
+        case "biblioteca_ler":
+            onde = f" p. {entrada['pagina']}" if entrada.get("pagina") else ""
+            return f"Biblioteca: lendo {entrada.get('id', '')}{onde}"
+        case "biblioteca_capturar":
+            return f"Biblioteca: baixando documento integral de {entrada.get('url', '')}"
+        case "biblioteca_publicar_nota":
+            return f"Biblioteca: publicando nota “{entrada.get('titulo', '')}”"
+        case "biblioteca_catalogo":
+            return "Biblioteca: consultando o catálogo"
+        case "terminal":
+            return f"Terminal: {str(entrada.get('comando', ''))[:80]}"
+        case "historico_conversas":
+            return f"Relendo conversas anteriores: {entrada.get('consulta', '')}"
     if nome.startswith("mcp__lamina__"):
-        return f"Consultando seus dados: {nome.removeprefix('mcp__lamina__')}"
+        return f"Consultando seus dados: {curto}"
     return nome
 
 
@@ -168,17 +216,19 @@ _MODELOS_SEM_ESFORCO = ("haiku",)
 
 
 class SdkRunner:
-    def __init__(self, concorrencia: int = 2, timeout_seg: int = 300):
+    def __init__(self, concorrencia: int = 2, timeout_seg: int = 420):
         self._sem = asyncio.Semaphore(concorrencia)
+        self._sem_fundo = asyncio.Semaphore(1)  # o segundo plano nunca ocupa a vez do aluno
         self._timeout = timeout_seg
 
     def _opcoes(self, p: Pedido, stream: bool):
         from claude_agent_sdk import ClaudeAgentOptions
 
-        config.CLAUDE_CWD.mkdir(parents=True, exist_ok=True)
+        cwd = Path(p.cwd) if p.cwd else config.CLAUDE_CWD
+        cwd.mkdir(parents=True, exist_ok=True)
         kwargs: dict[str, Any] = dict(
             cli_path=str(config.CLAUDE_CLI),
-            cwd=str(config.CLAUDE_CWD),
+            cwd=str(cwd),
             setting_sources=[],
             strict_mcp_config=True,
             system_prompt=p.sistema,
@@ -214,8 +264,8 @@ class SdkRunner:
         final: dict | None = None
         t0 = time.monotonic()
         try:
-            async with self._sem:
-                async with asyncio.timeout(self._timeout):
+            async with (self._sem_fundo if pedido.fundo else self._sem):
+                async with asyncio.timeout(pedido.timeout_seg or self._timeout):
                     # Consome o gerador do SDK até o fim (sair no meio deixa o subprocesso mal encerrado).
                     async for m in query(prompt=pedido.prompt, options=self._opcoes(pedido, stream=True)):
                         if isinstance(m, StreamEvent):
@@ -244,9 +294,14 @@ class SdkRunner:
                             else:
                                 _fechar_job(job_id, uso)
                                 texto = "\n\n".join(t for t in textos if t.strip()) or (m.result or "")
-                                final = {"tipo": "fim", "texto": texto, "session_id": m.session_id,
+                                final = {"tipo": "fim", "texto": texto, "final": m.result or texto,
+                                         "session_id": m.session_id,
                                          "estruturado": m.structured_output, "job_id": job_id,
                                          "uso": uso.__dict__ | {"total_tokens": uso.total_tokens}}
+        except asyncio.CancelledError:
+            if final is None:
+                _fechar_job(job_id, Uso(duracao_ms=int((time.monotonic() - t0) * 1000)), "interrompido", "cancelado")
+            raise
         except Exception as exc:  # noqa: BLE001 — qualquer falha do CLI vira evento de erro
             if final is None:
                 msg = str(exc) if not isinstance(exc, TimeoutError) else "Tempo esgotado esperando o Claude."
@@ -268,7 +323,7 @@ class SdkRunner:
         u = fim["uso"]
         return Resultado(
             texto=fim["texto"], estruturado=fim["estruturado"], session_id=fim["session_id"],
-            uso=Uso(**{k: u[k] for k in Uso.__dataclass_fields__}), job_id=fim["job_id"],
+            uso=Uso(**{k: u[k] for k in Uso.__dataclass_fields__}), job_id=fim["job_id"], final=fim.get("final") or fim["texto"],
         )
 
 
@@ -305,7 +360,7 @@ class FakeRunner:
             if ev["tipo"] == "fim":
                 fim = ev
         return Resultado(texto=fim["texto"], estruturado=fim["estruturado"], session_id=fim["session_id"],
-                         uso=Uso(), job_id=None)
+                         uso=Uso(), job_id=None, final=fim["texto"])
 
 
 _runner: Runner | None = None

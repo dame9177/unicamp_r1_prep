@@ -260,6 +260,10 @@ def painel():
             "coach_sugerido": novas >= aj["coach_min_tentativas_novas"],
             "tentativas_desde_analise": novas,
             "serie": consultas.serie_diaria(conn, 21),
+            "agenda_hoje": linhas(conn, """SELECT a.id, a.titulo, a.tipo, a.detalhe, a.status, a.tema_id, a.bloco_id,
+                                                  a.minutos, t.nome AS tema_nome FROM agenda a
+                                           LEFT JOIN temas t ON t.id = a.tema_id
+                                           WHERE a.dia = date('now', 'localtime') ORDER BY a.id"""),
             "blocos_abertos": linhas(conn, """
                 SELECT b.id, b.nome, b.tipo, b.criado_por,
                        (SELECT COUNT(*) FROM bloco_questoes bq WHERE bq.bloco_id = b.id) AS total,

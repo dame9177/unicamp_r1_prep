@@ -53,7 +53,7 @@ export default function TemaDetalhe() {
             {t.chutes > 0 && <span className="text-parcial">{t.acertos_no_chute}/{t.chutes} chutes certos</span>}
           </div>
           {t.peso_motivo && (
-            <p className="text-xs text-hema mt-3 flex items-center gap-1.5"><Sparkles className="size-3.5" /> Coach (peso ×{t.peso_coach}): {t.peso_motivo}</p>
+            <p className="text-xs text-hema mt-3 flex items-center gap-1.5"><Sparkles className="size-3.5" /> Preceptor (peso ×{t.peso_coach}): {t.peso_motivo}</p>
           )}
         </div>
       </section>

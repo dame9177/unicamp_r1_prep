@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { ArrowRight, Brain, CheckCircle2, Circle, Flame, Lightbulb, Sparkles, Target, TriangleAlert } from 'lucide-react'
+import { ArrowRight, Brain, CalendarDays, CheckCircle2, Circle, Flame, Lightbulb, Sparkles, Stethoscope, Target, TriangleAlert } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, AREA_CURTA, pct, type Painel as TPainel } from '../api'
 import MapaDominio from '../components/MapaDominio'
@@ -39,9 +39,13 @@ export default function Painel() {
     mutationFn: (tema_id: string) => api.post<{ id: number }>('/api/blocos', { tipo: 'tema', tema_id }),
     onSuccess: (r) => nav(`/blocos/${r.id}`),
   })
-  const coach = useMutation({
-    mutationFn: () => api.post('/api/coach/analisar', {}),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ['coach'] }); nav('/coach') },
+  const ronda = useMutation({
+    mutationFn: () => api.post('/api/preceptor/ronda', {}),
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ['preceptor'] }); nav('/preceptor') },
+  })
+  const marcar = useMutation({
+    mutationFn: ({ id, status }: { id: number; status: string }) => api.patch(`/api/agenda/${id}`, { status }),
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ['painel'] }); qc.invalidateQueries({ queryKey: ['agenda'] }) },
   })
   if (error) return <div className="p-8"><ErroCaixa erro={error} /></div>
   if (!p) return <Carregando />
@@ -106,7 +110,7 @@ export default function Painel() {
         </div>
       </section>
 
-      {/* Linha 2: missões, flashcards, coach */}
+      {/* Linha 2: missões e agenda de hoje, flashcards, Preceptor */}
       <section className="grid grid-cols-12 gap-6">
         <div className="cartao col-span-6 p-6">
           <p className="text-[11px] uppercase tracking-wider text-apagado flex items-center gap-1.5"><Sparkles className="size-3.5" /> Missões de hoje</p>
@@ -123,7 +127,23 @@ export default function Painel() {
               ))}
             </ul>
           ) : (
-            <p className="text-sm text-suave mt-3">Sem missões. Peça uma análise ao coach quando tiver algumas questões feitas.</p>
+            <p className="text-sm text-suave mt-3">Sem missões ainda. O Preceptor publica as do dia na primeira ronda.</p>
+          )}
+          {p.agenda_hoje.length > 0 && (
+            <>
+              <Link to="/agenda" className="text-[11px] uppercase tracking-wider text-apagado flex items-center gap-1.5 mt-5 hover:text-suave"><CalendarDays className="size-3.5" /> Agenda de hoje</Link>
+              <ul className="mt-2 space-y-1.5">
+                {p.agenda_hoje.map((a) => (
+                  <li key={a.id} className="flex gap-2.5 items-start">
+                    <button onClick={() => marcar.mutate({ id: a.id, status: a.status === 'feito' ? 'planejado' : 'feito' })} title="Marcar como feito">
+                      {a.status === 'feito' ? <CheckCircle2 className="size-4 text-certo mt-0.5" /> : <Circle className="size-4 text-suave mt-0.5" />}
+                    </button>
+                    <p className={a.status === 'feito' ? 'text-sm line-through text-apagado' : 'text-sm'}>{a.titulo}
+                      {a.minutos ? <span className="text-[11px] text-apagado num"> · {a.minutos} min</span> : null}</p>
+                  </li>
+                ))}
+              </ul>
+            </>
           )}
         </div>
         <Link to="/flashcards" className="cartao col-span-3 p-6 hover:border-eosina/60 transition group">
@@ -133,13 +153,13 @@ export default function Painel() {
           <p className="text-xs text-hema mt-4 group-hover:underline">Revisar →</p>
         </Link>
         <div className="cartao col-span-3 p-6 flex flex-col">
-          <p className="text-[11px] uppercase tracking-wider text-apagado flex items-center gap-1.5"><Sparkles className="size-3.5" /> Coach</p>
+          <Link to="/preceptor" className="text-[11px] uppercase tracking-wider text-apagado flex items-center gap-1.5 hover:text-suave"><Stethoscope className="size-3.5" /> Preceptor</Link>
           <p className="text-sm text-suave mt-3 flex-1">
-            {p.ultima_analise ? <>Última análise: {new Date(p.ultima_analise.criado_em).toLocaleDateString('pt-BR')}.<br /></> : 'Nenhuma análise ainda. '}
-            {p.tentativas_desde_analise} respostas novas desde então.
+            {p.ultima_analise ? <>Última ronda: {new Date(p.ultima_analise.criado_em).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}.<br /></> : 'Nenhuma ronda ainda. '}
+            {p.tentativas_desde_analise} respostas novas desde então. Ele roda sozinho em segundo plano.
           </p>
-          <button className={p.coach_sugerido ? 'btn btn-primario mt-3' : 'btn mt-3'} disabled={coach.isPending} onClick={() => coach.mutate()}>
-            {p.coach_sugerido ? 'Analisar agora' : 'Analisar'}
+          <button className={p.coach_sugerido ? 'btn btn-primario mt-3' : 'btn mt-3'} disabled={ronda.isPending} onClick={() => ronda.mutate()}>
+            Ronda agora
           </button>
         </div>
       </section>

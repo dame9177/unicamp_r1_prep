@@ -6,7 +6,10 @@ dependencies = [
     "claude-agent-sdk>=0.2.163",
     "fastapi>=0.142.2",
     "fsrs>=6.3.2",
+    "httpx>=0.28.1",
     "pydantic>=2.13.5",
+    "pypdfium2>=5.14.0",
+    "trafilatura>=2.3.0",
     "uvicorn[standard]>=0.54.0",
 ]
 

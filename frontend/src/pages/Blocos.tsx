@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { api, AREAS, AREA_CURTA, pct, type Bloco } from '../api'
 import { Barra, Cabecalho, Carregando, ErroCaixa, Vazio } from '../components/ui'
 
-const TIPO: Record<string, string> = { tema: 'Tema', custom: 'Personalizado', coach: 'Coach', refazer: 'Refazer', simulado: 'Simulado' }
+const TIPO: Record<string, string> = { tema: 'Tema', custom: 'Personalizado', coach: 'Preceptor', refazer: 'Refazer', simulado: 'Simulado' }
 
 export default function Blocos() {
   const qc = useQueryClient()

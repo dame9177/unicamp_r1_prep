@@ -183,3 +183,95 @@ CREATE TABLE IF NOT EXISTS limite_uso (
   tipo          TEXT,
   atualizado_em TEXT
 );
+
+-- ------------------------------------------------------------------------------------------------
+-- Biblioteca compartilhada pelos agentes (documentos integrais + notas verificadas)
+-- Os arquivos ficam em app_data/biblioteca/; aqui ficam metadados e o índice de busca.
+-- ------------------------------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS biblioteca (
+  id             TEXT PRIMARY KEY,
+  tipo           TEXT NOT NULL CHECK (tipo IN ('documento', 'nota')),
+  titulo         TEXT NOT NULL,
+  orgao          TEXT,
+  ano            INTEGER,
+  categoria      TEXT,
+  confiabilidade TEXT NOT NULL DEFAULT 'literatura'
+                 CHECK (confiabilidade IN ('oficial', 'sociedade', 'literatura', 'nota')),
+  status         TEXT NOT NULL DEFAULT 'vigente' CHECK (status IN ('vigente', 'substituido', 'em_revisao')),
+  status_motivo  TEXT,
+  url            TEXT,
+  formato        TEXT,
+  paginas        INTEGER,
+  caracteres     INTEGER NOT NULL DEFAULT 0,
+  sha256         TEXT,
+  temas_json     TEXT NOT NULL DEFAULT '[]',
+  fontes_json    TEXT NOT NULL DEFAULT '[]',
+  resumo         TEXT,
+  criado_por     TEXT NOT NULL,
+  acessos        INTEGER NOT NULL DEFAULT 0,
+  criado_em      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')),
+  atualizado_em  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+);
+CREATE INDEX IF NOT EXISTS ix_biblioteca_url ON biblioteca(url);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS biblioteca_fts USING fts5(
+  doc_id UNINDEXED, local UNINDEXED, titulo, texto, tokenize = 'unicode61 remove_diacritics 2'
+);
+
+-- ------------------------------------------------------------------------------------------------
+-- Orquestração (Preceptor): fila de tarefas dos agentes, avisos, agenda e estado interno
+-- ------------------------------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS tarefas (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  agente       TEXT NOT NULL,
+  titulo       TEXT NOT NULL,
+  instrucoes   TEXT NOT NULL,
+  prioridade   INTEGER NOT NULL DEFAULT 2 CHECK (prioridade BETWEEN 1 AND 3),
+  status       TEXT NOT NULL DEFAULT 'pendente'
+               CHECK (status IN ('pendente', 'executando', 'concluida', 'erro', 'cancelada')),
+  criado_por   TEXT NOT NULL DEFAULT 'preceptor',
+  resultado    TEXT,
+  job_id       INTEGER REFERENCES llm_jobs(id),
+  tentativas   INTEGER NOT NULL DEFAULT 0,
+  criado_em    TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')),
+  iniciado_em  TEXT,
+  concluido_em TEXT
+);
+
+CREATE TABLE IF NOT EXISTS avisos (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  tipo        TEXT NOT NULL DEFAULT 'lembrete' CHECK (tipo IN ('lembrete', 'sugestao', 'alerta', 'relatorio')),
+  titulo      TEXT NOT NULL,
+  texto       TEXT NOT NULL DEFAULT '',
+  link        TEXT,
+  origem      TEXT NOT NULL DEFAULT 'preceptor',
+  chave       TEXT,
+  quando      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')),
+  status      TEXT NOT NULL DEFAULT 'agendado' CHECK (status IN ('agendado', 'entregue', 'lido', 'descartado')),
+  entregue_em TEXT,
+  criado_em   TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+);
+CREATE UNIQUE INDEX IF NOT EXISTS ux_avisos_chave ON avisos(chave) WHERE chave IS NOT NULL;
+
+CREATE TABLE IF NOT EXISTS agenda (
+  id        INTEGER PRIMARY KEY AUTOINCREMENT,
+  dia       TEXT NOT NULL,
+  titulo    TEXT NOT NULL,
+  detalhe   TEXT,
+  tipo      TEXT NOT NULL DEFAULT 'estudo'
+            CHECK (tipo IN ('estudo', 'revisao', 'simulado', 'flashcards', 'leitura', 'descanso')),
+  tema_id   TEXT REFERENCES temas(id),
+  bloco_id  INTEGER REFERENCES blocos(id) ON DELETE SET NULL,
+  minutos   INTEGER,
+  status    TEXT NOT NULL DEFAULT 'planejado' CHECK (status IN ('planejado', 'feito', 'pulado')),
+  origem    TEXT NOT NULL DEFAULT 'preceptor',
+  criado_em TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+);
+CREATE INDEX IF NOT EXISTS ix_agenda_dia ON agenda(dia);
+
+CREATE TABLE IF NOT EXISTS estado (
+  chave      TEXT PRIMARY KEY,
+  valor_json TEXT NOT NULL
+);

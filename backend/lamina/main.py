@@ -11,8 +11,9 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from lamina import config, db, importer
-from lamina.api import curadoria, estudo, ia, questoes
+from lamina.api import biblioteca, curadoria, estudo, ia, orquestra, questoes
 from lamina.claude.runner import sanitizar_ambiente
+from lamina.orquestra.maestro import maestro
 
 log = logging.getLogger("lamina")
 
@@ -25,15 +26,17 @@ async def ciclo_de_vida(app: FastAPI):
     db.inicializar()
     with db.conectar() as conn:
         log.info("banco importado: %s", importer.importar(conn))
-    await ia.coach_automatico_se_preciso()
+    if config.MAESTRO_ATIVO:
+        maestro.iniciar()
     yield
+    await maestro.parar()
 
 
 app = FastAPI(title="Lâmina", lifespan=ciclo_de_vida)
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
                    allow_methods=["*"], allow_headers=["*"])
 
-for modulo in (questoes, estudo, ia, curadoria):
+for modulo in (questoes, estudo, ia, curadoria, biblioteca, orquestra):
     app.include_router(modulo.router)
 
 app.mount("/imagens", StaticFiles(directory=config.BANCO_DIR / "images"), name="imagens")

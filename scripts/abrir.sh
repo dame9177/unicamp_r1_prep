@@ -5,7 +5,11 @@ source "$(dirname "$0")/_ambiente.sh"
 URL="http://127.0.0.1:8765"
 if ! curl -fsS "$URL/api/saude" >/dev/null 2>&1; then
   mkdir -p "$RAIZ/app_data"
-  nohup "$RAIZ/scripts/start.sh" >"$RAIZ/app_data/servidor.log" 2>&1 &
+  if [ -f "$HOME/.config/systemd/user/lamina.service" ]; then
+    systemctl --user start lamina.service
+  else
+    nohup "$RAIZ/scripts/start.sh" >"$RAIZ/app_data/servidor.log" 2>&1 &
+  fi
   for _ in $(seq 1 60); do
     curl -fsS "$URL/api/saude" >/dev/null 2>&1 && break
     sleep 1

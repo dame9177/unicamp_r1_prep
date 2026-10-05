@@ -2,20 +2,44 @@ import clsx from 'clsx'
 import { Loader2 } from 'lucide-react'
 import type { ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { Link } from 'react-router-dom'
 import remarkGfm from 'remark-gfm'
 import type { Confianca, StatusTema, Veredito } from '../api'
+
+// Citações da biblioteca no texto dos agentes: [id-do-documento, p. N] vira link para o leitor.
+const CITACAO = /\[([a-z0-9][a-z0-9-]{3,}),\s*p(?:á?g)?\.?\s*(\d+)\]/g
+
+export function citacoesComoLinks(texto: string) {
+  return texto.replace(/<!--[\s\S]*?-->\n?/g, '').replace(CITACAO, (_m, id: string, p: string) => `[${id}, p. ${p}](/biblioteca/${id}?pagina=${p})`)
+}
 
 export function Markdown({ children, className }: { children: string; className?: string }) {
   return (
     <div className={clsx('md', className)}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        components={{ a: (p) => <a {...p} target="_blank" rel="noreferrer" /> }}
+        components={{
+          a: ({ href, children: c, ...p }) => href?.startsWith('/')
+            ? <Link to={href} className="citacao">{c}</Link>
+            : <a href={href} {...p} target="_blank" rel="noreferrer">{c}</a>,
+        }}
       >
-        {children}
+        {citacoesComoLinks(children)}
       </ReactMarkdown>
     </div>
   )
+}
+
+const COR_CONF: Record<string, string> = {
+  oficial: 'text-certo border-certo/40 bg-certo/10',
+  sociedade: 'text-hema border-hema/40 bg-hema/10',
+  literatura: 'text-suave border-borda-forte',
+  nota: 'text-eosina border-eosina/40 bg-eosina/10',
+}
+const ROTULO_CONF: Record<string, string> = { oficial: 'Oficial', sociedade: 'Sociedade', literatura: 'Literatura', nota: 'Nota' }
+
+export function ConfChip({ c }: { c: string }) {
+  return <span className={clsx('chip', COR_CONF[c])}>{ROTULO_CONF[c] ?? c}</span>
 }
 
 const COR_VEREDITO: Record<Veredito, string> = {
