@@ -248,3 +248,19 @@ async def test_freio_de_emergencia_interrompe_trabalho_de_fundo(ambiente, fake_r
     with conectar() as conn:
         assert linha(conn, "SELECT status FROM tarefas WHERE id = 1")["status"] == "pendente"
     assert m.ocupado is None and (await m.tick()).startswith("aguardando")
+
+
+def test_janela_vencida_deixa_de_valer(cliente):
+    with conectar() as conn:
+        conn.execute("INSERT INTO limite_uso (id, status, utilizacao, reseta_em, tipo) "
+                     "VALUES (1, 'allowed_warning', 0.96, ?, 'five_hour')", (int(time.time()) + 600,))
+        assert sentinela.janela(conn)["utilizacao"] == 0.96
+        assert not sentinela.pode_rodar_fundo(conn)[0]
+    assert cliente.get("/api/uso").json()["limite"]["status"] == "allowed_warning"
+    with conectar() as conn:
+        conn.execute("UPDATE limite_uso SET reseta_em = ?", (int(time.time()) - 1,))
+        assert sentinela.janela(conn) is None and sentinela.pode_rodar_fundo(conn)[0]
+        conn.execute("INSERT INTO llm_jobs (papel, input_tokens, cache_read) VALUES ('tutor', 1000, 100000)")
+    uso = cliente.get("/api/uso").json()
+    assert uso["limite"] is None
+    assert uso["hoje"][0]["efetivos"] == 11000 and uso["hoje"][0]["tokens"] == 101000

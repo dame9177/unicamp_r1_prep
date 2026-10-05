@@ -218,7 +218,7 @@ export interface Perfil {
 }
 
 export interface Uso {
-  hoje: { papel: string; chamadas: number; tokens: number; custo_usd: number }[]
+  hoje: { papel: string; chamadas: number; tokens: number; efetivos: number; custo_usd: number }[]
   limite: { status: string | null; utilizacao: number | null; reseta_em: number | null; tipo: string | null; atualizado_em: string } | null
   recentes: { id: number; papel: string; modelo: string; status: string; fundo: number; tokens: number; custo_usd: number; duracao_ms: number | null; erro: string | null; criado_em: string }[]
   aviso_tokens_dia: number

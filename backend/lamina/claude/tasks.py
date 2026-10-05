@@ -486,7 +486,9 @@ def tentativas_desde_ultima_analise(conn) -> int:
 
 
 def jobs_hoje(conn) -> list[dict]:
-    return linhas(conn, """
+    from lamina.orquestra.sentinela import TOKENS_EFETIVOS
+
+    return linhas(conn, f"""
         SELECT papel, COUNT(*) AS chamadas, SUM(input_tokens + output_tokens + cache_read + cache_write) AS tokens,
-               SUM(custo_usd) AS custo_usd
-        FROM llm_jobs WHERE date(criado_em) = date('now') GROUP BY papel""")
+               CAST(SUM({TOKENS_EFETIVOS}) AS INTEGER) AS efetivos, SUM(custo_usd) AS custo_usd
+        FROM llm_jobs WHERE date(criado_em, 'localtime') = date('now', 'localtime') GROUP BY papel""")

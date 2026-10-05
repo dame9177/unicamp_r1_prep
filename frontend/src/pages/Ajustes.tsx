@@ -113,25 +113,27 @@ export default function Ajustes() {
           <label className="flex items-center gap-3">Duração padrão do simulado
             <input type="number" className="campo !w-24 num !py-1" value={aj.simulado_duracao_min} onChange={(e) => set('simulado_duracao_min', Number(e.target.value))} /> min</label>
           <label className="flex items-center gap-3">Aviso de consumo diário
-            <input type="number" step={50000} className="campo !w-32 num !py-1" value={aj.aviso_tokens_dia} onChange={(e) => set('aviso_tokens_dia', Number(e.target.value))} /> tokens</label>
+            <input type="number" step={50000} className="campo !w-32 num !py-1" value={aj.aviso_tokens_dia} onChange={(e) => set('aviso_tokens_dia', Number(e.target.value))} /> tokens efetivos</label>
         </div>
       </Painel>
 
       {uso && (
         <Painel titulo="Uso do Claude" id="uso">
-          {uso.limite?.reseta_em && (
+          {uso.limite?.reseta_em ? (
             <p className="text-sm text-suave mb-4">
               Janela do plano ({uso.limite.tipo}): <b className="text-texto">{uso.limite.status}</b>
               {uso.limite.utilizacao != null && <> · {Math.round(uso.limite.utilizacao * 100)}% usado</>}
               {' '}· reinicia {new Date(uso.limite.reseta_em * 1000).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
             </p>
+          ) : (
+            <p className="text-sm text-suave mb-4">Janela do plano: reiniciada ou sem aviso recente. O estado atualiza na próxima chamada ao Claude.</p>
           )}
           <div className="grid grid-cols-4 gap-3 mb-5">
             {uso.hoje.map((h) => (
               <div key={h.papel} className="rounded-xl border border-borda p-3">
                 <p className="text-xs text-apagado">{h.papel}</p>
-                <p className="num text-lg">{(h.tokens / 1000).toFixed(1)}k</p>
-                <p className="num text-[11px] text-apagado">{h.chamadas} chamadas · US$ {h.custo_usd.toFixed(3)} eq.</p>
+                <p className="num text-lg">{(h.efetivos / 1000).toFixed(1)}k <span className="text-[11px] text-apagado">efetivos</span></p>
+                <p className="num text-[11px] text-apagado">{(h.tokens / 1000).toFixed(0)}k brutos · {h.chamadas} chamadas · US$ {h.custo_usd.toFixed(3)} eq.</p>
               </div>
             ))}
             {uso.hoje.length === 0 && <p className="text-sm text-suave col-span-4">Nenhuma chamada hoje.</p>}
