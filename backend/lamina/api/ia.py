@@ -233,7 +233,7 @@ def uso():
     with conectar() as conn:
         return {
             "hoje": tasks.jobs_hoje(conn),
-            "limite": linha(conn, "SELECT * FROM limite_uso WHERE id = 1"),
+            "limite": sentinela.janela(conn),
             "recentes": linhas(conn, "SELECT id, papel, modelo, status, fundo, input_tokens + output_tokens + "
                                      "cache_read + cache_write AS tokens, custo_usd, duracao_ms, erro, criado_em "
                                      "FROM llm_jobs ORDER BY id DESC LIMIT 30"),

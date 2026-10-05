@@ -23,22 +23,22 @@ const ITENS = [
 function MedidorUso() {
   const { data } = useQuery({ queryKey: ['uso'], queryFn: () => api.get<Uso>('/api/uso'), refetchInterval: 60_000 })
   if (!data) return null
-  const tokens = data.hoje.reduce((s, h) => s + (h.tokens || 0), 0)
+  const tokens = data.hoje.reduce((s, h) => s + (h.efetivos || 0), 0)
   const frac = Math.min(1, tokens / (data.aviso_tokens_dia || 1))
   const fracFundo = Math.min(frac, (data.fundo_hoje || 0) / (data.aviso_tokens_dia || 1))
-  const limite = data.limite
+  const limite = data.limite && (data.limite.reseta_em ?? 0) * 1000 > Date.now() ? data.limite : null
   return (
-    <NavLink to="/ajustes#uso" className="block px-3 py-3 rounded-xl hover:bg-lamina-2 transition" title="Uso do Claude hoje">
+    <NavLink to="/ajustes#uso" className="block px-3 py-3 rounded-xl hover:bg-lamina-2 transition" title="Uso do Claude hoje, em tokens efetivos (leitura de cache conta 1/10)">
       <div className="flex justify-between text-[11px] text-apagado mb-1.5">
         <span>Claude hoje</span>
-        <span className="num">{(tokens / 1000).toFixed(0)}k tok</span>
+        <span className="num">{(tokens / 1000).toFixed(0)}k ef.</span>
       </div>
       <div className="h-1 rounded-full bg-borda overflow-hidden flex">
         <div className="h-full bg-eosina/70" style={{ width: `${fracFundo * 100}%` }} title="segundo plano (Preceptor e agentes)" />
         <div className={clsx('h-full', frac > 0.85 ? 'bg-errado' : frac > 0.6 ? 'bg-parcial' : 'bg-hema')}
              style={{ width: `${(frac - fracFundo) * 100}%` }} />
       </div>
-      {data.fundo_hoje > 0 && <p className="text-[10px] text-apagado mt-1"><span className="text-eosina/80">■</span> segundo plano: {(data.fundo_hoje / 1000).toFixed(0)}k efetivos</p>}
+      {data.fundo_hoje > 0 && <p className="text-[10px] text-apagado mt-1"><span className="text-eosina/80">■</span> segundo plano: {(data.fundo_hoje / 1000).toFixed(0)}k</p>}
       {limite?.status && limite.status !== 'allowed' && (
         <p className="text-[11px] mt-1.5 text-parcial">
           {limite.status === 'rejected' ? 'Limite do plano atingido' : 'Perto do limite do plano'}

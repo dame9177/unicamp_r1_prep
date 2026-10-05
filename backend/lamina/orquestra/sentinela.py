@@ -29,7 +29,12 @@ def gasto_fundo_hoje(conn) -> int:
 
 
 def janela(conn) -> dict | None:
-    return linha(conn, "SELECT status, utilizacao, reseta_em, tipo, atualizado_em FROM limite_uso WHERE id = 1")
+    """Último estado da janela do plano informado pelo CLI, ou None se já passou do horário de reinício
+    (o CLI só manda um estado novo na próxima chamada; o antigo não vale mais)."""
+    j = linha(conn, "SELECT status, utilizacao, reseta_em, tipo, atualizado_em FROM limite_uso WHERE id = 1")
+    if not j or not j["reseta_em"] or j["reseta_em"] <= time.time():
+        return None
+    return j
 
 
 def pode_rodar_fundo(conn, aj: dict | None = None) -> tuple[bool, str]:
@@ -41,7 +46,7 @@ def pode_rodar_fundo(conn, aj: dict | None = None) -> tuple[bool, str]:
     if gasto >= aj["orcamento_fundo_dia"]:
         return False, f"orçamento do dia esgotado ({gasto // 1000}k de {aj['orcamento_fundo_dia'] // 1000}k tokens)"
     j = janela(conn)
-    if j and j["reseta_em"] and j["reseta_em"] > time.time():
+    if j:
         if j["status"] == "rejected":
             return False, "janela do plano esgotada"
         if j["utilizacao"] is not None and j["utilizacao"] >= aj["limiar_janela"]:
