@@ -16,7 +16,7 @@ from datetime import UTC, datetime
 
 from lamina import ajustes
 from lamina.db import conectar, linha
-from lamina.orquestra import avisos, sentinela
+from lamina.orquestra import avisos, progresso, sentinela
 
 log = logging.getLogger("lamina.maestro")
 
@@ -47,7 +47,11 @@ def motivo_ronda(aj: dict, s: dict, agora: datetime | None = None) -> str | None
 
 
 def proxima_tarefa(conn) -> dict | None:
-    return linha(conn, "SELECT * FROM tarefas WHERE status = 'pendente' ORDER BY prioridade, id LIMIT 1")
+    """Próxima tarefa pendente, pulando as que esperam a conversão local de um documento."""
+    return linha(conn, """SELECT * FROM tarefas t WHERE t.status = 'pendente' AND (t.aguarda_doc IS NULL OR NOT EXISTS (
+                              SELECT 1 FROM biblioteca b WHERE b.id = t.aguarda_doc
+                              AND b.conversao IN ('pendente', 'executando')))
+                          ORDER BY t.prioridade, t.id LIMIT 1""")
 
 
 def recuperar_tarefas_presas(conn) -> None:
@@ -96,8 +100,10 @@ class Maestro:
         self.ultimo_tick = datetime.now(UTC).isoformat()
         with conectar() as conn:
             aj = ajustes.todos(conn)
+            progresso.sincronizar(conn)
             s = sentinela.coletar(conn)
-            avisos.lembretes_automaticos(conn, aj, s)
+            if not (s["pausado_ate"] and s["pausado_ate"] > datetime.now(UTC).isoformat()):
+                avisos.lembretes_automaticos(conn, aj, s)  # pausado: nada proativo, nem lembrete automático
             avisos.entregar_pendentes(conn, aj)
             tarefa = proxima_tarefa(conn)
         decisao = self._decidir(aj, s, tarefa)

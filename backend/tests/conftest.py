@@ -19,6 +19,9 @@ def ambiente(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "AGENTES_DIR", dados / "agentes")
     monkeypatch.setattr(config, "BIBLIOTECA_DIR", dados / "biblioteca")
     monkeypatch.setattr(config, "MAESTRO_ATIVO", False)
+    from lamina.biblioteca import conversor
+
+    monkeypatch.setattr(conversor, "cli", lambda: None)  # sem GPU nos testes; test_upload usa um conversor falso
     cur = tmp_path / "curadoria"
     if config.CURADORIA_DIR.exists():
         shutil.copytree(config.CURADORIA_DIR, cur)

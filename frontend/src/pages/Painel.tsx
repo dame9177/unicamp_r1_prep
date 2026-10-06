@@ -43,6 +43,10 @@ export default function Painel() {
     mutationFn: () => api.post('/api/preceptor/ronda', {}),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ['preceptor'] }); nav('/preceptor') },
   })
+  const missao = useMutation({
+    mutationFn: ({ id, feita }: { id: number; feita: boolean }) => api.post(`/api/preceptor/missoes/${id}/feita?feita=${feita}`),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['painel'] }),
+  })
   const marcar = useMutation({
     mutationFn: ({ id, status }: { id: number; status: string }) => api.patch(`/api/agenda/${id}`, { status }),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ['painel'] }); qc.invalidateQueries({ queryKey: ['agenda'] }) },
@@ -118,9 +122,11 @@ export default function Painel() {
             <ul className="mt-3 space-y-2.5">
               {p.missoes.map((m) => (
                 <li key={m.id} className="flex gap-2.5">
-                  <Circle className="size-4 text-hema mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm">{m.titulo}</p>
+                  <button onClick={() => missao.mutate({ id: m.id, feita: !m.feita })} title={m.feita ? 'Desmarcar' : 'Marcar como feita'} className="shrink-0">
+                    {m.feita ? <CheckCircle2 className="size-4 text-certo mt-0.5" /> : <Circle className="size-4 text-hema mt-0.5" />}
+                  </button>
+                  <div className={m.feita ? 'opacity-55' : ''}>
+                    <p className={m.feita ? 'text-sm line-through' : 'text-sm'}>{m.titulo}</p>
                     {m.conteudo_md && <p className="text-xs text-suave mt-0.5">{m.conteudo_md}</p>}
                   </div>
                 </li>

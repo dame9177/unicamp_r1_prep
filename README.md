@@ -17,6 +17,11 @@ O núcleo é humano: temas, blocos de questões, aproveitamento, e o tema é "do
 - **Biblioteca compartilhada** (`app_data/biblioteca/`): o app baixa o documento inteiro, extrai o texto, guarda o original e indexa tudo para busca em texto completo. Isso resolve uma limitação do WebFetch do Claude Code, que entrega só um resumo da página.
   - Cada item registra a fonte, o ano, a confiabilidade (oficial, sociedade, literatura ou nota) e se está vigente ou foi substituído.
   - Todos os agentes consultam a biblioteca antes da web. Você pode ler os documentos no app e citar páginas.
+- **Seus arquivos:** os sites às vezes bloqueiam os agentes. Por isso você pode alimentar a biblioteca diretamente: arraste PDFs ou fotos de páginas na página Biblioteca, ou anexe-os pelo clipe nas conversas com o tutor e o Preceptor.
+  - O texto é extraído localmente.
+  - O bibliotecário cataloga o documento (título oficial, órgão, ano, confiabilidade, vigência), escreve a nota-síntese e, se não houver texto, transcreve as páginas.
+  - Num anexo de conversa, o agente já usa o documento na mesma resposta.
+- **Conversor local na GPU (opcional):** instale com `./scripts/instalar_conversor.sh`, que usa o Marker 1.10. Num PDF de 107 páginas com tabelas, testado numa RTX 5070 de 8 GB, levou cerca de 2,6 s por página. Uma página escaneada leva cerca de 40 s. Ele refaz o texto dos PDFs em Markdown com títulos e tabelas e faz OCR de PDFs escaneados e fotos, sem gastar tokens. Sem ele, o app funciona igual, com extração simples.
 - **Cadernos** (`app_data/agentes/<agente>/`): cada agente tem um diretório próprio e persistente. Ali ele escreve livremente (Write/Edit) e mantém uma `MEMORIA.md` que entra no prompt de toda nova sessão. É assim que o tutor e o Preceptor acumulam conhecimento entre conversas.
   - Você lê os cadernos na Biblioteca. Os agentes não escrevem fora deles.
 
@@ -33,6 +38,8 @@ claude auth login           # uma vez; usa a sua conta Claude (Pro/Max)
 Para abrir com um clique, `./scripts/instalar_atalho.sh` cria o item **Lâmina** no menu de aplicativos: ele sobe o servidor em segundo plano e abre o navegador. Para encerrar o servidor, use `./scripts/parar.sh`.
 
 O Preceptor só trabalha enquanto o servidor estiver rodando. Para mantê-lo sempre ligado, inclusive depois de reiniciar o computador, há um script opcional: `./scripts/instalar_servico.sh` cria um serviço de usuário do systemd. Para desfazer, use `./scripts/instalar_servico.sh --remover`.
+
+Para recomeçar do zero (com backup antes): pare o servidor e rode `uv run --project backend python scripts/zerar_progresso.py`.
 
 Para desenvolver, `./scripts/dev.sh` sobe o backend com reload e o Vite com hot reload em http://127.0.0.1:5173.
 

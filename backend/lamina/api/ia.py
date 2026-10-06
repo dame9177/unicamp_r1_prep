@@ -69,6 +69,7 @@ def obter_chat(chat_id: int):
 
 class Mensagem(BaseModel):
     texto: str = Field(min_length=1, max_length=4000)
+    anexos: list[str] = Field(default_factory=list, max_length=5)  # ids de documentos da biblioteca
 
 
 @router.post("/chats/{chat_id}/mensagens")
@@ -78,7 +79,7 @@ async def enviar_mensagem(chat_id: int, dados: Mensagem):
 
     async def eventos():
         try:
-            async for ev in tasks.conversar(chat_id, dados.texto):
+            async for ev in tasks.conversar(chat_id, dados.texto, dados.anexos):
                 yield f"data: {json.dumps(ev, ensure_ascii=False, default=str)}\n\n"
         except Exception as exc:  # noqa: BLE001
             yield f"data: {json.dumps({'tipo': 'erro', 'mensagem': str(exc)}, ensure_ascii=False)}\n\n"

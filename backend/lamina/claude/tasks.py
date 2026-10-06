@@ -343,7 +343,27 @@ def _transcricao(conn, chat_id: int, limite: int = 12) -> str:
     return "\n\n".join(f"{'ALUNO' if m['papel'] == 'user' else 'VOCÊ'}: {m['conteudo'][:3000]}" for m in reversed(msgs))
 
 
-async def conversar(chat_id: int, mensagem: str) -> AsyncIterator[dict]:
+def _texto_anexos(conn, anexos: list[str]) -> tuple[str, str]:
+    """(bloco para o prompt do agente, linha para o histórico do aluno)."""
+    docs = [d for d in (armazem.obter(conn, a) for a in anexos[:5]) if d]
+    if not docs:
+        return "", ""
+    itens = []
+    for d in docs:
+        pasta = config.BIBLIOTECA_DIR / "docs" / d["id"]
+        original = next(iter(sorted(pasta.glob("original.*"))), None)
+        if d["status_motivo"] and "transcrição" in d["status_motivo"]:
+            estado = (f"ainda sem texto (aguardando OCR/transcrição): leia as páginas do original com Read em {original}"
+                      if original else "ainda sem texto")
+        else:
+            estado = "texto disponível: use biblioteca_ler/biblioteca_buscar"
+        itens.append(f"- `{d['id']}` · {d['titulo']} · {d['formato']}, {d['paginas'] or '?'} página(s) · {estado}")
+    bloco = ("[ANEXOS enviados pelo aluno nesta mensagem; já estão guardados na biblioteca e o bibliotecário vai "
+             "catalogá-los depois]\n" + "\n".join(itens) + "\nLeia o que for necessário dos anexos antes de responder.")
+    return bloco, "📎 " + " · ".join(d["titulo"] for d in docs)
+
+
+async def conversar(chat_id: int, mensagem: str, anexos: list[str] | None = None) -> AsyncIterator[dict]:
     with conectar() as conn:
         chat = linha(conn, "SELECT * FROM chats WHERE id = ?", (chat_id,))
         if not chat:
@@ -358,7 +378,11 @@ async def conversar(chat_id: int, mensagem: str) -> AsyncIterator[dict]:
             contexto = _contexto_inicial(conn, chat["questao_id"])
         elif primeira and agente == "preceptor":
             contexto = _contexto_preceptor(conn)
-        conn.execute("INSERT INTO mensagens (chat_id, papel, conteudo) VALUES (?, 'user', ?)", (chat_id, mensagem))
+        bloco_anexos, linha_anexos = _texto_anexos(conn, anexos or [])
+        conn.execute("INSERT INTO mensagens (chat_id, papel, conteudo) VALUES (?, 'user', ?)",
+                     (chat_id, f"{mensagem}\n\n{linha_anexos}" if linha_anexos else mensagem))
+    if bloco_anexos:
+        mensagem = f"{bloco_anexos}\n\n{mensagem}"
 
     def pedido(texto: str, retomar: str | None) -> Pedido:
         return Pedido(papel=agente, modelo=modelo, esforco=esforco, sistema=sistema(cfg["prompt"], agente),
@@ -440,6 +464,22 @@ async def analisar_coach(pedido_extra: str | None = None) -> dict:
 
 
 TAREFA_PROMPT = {"bibliotecario": "bibliotecario"}
+
+
+def tarefa_catalogo(doc: dict, observacao: str | None, origem: str) -> tuple[str, str]:
+    """Título e instruções da tarefa que o bibliotecário recebe para cada arquivo enviado pelo aluno."""
+    pasta = config.BIBLIOTECA_DIR / "docs" / doc["id"]
+    original = next(iter(sorted(pasta.glob("original.*"))), pasta / "original")
+    onde = "na página Biblioteca" if origem == "biblioteca" else "anexado numa conversa"
+    instrucoes = f"""O aluno enviou um arquivo ({onde}). Id na biblioteca: `{doc['id']}`; arquivo original: {original}; formato: {doc['formato']}; páginas: {doc['paginas'] or '?'}; título provisório: "{doc['titulo']}".
+
+1. Identifique o documento: leia o início (biblioteca_ler com pagina=1 e ate_pagina=3, ou Read no original) e descubra título oficial, órgão ou autoria, ano ou edição, categoria e confiabilidade (oficial = governo/CONITEC; sociedade = sociedade médica; literatura = demais). Atualize com biblioteca_catalogar, incluindo os temas do app (ids de `panorama`) e um resumo de 1 a 2 frases.
+2. Se o documento estiver "em revisão: aguardando transcrição" (sem texto), transcreva-o: leia o original com Read (parâmetro pages, até 20 por vez) e envie com biblioteca_anexar_texto, com as marcas [[página N]] e tabelas em Markdown, usando concluido=true no último lote. Até 60 páginas; acima disso, transcreva o sumário e as seções mais cobráveis e registre a pendência no caderno.
+3. Vigência: compare com o catálogo. Se for edição mais nova de algo já guardado, marque o antigo como substituido (ou o contrário, se o enviado for o mais antigo).
+4. Se o conteúdo for cobrável na prova, escreva uma nota-síntese (biblioteca_publicar_nota) citando as páginas.
+
+Observação do aluno: {observacao or "(nenhuma)"}"""
+    return f"Catalogar arquivo enviado: {doc['titulo'][:90]}", instrucoes
 
 
 async def executar_tarefa(tarefa_id: int, fundo: bool = True) -> dict:

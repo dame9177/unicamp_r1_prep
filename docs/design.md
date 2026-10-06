@@ -60,6 +60,14 @@ Todas as instâncias com ferramentas recebem o mesmo "kit", e o papel define qua
   - A busca usa BM25 com prefixos, que dão um stemming leve.
   - O documento vigente vem antes do substituído.
   - Duplicatas são barradas por URL e por sha256.
+- **Arquivos do aluno** (`importar_arquivo`, `POST /api/biblioteca/enviar`): aceita PDF, imagem, texto e HTML, enviados pela página Biblioteca ou pelo clipe das conversas.
+  - A extração é local. PDFs escaneados e imagens ficam "em revisão: aguardando transcrição".
+  - Cada envio gera uma tarefa do bibliotecário, que usa `biblioteca_catalogar` e, se faltar texto, transcreve lendo as páginas com Read e grava com `biblioteca_anexar_texto`.
+  - Envios feitos pela página Biblioteca começam na hora; anexos de conversa entram na fila e são lidos pelo agente da conversa na mesma resposta.
+- **Conversor local** (`conversor.py`, opcional): o Marker roda na GPU como ferramenta isolada do uv (`scripts/instalar_conversor.sh`).
+  - Uma fila converte um documento por vez para Markdown com títulos e tabelas, preservando as páginas (`[[página N]]`), e faz OCR forçado nos escaneados.
+  - O texto simples anterior fica em `texto_simples.md`. Se o Markdown perderia mais de 40% do conteúdo, a conversão é descartada.
+  - Tarefas com `aguarda_doc` só rodam depois da conversão.
 - **Notas-síntese:** exigem fontes (ids da biblioteca ou URLs). A interface transforma citações `[id, p. N]` em links para o leitor.
 - **Fora do git:** documentos de sociedades têm direitos autorais.
 

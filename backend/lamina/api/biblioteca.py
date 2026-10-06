@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from lamina import config
-from lamina.biblioteca import armazem
+from lamina.biblioteca import armazem, captura, conversor
 from lamina.biblioteca.captura import ErroCaptura
 from lamina.db import conectar, linha
 
@@ -19,7 +19,45 @@ def catalogo(tipo: str | None = None, busca: str | None = None):
     with conectar() as conn:
         itens = armazem.catalogo(conn, tipo, busca)
         tot = linha(conn, "SELECT COUNT(*) AS n, COALESCE(SUM(caracteres), 0) AS c FROM biblioteca")
-    return {"itens": itens, "total": tot["n"], "caracteres": tot["c"]}
+    return {"itens": itens, "total": tot["n"], "caracteres": tot["c"], "conversor": conversor.fila.estado(),
+            "extensoes": armazem.EXTENSOES_ACEITAS}
+
+
+@router.post("/enviar")
+async def enviar(arquivos: list[UploadFile] = File(...), confiabilidade: str | None = Form(None),
+                 orgao: str | None = Form(None), ano: int | None = Form(None), observacao: str | None = Form(None),
+                 catalogar: bool = Form(True), origem: str = Form("biblioteca")):
+    """Arquivos enviados pelo aluno (página Biblioteca ou anexo de conversa): guarda, extrai localmente e
+    agenda o bibliotecário para catalogar (e transcrever, se não houver texto nem conversor local)."""
+    from lamina.claude import tasks
+    from lamina.orquestra.maestro import maestro
+
+    resultados = []
+    for arq in arquivos[:10]:
+        conteudo = await arq.read(captura.MAX_BYTES + 1)
+        nome = arq.filename or "arquivo"
+        try:
+            r = await armazem.importar_arquivo(conteudo, nome, criado_por="aluno", orgao=orgao or None, ano=ano,
+                                               confiabilidade=confiabilidade or None)
+        except (ErroCaptura, ValueError) as exc:
+            resultados.append({"arquivo": nome, "erro": str(exc)})
+            continue
+        r["arquivo"] = nome
+        if catalogar and not r["ja_existia"]:
+            with conectar() as conn:
+                titulo, instrucoes = tasks.tarefa_catalogo(armazem.obter(conn, r["id"]), observacao, origem)
+                cur = conn.execute(
+                    "INSERT INTO tarefas (agente, titulo, instrucoes, prioridade, criado_por, aguarda_doc) "
+                    "VALUES ('bibliotecario', ?, ?, ?, 'aluno', ?)",
+                    (titulo, instrucoes, 1 if origem == "biblioteca" else 2,
+                     r["id"] if r.get("conversao_local") else None))
+                r["tarefa_id"] = cur.lastrowid
+        resultados.append(r)
+    if origem == "biblioteca":  # pedido explícito do aluno: começa já o que não depende do conversor
+        prontas = [r for r in resultados if r.get("tarefa_id") and not r.get("conversao_local")]
+        if prontas:
+            maestro.disparar_tarefa(prontas[0]["tarefa_id"], fundo=False)
+    return {"resultados": resultados}
 
 
 @router.get("/buscar")
@@ -60,7 +98,8 @@ def original(doc_id: str):
     arquivo = next(iter(sorted(pasta.glob("original.*"))), None) if pasta.exists() else None
     if not arquivo:
         raise HTTPException(404, "arquivo original indisponível")
-    tipos = {".pdf": "application/pdf", ".html": "text/plain; charset=utf-8", ".txt": "text/plain; charset=utf-8"}
+    tipos = {".pdf": "application/pdf", ".html": "text/plain; charset=utf-8", ".txt": "text/plain; charset=utf-8",
+             ".md": "text/plain; charset=utf-8", **{f".{k}": v for k, v in armazem.IMAGENS.items()}}
     return FileResponse(arquivo, media_type=tipos.get(arquivo.suffix, "application/octet-stream"),
                         content_disposition_type="inline", filename=f"{d['id']}{arquivo.suffix}")
 
@@ -111,6 +150,18 @@ def editar(doc_id: str, dados: Edicao):
         except ValueError as exc:
             raise HTTPException(422, str(exc)) from exc
         return _doc(conn, doc_id)
+
+
+@router.post("/{doc_id}/reconverter")
+def reconverter(doc_id: str):
+    if not conversor.disponivel():
+        raise HTTPException(409, "conversor local não instalado (scripts/instalar_conversor.sh)")
+    with conectar() as conn:
+        d = _doc(conn, doc_id)
+        if d["tipo"] != "documento" or d["formato"] not in ("pdf", "imagem"):
+            raise HTTPException(422, "só PDFs e imagens passam pelo conversor")
+        conversor.marcar_pendente(conn, doc_id)
+    return {"ok": True}
 
 
 @router.delete("/{doc_id}")

@@ -13,6 +13,7 @@ from fastapi.staticfiles import StaticFiles
 from lamina import config, db, importer
 from lamina.api import biblioteca, curadoria, estudo, ia, orquestra, questoes
 from lamina.claude.runner import sanitizar_ambiente
+from lamina.biblioteca.conversor import fila as fila_conversao
 from lamina.orquestra.maestro import maestro
 
 log = logging.getLogger("lamina")
@@ -28,8 +29,10 @@ async def ciclo_de_vida(app: FastAPI):
         log.info("banco importado: %s", importer.importar(conn))
     if config.MAESTRO_ATIVO:
         maestro.iniciar()
+        fila_conversao.iniciar()
     yield
     await maestro.parar()
+    await fila_conversao.parar()
 
 
 app = FastAPI(title="Lâmina", lifespan=ciclo_de_vida)
