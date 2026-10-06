@@ -11,6 +11,7 @@ Os trabalhos com LLM rodam como tarefas asyncio separadas, para o ciclo continua
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
 from datetime import UTC, datetime
 
@@ -52,6 +53,18 @@ def proxima_tarefa(conn) -> dict | None:
                               SELECT 1 FROM biblioteca b WHERE b.id = t.aguarda_doc
                               AND b.conversao IN ('pendente', 'executando')))
                           ORDER BY t.prioridade, t.id LIMIT 1""")
+
+
+LIMITE_IMEDIATO = 3  # acima disso, tarefas de arquivos enviados pelo aluno seguem o orçamento de segundo plano
+
+
+def envio_pequeno(conn) -> bool:
+    """Tarefas do aluno podem rodar na hora (fora do orçamento) só se forem poucas e sem pausa."""
+    pausa = linha(conn, "SELECT valor_json FROM estado WHERE chave = 'pausa_fundo_ate'")
+    if pausa and json.loads(pausa["valor_json"] or "null") and json.loads(pausa["valor_json"]) > datetime.now(UTC).isoformat():
+        return False
+    n = linha(conn, "SELECT COUNT(*) AS n FROM tarefas WHERE status = 'pendente' AND criado_por = 'aluno'")["n"]
+    return n <= LIMITE_IMEDIATO
 
 
 def recuperar_tarefas_presas(conn) -> None:

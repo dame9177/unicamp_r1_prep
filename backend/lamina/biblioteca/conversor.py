@@ -203,10 +203,13 @@ class FilaConversao:
 
     @staticmethod
     def _liberar_tarefas(doc_id: str) -> None:
-        """Tarefas do aluno que esperavam esta conversão rodam já (fora do orçamento de segundo plano)."""
-        from lamina.orquestra.maestro import maestro
+        """Tarefas do aluno que esperavam esta conversão rodam já (fora do orçamento de segundo plano), mas só em
+        envios pequenos e sem pausa; envios em massa seguem a fila do Maestro, com orçamento e trava da janela."""
+        from lamina.orquestra.maestro import envio_pequeno, maestro
 
         with conectar() as conn:
+            if not envio_pequeno(conn):
+                return
             esperando = linhas(conn, "SELECT id FROM tarefas WHERE status = 'pendente' AND aguarda_doc = ? "
                                      "AND criado_por = 'aluno' ORDER BY id", (doc_id,))
         for t in esperando:

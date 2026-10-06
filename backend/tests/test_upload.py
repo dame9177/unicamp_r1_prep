@@ -112,3 +112,19 @@ def test_api_de_envio_cria_tarefa_e_anexo_no_chat(cliente, fake_runner):
     assert msgs[0]["conteudo"].startswith("Explique a tabela") and "📎" in msgs[0]["conteudo"]
     assert cliente.post(f"/api/biblioteca/{ok['id']}/reconverter").status_code == 409  # sem conversor nos testes
     assert config.BIBLIOTECA_DIR.exists()
+
+
+def test_envio_em_massa_nao_roda_fora_do_orcamento(ambiente):
+    from datetime import UTC, datetime, timedelta
+
+    from lamina.db import salvar_estado
+
+    with conectar() as conn:
+        for i in range(3):
+            conn.execute("INSERT INTO tarefas (agente, titulo, instrucoes, criado_por) VALUES ('bibliotecario', ?, 'x', 'aluno')", (f"t{i}",))
+        assert maestro_mod.envio_pequeno(conn)
+        conn.execute("INSERT INTO tarefas (agente, titulo, instrucoes, criado_por) VALUES ('bibliotecario', 't3', 'x', 'aluno')")
+        assert not maestro_mod.envio_pequeno(conn)
+        conn.execute("DELETE FROM tarefas WHERE titulo = 't3'")
+        salvar_estado(conn, "pausa_fundo_ate", (datetime.now(UTC) + timedelta(hours=1)).isoformat())
+        assert not maestro_mod.envio_pequeno(conn)

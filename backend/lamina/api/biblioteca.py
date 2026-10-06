@@ -33,8 +33,8 @@ async def enviar(arquivos: list[UploadFile] = File(...), confiabilidade: str | N
     from lamina.orquestra.maestro import maestro
 
     resultados = []
-    for arq in arquivos[:10]:
-        conteudo = await arq.read(captura.MAX_BYTES + 1)
+    for arq in arquivos[:20]:
+        conteudo = await arq.read(armazem.MAX_UPLOAD + 1)
         nome = arq.filename or "arquivo"
         try:
             r = await armazem.importar_arquivo(conteudo, nome, criado_por="aluno", orgao=orgao or None, ano=ano,
@@ -53,9 +53,13 @@ async def enviar(arquivos: list[UploadFile] = File(...), confiabilidade: str | N
                      r["id"] if r.get("conversao_local") else None))
                 r["tarefa_id"] = cur.lastrowid
         resultados.append(r)
-    if origem == "biblioteca":  # pedido explícito do aluno: começa já o que não depende do conversor
+    if origem == "biblioteca":  # pedido explícito do aluno: começa já o que não depende do conversor (envios pequenos)
+        from lamina.orquestra.maestro import envio_pequeno
+
         prontas = [r for r in resultados if r.get("tarefa_id") and not r.get("conversao_local")]
-        if prontas:
+        with conectar() as conn:
+            pequeno = envio_pequeno(conn)
+        if prontas and pequeno:
             maestro.disparar_tarefa(prontas[0]["tarefa_id"], fundo=False)
     return {"resultados": resultados}
 
