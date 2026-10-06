@@ -441,6 +441,45 @@ def ferramentas_biblioteca(ctx: Contexto) -> list:
             return _erro(str(exc))
         return _ok(r)
 
+    @tool("biblioteca_catalogar",
+          "Corrige ou completa os metadados de um documento da biblioteca (ex.: arquivo enviado pelo aluno): título "
+          "oficial, órgão, ano, categoria, confiabilidade, temas e resumo.", {
+              "type": "object",
+              "properties": {
+                  "id": {"type": "string"}, "titulo": {"type": "string"}, "orgao": {"type": "string"},
+                  "ano": {"type": "integer"}, "categoria": {"type": "string"},
+                  "confiabilidade": {"type": "string", "enum": _CONF},
+                  "temas": {"type": "array", "items": {"type": "string"}}, "resumo": {"type": "string"},
+              },
+              "required": ["id"],
+          })
+    async def biblioteca_catalogar(args):
+        campos = {k: v for k, v in args.items() if k != "id" and v not in (None, "")}
+        try:
+            with conectar() as conn:
+                armazem.editar(conn, args["id"], campos)
+                d = armazem.obter(conn, args["id"])
+        except KeyError:
+            return _erro("id inexistente")
+        except ValueError as exc:
+            return _erro(str(exc))
+        return _ok({k: d[k] for k in ("id", "titulo", "orgao", "ano", "categoria", "confiabilidade", "temas", "status")})
+
+    @tool("biblioteca_anexar_texto",
+          "Acrescenta texto TRANSCRITO a um documento sem texto extraível (PDF escaneado ou imagem). Leia as páginas do "
+          "arquivo original com Read (parâmetro pages, até 20 por vez), transcreva fielmente em Markdown (tabelas em "
+          "Markdown) começando cada página com a marca [[página N]], e envie em lotes. Use concluido=true no último lote.", {
+              "type": "object",
+              "properties": {"id": {"type": "string"}, "texto_md": {"type": "string"}, "concluido": {"type": "boolean"}},
+              "required": ["id", "texto_md"],
+          })
+    async def biblioteca_anexar_texto(args):
+        try:
+            with conectar() as conn:
+                return _ok(armazem.anexar_texto(conn, args["id"], args["texto_md"], bool(args.get("concluido"))))
+        except KeyError:
+            return _erro("id inexistente")
+
     @tool("biblioteca_marcar", "Marca um item como vigente, substituido (ex.: saiu nova edição) ou em_revisao.", {
         "type": "object",
         "properties": {"id": {"type": "string"}, "status": {"type": "string", "enum": list(armazem.STATUS)},
@@ -479,7 +518,7 @@ def ferramentas_biblioteca(ctx: Contexto) -> list:
         return _ok(achados or "Nada encontrado nas conversas anteriores.")
 
     return [biblioteca_buscar, biblioteca_ler, biblioteca_catalogo, biblioteca_capturar, biblioteca_publicar_nota,
-            biblioteca_marcar, historico_conversas]
+            biblioteca_catalogar, biblioteca_anexar_texto, biblioteca_marcar, historico_conversas]
 
 
 # ------------------------------------------------------------------------------------------------
@@ -642,7 +681,7 @@ FERRAMENTAS_PAPEL: dict[str, set[str] | None] = {
     "juiz": {"terminal", "ver_questao", "biblioteca_capturar", *_BIB_LER},
     "flashcards": {"terminal", "ver_questao", *_BIB_LER},
     "bibliotecario": {"terminal", "panorama", "detalhe_tema", "buscar_questoes", "ver_questao", "biblioteca_marcar",
-                      *_BIB_LER, *_BIB_ESCREVER},
+                      "biblioteca_catalogar", "biblioteca_anexar_texto", *_BIB_LER, *_BIB_ESCREVER},
     "preceptor": None,
 }
 

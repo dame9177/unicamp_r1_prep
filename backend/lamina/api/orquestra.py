@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from datetime import UTC, date, datetime, timedelta
 
 from fastapi import APIRouter, HTTPException
@@ -11,7 +12,7 @@ from lamina import agentes
 from lamina.api.comum import obter_ou_404
 from lamina.claude.tools import TIPOS_AGENDA, desfazer
 from lamina.db import conectar, linha, linhas, salvar_estado
-from lamina.orquestra import sentinela
+from lamina.orquestra import progresso, sentinela
 from lamina.orquestra.maestro import maestro
 
 router = APIRouter(prefix="/api")
@@ -79,6 +80,15 @@ def desfazer_acao(acao_id: int):
     return {"ok": True}
 
 
+@router.post("/preceptor/missoes/{missao_id}/feita")
+def marcar_missao(missao_id: int, feita: bool = True):
+    with conectar() as conn:
+        m = obter_ou_404(conn, "SELECT * FROM coach_insights WHERE id = ? AND tipo = 'missao'", (missao_id,), "missão")
+        payload = {**json.loads(m["payload_json"] or "{}"), "feita": feita}
+        conn.execute("UPDATE coach_insights SET payload_json = ? WHERE id = ?", (json.dumps(payload), missao_id))
+    return {"ok": True}
+
+
 @router.patch("/preceptor/insights/{insight_id}")
 def arquivar_insight(insight_id: int, arquivado: bool = True):
     with conectar() as conn:
@@ -96,6 +106,7 @@ def agenda(de: str | None = None, ate: str | None = None):
     de = de or (date.today() - timedelta(days=7)).isoformat()
     ate = ate or (date.today() + timedelta(days=21)).isoformat()
     with conectar() as conn:
+        progresso.sincronizar(conn)
         return linhas(conn, """SELECT a.*, t.nome AS tema_nome, b.nome AS bloco_nome FROM agenda a
                                LEFT JOIN temas t ON t.id = a.tema_id LEFT JOIN blocos b ON b.id = a.bloco_id
                                WHERE a.dia BETWEEN ? AND ? ORDER BY a.dia, a.id""", (de, ate))

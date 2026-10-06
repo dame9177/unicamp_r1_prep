@@ -1,3 +1,4 @@
+import json
 import time
 from datetime import datetime
 
@@ -264,3 +265,58 @@ def test_janela_vencida_deixa_de_valer(cliente):
     uso = cliente.get("/api/uso").json()
     assert uso["limite"] is None
     assert uso["hoje"][0]["efetivos"] == 11000 and uso["hoje"][0]["tokens"] == 101000
+
+
+def test_agenda_e_missoes_reconhecem_o_que_foi_feito(cliente, fake_runner):
+    from lamina.domain import blocks
+    from lamina.orquestra import progresso
+
+    hoje = datetime.now().date().isoformat()
+    with conectar() as conn:
+        q = linha(conn, "SELECT id, tema_id FROM questoes WHERE id = ?", (Q,))
+        outra = linha(conn, "SELECT id FROM questoes WHERE tema_id = ? AND id != ? LIMIT 1", (q["tema_id"], Q))
+        bid = blocks.criar_bloco(conn, "B", "coach", [Q, outra["id"]], criado_por="coach")
+        conn.execute("INSERT INTO agenda (dia, titulo, tipo, bloco_id) VALUES (?, 'Bloco B', 'estudo', ?)", (hoje, bid))
+        conn.execute("INSERT INTO agenda (dia, titulo, tipo, tema_id, minutos) VALUES (?, 'Tema', 'estudo', ?, 3)",
+                     (hoje, q["tema_id"]))
+        conn.execute("INSERT INTO coach_insights (tipo, titulo, payload_json) VALUES ('missao', 'Fazer bloco B', ?)",
+                     (json.dumps({"bloco_id": bid}),))
+        conn.execute("INSERT INTO coach_insights (tipo, titulo) VALUES ('missao', 'Ler o resumo')")
+    # respostas fora do bloco (questão avulsa) também contam
+    for qid in (Q, outra["id"]):
+        cliente.post("/api/tentativas", json={"questao_id": qid, "resposta": "CERTO", "confianca": "certeza"})
+    with conectar() as conn:
+        assert progresso.respondidas_do_tema_no_dia(conn, q["tema_id"], hoje) == 2
+    painel = cliente.get("/api/painel").json()
+    assert [i["status"] for i in painel["agenda_hoje"]] == ["feito", "planejado"]  # tema pede ≥5 questões
+    assert [m["feita"] for m in painel["missoes"]] == [True, False]
+    manual = painel["missoes"][1]["id"]
+    assert cliente.post(f"/api/preceptor/missoes/{manual}/feita").json()["ok"]
+    assert all(m["feita"] for m in cliente.get("/api/painel").json()["missoes"])
+
+
+def test_pausa_e_silencio_seguram_lembretes(ambiente, monkeypatch):
+    from datetime import UTC, timedelta
+
+    from lamina.db import salvar_estado
+
+    enviados = []
+    monkeypatch.setattr(avisos, "notificador", lambda t, x: enviados.append(t) or True)
+    with conectar() as conn:
+        aj = ajustes.todos(conn)
+        s = sentinela.coletar(conn)
+        assert avisos.lembretes_automaticos(conn, aj, s, datetime.now().replace(hour=23, minute=30)) == []
+        conn.execute("INSERT INTO avisos (titulo, origem, chave, criado_em) VALUES ('Meta de ontem', 'sentinela', "
+                     "'meta:ontem', datetime('now', '-2 days'))")
+        aj["silencio"] = [0, 0]
+        assert avisos.entregar_pendentes(conn, aj) == 0
+        assert linha(conn, "SELECT status FROM avisos")["status"] == "descartado"
+        salvar_estado(conn, "pausa_fundo_ate", (datetime.now(UTC) + timedelta(hours=8)).isoformat())
+        salvar_ajuste(conn, "hora_lembrete", 0)
+        salvar_ajuste(conn, "silencio", [0, 0])
+    import asyncio
+
+    asyncio.run(maestro_mod.Maestro().tick())
+    with conectar() as conn:
+        assert linha(conn, "SELECT COUNT(*) AS n FROM avisos WHERE origem = 'sentinela' AND status != 'descartado'")["n"] == 0
+    assert enviados == []

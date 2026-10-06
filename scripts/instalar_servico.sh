@@ -27,6 +27,8 @@ Type=simple
 ExecStart=$RAIZ/scripts/start.sh
 Restart=on-failure
 RestartSec=10
+# o "uv run" sai com 143 (SIGTERM) num desligamento normal
+SuccessExitStatus=143
 Environment=PATH=$HOME/.local/bin:$HOME/.local/share/fnm/aliases/default/bin:/usr/local/bin:/usr/bin:/bin
 
 [Install]

@@ -36,6 +36,15 @@ class ErroCaptura(Exception):
     pass
 
 
+class PdfSemTexto(ErroCaptura):
+    """PDF escaneado (só imagem): precisa de transcrição (o Claude lê as páginas como imagem)."""
+
+    def __init__(self, paginas: int, titulo: str | None):
+        super().__init__("PDF sem texto extraível (provavelmente escaneado como imagem)")
+        self.paginas = paginas
+        self.titulo = titulo
+
+
 @dataclass
 class Download:
     conteudo: bytes
@@ -158,7 +167,7 @@ def _pdf(conteudo: bytes) -> Extraido:
     texto = "\n\n".join(paginas)
     util = len(RE_PAGINA.sub("", texto).split())
     if util < max(30, 8 * len(paginas)):
-        raise ErroCaptura("PDF sem texto extraível (provavelmente escaneado como imagem)")
+        raise PdfSemTexto(len(paginas), titulo)
     return Extraido(titulo, texto, "pdf", len(paginas))
 
 

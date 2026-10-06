@@ -48,6 +48,9 @@ def criar(conn, *, titulo: str, texto: str = "", tipo: str = "lembrete", link: s
 def entregar_pendentes(conn, aj: dict) -> int:
     if em_silencio(aj):
         return 0
+    # Lembretes automáticos de dias anteriores perderam o sentido ("faltam N questões hoje"): descarta.
+    conn.execute("""UPDATE avisos SET status = 'descartado' WHERE status = 'agendado' AND origem = 'sentinela'
+                    AND date(criado_em, 'localtime') < date('now', 'localtime')""")
     devidos = linhas(conn, "SELECT * FROM avisos WHERE status = 'agendado' AND quando <= ? ORDER BY quando LIMIT 5",
                      (_agora_utc(),))
     for a in devidos:
@@ -60,7 +63,7 @@ def entregar_pendentes(conn, aj: dict) -> int:
 def lembretes_automaticos(conn, aj: dict, sinais: dict, agora: datetime | None = None) -> list[int]:
     """Lembretes óbvios, que não precisam de LLM. Cada um no máximo uma vez por dia."""
     agora = agora or datetime.now()
-    if agora.hour < aj["hora_lembrete"] or sinais["dias_ate_prova"] < 0:
+    if agora.hour < aj["hora_lembrete"] or sinais["dias_ate_prova"] < 0 or em_silencio(aj, agora):
         return []
     hoje = date.today().isoformat()
     ids = []

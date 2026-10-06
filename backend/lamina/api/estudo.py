@@ -13,6 +13,7 @@ from lamina.api.comum import em_segundo_plano, obter_ou_404
 from lamina.claude import tasks
 from lamina.db import conectar, linha, linhas
 from lamina.domain import blocks
+from lamina.orquestra import progresso
 
 router = APIRouter(prefix="/api")
 
@@ -233,6 +234,7 @@ def arquivar_bloco(bloco_id: int):
 @router.get("/painel")
 def painel():
     with conectar() as conn:
+        progresso.sincronizar(conn)
         temas = consultas.estatisticas_temas(conn)
         nao_dominados = [t for t in temas if t["status"] != "dominado"]
         prioritarios = sorted(nao_dominados, key=lambda t: -t["prioridade"])[:3]
@@ -252,7 +254,8 @@ def painel():
             "mapa": [{k: t[k] for k in ("id", "nome", "area", "status", "aproveitamento_firme", "cobertura",
                                          "revisar", "prioridade", "total", "respondidas", "geral")} for t in temas],
             "flashcards_vencidos": consultas.flashcards_vencidos(conn),
-            "missoes": linhas(conn, "SELECT * FROM coach_insights WHERE tipo = 'missao' AND arquivado = 0 ORDER BY id"),
+            "missoes": [{**m, "feita": progresso.missao_feita(conn, m)} for m in linhas(
+                conn, "SELECT * FROM coach_insights WHERE tipo = 'missao' AND arquivado = 0 ORDER BY id")],
             "insights": linhas(conn, "SELECT * FROM coach_insights WHERE tipo IN ('insight', 'alerta') "
                                      "AND arquivado = 0 ORDER BY id DESC LIMIT 4"),
             "ultima_analise": ult,

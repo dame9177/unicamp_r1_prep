@@ -3,12 +3,13 @@ import clsx from 'clsx'
 import { BookMarked, FileText, Library, Link2, Search, StickyNote } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { api, type AchadoBiblioteca, type ItemBiblioteca } from '../api'
+import { api, type AchadoBiblioteca, type EstadoConversor, type ItemBiblioteca } from '../api'
 import Cadernos from '../components/Cadernos'
+import EnviarArquivos from '../components/EnviarArquivos'
 import ListaTarefas, { NovaTarefa } from '../components/Tarefas'
 import { Cabecalho, Carregando, ConfChip, ErroCaixa, Markdown } from '../components/ui'
 
-interface Catalogo { itens: ItemBiblioteca[]; total: number; caracteres: number }
+interface Catalogo { itens: ItemBiblioteca[]; total: number; caracteres: number; conversor: EstadoConversor }
 
 function tamanho(c: number) {
   return c > 1e6 ? `${(c / 1e6).toFixed(1)} M car.` : c > 1e3 ? `${Math.round(c / 1e3)} mil car.` : `${c} car.`
@@ -83,7 +84,11 @@ export default function Biblioteca() {
   const [busca, setBusca] = useState(q)
   const [tipo, setTipo] = useState<'' | 'documento' | 'nota'>('')
   const [conf, setConf] = useState('')
-  const { data, error } = useQuery({ queryKey: ['biblioteca', 'catalogo'], queryFn: () => api.get<Catalogo>('/api/biblioteca') })
+  const { data, error } = useQuery({
+    queryKey: ['biblioteca', 'catalogo'],
+    queryFn: () => api.get<Catalogo>('/api/biblioteca'),
+    refetchInterval: (q) => (q.state.data?.conversor.na_fila || q.state.data?.conversor.convertendo ? 8000 : false),
+  })
   if (error) return <div className="p-8"><ErroCaixa erro={error} /></div>
   if (!data) return <Carregando />
   const itens = data.itens.filter((i) => (!tipo || i.tipo === tipo) && (!conf || i.confiabilidade === conf))
@@ -137,7 +142,8 @@ export default function Biblioteca() {
                           <p className="text-[11px] text-apagado mt-0.5 pl-5.5">{i.orgao ?? '—'}{i.ano ? ` · ${i.ano}` : ''}{i.categoria ? ` · ${i.categoria}` : ''} · por {i.criado_por}</p>
                         </td>
                         <td className="px-2"><ConfChip c={i.confiabilidade} /></td>
-                        <td className="px-2 text-[11px] text-apagado">{i.status === 'vigente' ? '' : i.status === 'substituido' ? 'substituído' : 'em revisão'}</td>
+                        <td className="px-2 text-[11px] text-apagado">{i.status === 'vigente' ? '' : i.status === 'substituido' ? 'substituído' : 'em revisão'}
+                          {(i.conversao === 'pendente' || i.conversao === 'executando') && <span className="text-hema"> · convertendo</span>}</td>
                         <td className="px-4 text-right text-[11px] text-apagado num whitespace-nowrap">{i.paginas ? `${i.paginas} p.` : tamanho(i.caracteres)} · {i.acessos} usos</td>
                       </tr>
                     ))}
@@ -154,6 +160,15 @@ export default function Biblioteca() {
         </section>
 
         <aside className="col-span-4 space-y-6">
+          <div className="cartao p-5">
+            <h2 className="titulo text-lg mb-3">Enviar arquivos</h2>
+            <EnviarArquivos />
+            <p className="text-[11px] text-apagado mt-3">
+              {data.conversor.disponivel
+                ? <>Conversor local (GPU) ativo: Markdown com tabelas e OCR sem gastar tokens.{data.conversor.convertendo ? <> Convertendo <b>{data.conversor.convertendo}</b>.</> : ''}{data.conversor.na_fila ? ` ${data.conversor.na_fila} na fila.` : ''}</>
+                : 'Conversor local não instalado: o texto é extraído de forma simples, e o bibliotecário transcreve PDFs escaneados.'}
+            </p>
+          </div>
           <div className="cartao p-5">
             <h2 className="titulo text-lg mb-3">Adicionar por URL</h2>
             <Adicionar />

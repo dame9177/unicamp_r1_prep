@@ -1,8 +1,9 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import clsx from 'clsx'
-import { Database, Globe, Library, Loader2, NotebookPen, Pin, RotateCcw, Send, Square, SquareTerminal, X } from 'lucide-react'
+import { Database, Globe, Library, Loader2, NotebookPen, Paperclip, Pin, RotateCcw, Send, Square, SquareTerminal, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { api, transmitir, type Chat } from '../api'
+import { api, enviarArquivos, transmitir, type Chat } from '../api'
+import { ACEITOS } from './EnviarArquivos'
 import { Markdown } from './ui'
 
 export function IconeAtividade({ texto }: { texto: string }) {
@@ -66,6 +67,9 @@ export default function Tutor({ questaoId, chatId, aoFechar, inteiro, agente = '
   const [atividades, setAtividades] = useState<string[]>([])
   const [erro, setErro] = useState<string | null>(null)
   const [uso, setUso] = useState<string | null>(null)
+  const [anexos, setAnexos] = useState<{ id: string; titulo: string }[]>([])
+  const [anexando, setAnexando] = useState(false)
+  const arquivo = useRef<HTMLInputElement>(null)
   const abortar = useRef<AbortController | null>(null)
   const fim = useRef<HTMLDivElement>(null)
   const transmitindo = pergunta !== null
@@ -73,12 +77,26 @@ export default function Tutor({ questaoId, chatId, aoFechar, inteiro, agente = '
   useEffect(() => { fim.current?.scrollIntoView({ behavior: 'smooth' }) }, [data?.mensagens.length, parcial, atividades.length])
   useEffect(() => () => abortar.current?.abort(), [])
 
+  async function anexar(lista: FileList) {
+    setAnexando(true); setErro(null)
+    try {
+      const r = await enviarArquivos([...lista].slice(0, 5), { origem: 'chat' })
+      const ok = r.filter((x) => x.id).map((x) => ({ id: x.id!, titulo: x.titulo ?? x.arquivo }))
+      setAnexos((a) => [...a, ...ok].slice(0, 5))
+      const falhas = r.filter((x) => x.erro)
+      if (falhas.length) setErro(falhas.map((f) => `${f.arquivo}: ${f.erro}`).join(' · '))
+      qc.invalidateQueries({ queryKey: ['biblioteca'] }); qc.invalidateQueries({ queryKey: ['tarefas'] })
+    } catch (e) { setErro((e as Error).message) } finally { setAnexando(false) }
+  }
+
   async function enviar(msg: string) {
-    if (!data || !msg.trim() || transmitindo) return
-    setPergunta(msg); setParcial(''); setAtividades([]); setErro(null); setTexto('')
+    if (!data || !msg.trim() || transmitindo || anexando) return
+    const ids = anexos.map((a) => a.id)
+    setPergunta(anexos.length ? `${msg}\n\n📎 ${anexos.map((a) => a.titulo).join(' · ')}` : msg)
+    setParcial(''); setAtividades([]); setErro(null); setTexto(''); setAnexos([])
     abortar.current = new AbortController()
     try {
-      await transmitir(`/api/chats/${data.chat.id}/mensagens`, { texto: msg }, (ev) => {
+      await transmitir(`/api/chats/${data.chat.id}/mensagens`, { texto: msg, anexos: ids }, (ev) => {
         if (ev.tipo === 'texto') setParcial((p) => p + (ev.delta ?? ''))
         if (ev.tipo === 'atividade') setAtividades((a) => [...a, ev.detalhe ?? ''])
         if (ev.tipo === 'erro') setErro(ev.mensagem ?? 'erro')
@@ -135,7 +153,7 @@ export default function Tutor({ questaoId, chatId, aoFechar, inteiro, agente = '
         {msgs.map((m) => (
           <div key={m.id} className={clsx(m.papel === 'user' ? 'ml-10' : '')}>
             {m.papel === 'user' ? (
-              <p className="text-sm rounded-2xl rounded-br-sm bg-hema-escuro/70 border border-hema/30 px-3.5 py-2.5">{m.conteudo}</p>
+              <p className="text-sm rounded-2xl rounded-br-sm bg-hema-escuro/70 border border-hema/30 px-3.5 py-2.5 whitespace-pre-wrap">{m.conteudo}</p>
             ) : (
               <div className="group">
                 <Atividades itens={m.atividades} />
@@ -149,7 +167,7 @@ export default function Tutor({ questaoId, chatId, aoFechar, inteiro, agente = '
         ))}
         {transmitindo && (
           <>
-            <p className="ml-10 text-sm rounded-2xl rounded-br-sm bg-hema-escuro/70 border border-hema/30 px-3.5 py-2.5">{pergunta}</p>
+            <p className="ml-10 text-sm rounded-2xl rounded-br-sm bg-hema-escuro/70 border border-hema/30 px-3.5 py-2.5 whitespace-pre-wrap">{pergunta}</p>
             <div>
               {atividades.map((a, i) => (
                 <p key={i} className="text-[11px] text-suave flex items-center gap-1.5"><IconeAtividade texto={a} /> <span className="truncate">{a}</span></p>
@@ -165,7 +183,22 @@ export default function Tutor({ questaoId, chatId, aoFechar, inteiro, agente = '
       </div>
 
       <footer className="p-3 border-t border-borda">
+        {(anexos.length > 0 || anexando) && (
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {anexos.map((a) => (
+              <span key={a.id} className="chip text-certo border-certo/40 bg-certo/10 max-w-60">
+                <Paperclip className="size-3 shrink-0" /><span className="truncate">{a.titulo}</span>
+                <button onClick={() => setAnexos((l) => l.filter((x) => x.id !== a.id))} title="Remover da mensagem (continua na biblioteca)"><X className="size-3" /></button>
+              </span>
+            ))}
+            {anexando && <span className="chip text-suave border-borda"><Loader2 className="size-3 animate-spin" /> enviando…</span>}
+          </div>
+        )}
+        <input ref={arquivo} type="file" multiple accept={ACEITOS} className="hidden" onChange={(e) => { if (e.target.files) anexar(e.target.files); e.target.value = '' }} />
         <div className="flex gap-2 items-end">
+          <button className="btn btn-fantasma !p-2.5" title="Anexar PDF ou foto (vai para a biblioteca)" onClick={() => arquivo.current?.click()} disabled={transmitindo || anexando}>
+            <Paperclip className="size-4" />
+          </button>
           <textarea
             className="campo text-sm resize-none" rows={2} placeholder={preceptor ? 'Fale com o Preceptor… (Enter envia)' : 'Pergunte ao tutor… (Enter envia)'}
             value={texto} onChange={(e) => setTexto(e.target.value)}

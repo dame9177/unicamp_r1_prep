@@ -42,6 +42,9 @@ MIGRACOES = [
     ("tentativas", "adendo", "TEXT"),
     ("chats", "agente", "TEXT NOT NULL DEFAULT 'tutor'"),
     ("llm_jobs", "fundo", "INTEGER NOT NULL DEFAULT 0"),
+    ("biblioteca", "conversao", "TEXT"),        # conversor local: pendente | executando | feita | descartada | erro
+    ("biblioteca", "conversao_erro", "TEXT"),
+    ("tarefas", "aguarda_doc", "TEXT"),          # tarefa só roda depois que este documento for convertido
 ]
 
 

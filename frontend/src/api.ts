@@ -132,6 +132,7 @@ export interface Insight {
   payload_json: string
   criado_em: string
   arquivado: number
+  feita?: boolean
 }
 
 export interface Painel {
@@ -320,6 +321,37 @@ export interface ItemBiblioteca {
   acessos: number
   criado_em: string
   atualizado_em: string
+  conversao?: 'pendente' | 'executando' | 'feita' | 'descartada' | 'erro' | null
+  conversao_erro?: string | null
+}
+
+export interface EstadoConversor { disponivel: boolean; ativo: boolean; convertendo: string | null; na_fila: number; ultimo_erro: string | null }
+
+export interface ResultadoEnvio {
+  arquivo: string
+  id?: string
+  titulo?: string
+  formato?: string
+  paginas?: number | null
+  ja_existia?: boolean
+  precisa_transcricao?: boolean
+  conversao_local?: boolean
+  tarefa_id?: number
+  erro?: string
+}
+
+/** Envia arquivos para a biblioteca (multipart). */
+export async function enviarArquivos(arquivos: File[], extras: Record<string, string> = {}): Promise<ResultadoEnvio[]> {
+  const form = new FormData()
+  for (const a of arquivos) form.append('arquivos', a)
+  for (const [k, v] of Object.entries(extras)) if (v !== '') form.append(k, v)
+  const r = await fetch('/api/biblioteca/enviar', { method: 'POST', body: form })
+  if (!r.ok) {
+    let msg = r.statusText
+    try { const j = await r.json(); msg = typeof j.detail === 'string' ? j.detail : JSON.stringify(j.detail) } catch { /* corpo não-JSON */ }
+    throw new ErroApi(r.status, msg)
+  }
+  return (await r.json()).resultados
 }
 
 export interface AchadoBiblioteca {

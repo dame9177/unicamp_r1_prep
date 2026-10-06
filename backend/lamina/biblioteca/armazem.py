@@ -23,7 +23,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from lamina import config
-from lamina.biblioteca import captura
+from lamina.biblioteca import captura, conversor
 from lamina.biblioteca.captura import RE_PAGINA, ErroCaptura
 from lamina.db import conectar, linha, linhas
 from lamina.importer import slug
@@ -225,7 +225,7 @@ def ler(conn: sqlite3.Connection, doc_id: str, pagina: int | None = None, ate_pa
 
 def catalogo(conn: sqlite3.Connection, tipo: str | None = None, busca: str | None = None) -> list[dict]:
     sql = ["SELECT id, tipo, titulo, orgao, ano, categoria, confiabilidade, status, paginas, caracteres, url,",
-           "temas_json, criado_por, acessos, criado_em, atualizado_em FROM biblioteca WHERE 1=1"]
+           "temas_json, criado_por, acessos, criado_em, atualizado_em, conversao FROM biblioteca WHERE 1=1"]
     params: list = []
     if tipo:
         sql.append("AND tipo = ?")
@@ -288,6 +288,34 @@ def _sumario(texto: str, formato: str) -> str:
     return " ".join(texto.split())[:900]
 
 
+def _gravar(conn: sqlite3.Connection, *, doc_id: str | None, conteudo: bytes, sha: str, texto: str, formato: str,
+            ext: str, paginas: int | None, titulo: str, criado_por: str, orgao: str | None = None,
+            ano: int | None = None, categoria: str | None = None, confiabilidade: str = "literatura",
+            temas: list[str] | None = None, resumo: str | None = None, url: str | None = None,
+            status: str = "vigente", status_motivo: str | None = None, meta_extra: dict | None = None) -> tuple[str, int]:
+    """Grava arquivos, metadados e índice de um documento (novo ou substituindo `doc_id`)."""
+    doc_id = doc_id or _novo_id(conn, titulo, ano)
+    pasta = _raiz() / "docs" / doc_id
+    if pasta.exists():
+        shutil.rmtree(pasta)
+    pasta.mkdir(parents=True)
+    (pasta / "texto.md").write_text(texto, encoding="utf-8")
+    (pasta / f"original.{ext}").write_bytes(conteudo)
+    valores = dict(id=doc_id, tipo="documento", titulo=titulo, orgao=orgao, ano=ano, categoria=categoria,
+                   confiabilidade=confiabilidade, status=status, status_motivo=status_motivo, url=url, formato=formato,
+                   paginas=paginas, caracteres=len(texto), sha256=sha,
+                   temas_json=json.dumps(temas or [], ensure_ascii=False), resumo=resumo, criado_por=criado_por,
+                   conversao="pendente" if formato in ("pdf", "imagem") and conversor.disponivel() else None)
+    conn.execute("DELETE FROM biblioteca WHERE id = ?", (doc_id,))
+    conn.execute(f"INSERT INTO biblioteca ({', '.join(valores)}) VALUES ({', '.join('?' * len(valores))})",
+                 tuple(valores.values()))
+    n = indexar(conn, doc_id, titulo, texto)
+    (pasta / "meta.json").write_text(json.dumps({**valores, **(meta_extra or {}), "guardado_em": _agora()},
+                                                ensure_ascii=False, indent=2), encoding="utf-8")
+    regenerar_catalogo(conn)
+    return doc_id, n
+
+
 async def capturar(url: str, *, criado_por: str, titulo: str | None = None, orgao: str | None = None,
                    ano: int | None = None, categoria: str | None = None, confiabilidade: str | None = None,
                    temas: list[str] | None = None, resumo: str | None = None, substituir: bool = False) -> dict:
@@ -310,30 +338,102 @@ async def capturar(url: str, *, criado_por: str, titulo: str | None = None, orga
             return {"id": dup["id"], "titulo": dup["titulo"], "ja_existia": True}
         titulo_final = (titulo or ex.titulo or download.url.rsplit("/", 1)[-1] or "Documento").strip()[:200]
         alvo = existente or dup
-        doc_id = alvo["id"] if alvo else _novo_id(conn, titulo_final, ano)
-        pasta = _raiz() / "docs" / doc_id
-        if pasta.exists():
-            shutil.rmtree(pasta)
-        pasta.mkdir(parents=True)
-        (pasta / "texto.md").write_text(ex.texto, encoding="utf-8")
-        (pasta / f"original.{_EXT[ex.formato]}").write_bytes(download.conteudo)
-        valores = dict(id=doc_id, tipo="documento", titulo=titulo_final, orgao=orgao, ano=ano, categoria=categoria,
-                       confiabilidade=conf, url=url, formato=ex.formato, paginas=ex.paginas, caracteres=len(ex.texto),
-                       sha256=sha, temas_json=json.dumps(temas or [], ensure_ascii=False), resumo=resumo,
-                       criado_por=criado_por)
-        conn.execute("DELETE FROM biblioteca WHERE id = ?", (doc_id,))
-        conn.execute(f"INSERT INTO biblioteca ({', '.join(valores)}) VALUES ({', '.join('?' * len(valores))})",
-                     tuple(valores.values()))
-        n = indexar(conn, doc_id, titulo_final, ex.texto)
-        (pasta / "meta.json").write_text(json.dumps({**valores, "url_final": download.url, "capturado_em": _agora()},
-                                                    ensure_ascii=False, indent=2), encoding="utf-8")
-        regenerar_catalogo(conn)
+        doc_id, n = _gravar(conn, doc_id=alvo["id"] if alvo else None, conteudo=download.conteudo, sha=sha,
+                            texto=ex.texto, formato=ex.formato, ext=_EXT[ex.formato], paginas=ex.paginas,
+                            titulo=titulo_final, criado_por=criado_por, orgao=orgao, ano=ano, categoria=categoria,
+                            confiabilidade=conf, temas=temas, resumo=resumo, url=url,
+                            meta_extra={"url_final": download.url})
     saida = {"id": doc_id, "titulo": titulo_final, "formato": ex.formato, "paginas": ex.paginas,
              "caracteres": len(ex.texto), "trechos_indexados": n, "ja_existia": False,
              "inicio_ou_sumario": _sumario(ex.texto, ex.formato)}
+    if ex.formato == "pdf" and conversor.disponivel():
+        saida["observacao"] = ("o conversor local (GPU) vai refazer o texto em Markdown com tabelas em alguns minutos; "
+                               "as páginas continuam as mesmas")
     if ex.links:
         saida["links_documentos"] = ex.links[:15]
     return saida
+
+
+# ------------------------------------------------------------------------------------------------
+# Arquivos enviados pelo aluno (upload na Biblioteca ou anexo nas conversas)
+# ------------------------------------------------------------------------------------------------
+
+IMAGENS = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "webp": "image/webp", "gif": "image/gif"}
+TEXTOS = {"txt", "md", "markdown"}
+HTMLS = {"html", "htm"}
+EXTENSOES_ACEITAS = sorted({"pdf", *IMAGENS, *TEXTOS, *HTMLS})
+AGUARDANDO_TRANSCRICAO = "aguardando transcrição (sem texto extraível: PDF escaneado ou imagem)"
+
+
+def _titulo_do_arquivo(nome: str) -> str:
+    base = Path(nome).stem
+    return re.sub(r"[_\-]+", " ", base).strip().capitalize()[:200] or "Documento enviado"
+
+
+async def importar_arquivo(conteudo: bytes, nome: str, *, criado_por: str = "aluno", titulo: str | None = None,
+                           orgao: str | None = None, ano: int | None = None, categoria: str | None = None,
+                           confiabilidade: str | None = None, temas: list[str] | None = None) -> dict:
+    """Guarda um arquivo enviado. A extração é local (sem tokens); PDFs escaneados e imagens ficam
+    'em revisão' até um agente transcrever (biblioteca_anexar_texto)."""
+    if len(conteudo) > captura.MAX_BYTES:
+        raise ErroCaptura(f"arquivo maior que {captura.MAX_BYTES // 2**20} MB")
+    ext = Path(nome).suffix.lower().lstrip(".")
+    if conteudo[:5] == b"%PDF-":
+        ext = "pdf"
+    if ext not in EXTENSOES_ACEITAS:
+        raise ErroCaptura(f"formato não suportado ({ext or 'sem extensão'}); aceitos: {', '.join(EXTENSOES_ACEITAS)}")
+    conf = _validar_confiabilidade(confiabilidade, "documento")
+    sha = hashlib.sha256(conteudo).hexdigest()
+    with conectar() as conn:
+        dup = linha(conn, "SELECT id, titulo, status FROM biblioteca WHERE sha256 = ?", (sha,))
+    if dup:
+        return {"id": dup["id"], "titulo": dup["titulo"], "ja_existia": True,
+                "precisa_transcricao": dup["status"] == "em_revisao"}
+
+    texto, formato, paginas, titulo_ex, transcrever = "", "texto", None, None, False
+    if ext == "pdf":
+        try:
+            ex = await asyncio.to_thread(captura.extrair, captura.Download(conteudo, "application/pdf", nome))
+            texto, formato, paginas, titulo_ex = ex.texto, "pdf", ex.paginas, ex.titulo
+        except captura.PdfSemTexto as exc:
+            formato, paginas, titulo_ex, transcrever = "pdf", exc.paginas, exc.titulo, True
+    elif ext in IMAGENS:
+        formato, paginas, transcrever = "imagem", 1, True
+    elif ext in HTMLS:
+        ex = await asyncio.to_thread(captura.extrair, captura.Download(conteudo, "text/html", f"arquivo:{nome}"))
+        texto, formato, titulo_ex = ex.texto, "html", ex.titulo
+    else:
+        texto, formato = conteudo.decode("utf-8", errors="replace"), "texto"
+    titulo_final = (titulo or titulo_ex or _titulo_do_arquivo(nome)).strip()[:200]
+    with conectar() as conn:
+        doc_id, n = _gravar(conn, doc_id=None, conteudo=conteudo, sha=sha, texto=texto, formato=formato, ext=ext,
+                            paginas=paginas, titulo=titulo_final, criado_por=criado_por, orgao=orgao, ano=ano,
+                            categoria=categoria, confiabilidade=conf, temas=temas,
+                            status="em_revisao" if transcrever else "vigente",
+                            status_motivo=AGUARDANDO_TRANSCRICAO if transcrever else None,
+                            meta_extra={"nome_arquivo": nome})
+    return {"id": doc_id, "titulo": titulo_final, "formato": formato, "paginas": paginas, "caracteres": len(texto),
+            "trechos_indexados": n, "ja_existia": False, "precisa_transcricao": transcrever,
+            "conversao_local": formato in ("pdf", "imagem") and conversor.disponivel(),
+            "caminho_original": str(_raiz() / "docs" / doc_id / f"original.{ext}")}
+
+
+def anexar_texto(conn: sqlite3.Connection, doc_id: str, texto: str, concluido: bool = False) -> dict:
+    """Acrescenta texto transcrito (Markdown, com marcas [[página N]]) a um documento e reindexa."""
+    doc = obter(conn, doc_id)
+    if not doc or doc["tipo"] != "documento":
+        raise KeyError(doc_id)
+    caminho = caminho_texto(doc)
+    atual = caminho.read_text(encoding="utf-8") if caminho.exists() else ""
+    novo = (atual.rstrip() + "\n\n" + texto.strip()).strip() + "\n"
+    caminho.write_text(novo, encoding="utf-8")
+    conn.execute("UPDATE biblioteca SET caracteres = ?, atualizado_em = ? WHERE id = ?", (len(novo), _agora(), doc_id))
+    if concluido:
+        conn.execute("UPDATE biblioteca SET status = 'vigente', status_motivo = NULL WHERE id = ? "
+                     "AND status_motivo = ?", (doc_id, AGUARDANDO_TRANSCRICAO))
+    n = indexar(conn, doc_id, doc["titulo"], novo)
+    regenerar_catalogo(conn)
+    return {"id": doc_id, "caracteres": len(novo), "trechos_indexados": n, "concluido": concluido}
 
 
 def salvar_nota(conn: sqlite3.Connection, *, titulo: str, conteudo: str, fontes: list[str], criado_por: str,

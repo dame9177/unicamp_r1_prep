@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink, FileDown, Trash2 } from 'lucide-react'
+import { ArrowLeft, ChevronLeft, ChevronRight, Cpu, ExternalLink, FileDown, Loader2, Trash2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { api, type ItemBiblioteca, type TextoBiblioteca } from '../api'
@@ -13,7 +13,7 @@ function linkarPaginas(texto: string, id: string) {
     dentro.replace(/p\.\s*(\d+)(-\d+)?/g, (_x, n: string, r?: string) => `[p. ${n}${r ?? ''}](/biblioteca/${id}?pagina=${n})`))
 }
 
-function TextoPdf({ texto }: { texto: string }) {
+function TextoPdf({ texto, markdown }: { texto: string; markdown?: boolean }) {
   const partes = texto.split(/\[\[página (\d+)\]\]/)
   const blocos: { n: string; t: string }[] = []
   for (let i = 1; i < partes.length; i += 2) blocos.push({ n: partes[i], t: partes[i + 1] })
@@ -23,7 +23,8 @@ function TextoPdf({ texto }: { texto: string }) {
       {blocos.map((b) => (
         <div key={b.n} id={`p${b.n}`}>
           <p className="text-[11px] uppercase tracking-wider text-apagado border-b border-borda pb-1 mb-2">Página {b.n}</p>
-          <pre className="whitespace-pre-wrap text-sm leading-relaxed font-sans text-texto/90">{b.t.trim()}</pre>
+          {markdown ? <Markdown className="text-sm">{b.t.trim()}</Markdown>
+            : <pre className="whitespace-pre-wrap text-sm leading-relaxed font-sans text-texto/90">{b.t.trim()}</pre>}
         </div>
       ))}
     </div>
@@ -42,7 +43,17 @@ function Documento({ id }: { id: string }) {
   const pagina = Number(params.get('pagina') || 1)
   const [inicio, setInicio] = useState(0)
   const [acumulado, setAcumulado] = useState('')
-  const { data: doc, error } = useQuery({ queryKey: ['biblioteca', 'doc', id], queryFn: () => api.get<ItemBiblioteca>(`/api/biblioteca/${id}`) })
+  const { data: doc, error } = useQuery({
+    queryKey: ['biblioteca', 'doc', id],
+    queryFn: () => api.get<ItemBiblioteca>(`/api/biblioteca/${id}`),
+    refetchInterval: (q) => (['pendente', 'executando'].includes(q.state.data?.conversao ?? '') ? 6000 : false),
+  })
+  const reconverter = useMutation({
+    mutationFn: () => api.post(`/api/biblioteca/${id}/reconverter`),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['biblioteca'] }),
+  })
+  // Quando a conversão termina, o texto exibido muda.
+  useEffect(() => { if (doc?.conversao === 'feita') qc.invalidateQueries({ queryKey: ['biblioteca', 'texto', id] }) }, [doc?.conversao, id, qc])
   const ehPdf = doc?.formato === 'pdf'
   const { data: trecho, error: erroTexto } = useQuery({
     queryKey: ['biblioteca', 'texto', id, ehPdf ? pagina : inicio],
@@ -85,7 +96,13 @@ function Documento({ id }: { id: string }) {
         )}
         <div className="flex flex-wrap gap-2 mt-4">
           {doc.url && <a className="btn btn-fantasma text-xs" href={doc.url} target="_blank" rel="noreferrer"><ExternalLink className="size-3.5" /> Fonte original</a>}
-          {doc.tipo === 'documento' && <a className="btn btn-fantasma text-xs" href={`/api/biblioteca/${id}/original`} target="_blank" rel="noreferrer"><FileDown className="size-3.5" /> Arquivo baixado</a>}
+          {doc.tipo === 'documento' && <a className="btn btn-fantasma text-xs" href={`/api/biblioteca/${id}/original`} target="_blank" rel="noreferrer"><FileDown className="size-3.5" /> Arquivo original</a>}
+          {doc.tipo === 'documento' && (doc.formato === 'pdf' || doc.formato === 'imagem') && (
+            <button className="btn btn-fantasma text-xs" disabled={reconverter.isPending || doc.conversao === 'pendente' || doc.conversao === 'executando'}
+                    onClick={() => reconverter.mutate()} title="Refazer o texto com o conversor local (GPU): Markdown com tabelas e OCR">
+              <Cpu className="size-3.5" /> Reconverter na GPU
+            </button>
+          )}
           <select className="campo !w-40 !py-1 text-xs" value={doc.status} onChange={(e) => editar.mutate(e.target.value)}>
             <option value="vigente">Vigente</option><option value="substituido">Substituído</option><option value="em_revisao">Em revisão</option>
           </select>
@@ -96,6 +113,16 @@ function Documento({ id }: { id: string }) {
       </header>
 
       <ErroCaixa erro={erroTexto} />
+      <ErroCaixa erro={reconverter.error} />
+      {(doc.conversao === 'pendente' || doc.conversao === 'executando') && (
+        <p className="text-sm text-hema mb-4 flex items-center gap-2"><Loader2 className="size-4 animate-spin" />
+          {doc.conversao === 'executando' ? 'Convertendo na GPU (Markdown com tabelas e OCR)…' : 'Na fila do conversor local.'} O texto abaixo é provisório.</p>
+      )}
+      {doc.conversao === 'erro' && <p className="text-xs text-errado mb-4">A conversão local falhou: {doc.conversao_erro?.slice(0, 300)}</p>}
+      {doc.status_motivo?.includes('transcrição') && doc.conversao !== 'pendente' && doc.conversao !== 'executando' && (
+        <p className="text-sm text-parcial mb-4">Sem texto ainda: o bibliotecário vai transcrever (ou use “Reconverter na GPU”).</p>
+      )}
+      {doc.formato === 'imagem' && <img src={`/api/biblioteca/${id}/original`} alt={doc.titulo} className="rounded-xl border border-borda mb-4 max-h-[70vh] mx-auto" />}
       {ehPdf && doc.paginas && (
         <div className="sticky top-0 z-10 bg-tinta/90 backdrop-blur py-2 mb-4 flex items-center gap-2 border-b border-borda">
           <button className="btn btn-fantasma !p-1.5" disabled={pagina <= 1} onClick={() => irPara(pagina - JANELA)}><ChevronLeft className="size-4" /></button>
@@ -106,7 +133,7 @@ function Documento({ id }: { id: string }) {
         </div>
       )}
       <article className="cartao p-6">
-        {!trecho ? <Carregando /> : ehPdf ? <TextoPdf texto={trecho.texto} />
+        {!trecho ? <Carregando /> : ehPdf ? <TextoPdf texto={trecho.texto} markdown={doc.conversao === 'feita'} />
           : <Markdown>{fonteUnica ? linkarPaginas(acumulado || trecho.texto, fonteUnica) : (acumulado || trecho.texto)}</Markdown>}
         {trecho && !ehPdf && trecho.continua && (
           <button className="btn mt-4" onClick={() => setInicio(trecho.fim)}>Carregar mais ({Math.round((trecho.fim / trecho.total_caracteres) * 100)}% lido)</button>
