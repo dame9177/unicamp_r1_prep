@@ -131,7 +131,7 @@ def _expr(termos: list[str], juncao: str) -> str:
 
 
 def buscar(conn: sqlite3.Connection, consulta: str, limite: int = 8, confiabilidade: str | None = None,
-           tipo: str | None = None, por_documento: int = 3) -> list[dict]:
+           tipo: str | None = None, por_documento: int = 3, tema_id: str | None = None) -> list[dict]:
     termos = _termos(consulta)
     if not termos:
         return []
@@ -142,6 +142,9 @@ def buscar(conn: sqlite3.Connection, consulta: str, limite: int = 8, confiabilid
     if tipo:
         filtros.append("AND b.tipo = ?")
         params.append(tipo)
+    if tema_id:
+        filtros.append("AND b.temas_json LIKE ?")
+        params.append(f'%"{tema_id}"%')
     sql = f"""
         SELECT f.doc_id, f.local, snippet(biblioteca_fts, 3, '**', '**', ' … ', 28) AS trecho,
                bm25(biblioteca_fts, 0, 0, 2.0, 1.0) AS score, b.titulo, b.tipo, b.orgao, b.ano,
@@ -361,6 +364,7 @@ async def capturar(url: str, *, criado_por: str, titulo: str | None = None, orga
 IMAGENS = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "webp": "image/webp", "gif": "image/gif"}
 TEXTOS = {"txt", "md", "markdown"}
 HTMLS = {"html", "htm"}
+MAX_UPLOAD = 250 * 1024 * 1024  # apostilas inteiras passam de 80 MB (limite da captura pela web)
 EXTENSOES_ACEITAS = sorted({"pdf", *IMAGENS, *TEXTOS, *HTMLS})
 AGUARDANDO_TRANSCRICAO = "aguardando transcrição (sem texto extraível: PDF escaneado ou imagem)"
 
@@ -375,8 +379,8 @@ async def importar_arquivo(conteudo: bytes, nome: str, *, criado_por: str = "alu
                            confiabilidade: str | None = None, temas: list[str] | None = None) -> dict:
     """Guarda um arquivo enviado. A extração é local (sem tokens); PDFs escaneados e imagens ficam
     'em revisão' até um agente transcrever (biblioteca_anexar_texto)."""
-    if len(conteudo) > captura.MAX_BYTES:
-        raise ErroCaptura(f"arquivo maior que {captura.MAX_BYTES // 2**20} MB")
+    if len(conteudo) > MAX_UPLOAD:
+        raise ErroCaptura(f"arquivo maior que {MAX_UPLOAD // 2**20} MB")
     ext = Path(nome).suffix.lower().lstrip(".")
     if conteudo[:5] == b"%PDF-":
         ext = "pdf"

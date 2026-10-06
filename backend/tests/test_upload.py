@@ -112,3 +112,42 @@ def test_api_de_envio_cria_tarefa_e_anexo_no_chat(cliente, fake_runner):
     assert msgs[0]["conteudo"].startswith("Explique a tabela") and "📎" in msgs[0]["conteudo"]
     assert cliente.post(f"/api/biblioteca/{ok['id']}/reconverter").status_code == 409  # sem conversor nos testes
     assert config.BIBLIOTECA_DIR.exists()
+
+
+def test_envio_em_massa_nao_roda_fora_do_orcamento(ambiente):
+    from datetime import UTC, datetime, timedelta
+
+    from lamina.db import salvar_estado
+
+    with conectar() as conn:
+        for i in range(3):
+            conn.execute("INSERT INTO tarefas (agente, titulo, instrucoes, criado_por) VALUES ('bibliotecario', ?, 'x', 'aluno')", (f"t{i}",))
+        assert maestro_mod.envio_pequeno(conn)
+        conn.execute("INSERT INTO tarefas (agente, titulo, instrucoes, criado_por) VALUES ('bibliotecario', 't3', 'x', 'aluno')")
+        assert not maestro_mod.envio_pequeno(conn)
+        conn.execute("DELETE FROM tarefas WHERE titulo = 't3'")
+        salvar_estado(conn, "pausa_fundo_ate", (datetime.now(UTC) + timedelta(hours=1)).isoformat())
+        assert not maestro_mod.envio_pequeno(conn)
+
+
+async def test_catalogo_em_lote_com_temas_validos(ambiente, fake_runner):
+    from lamina.claude import tasks
+
+    r = await armazem.importar_arquivo(PDF, "medway_ist.pdf")
+    with conectar() as conn:
+        tema = linha(conn, "SELECT id FROM temas LIMIT 1")["id"]
+        assert tasks.pendentes_de_catalogo(conn) == [r["id"]]
+
+    def catalogo(p):
+        assert tema in p.sistema and "### ITEM id=" in p.prompt and p.esquema["properties"]["itens"]
+        return {"itens": [{"id": r["id"], "titulo": "Apostila de IST", "orgao": "Medway", "ano": None,
+                           "categoria": "apostila", "confiabilidade": "literatura", "area": "Clínica Médica",
+                           "temas": [tema, "inexistente"], "resumo": "Sífilis e outras IST."}]}
+
+    fake_runner.respostas["catalogo"] = catalogo
+    assert await tasks.catalogar_em_lote() == 1
+    with conectar() as conn:
+        d = armazem.obter(conn, r["id"])
+        assert d["titulo"] == "Apostila de IST" and d["temas"] == [tema] and d["orgao"] == "Medway"
+        assert tasks.pendentes_de_catalogo(conn) == []
+        assert armazem.buscar(conn, "benzatina", tema_id=tema) and not armazem.buscar(conn, "benzatina", tema_id="x")

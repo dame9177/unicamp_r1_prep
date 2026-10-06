@@ -11,6 +11,7 @@ Os trabalhos com LLM rodam como tarefas asyncio separadas, para o ciclo continua
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
 from datetime import UTC, datetime
 
@@ -52,6 +53,18 @@ def proxima_tarefa(conn) -> dict | None:
                               SELECT 1 FROM biblioteca b WHERE b.id = t.aguarda_doc
                               AND b.conversao IN ('pendente', 'executando')))
                           ORDER BY t.prioridade, t.id LIMIT 1""")
+
+
+LIMITE_IMEDIATO = 3  # acima disso, tarefas de arquivos enviados pelo aluno seguem o orçamento de segundo plano
+
+
+def envio_pequeno(conn) -> bool:
+    """Tarefas do aluno podem rodar na hora (fora do orçamento) só se forem poucas e sem pausa."""
+    pausa = linha(conn, "SELECT valor_json FROM estado WHERE chave = 'pausa_fundo_ate'")
+    if pausa and json.loads(pausa["valor_json"] or "null") and json.loads(pausa["valor_json"]) > datetime.now(UTC).isoformat():
+        return False
+    n = linha(conn, "SELECT COUNT(*) AS n FROM tarefas WHERE status = 'pendente' AND criado_por = 'aluno'")["n"]
+    return n <= LIMITE_IMEDIATO
 
 
 def recuperar_tarefas_presas(conn) -> None:
@@ -106,6 +119,9 @@ class Maestro:
                 avisos.lembretes_automaticos(conn, aj, s)  # pausado: nada proativo, nem lembrete automático
             avisos.entregar_pendentes(conn, aj)
             tarefa = proxima_tarefa(conn)
+            from lamina.claude.tasks import pendentes_de_catalogo
+
+            self._catalogo_pendente = bool(pendentes_de_catalogo(conn, 1))
         decisao = self._decidir(aj, s, tarefa)
         self.ultima_decisao = decisao
         return decisao
@@ -130,6 +146,9 @@ class Maestro:
         if motivo:
             self.disparar_ronda(motivo, fundo=True)
             return f"ronda: {motivo}"
+        if getattr(self, "_catalogo_pendente", False):
+            self.disparar_catalogo(fundo=True)
+            return "catálogo em lote (Haiku)"
         if tarefa:
             self.disparar_tarefa(tarefa["id"], fundo=True)
             return f"tarefa #{tarefa['id']}: {tarefa['titulo']}"
@@ -169,6 +188,11 @@ class Maestro:
         from lamina.claude import tasks
 
         return self._rodar(f"tarefa #{tarefa_id}", tasks.executar_tarefa(tarefa_id, fundo=fundo), fundo)
+
+    def disparar_catalogo(self, fundo: bool = True) -> bool:
+        from lamina.claude import tasks
+
+        return self._rodar("catálogo em lote", tasks.catalogar_em_lote(fundo=fundo), fundo)
 
     async def aguardar(self) -> None:
         if self._job:

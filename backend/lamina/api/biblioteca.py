@@ -19,7 +19,10 @@ def catalogo(tipo: str | None = None, busca: str | None = None):
     with conectar() as conn:
         itens = armazem.catalogo(conn, tipo, busca)
         tot = linha(conn, "SELECT COUNT(*) AS n, COALESCE(SUM(caracteres), 0) AS c FROM biblioteca")
+    with conectar() as conn:
+        sem_catalogo = linha(conn, "SELECT COUNT(*) AS n FROM biblioteca WHERE tipo = 'documento' AND resumo IS NULL")["n"]
     return {"itens": itens, "total": tot["n"], "caracteres": tot["c"], "conversor": conversor.fila.estado(),
+            "sem_catalogo": sem_catalogo,
             "extensoes": armazem.EXTENSOES_ACEITAS}
 
 
@@ -33,8 +36,8 @@ async def enviar(arquivos: list[UploadFile] = File(...), confiabilidade: str | N
     from lamina.orquestra.maestro import maestro
 
     resultados = []
-    for arq in arquivos[:10]:
-        conteudo = await arq.read(captura.MAX_BYTES + 1)
+    for arq in arquivos[:20]:
+        conteudo = await arq.read(armazem.MAX_UPLOAD + 1)
         nome = arq.filename or "arquivo"
         try:
             r = await armazem.importar_arquivo(conteudo, nome, criado_por="aluno", orgao=orgao or None, ano=ano,
@@ -53,9 +56,13 @@ async def enviar(arquivos: list[UploadFile] = File(...), confiabilidade: str | N
                      r["id"] if r.get("conversao_local") else None))
                 r["tarefa_id"] = cur.lastrowid
         resultados.append(r)
-    if origem == "biblioteca":  # pedido explícito do aluno: começa já o que não depende do conversor
+    if origem == "biblioteca":  # pedido explícito do aluno: começa já o que não depende do conversor (envios pequenos)
+        from lamina.orquestra.maestro import envio_pequeno
+
         prontas = [r for r in resultados if r.get("tarefa_id") and not r.get("conversao_local")]
-        if prontas:
+        with conectar() as conn:
+            pequeno = envio_pequeno(conn)
+        if prontas and pequeno:
             maestro.disparar_tarefa(prontas[0]["tarefa_id"], fundo=False)
     return {"resultados": resultados}
 
@@ -150,6 +157,16 @@ def editar(doc_id: str, dados: Edicao):
         except ValueError as exc:
             raise HTTPException(422, str(exc)) from exc
         return _doc(conn, doc_id)
+
+
+@router.post("/catalogar-pendentes")
+async def catalogar_pendentes():
+    """Catalogação em lote pelo Haiku (metadados, área, temas, resumo) dos documentos sem resumo."""
+    from lamina.orquestra.maestro import maestro
+
+    if not maestro.disparar_catalogo(fundo=False):
+        raise HTTPException(409, f"há outro trabalho em andamento: {maestro.ocupado}")
+    return {"iniciado": True}
 
 
 @router.post("/{doc_id}/reconverter")

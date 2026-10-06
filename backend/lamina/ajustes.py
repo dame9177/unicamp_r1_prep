@@ -9,6 +9,7 @@ from lamina.db import obter_ajuste, salvar_ajuste
 PADROES: dict[str, object] = {
     "modelos": {
         "juiz": "claude-haiku-4-5",
+        "catalogo": "claude-haiku-4-5",
         "juiz_revisao": "claude-sonnet-5-5",
         "tutor": "claude-sonnet-5-5",
         "flashcards": "claude-sonnet-5-5",

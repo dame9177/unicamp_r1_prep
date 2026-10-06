@@ -340,13 +340,14 @@ def ferramentas_biblioteca(ctx: Contexto) -> list:
                   "limite": {"type": "integer"},
                   "confiabilidade": {"type": "string", "enum": [*_CONF, "nota"]},
                   "tipo": {"type": "string", "enum": ["documento", "nota"]},
+                  "tema_id": {"type": "string", "description": "restringe a documentos ligados a este tema do app"},
               },
               "required": ["consulta"],
           })
     async def biblioteca_buscar(args):
         with conectar() as conn:
             r = armazem.buscar(conn, args["consulta"], int(args.get("limite") or 8), args.get("confiabilidade"),
-                               args.get("tipo"))
+                               args.get("tipo"), tema_id=args.get("tema_id"))
         if not r:
             return _ok("Nada encontrado na biblioteca para esses termos. Tente sinônimos ou pesquise na web e "
                        "capture o documento oficial com biblioteca_capturar.")

@@ -5,6 +5,7 @@ import { Cabecalho, Carregando, ErroCaixa } from '../components/ui'
 
 const PAPEIS: { id: string; rotulo: string; dica: string }[] = [
   { id: 'juiz', rotulo: 'Juiz (correção)', dica: 'Roda a cada resposta. Haiku é rápido e barato.' },
+  { id: 'catalogo', rotulo: 'Catálogo em lote', dica: 'Temas e resumo de documentos enviados em massa.' },
   { id: 'juiz_revisao', rotulo: 'Juiz de revisão', dica: 'Só quando você clica em “Rejulgar”.' },
   { id: 'tutor', rotulo: 'Tutor', dica: 'Conversas, com biblioteca, web e caderno próprio.' },
   { id: 'flashcards', rotulo: 'Flashcards', dica: 'Geração sob demanda.' },
