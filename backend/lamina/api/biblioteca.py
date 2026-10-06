@@ -19,7 +19,10 @@ def catalogo(tipo: str | None = None, busca: str | None = None):
     with conectar() as conn:
         itens = armazem.catalogo(conn, tipo, busca)
         tot = linha(conn, "SELECT COUNT(*) AS n, COALESCE(SUM(caracteres), 0) AS c FROM biblioteca")
+    with conectar() as conn:
+        sem_catalogo = linha(conn, "SELECT COUNT(*) AS n FROM biblioteca WHERE tipo = 'documento' AND resumo IS NULL")["n"]
     return {"itens": itens, "total": tot["n"], "caracteres": tot["c"], "conversor": conversor.fila.estado(),
+            "sem_catalogo": sem_catalogo,
             "extensoes": armazem.EXTENSOES_ACEITAS}
 
 
@@ -154,6 +157,16 @@ def editar(doc_id: str, dados: Edicao):
         except ValueError as exc:
             raise HTTPException(422, str(exc)) from exc
         return _doc(conn, doc_id)
+
+
+@router.post("/catalogar-pendentes")
+async def catalogar_pendentes():
+    """Catalogação em lote pelo Haiku (metadados, área, temas, resumo) dos documentos sem resumo."""
+    from lamina.orquestra.maestro import maestro
+
+    if not maestro.disparar_catalogo(fundo=False):
+        raise HTTPException(409, f"há outro trabalho em andamento: {maestro.ocupado}")
+    return {"iniciado": True}
 
 
 @router.post("/{doc_id}/reconverter")

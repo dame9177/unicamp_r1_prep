@@ -321,7 +321,9 @@ CONVERSA = {
 def _contexto_inicial(conn, questao_id: str) -> str:
     q = _questao(conn, questao_id)
     t = linha(conn, "SELECT * FROM tentativas WHERE questao_id = ? ORDER BY id DESC LIMIT 1", (questao_id,))
-    partes = [f"[Questão {q['id']} — {q['area']} — prova {q['prova_id']}]", texto_questao(q, imagens=True)]
+    tema = linha(conn, "SELECT id, nome FROM temas WHERE id = ?", (q["tema_id"],))
+    rotulo_tema = f" — tema do app: {tema['id']} ({tema['nome']})" if tema else ""
+    partes = [f"[Questão {q['id']} — {q['area']} — prova {q['prova_id']}{rotulo_tema}]", texto_questao(q, imagens=True)]
     if t:
         partes.append(
             f"RESPOSTA DO ALUNO: {t['resposta']}\nConfiança declarada: {t['confianca']}\n"
@@ -532,3 +534,91 @@ def jobs_hoje(conn) -> list[dict]:
         SELECT papel, COUNT(*) AS chamadas, SUM(input_tokens + output_tokens + cache_read + cache_write) AS tokens,
                CAST(SUM({TOKENS_EFETIVOS}) AS INTEGER) AS efetivos, SUM(custo_usd) AS custo_usd
         FROM llm_jobs WHERE date(criado_em, 'localtime') = date('now', 'localtime') GROUP BY papel""")
+
+
+# ------------------------------------------------------------------------------------------------
+# Catalogação em lote (Haiku, sem ferramentas): metadados e temas dos documentos enviados em massa
+# ------------------------------------------------------------------------------------------------
+
+CATEGORIAS = ["apostila", "pcdt", "protocolo", "guia", "manual", "diretriz", "nota_tecnica", "calendario",
+              "caderno_atencao_basica", "artigo", "livro", "consenso", "resumo", "outro"]
+LOTE_CATALOGO = 20
+
+
+def pendentes_de_catalogo(conn, limite: int = LOTE_CATALOGO) -> list[str]:
+    """Documentos ainda sem resumo nem tarefa de catalogação em andamento."""
+    return [r["id"] for r in linhas(conn, """
+        SELECT b.id FROM biblioteca b WHERE b.tipo = 'documento' AND b.resumo IS NULL
+          AND NOT EXISTS (SELECT 1 FROM tarefas t WHERE t.status IN ('pendente', 'executando')
+                          AND t.instrucoes LIKE '%`' || b.id || '`%')
+        ORDER BY b.criado_em LIMIT ?""", (limite,))]
+
+
+def _inicio_do_documento(doc_id: str, limite: int = 1800) -> str:
+    from lamina.biblioteca.captura import RE_PAGINA
+
+    caminho = config.BIBLIOTECA_DIR / "docs" / doc_id / "texto.md"
+    texto = caminho.read_text(encoding="utf-8")[:12_000] if caminho.exists() else ""
+    return " ".join(RE_PAGINA.sub(" ", texto).split())[:limite]
+
+
+async def catalogar_em_lote(doc_ids: list[str] | None = None, fundo: bool = True) -> int:
+    with conectar() as conn:
+        ids = doc_ids or pendentes_de_catalogo(conn)
+        if not ids:
+            return 0
+        temas = linhas(conn, "SELECT id, area, nome, descricao FROM temas ORDER BY area, ordem")
+        docs = [armazem.obter(conn, i) for i in ids]
+        modelo = ajustes.modelo(conn, "catalogo")
+    lista_temas = "\n".join(f"- {t['id']} · {t['area']} · {t['nome']}: {(t['descricao'] or '')[:90]}" for t in temas)
+    itens = []
+    for d in docs:
+        nome = ""
+        meta = config.BIBLIOTECA_DIR / "docs" / d["id"] / "meta.json"
+        if meta.exists():
+            nome = json.loads(meta.read_text(encoding="utf-8")).get("nome_arquivo") or ""
+        itens.append(f"### ITEM id={d['id']}\narquivo: {nome or d['titulo']} · {d['paginas'] or '?'} páginas\n"
+                     f"início: {_inicio_do_documento(d['id'])}")
+    esquema = {
+        "type": "object",
+        "properties": {"itens": {"type": "array", "items": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string", "enum": ids},
+                "titulo": {"type": "string"}, "orgao": {"type": "string"},
+                "ano": {"type": ["integer", "null"]},
+                "categoria": {"type": "string", "enum": CATEGORIAS},
+                "confiabilidade": {"type": "string", "enum": ["oficial", "sociedade", "literatura"]},
+                "area": {"type": "string", "enum": config.AREAS},
+                "temas": {"type": "array", "items": {"type": "string", "enum": [t["id"] for t in temas]},
+                          "minItems": 1, "maxItems": 4},
+                "resumo": {"type": "string"},
+            },
+            "required": ["id", "titulo", "orgao", "ano", "categoria", "confiabilidade", "area", "temas", "resumo"],
+            "additionalProperties": False,
+        }}},
+        "required": ["itens"],
+        "additionalProperties": False,
+    }
+    sistema = Template((PROMPTS / "catalogo_lote.md").read_text(encoding="utf-8")).safe_substitute(
+        {**_vars(), "temas": lista_temas})
+    r = await obter_runner().executar(Pedido(
+        papel="catalogo", modelo=modelo, sem_raciocinio=True, sistema=sistema, esquema=esquema,
+        prompt="\n\n".join(itens), ref=f"catalogo:{ids[0]}..{ids[-1]}", fundo=fundo, timeout_seg=600,
+    ))
+    dados = r.estruturado or json.loads(r.texto)
+    validos = {t["id"] for t in temas}
+    feitos = 0
+    with conectar() as conn:
+        for it in dados["itens"]:
+            if it["id"] not in ids:
+                continue
+            campos = {k: it.get(k) for k in ("titulo", "orgao", "ano", "categoria", "confiabilidade", "resumo")}
+            campos = {k: v for k, v in campos.items() if v not in (None, "")}
+            campos["temas"] = [t for t in it.get("temas", []) if t in validos][:4]
+            armazem.editar(conn, it["id"], campos)
+            feitos += 1
+        # documentos que o modelo pulou: marca o resumo para não voltarem para sempre à fila
+        for i in set(ids) - {it["id"] for it in dados["itens"]}:
+            conn.execute("UPDATE biblioteca SET resumo = '(sem catalogação automática)' WHERE id = ? AND resumo IS NULL", (i,))
+    return feitos

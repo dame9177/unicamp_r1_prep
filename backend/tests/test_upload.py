@@ -128,3 +128,26 @@ def test_envio_em_massa_nao_roda_fora_do_orcamento(ambiente):
         conn.execute("DELETE FROM tarefas WHERE titulo = 't3'")
         salvar_estado(conn, "pausa_fundo_ate", (datetime.now(UTC) + timedelta(hours=1)).isoformat())
         assert not maestro_mod.envio_pequeno(conn)
+
+
+async def test_catalogo_em_lote_com_temas_validos(ambiente, fake_runner):
+    from lamina.claude import tasks
+
+    r = await armazem.importar_arquivo(PDF, "medway_ist.pdf")
+    with conectar() as conn:
+        tema = linha(conn, "SELECT id FROM temas LIMIT 1")["id"]
+        assert tasks.pendentes_de_catalogo(conn) == [r["id"]]
+
+    def catalogo(p):
+        assert tema in p.sistema and "### ITEM id=" in p.prompt and p.esquema["properties"]["itens"]
+        return {"itens": [{"id": r["id"], "titulo": "Apostila de IST", "orgao": "Medway", "ano": None,
+                           "categoria": "apostila", "confiabilidade": "literatura", "area": "Clínica Médica",
+                           "temas": [tema, "inexistente"], "resumo": "Sífilis e outras IST."}]}
+
+    fake_runner.respostas["catalogo"] = catalogo
+    assert await tasks.catalogar_em_lote() == 1
+    with conectar() as conn:
+        d = armazem.obter(conn, r["id"])
+        assert d["titulo"] == "Apostila de IST" and d["temas"] == [tema] and d["orgao"] == "Medway"
+        assert tasks.pendentes_de_catalogo(conn) == []
+        assert armazem.buscar(conn, "benzatina", tema_id=tema) and not armazem.buscar(conn, "benzatina", tema_id="x")

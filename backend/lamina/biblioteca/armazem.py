@@ -131,7 +131,7 @@ def _expr(termos: list[str], juncao: str) -> str:
 
 
 def buscar(conn: sqlite3.Connection, consulta: str, limite: int = 8, confiabilidade: str | None = None,
-           tipo: str | None = None, por_documento: int = 3) -> list[dict]:
+           tipo: str | None = None, por_documento: int = 3, tema_id: str | None = None) -> list[dict]:
     termos = _termos(consulta)
     if not termos:
         return []
@@ -142,6 +142,9 @@ def buscar(conn: sqlite3.Connection, consulta: str, limite: int = 8, confiabilid
     if tipo:
         filtros.append("AND b.tipo = ?")
         params.append(tipo)
+    if tema_id:
+        filtros.append("AND b.temas_json LIKE ?")
+        params.append(f'%"{tema_id}"%')
     sql = f"""
         SELECT f.doc_id, f.local, snippet(biblioteca_fts, 3, '**', '**', ' … ', 28) AS trecho,
                bm25(biblioteca_fts, 0, 0, 2.0, 1.0) AS score, b.titulo, b.tipo, b.orgao, b.ano,

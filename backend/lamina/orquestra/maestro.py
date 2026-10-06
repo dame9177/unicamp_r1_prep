@@ -119,6 +119,9 @@ class Maestro:
                 avisos.lembretes_automaticos(conn, aj, s)  # pausado: nada proativo, nem lembrete automático
             avisos.entregar_pendentes(conn, aj)
             tarefa = proxima_tarefa(conn)
+            from lamina.claude.tasks import pendentes_de_catalogo
+
+            self._catalogo_pendente = bool(pendentes_de_catalogo(conn, 1))
         decisao = self._decidir(aj, s, tarefa)
         self.ultima_decisao = decisao
         return decisao
@@ -143,6 +146,9 @@ class Maestro:
         if motivo:
             self.disparar_ronda(motivo, fundo=True)
             return f"ronda: {motivo}"
+        if getattr(self, "_catalogo_pendente", False):
+            self.disparar_catalogo(fundo=True)
+            return "catálogo em lote (Haiku)"
         if tarefa:
             self.disparar_tarefa(tarefa["id"], fundo=True)
             return f"tarefa #{tarefa['id']}: {tarefa['titulo']}"
@@ -182,6 +188,11 @@ class Maestro:
         from lamina.claude import tasks
 
         return self._rodar(f"tarefa #{tarefa_id}", tasks.executar_tarefa(tarefa_id, fundo=fundo), fundo)
+
+    def disparar_catalogo(self, fundo: bool = True) -> bool:
+        from lamina.claude import tasks
+
+        return self._rodar("catálogo em lote", tasks.catalogar_em_lote(fundo=fundo), fundo)
 
     async def aguardar(self) -> None:
         if self._job:

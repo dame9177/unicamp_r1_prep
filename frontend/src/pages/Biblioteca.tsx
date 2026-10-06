@@ -9,7 +9,7 @@ import EnviarArquivos from '../components/EnviarArquivos'
 import ListaTarefas, { NovaTarefa } from '../components/Tarefas'
 import { Cabecalho, Carregando, ConfChip, ErroCaixa, Markdown } from '../components/ui'
 
-interface Catalogo { itens: ItemBiblioteca[]; total: number; caracteres: number; conversor: EstadoConversor }
+interface Catalogo { itens: ItemBiblioteca[]; total: number; caracteres: number; conversor: EstadoConversor; sem_catalogo: number }
 
 function tamanho(c: number) {
   return c > 1e6 ? `${(c / 1e6).toFixed(1)} M car.` : c > 1e3 ? `${Math.round(c / 1e3)} mil car.` : `${c} car.`
@@ -50,6 +50,20 @@ function Adicionar() {
           ))}
         </div>
       )}
+    </div>
+  )
+}
+
+function CatalogarPendentes({ n }: { n: number }) {
+  const qc = useQueryClient()
+  const m = useMutation({
+    mutationFn: () => api.post('/api/biblioteca/catalogar-pendentes'),
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ['avisos'] }); setTimeout(() => qc.invalidateQueries({ queryKey: ['biblioteca'] }), 60_000) },
+  })
+  return (
+    <div className="mt-3 text-[11px] text-apagado flex items-center gap-2">
+      <span className="flex-1">{n} documento(s) sem temas/resumo. O Preceptor cataloga em lote (Haiku, ~1k tokens cada) em segundo plano.</span>
+      <button className="btn btn-fantasma !py-1 !px-2 text-xs" disabled={m.isPending || m.isSuccess} onClick={() => m.mutate()}>{m.isSuccess ? 'Catalogando…' : 'Agora'}</button>
     </div>
   )
 }
@@ -168,6 +182,7 @@ export default function Biblioteca() {
                 ? <>Conversor local (GPU) ativo: Markdown com tabelas e OCR sem gastar tokens.{data.conversor.convertendo ? <> Convertendo <b>{data.conversor.convertendo}</b>.</> : ''}{data.conversor.na_fila ? ` ${data.conversor.na_fila} na fila.` : ''}</>
                 : 'Conversor local não instalado: o texto é extraído de forma simples, e o bibliotecário transcreve PDFs escaneados.'}
             </p>
+            {data.sem_catalogo > 0 && <CatalogarPendentes n={data.sem_catalogo} />}
           </div>
           <div className="cartao p-5">
             <h2 className="titulo text-lg mb-3">Adicionar por URL</h2>
